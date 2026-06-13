@@ -4018,6 +4018,31 @@
       "url": "https://www.nvidia.com/gtc/"
     },
     {
+      "date": "2026-05-07",
+      "name": "xAI-Anthropic 合作案 (AI labs 事件)",
+      "tickers": [
+        "TSLA",
+        "NVDA",
+        "MSFT"
+      ],
+      "bias": "down",
+      "note": "Casey Newton: 'Did xAI just concede the AI race?' — Musk 與 Anthropic 達成合作,Newton 解讀為 xAI 落後信號",
+      "details": "**📰 評論家視角**\n\n• **Casey Newton (Platformer 5/7 'Did xAI just concede the AI race?')** — 公開 subhead: 'Elon Musk had lots of reasons to make a deal with Anthropic — but he wouldn't have done it if he were ahead.'\n• 核心論點: xAI 主動跟競爭對手 Anthropic 合作,被 Newton 視為承認自家模型落後;若 Grok 已領先,Musk 不會走這一步\n• 同篇還含: Shivon Zilis 證詞 (與 Musk 私人事務相關);校園手機禁令研究\n• 全文 paywall,以上為公開 subhead + 對 Newton 既有立場推估\n\n**💰 投資觀點 (含推測)**\n• TSLA: Musk 個人 AI 信譽是 TSLA Robotaxi / FSD / Optimus 故事的隱性支柱 — xAI 若被外界判定落後,溢價有壓力\n• NVDA: xAI 是 NVDA 最大 GPU 客戶之一 (Memphis Colossus),若 xAI 改用 Anthropic 模型 (跑在 AWS Trainium / Google TPU),NVDA 採購量短期可能放緩\n• MSFT/Anthropic: 與 MSFT Build 'Copilot 加入 Claude' 形成 pattern — Anthropic 從 lab → 平台層雙打中性偏正\n• 風險: 此為單一評論家解讀,xAI 官方未承認落後;Musk 慣於戰術性合作後續再脫鉤",
+      "url": "https://www.platformer.news/did-xai-just-concede-the-ai-race/"
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Musk vs OpenAI 訴訟 - Musk 敗訴 (AI labs 事件)",
+      "tickers": [
+        "TSLA",
+        "MSFT"
+      ],
+      "bias": "up",
+      "note": "Platformer: 'Musk vows to appeal; the judge vows to throw that case out, too' — OpenAI 結構重組與 IPO 路徑障礙清除",
+      "details": "**📰 評論家視角**\n\n• **Ella Markianos / Platformer (5/18 'Following: Elon loses the OpenAI trial')** — 公開 subhead: 'Musk vows to appeal; the judge vows to throw that case out, too' (Musk 揚言上訴,法官則暗示連上訴一併駁回)\n• 內容: Musk 對 OpenAI 從 non-profit 轉 for-profit 的訴訟敗訴\n• 全文 paywall,以上為 headline + subhead 可見部分\n\n**💰 投資觀點 (含推測)**\n• OpenAI: 結構重組與 IPO 路徑最大法律障礙清除 — 雖未上市但對二級市場估值與後續 IPO timeline 偏正向\n• MSFT: 與 OpenAI capped-profit 結構解綁可能性提高,MSFT 持股價值清晰化\n• TSLA: Musk 訴訟連敗 (Delaware 薪酬案 + OpenAI 訴訟),法律戰精力耗損;對 TSLA 治理風險偏正 (越少分心越好) 但對 Musk 個人聲望偏負\n• xAI: 與 OpenAI 競爭少了一條法律牽制,變成純粹技術 + 資本競爭",
+      "url": "https://www.platformer.news/elon-musk-loses-openai-trial/"
+    },
+    {
       "date": "2026-05-19",
       "name": "Google I/O 2026",
       "tickers": [
