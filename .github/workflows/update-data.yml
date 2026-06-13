@@ -34,7 +34,7 @@ jobs:
       - name: Embed data.json into index.html
         run: |
           python - <<'PY'
-          import json, re, pathlib
+          import re, pathlib
           html_path = pathlib.Path('index.html')
           data_json = pathlib.Path('data.json').read_text(encoding='utf-8')
           html = html_path.read_text(encoding='utf-8')
@@ -43,10 +43,9 @@ jobs:
           )
           if not pattern.search(html):
               raise SystemExit('EMBEDDED_DATA placeholder not found')
-          new = pattern.sub(
-              f'/*__EMBEDDED_DATA_START__*/{data_json}/*__EMBEDDED_DATA_END__*/',
-              html,
-          )
+          replacement = f'/*__EMBEDDED_DATA_START__*/{data_json}/*__EMBEDDED_DATA_END__*/'
+          # 用 lambda 避免 re.sub 把 replacement string 內的 \n / \t 當 escape 處理
+          new = pattern.sub(lambda _m: replacement, html)
           if new != html:
               html_path.write_text(new, encoding='utf-8')
               print('embedded data.json into index.html')
