@@ -549,10 +549,10 @@ let DATA = null;
 // 內嵌靜態快照 (run.py 啟動時會替換 __EMBEDDED_DATA__ 區段為 data.json 內容)
 const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
   "_meta": {
-    "generated_at": "2026-06-10 01:10:20",
-    "note": "靜態快照。執行 update_data.py 重新抓取最新數據。所有日期標 '(估)' 者為基於歷年同期推估,實際以公司 IR 公告為準。",
-    "generated_iso": "2026-06-10T01:10:20",
-    "version": "0.1.13",
+    "generated_at": "2026-06-13",
+    "note": "從 index.html EMBEDDED_DATA 同步。執行 update_data.py 重新抓取最新數據。",
+    "generated_iso": "2026-06-13T06:04:28.088Z",
+    "version": "0.1.14",
     "sources_updated": [
       "yfinance"
     ]
@@ -573,6 +573,23 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         "eps": "$3.24",
         "revenue": "$29.44B",
         "yoy_rev": "+85%"
+      }
+    },
+    {
+      "date": "2026-06-04 (估)",
+      "ticker": "MRVL",
+      "company": "Marvell",
+      "fiscal": "FQ1 27",
+      "time": "AMC",
+      "note": "客製化 AI 晶片(AWS Trainium)、光通訊 DSP",
+      "hist_move": "±9%",
+      "bias": "up",
+      "consensus": {
+        "price_target": "$233 (n=41) [$110-$321]",
+        "rating": "Strong Buy",
+        "eps": "$0.93",
+        "revenue": "$2.70B",
+        "yoy_rev": "+35%"
       }
     },
     {
@@ -632,38 +649,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
-      "date": "2026-06-26",
-      "ticker": "NKE",
-      "company": "Nike",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "非科技但 SPX 權重股,中國市場 + 通路改革",
-      "hist_move": "±7%",
-      "bias": "down",
-      "consensus": {
-        "price_target": "$60 (n=33) [$23-$120]",
-        "rating": "Buy",
-        "eps": "$0.12",
-        "revenue": "$10.85B",
-        "yoy_rev": "-2%"
-      }
-    },
-    {
-      "date": "2026-06-04 (估)",
-      "ticker": "MRVL",
-      "company": "Marvell",
-      "fiscal": "FQ1 27",
-      "time": "AMC",
-      "note": "客製化 AI 晶片(AWS Trainium)、光通訊 DSP",
-      "hist_move": "±9%",
-      "bias": "up",
-      "consensus": {
-        "price_target": "$233 (n=41) [$110-$321]",
-        "rating": "Strong Buy",
-        "eps": "$0.93",
-        "revenue": "$2.70B",
-        "yoy_rev": "+35%"
-      }
+      "date": "2026-06-24",
+      "ticker": "MU",
+      "company": "MU",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-06-25 (估)",
@@ -681,9 +674,36 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         "revenue": "$1.91B",
         "yoy_rev": "+15%"
       }
+    },
+    {
+      "date": "2026-06-26",
+      "ticker": "NKE",
+      "company": "Nike",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "非科技但 SPX 權重股,中國市場 + 通路改革",
+      "hist_move": "±7%",
+      "bias": "down",
+      "consensus": {
+        "price_target": "$60 (n=33) [$23-$120]",
+        "rating": "Buy",
+        "eps": "$0.12",
+        "revenue": "$10.85B",
+        "yoy_rev": "-2%"
+      }
     }
   ],
   "h2_2026_earnings": [
+    {
+      "date": "2026-07-15",
+      "ticker": "ASML",
+      "company": "ASML",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
     {
       "date": "2026-07-16",
       "ticker": "TSM",
@@ -717,6 +737,16 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         "revenue": "$12.58B",
         "yoy_rev": "+14%"
       }
+    },
+    {
+      "date": "2026-07-16",
+      "ticker": "2330.TW",
+      "company": "2330.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-07-21",
@@ -770,6 +800,26 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
+      "date": "2026-07-23",
+      "ticker": "INTC",
+      "company": "INTC",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-23",
+      "ticker": "NOK",
+      "company": "NOK",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
       "date": "2026-07-23 (估)",
       "ticker": "SK Hynix",
       "company": "SK Hynix",
@@ -780,6 +830,16 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "bias": "up"
     },
     {
+      "date": "2026-07-27",
+      "ticker": "3189.TW",
+      "company": "3189.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
       "date": "2026-07-27 (估)",
       "ticker": "005930.KS",
       "company": "Samsung Electronics",
@@ -787,6 +847,26 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "time": "韓股盤後",
       "note": "HBM 良率追趕進度、Foundry 業務虧損",
       "hist_move": "±4%",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-28",
+      "ticker": "3037.TW",
+      "company": "3037.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-28",
+      "ticker": "5347.TWO",
+      "company": "5347.TWO",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
       "bias": "neutral"
     },
     {
@@ -822,6 +902,96 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         "revenue": "$87.66B",
         "yoy_rev": "+15%"
       }
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "QCOM",
+      "company": "QCOM",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "2454.TW",
+      "company": "2454.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "2308.TW",
+      "company": "2308.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "2303.TW",
+      "company": "2303.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "ARM",
+      "company": "ARM",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "FORM",
+      "company": "FORM",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "LRCX",
+      "company": "LRCX",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "TER",
+      "company": "TER",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-29",
+      "ticker": "2492.TW",
+      "company": "2492.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-07-30",
@@ -875,6 +1045,116 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
+      "date": "2026-07-30",
+      "ticker": "3711.TW",
+      "company": "3711.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "NET",
+      "company": "NET",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "KLAC",
+      "company": "KLAC",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "6981.T",
+      "company": "6981.T",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "6762.T",
+      "company": "6762.T",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-03",
+      "ticker": "PLTR",
+      "company": "PLTR",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-03",
+      "ticker": "NVTS",
+      "company": "NVTS",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "AMD",
+      "company": "AMD",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "2412.TW",
+      "company": "2412.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "SMCI",
+      "company": "SMCI",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "ACLS",
+      "company": "ACLS",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
       "date": "2026-08-04 (估)",
       "ticker": "PLTR",
       "company": "Palantir",
@@ -926,6 +1206,26 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
+      "date": "2026-08-05",
+      "ticker": "FTNT",
+      "company": "FTNT",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-05",
+      "ticker": "6976.T",
+      "company": "6976.T",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
       "date": "2026-08-05 (估)",
       "ticker": "LITE",
       "company": "Lumentum",
@@ -943,122 +1243,44 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
-      "date": "2026-08-12 (估)",
-      "ticker": "COHR",
-      "company": "Coherent",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "VCSEL、矽光、800G/1.6T 收發器;與 LITE 同為光通訊核心",
-      "hist_move": "±10%",
-      "bias": "up",
-      "consensus": {
-        "price_target": "$381 (n=21) [$230-$462]",
-        "rating": "None",
-        "eps": "$1.62",
-        "revenue": "$1.98B",
-        "yoy_rev": "+29%"
-      }
-    },
-    {
-      "date": "2026-08-26 (估)",
-      "ticker": "NVDA",
-      "company": "NVIDIA ★",
-      "fiscal": "FQ2 27",
-      "time": "AMC",
-      "note": "全市場最重要單一財報。Data Center >$40B?、Blackwell 出貨、毛利率 >72%",
-      "hist_move": "±8~10%",
-      "bias": "up",
-      "consensus": {
-        "eps": "$1.65",
-        "revenue": "$56B",
-        "yoy_rev": "+45%",
-        "datacenter_rev": "$45B (預期)",
-        "gross_margin": "73%",
-        "price_target": "$220 (62 analysts)",
-        "rating": "Strong Buy",
-        "iv": "~70% (財報前 IV)"
-      }
-    },
-    {
-      "date": "2026-08-28 (估)",
-      "ticker": "MRVL",
-      "company": "Marvell",
-      "fiscal": "FQ2 27",
-      "time": "AMC",
-      "note": "AWS Trainium ASIC、光通訊 DSP",
-      "hist_move": "±9%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-09-10 (估)",
-      "ticker": "AVGO",
-      "company": "Broadcom",
-      "fiscal": "FQ3 26",
-      "time": "AMC",
-      "note": "ASIC + VMware 整合",
-      "hist_move": "±6%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-09-24 (估)",
-      "ticker": "MU",
-      "company": "Micron",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "HBM4 良率、價格",
-      "hist_move": "±10%",
+      "date": "2026-08-06",
+      "ticker": "NBIS",
+      "company": "NBIS",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
       "bias": "neutral"
     },
     {
-      "date": "2026-08-26 (估)",
-      "ticker": "CRWD",
-      "company": "CrowdStrike",
-      "fiscal": "FQ2 27",
-      "time": "AMC",
-      "note": "ARR 成長、NRR、Falcon Flex 採用率;2024/7 大當機後續觀察",
-      "hist_move": "±12%",
-      "bias": "up",
-      "consensus": {
-        "price_target": "$707 (n=51) [$413-$850]",
-        "rating": "Buy",
-        "eps": "$1.17",
-        "revenue": "$1.44B",
-        "yoy_rev": "+23%"
-      }
+      "date": "2026-08-06",
+      "ticker": "CIFR",
+      "company": "CIFR",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
-      "date": "2026-08-19 (估)",
-      "ticker": "PANW",
-      "company": "Palo Alto Networks",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "RPO、Platformization 成績,Next-Gen Security ARR",
-      "hist_move": "±10%",
-      "bias": "neutral",
-      "consensus": {
-        "price_target": "$307 (n=50) [$162-$375]",
-        "rating": "Buy",
-        "eps": "$0.98",
-        "revenue": "$3.35B",
-        "yoy_rev": "+32%"
-      }
+      "date": "2026-08-06",
+      "ticker": "GSAT",
+      "company": "GSAT",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
-      "date": "2026-09-02 (估)",
-      "ticker": "ZS",
-      "company": "Zscaler",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "Billings、Large customer adds",
-      "hist_move": "±14%",
-      "bias": "neutral",
-      "consensus": {
-        "price_target": "$194 (n=45) [$145-$250]",
-        "rating": "Buy",
-        "eps": "$1.09",
-        "revenue": "$878M",
-        "yoy_rev": "+22%"
-      }
+      "date": "2026-08-06",
+      "ticker": "RKLB",
+      "company": "RKLB",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-08-06 (估)",
@@ -1078,37 +1300,90 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       }
     },
     {
-      "date": "2026-11-05 (估)",
-      "ticker": "NET",
-      "company": "Cloudflare",
-      "fiscal": "Q3 26",
-      "time": "AMC",
-      "note": "Workers AI 採用、大客戶比重 (>$100K)",
-      "hist_move": "±18%",
-      "bias": "up",
-      "consensus": {
-        "price_target": "$236 (n=31) [$135-$305]",
-        "rating": "Buy",
-        "eps": "$0.27",
-        "revenue": "$666M",
-        "yoy_rev": "+30%"
-      }
+      "date": "2026-08-07",
+      "ticker": "6669.TW",
+      "company": "6669.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
-      "date": "2026-08-27 (估)",
-      "ticker": "OKTA",
-      "company": "Okta",
-      "fiscal": "FQ2 27",
+      "date": "2026-08-10",
+      "ticker": "ASTS",
+      "company": "ASTS",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "POET",
+      "company": "POET",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-11 (估)",
+      "ticker": "3017.TW",
+      "company": "奇鋐 Auras",
+      "fiscal": "Q2 26 法說",
+      "time": "台股盤後",
+      "note": "AI 液冷 + 散熱模組龍頭,GB200/300 直接受惠",
+      "hist_move": "±10%",
+      "bias": "up"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "LITE",
+      "company": "LITE",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "2382.TW",
+      "company": "2382.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-12",
+      "ticker": "4938.TW",
+      "company": "4938.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-12 (估)",
+      "ticker": "COHR",
+      "company": "Coherent",
+      "fiscal": "FQ4 26",
       "time": "AMC",
-      "note": "RPO 復甦、cRPO、Auth0 整合",
-      "hist_move": "±15%",
-      "bias": "neutral",
+      "note": "VCSEL、矽光、800G/1.6T 收發器;與 LITE 同為光通訊核心",
+      "hist_move": "±10%",
+      "bias": "up",
       "consensus": {
-        "price_target": "$119 (n=43) [$75-$141]",
-        "rating": "Buy",
-        "eps": "$0.96",
-        "revenue": "$793M",
-        "yoy_rev": "+9%"
+        "price_target": "$381 (n=21) [$230-$462]",
+        "rating": "None",
+        "eps": "$1.62",
+        "revenue": "$1.98B",
+        "yoy_rev": "+29%"
       }
     },
     {
@@ -1122,55 +1397,44 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "bias": "up"
     },
     {
-      "date": "2026-08-27 (估)",
-      "ticker": "DELL",
-      "company": "Dell Technologies",
-      "fiscal": "FQ2 27",
-      "time": "AMC",
-      "note": "AI server (ISG) 出貨、訂單能見度;NVDA 鏈最直接美系受惠股",
-      "hist_move": "±8%",
-      "bias": "up",
-      "consensus": {
-        "price_target": "$484 (n=23) [$213-$700]",
-        "rating": "Buy",
-        "eps": "$4.88",
-        "revenue": "$44.38B",
-        "yoy_rev": "+49%"
-      }
+      "date": "2026-08-12 (估)",
+      "ticker": "2376.TW",
+      "company": "技嘉 Gigabyte",
+      "fiscal": "Q2 26 法說",
+      "time": "台股盤後",
+      "note": "GPU 板卡 + AI server (B100/H200),Tier-2 客戶",
+      "hist_move": "±7%",
+      "bias": "neutral"
     },
     {
-      "date": "2026-08-19 (估)",
-      "ticker": "SMCI",
-      "company": "Super Micro",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "GB200 出貨、毛利率復原;2024 做空陰影持續觀察",
-      "hist_move": "±15%",
-      "bias": "neutral",
-      "consensus": {
-        "price_target": "$38 (n=16) [$15-$58]",
-        "rating": "Hold",
-        "eps": "$0.71",
-        "revenue": "$11.73B",
-        "yoy_rev": "+104%"
-      }
+      "date": "2026-08-13",
+      "ticker": "2317.TW",
+      "company": "2317.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
-      "date": "2026-09-03 (估)",
-      "ticker": "HPE",
-      "company": "HP Enterprise",
-      "fiscal": "FQ4 26",
-      "time": "AMC",
-      "note": "Juniper 整合進度、AI server 訂單追趕 DELL",
-      "hist_move": "±6%",
-      "bias": "neutral",
-      "consensus": {
-        "price_target": "$61 (n=20) [$23-$80]",
-        "rating": "Buy",
-        "eps": "$0.92",
-        "revenue": "$11.91B",
-        "yoy_rev": "+30%"
-      }
+      "date": "2026-08-13",
+      "ticker": "2376.TW",
+      "company": "2376.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "AMAT",
+      "company": "AMAT",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-08-13 (估)",
@@ -1213,24 +1477,310 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "bias": "neutral"
     },
     {
-      "date": "2026-08-12 (估)",
-      "ticker": "2376.TW",
-      "company": "技嘉 Gigabyte",
-      "fiscal": "Q2 26 法說",
-      "time": "台股盤後",
-      "note": "GPU 板卡 + AI server (B100/H200),Tier-2 客戶",
-      "hist_move": "±7%",
+      "date": "2026-08-18",
+      "ticker": "PANW",
+      "company": "PANW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
       "bias": "neutral"
     },
     {
-      "date": "2026-08-11 (估)",
-      "ticker": "3017.TW",
-      "company": "奇鋐 Auras",
-      "fiscal": "Q2 26 法說",
-      "time": "台股盤後",
-      "note": "AI 液冷 + 散熱模組龍頭,GB200/300 直接受惠",
+      "date": "2026-08-19 (估)",
+      "ticker": "PANW",
+      "company": "Palo Alto Networks",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "RPO、Platformization 成績,Next-Gen Security ARR",
       "hist_move": "±10%",
+      "bias": "neutral",
+      "consensus": {
+        "price_target": "$307 (n=50) [$162-$375]",
+        "rating": "Buy",
+        "eps": "$0.98",
+        "revenue": "$3.35B",
+        "yoy_rev": "+32%"
+      }
+    },
+    {
+      "date": "2026-08-19 (估)",
+      "ticker": "SMCI",
+      "company": "Super Micro",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "GB200 出貨、毛利率復原;2024 做空陰影持續觀察",
+      "hist_move": "±15%",
+      "bias": "neutral",
+      "consensus": {
+        "price_target": "$38 (n=16) [$15-$58]",
+        "rating": "Hold",
+        "eps": "$0.71",
+        "revenue": "$11.73B",
+        "yoy_rev": "+104%"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "2881.TW",
+      "company": "2881.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-21",
+      "ticker": "2891.TW",
+      "company": "2891.TW",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-24",
+      "ticker": "SNDK",
+      "company": "SNDK",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-25",
+      "ticker": "OKTA",
+      "company": "OKTA",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-26 (估)",
+      "ticker": "NVDA",
+      "company": "NVIDIA ★",
+      "fiscal": "FQ2 27",
+      "time": "AMC",
+      "note": "全市場最重要單一財報。Data Center >$40B?、Blackwell 出貨、毛利率 >72%",
+      "hist_move": "±8~10%",
+      "bias": "up",
+      "consensus": {
+        "eps": "$1.65",
+        "revenue": "$56B",
+        "yoy_rev": "+45%",
+        "datacenter_rev": "$45B (預期)",
+        "gross_margin": "73%",
+        "price_target": "$220 (62 analysts)",
+        "rating": "Strong Buy",
+        "iv": "~70% (財報前 IV)"
+      }
+    },
+    {
+      "date": "2026-08-26 (估)",
+      "ticker": "CRWD",
+      "company": "CrowdStrike",
+      "fiscal": "FQ2 27",
+      "time": "AMC",
+      "note": "ARR 成長、NRR、Falcon Flex 採用率;2024/7 大當機後續觀察",
+      "hist_move": "±12%",
+      "bias": "up",
+      "consensus": {
+        "price_target": "$707 (n=51) [$413-$850]",
+        "rating": "Buy",
+        "eps": "$1.17",
+        "revenue": "$1.44B",
+        "yoy_rev": "+23%"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "MRVL",
+      "company": "MRVL",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "S",
+      "company": "S",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-27",
+      "ticker": "IREN",
+      "company": "IREN",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-27 (估)",
+      "ticker": "OKTA",
+      "company": "Okta",
+      "fiscal": "FQ2 27",
+      "time": "AMC",
+      "note": "RPO 復甦、cRPO、Auth0 整合",
+      "hist_move": "±15%",
+      "bias": "neutral",
+      "consensus": {
+        "price_target": "$119 (n=43) [$75-$141]",
+        "rating": "Buy",
+        "eps": "$0.96",
+        "revenue": "$793M",
+        "yoy_rev": "+9%"
+      }
+    },
+    {
+      "date": "2026-08-27 (估)",
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "fiscal": "FQ2 27",
+      "time": "AMC",
+      "note": "AI server (ISG) 出貨、訂單能見度;NVDA 鏈最直接美系受惠股",
+      "hist_move": "±8%",
+      "bias": "up",
+      "consensus": {
+        "price_target": "$484 (n=23) [$213-$700]",
+        "rating": "Buy",
+        "eps": "$4.88",
+        "revenue": "$44.38B",
+        "yoy_rev": "+49%"
+      }
+    },
+    {
+      "date": "2026-08-28 (估)",
+      "ticker": "MRVL",
+      "company": "Marvell",
+      "fiscal": "FQ2 27",
+      "time": "AMC",
+      "note": "AWS Trainium ASIC、光通訊 DSP",
+      "hist_move": "±9%",
       "bias": "up"
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "CRWD",
+      "company": "CRWD",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-09-02 (估)",
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "Billings、Large customer adds",
+      "hist_move": "±14%",
+      "bias": "neutral",
+      "consensus": {
+        "price_target": "$194 (n=45) [$145-$250]",
+        "rating": "Buy",
+        "eps": "$1.09",
+        "revenue": "$878M",
+        "yoy_rev": "+22%"
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "AVGO",
+      "company": "AVGO",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "DELL",
+      "company": "DELL",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-09-03 (估)",
+      "ticker": "HPE",
+      "company": "HP Enterprise",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "Juniper 整合進度、AI server 訂單追趕 DELL",
+      "hist_move": "±6%",
+      "bias": "neutral",
+      "consensus": {
+        "price_target": "$61 (n=20) [$23-$80]",
+        "rating": "Buy",
+        "eps": "$0.92",
+        "revenue": "$11.91B",
+        "yoy_rev": "+30%"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "ORCL",
+      "company": "ORCL",
+      "fiscal": "TBD",
+      "time": "?",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-09-10 (估)",
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "fiscal": "FQ3 26",
+      "time": "AMC",
+      "note": "ASIC + VMware 整合",
+      "hist_move": "±6%",
+      "bias": "up"
+    },
+    {
+      "date": "2026-09-24 (估)",
+      "ticker": "MU",
+      "company": "Micron",
+      "fiscal": "FQ4 26",
+      "time": "AMC",
+      "note": "HBM4 良率、價格",
+      "hist_move": "±10%",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-11-05 (估)",
+      "ticker": "NET",
+      "company": "Cloudflare",
+      "fiscal": "Q3 26",
+      "time": "AMC",
+      "note": "Workers AI 採用、大客戶比重 (>$100K)",
+      "hist_move": "±18%",
+      "bias": "up",
+      "consensus": {
+        "price_target": "$236 (n=31) [$135-$305]",
+        "rating": "Buy",
+        "eps": "$0.27",
+        "revenue": "$666M",
+        "yoy_rev": "+30%"
+      }
     }
   ],
   "ipos": [
@@ -1312,49 +1862,57 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "QQQ",
       "name": "Invesco QQQ Trust",
       "type": "ETF",
-      "pe": "~31",
-      "fwd_pe": "~28",
-      "price": "$695.09",
-      "div": "0.4%",
+      "pe": "~32",
+      "fwd_pe": "—",
+      "price": "$721.34",
+      "div": "38.0%",
       "note": "追蹤 Nasdaq-100",
       "shares": "393M",
-      "mcap": "$494.0B"
+      "mcap": "$494.0B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "SMH",
       "name": "VanEck Semiconductor",
       "type": "ETF",
-      "pe": "~38",
-      "fwd_pe": "~28",
-      "price": "$569.02",
-      "div": "0.2%",
+      "pe": "~42",
+      "fwd_pe": "—",
+      "price": "$619.96",
+      "div": "18.0%",
       "note": "費城半導體 ETF,NVDA 權重高",
       "shares": "12M",
-      "mcap": "$67.8B"
+      "mcap": "$67.8B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "SOXX",
       "name": "iShares Semiconductor",
       "type": "ETF",
-      "pe": "~38",
-      "fwd_pe": "~26",
-      "price": "$538.09",
-      "div": "0.3%",
+      "pe": "~43",
+      "fwd_pe": "—",
+      "price": "$596.25",
+      "div": "29.0%",
       "note": "ICE Semi Index",
       "shares": "8M",
-      "mcap": "$38.4B"
+      "mcap": "$38.4B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "EWY",
       "name": "iShares MSCI South Korea",
       "type": "ETF",
-      "pe": "~18",
-      "fwd_pe": "~10",
-      "price": "$179.69",
-      "div": "1.0%",
+      "pe": "~20",
+      "fwd_pe": "—",
+      "price": "$197.45",
+      "div": "99.0%",
       "note": "三星/海力士 50% 權重,HBM 故事代理",
       "shares": "76M",
-      "mcap": "$24.1B"
+      "mcap": "$24.1B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "IAUM",
@@ -1362,10 +1920,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$42.46",
-      "div": "0.0%",
+      "price": "$41.96",
+      "div": "0%",
       "note": "黃金 ETF (低費率)",
-      "mcap": "$7.2B"
+      "mcap": "$7.2B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "IBIT",
@@ -1373,146 +1933,172 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$34.80",
-      "div": "0.0%",
+      "price": "$36.04",
+      "div": "0%",
       "note": "BTC 現貨 ETF",
-      "mcap": "$58.1B"
+      "mcap": "$58.1B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "VGT",
       "name": "Vanguard Info Tech",
       "type": "ETF",
-      "pe": "~37",
-      "fwd_pe": "~30",
-      "price": "$112.35",
-      "div": "0.3%",
+      "pe": "~39",
+      "fwd_pe": "—",
+      "price": "$116.74",
+      "div": "32.0%",
       "note": "AAPL+MSFT+NVDA 集中度高",
-      "mcap": "$170.1B"
+      "mcap": "$170.1B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "IGV",
       "name": "iShares Expanded Tech-Software",
       "type": "ETF",
       "pe": "~30",
-      "fwd_pe": "~32",
-      "price": "$91.46",
-      "div": "0.0%",
+      "fwd_pe": "—",
+      "price": "$90.70",
+      "div": "0%",
       "note": "純軟體股 ETF",
       "shares": "12M",
-      "mcap": "$16.7B"
+      "mcap": "$16.7B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "CIBR",
       "name": "First Trust Cybersecurity",
       "type": "ETF",
-      "pe": "~31",
-      "fwd_pe": "~30",
-      "price": "$82.72",
-      "div": "0.5%",
+      "pe": "~32",
+      "fwd_pe": "—",
+      "price": "$85.33",
+      "div": "46.0%",
       "note": "資安 ETF 最大 (~$8B AUM),CRWD/PANW/ZS 三大權重",
-      "mcap": "$13.7B"
+      "mcap": "$13.7B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "HACK",
       "name": "Amplify Cybersecurity",
       "type": "ETF",
-      "pe": "~28",
-      "fwd_pe": "~28",
-      "price": "$93.29",
-      "div": "0.1%",
+      "pe": "~29",
+      "fwd_pe": "—",
+      "price": "$96.05",
+      "div": "6.0%",
       "note": "資安 ETF 第二大,權重較分散",
-      "mcap": "$2.5B"
+      "mcap": "$2.5B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "BUG",
       "name": "Global X Cybersecurity",
       "type": "ETF",
       "pe": "~25",
-      "fwd_pe": "~30",
-      "price": "$33.26",
-      "div": "0.0%",
+      "fwd_pe": "—",
+      "price": "$34.11",
+      "div": "3.0%",
       "note": "資安純度高,小型化",
-      "mcap": "$1.2B"
+      "mcap": "$1.2B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "SPY",
       "name": "SPDR S&P 500 ETF",
       "type": "ETF",
-      "pe": "~26",
-      "fwd_pe": "~22",
-      "price": "$728.07",
-      "div": "1.0%",
+      "pe": "~27",
+      "fwd_pe": "—",
+      "price": "$741.75",
+      "div": "98.0%",
       "note": "S&P 500,流動性最高 (期權選擇豐富)",
       "shares": "918M",
-      "mcap": "$783.8B"
+      "mcap": "$783.8B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "VOO",
       "name": "Vanguard S&P 500",
       "type": "ETF",
-      "pe": "~27",
-      "fwd_pe": "~22",
-      "price": "$669.36",
-      "div": "1.0%",
+      "pe": "~28",
+      "fwd_pe": "—",
+      "price": "$681.95",
+      "div": "103.0%",
       "note": "S&P 500",
-      "mcap": "$1.70T"
+      "mcap": "$1.70T",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "VTI",
       "name": "Vanguard Total Stock Market",
       "type": "ETF",
       "pe": "~27",
-      "fwd_pe": "~21",
-      "price": "$359.10",
-      "div": "1.0%",
+      "fwd_pe": "—",
+      "price": "$366.36",
+      "div": "101.0%",
       "note": "全美股市",
       "shares": "743M",
-      "mcap": "$2.31T"
+      "mcap": "$2.31T",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "VT",
       "name": "Vanguard Total World Stock",
       "type": "ETF",
       "pe": "~23",
-      "fwd_pe": "~18",
-      "price": "$152.55",
-      "div": "1.6%",
+      "fwd_pe": "—",
+      "price": "$156.29",
+      "div": "159.0%",
       "note": "全球股市 (美 ~60% + 國際 ~40%)",
-      "mcap": "$95.3B"
+      "mcap": "$95.3B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "0050.TW",
       "name": "元大台灣50",
       "type": "ETF",
       "pe": "~30",
-      "fwd_pe": "~18",
-      "price": "NT$104",
-      "div": "1.3%",
+      "fwd_pe": "—",
+      "price": "$101.95",
+      "div": "131.0%",
       "note": "台股市值前 50 大,台積電權重 ~57%",
-      "mcap": "$62.5B"
+      "mcap": "$62.5B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "0056.TW",
       "name": "元大高股息",
       "type": "ETF",
       "pe": "~20",
-      "fwd_pe": "~14",
-      "price": "NT$51.25",
-      "div": "7.2%",
+      "fwd_pe": "—",
+      "price": "$50.60",
+      "div": "717.0%",
       "note": "台股高股息 ETF,散戶最愛",
-      "mcap": "$21.6B"
+      "mcap": "$21.6B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "XLK",
       "name": "Tech Select Sector SPDR",
       "type": "ETF",
-      "pe": "~35",
-      "fwd_pe": "~30",
-      "price": "$176.20",
-      "div": "0.4%",
+      "pe": "~37",
+      "fwd_pe": "—",
+      "price": "$184.80",
+      "div": "40.0%",
       "note": "S&P 500 科技類股",
       "shares": "272M",
-      "mcap": "$124.5B"
+      "mcap": "$124.5B",
+      "gross_margin": "—",
+      "fcf_ttm": "—"
     },
     {
       "ticker": "VIX",
@@ -1520,7 +2106,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Index",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "~23.0",
+      "price": "~17.7",
       "div": "—",
       "note": "恐慌指數,>20 注意,>30 警戒"
     },
@@ -1530,9 +2116,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~35",
       "fwd_pe": "~30",
-      "price": "$289.91",
-      "div": "0.4%",
-      "gross_margin": "48%",
+      "price": "$291.13",
+      "div": "37.0%",
+      "gross_margin": "47.9%",
       "fcf_ttm": "$101.1B",
       "note": "Services 高毛利,但成長放緩",
       "shares": "14.69B",
@@ -1542,11 +2128,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "MSFT",
       "name": "Microsoft",
       "type": "Stock",
-      "pe": "~24",
-      "fwd_pe": "~21",
-      "price": "$400.50",
-      "div": "0.9%",
-      "gross_margin": "68%",
+      "pe": "~23",
+      "fwd_pe": "~20",
+      "price": "$390.74",
+      "div": "93.0%",
+      "gross_margin": "68.3%",
       "fcf_ttm": "$37.0B",
       "note": "Azure + Copilot 雙引擎",
       "shares": "7.43B",
@@ -1558,9 +2144,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~31",
       "fwd_pe": "~16",
-      "price": "$203.03",
-      "div": "0.5%",
-      "gross_margin": "74%",
+      "price": "$205.19",
+      "div": "49.0%",
+      "gross_margin": "74.1%",
       "fcf_ttm": "$46.3B",
       "note": "Blackwell 出貨高峰,FCF 爆發",
       "shares": "24.22B",
@@ -1570,11 +2156,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "AMZN",
       "name": "Amazon",
       "type": "Stock",
-      "pe": "~31",
-      "fwd_pe": "~25",
-      "price": "$241.84",
+      "pe": "~32",
+      "fwd_pe": "~24",
+      "price": "$238.55",
       "div": "0%",
-      "gross_margin": "51%",
+      "gross_margin": "50.6%",
       "fcf_ttm": "$9.8B",
       "note": "AWS + 廣告 為利潤引擎",
       "shares": "10.76B",
@@ -1586,9 +2172,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~21",
       "fwd_pe": "~16",
-      "price": "$584.38",
-      "div": "0.4%",
-      "gross_margin": "82%",
+      "price": "$566.98",
+      "div": "37.0%",
+      "gross_margin": "81.9%",
       "fcf_ttm": "$25.6B",
       "note": "Reality Labs 虧但廣告現金流穩",
       "shares": "2.20B",
@@ -1598,11 +2184,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "GOOGL",
       "name": "Alphabet",
       "type": "Stock",
-      "pe": "~28",
+      "pe": "~27",
       "fwd_pe": "~25",
-      "price": "$361.47",
-      "div": "0.2%",
-      "gross_margin": "60%",
+      "price": "$359.68",
+      "div": "24.0%",
+      "gross_margin": "60.4%",
       "fcf_ttm": "$27.9B",
       "note": "估值最便宜的 Mag 7",
       "shares": "5.86B",
@@ -1612,11 +2198,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "TSLA",
       "name": "Tesla",
       "type": "Stock",
-      "pe": "~355",
-      "fwd_pe": "~156",
-      "price": "$390.33",
+      "pe": "~369",
+      "fwd_pe": "~163",
+      "price": "$406.43",
       "div": "0%",
-      "gross_margin": "19%",
+      "gross_margin": "19.1%",
       "fcf_ttm": "$5.3B",
       "note": "Robotaxi/FSD 故事溢價",
       "shares": "3.76B",
@@ -1626,11 +2212,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "AVGO",
       "name": "Broadcom",
       "type": "Stock",
-      "pe": "~63",
+      "pe": "~64",
       "fwd_pe": "~20",
-      "price": "$378.27",
-      "div": "0.7%",
-      "gross_margin": "76%",
+      "price": "$382.07",
+      "div": "68.0%",
+      "gross_margin": "76.3%",
       "fcf_ttm": "$27.2B",
       "note": "AI ASIC 第二大故事",
       "shares": "4.73B",
@@ -1641,11 +2227,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "TSMC ADR",
       "type": "Stock",
       "pe": "~36",
-      "fwd_pe": "~21",
-      "price": "$413.92",
-      "div": "0.9%",
-      "gross_margin": "62%",
-      "fcf_ttm": "$22.8B",
+      "fwd_pe": "~22",
+      "price": "$423.93",
+      "div": "90.0%",
+      "gross_margin": "61.9%",
+      "fcf_ttm": "$719.2B",
       "note": "全球先進製程獨佔",
       "shares": "5.19B",
       "mcap": "$2.15T"
@@ -1654,11 +2240,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "AMD",
       "name": "AMD",
       "type": "Stock",
-      "pe": "~152",
-      "fwd_pe": "~35",
-      "price": "$453.00",
+      "pe": "~169",
+      "fwd_pe": "~39",
+      "price": "$511.57",
       "div": "0%",
-      "gross_margin": "53%",
+      "gross_margin": "53.1%",
       "fcf_ttm": "$7.2B",
       "note": "MI 系列 AI 加速器追趕中",
       "shares": "1.63B",
@@ -1668,11 +2254,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "INTC",
       "name": "Intel",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "~67",
-      "price": "$102.83",
+      "pe": "—",
+      "fwd_pe": "~81",
+      "price": "$124.57",
       "div": "0%",
-      "gross_margin": "37%",
+      "gross_margin": "37.2%",
       "fcf_ttm": "$-8.3B",
       "note": "重組故事,Foundry 燒錢",
       "shares": "5.03B",
@@ -1682,11 +2268,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "QCOM",
       "name": "Qualcomm",
       "type": "Stock",
-      "pe": "~21",
-      "fwd_pe": "~19",
-      "price": "$198.57",
-      "div": "1.7%",
-      "gross_margin": "55%",
+      "pe": "~23",
+      "fwd_pe": "~20",
+      "price": "$211.72",
+      "div": "174.0%",
+      "gross_margin": "54.8%",
       "fcf_ttm": "$9.6B",
       "note": "估值便宜但成長題材弱",
       "shares": "1.05B",
@@ -1696,11 +2282,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "MU",
       "name": "Micron",
       "type": "Stock",
-      "pe": "~42",
-      "fwd_pe": "~8",
-      "price": "$886.69",
-      "div": "0.1%",
-      "gross_margin": "58%",
+      "pe": "~46",
+      "fwd_pe": "~9",
+      "price": "$981.61",
+      "div": "6.0%",
+      "gross_margin": "58.4%",
       "fcf_ttm": "$2.9B",
       "note": "HBM 故事,景氣循環",
       "shares": "1.13B",
@@ -1710,11 +2296,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "MRVL",
       "name": "Marvell",
       "type": "Stock",
-      "pe": "~87",
-      "fwd_pe": "~41",
-      "price": "$253.24",
-      "div": "0.1%",
-      "gross_margin": "52%",
+      "pe": "~96",
+      "fwd_pe": "~45",
+      "price": "$279.70",
+      "div": "9.0%",
+      "gross_margin": "51.5%",
       "fcf_ttm": "$2.3B",
       "note": "AWS ASIC 客製",
       "shares": "875M",
@@ -1724,11 +2310,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "PLTR",
       "name": "Palantir",
       "type": "Stock",
-      "pe": "~145",
+      "pe": "~142",
       "fwd_pe": "~62",
-      "price": "$129.38",
+      "price": "$127.99",
       "div": "0%",
-      "gross_margin": "84%",
+      "gross_margin": "84.1%",
       "fcf_ttm": "$1.8B",
       "note": "高估值純 AI 股,波動劇烈",
       "shares": "2.30B",
@@ -1740,9 +2326,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~26",
       "fwd_pe": "~21",
-      "price": "$81.58",
+      "price": "$80.34",
       "div": "0%",
-      "gross_margin": "49%",
+      "gross_margin": "49.0%",
       "fcf_ttm": "$26.0B",
       "note": "廣告層 + 直播驅動",
       "shares": "4.21B",
@@ -1752,12 +2338,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "ORCL",
       "name": "Oracle",
       "type": "Stock",
-      "pe": "~36",
-      "fwd_pe": "~25",
-      "price": "$201.86",
-      "div": "0.9%",
-      "gross_margin": "67%",
-      "fcf_ttm": "$-22.3B",
+      "pe": "~32",
+      "fwd_pe": "~17",
+      "price": "$184.13",
+      "div": "109.0%",
+      "gross_margin": "65.8%",
+      "fcf_ttm": "$-20.3B",
       "note": "OCI 雲端 + AI infra,Stargate 受惠股",
       "shares": "2.88B",
       "mcap": "$580.6B"
@@ -1766,11 +2352,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "COHR",
       "name": "Coherent",
       "type": "Stock",
-      "pe": "~167",
-      "fwd_pe": "~43",
-      "price": "$348.91",
+      "pe": "~182",
+      "fwd_pe": "~47",
+      "price": "$385.03",
       "div": "0%",
-      "gross_margin": "37%",
+      "gross_margin": "37.0%",
       "fcf_ttm": "$-198M",
       "note": "光通訊核心,800G/1.6T",
       "shares": "196M",
@@ -1780,11 +2366,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "LITE",
       "name": "Lumentum",
       "type": "Stock",
-      "pe": "~142",
-      "fwd_pe": "~44",
-      "price": "$804.03",
+      "pe": "~161",
+      "fwd_pe": "~51",
+      "price": "$921.56",
       "div": "0%",
-      "gross_margin": "41%",
+      "gross_margin": "40.8%",
       "fcf_ttm": "$93M",
       "note": "DC 光通訊 EML 領導",
       "shares": "78M",
@@ -1794,12 +2380,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "005930.KS",
       "name": "Samsung Electronics",
       "type": "Stock",
-      "pe": "~14",
+      "pe": "—",
       "fwd_pe": "~6",
-      "price": "₩322,000",
-      "div": "0.5%",
-      "gross_margin": "48%",
-      "fcf_ttm": "$44.2B",
+      "price": "₩322,500",
+      "div": "46.0%",
+      "gross_margin": "47.7%",
+      "fcf_ttm": "$67568.2B",
       "note": "HBM 追趕,Foundry 虧損",
       "shares": "5.76B",
       "mcap": "$1.38T"
@@ -1808,12 +2394,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "000660.KS",
       "name": "SK Hynix",
       "type": "Stock",
-      "pe": "~8",
-      "fwd_pe": "~6",
-      "price": "₩2,215,000",
-      "div": "0.2%",
-      "gross_margin": "68%",
-      "fcf_ttm": "$16.9B",
+      "pe": "—",
+      "fwd_pe": "~5",
+      "price": "₩2,150,000",
+      "div": "14.0%",
+      "gross_margin": "68.3%",
+      "fcf_ttm": "$25809.1B",
       "note": "HBM3E 領導者,NVDA 主供",
       "shares": "710M",
       "mcap": "$1.03T"
@@ -1824,10 +2410,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~31",
       "fwd_pe": "~19",
-      "price": "NT$2,305",
-      "div": "1.1%",
-      "gross_margin": "62%",
-      "fcf_ttm": "$22.8B",
+      "price": "$2,310",
+      "div": "104.0%",
+      "gross_margin": "61.9%",
+      "fcf_ttm": "$719.2B",
       "note": "權重 #1 (~57%),先進製程獨佔。0050 與大盤主引擎",
       "shares": "25.93B",
       "mcap": "$1.89T"
@@ -1836,12 +2422,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2317.TW",
       "name": "鴻海 Foxconn",
       "type": "Stock",
-      "pe": "~21",
-      "fwd_pe": "~13",
-      "price": "NT$278",
-      "div": "2.7%",
-      "gross_margin": "6%",
-      "fcf_ttm": "$1.2B",
+      "pe": "~19",
+      "fwd_pe": "~12",
+      "price": "$260.50",
+      "div": "275.0%",
+      "gross_margin": "6.2%",
+      "fcf_ttm": "$37.2B",
       "note": "權重 #2,AI 伺服器代工 (NVDA GB200) 受惠",
       "shares": "14.00B",
       "mcap": "$123.0B"
@@ -1850,12 +2436,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2454.TW",
       "name": "聯發科 MediaTek",
       "type": "Stock",
-      "pe": "~68",
-      "fwd_pe": "~37",
-      "price": "NT$4,475",
-      "div": "1.3%",
-      "gross_margin": "47%",
-      "fcf_ttm": "$2.3B",
+      "pe": "~63",
+      "fwd_pe": "~35",
+      "price": "$4,180",
+      "div": "128.0%",
+      "gross_margin": "47.0%",
+      "fcf_ttm": "$73.6B",
       "note": "權重 #3,手機晶片 + AI ASIC 客製化",
       "shares": "1.60B",
       "mcap": "$226.0B"
@@ -1866,10 +2452,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~20",
       "fwd_pe": "~13",
-      "price": "NT$375",
-      "div": "3.5%",
-      "gross_margin": "6%",
-      "fcf_ttm": "$-3.1B",
+      "price": "$372.00",
+      "div": "349.0%",
+      "gross_margin": "6.1%",
+      "fcf_ttm": "$-98.2B",
       "note": "權重 #4,AI 伺服器 ODM 龍頭,Meta/Google 客戶",
       "shares": "3.85B",
       "mcap": "$45.7B"
@@ -1878,12 +2464,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2308.TW",
       "name": "台達電 Delta",
       "type": "Stock",
-      "pe": "~105",
-      "fwd_pe": "~37",
-      "price": "NT$2,415",
-      "div": "0.5%",
-      "gross_margin": "35%",
-      "fcf_ttm": "$1.0B",
+      "pe": "~96",
+      "fwd_pe": "~34",
+      "price": "$2,215",
+      "div": "52.0%",
+      "gross_margin": "35.5%",
+      "fcf_ttm": "$32.5B",
       "note": "權重 #5,電源管理 + AI 散熱 + 液冷",
       "shares": "2.60B",
       "mcap": "$198.5B"
@@ -1894,10 +2480,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~17",
       "fwd_pe": "~15",
-      "price": "NT$69.20",
-      "div": "3.5%",
-      "gross_margin": "69%",
-      "fcf_ttm": "$6.8B",
+      "price": "$67.60",
+      "div": "340.0%",
+      "gross_margin": "69.2%",
+      "fcf_ttm": "$213.4B",
       "note": "權重 #6,金融類 No.1",
       "shares": "19.68B",
       "mcap": "$43.1B"
@@ -1906,12 +2492,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2412.TW",
       "name": "中華電信",
       "type": "Stock",
-      "pe": "~28",
-      "fwd_pe": "~26",
-      "price": "NT$142",
-      "div": "3.6%",
-      "gross_margin": "37%",
-      "fcf_ttm": "$1.4B",
+      "pe": "~29",
+      "fwd_pe": "~27",
+      "price": "$145.00",
+      "div": "359.0%",
+      "gross_margin": "36.7%",
+      "fcf_ttm": "$42.7B",
       "note": "權重 #7,定存替代,股價最穩",
       "shares": "7.76B",
       "mcap": "$34.9B"
@@ -1922,10 +2508,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~15",
       "fwd_pe": "~12",
-      "price": "NT$125",
-      "div": "3.6%",
-      "gross_margin": "49%",
-      "fcf_ttm": "$36.8B",
+      "price": "$122.00",
+      "div": "340.0%",
+      "gross_margin": "49.5%",
+      "fcf_ttm": "$1164.4B",
       "note": "權重 #8,壽險為主",
       "shares": "13.67B",
       "mcap": "$54.1B"
@@ -1934,12 +2520,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3711.TW",
       "name": "日月光投控 ASE",
       "type": "Stock",
-      "pe": "~56",
-      "fwd_pe": "~24",
-      "price": "NT$569",
-      "div": "1.0%",
-      "gross_margin": "19%",
-      "fcf_ttm": "$-2.1B",
+      "pe": "~58",
+      "fwd_pe": "~25",
+      "price": "$590.00",
+      "div": "112.0%",
+      "gross_margin": "18.5%",
+      "fcf_ttm": "$-66.1B",
       "note": "權重 #9,封測龍頭,CoWoS 受惠股",
       "shares": "4.39B",
       "mcap": "$79.0B"
@@ -1948,12 +2534,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2303.TW",
       "name": "聯電 UMC",
       "type": "Stock",
-      "pe": "~32",
-      "fwd_pe": "~24",
-      "price": "NT$128",
-      "div": "2.4%",
-      "gross_margin": "30%",
-      "fcf_ttm": "$1.1B",
+      "pe": "~34",
+      "fwd_pe": "~25",
+      "price": "$133.50",
+      "div": "213.0%",
+      "gross_margin": "29.6%",
+      "fcf_ttm": "$34.4B",
       "note": "權重 #10,成熟製程 (28nm/14nm)",
       "shares": "12.55B",
       "mcap": "$50.6B"
@@ -1962,11 +2548,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "type": "Stock",
-      "pe": "~110",
-      "fwd_pe": "~101",
-      "price": "$629.36",
+      "pe": "—",
+      "fwd_pe": "~109",
+      "price": "$682.80",
       "div": "0%",
-      "gross_margin": "75%",
+      "gross_margin": "75.1%",
       "fcf_ttm": "$1.9B",
       "note": "資安龍頭 (EDR + Falcon),2024/7 全球大當機後仍強勢復原",
       "shares": "255M",
@@ -1976,11 +2562,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "type": "Stock",
-      "pe": "~222",
-      "fwd_pe": "~62",
-      "price": "$254.82",
+      "pe": "~243",
+      "fwd_pe": "~68",
+      "price": "$279.62",
       "div": "0%",
-      "gross_margin": "72%",
+      "gross_margin": "72.0%",
       "fcf_ttm": "$3.6B",
       "note": "資安市值最大 (~$150B),Platformization 策略",
       "shares": "815M",
@@ -1991,10 +2577,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Zscaler",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~27",
-      "price": "$122.59",
+      "fwd_pe": "~28",
+      "price": "$129.52",
       "div": "0%",
-      "gross_margin": "77%",
+      "gross_margin": "76.7%",
       "fcf_ttm": "$1.1B",
       "note": "雲端 SASE / ZTNA 龍頭",
       "shares": "162M",
@@ -2005,10 +2591,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Cloudflare",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~154",
-      "price": "$234.26",
+      "fwd_pe": "~145",
+      "price": "$228.48",
       "div": "0%",
-      "gross_margin": "73%",
+      "gross_margin": "73.3%",
       "fcf_ttm": "$755M",
       "note": "邊緣運算 + 資安 + Workers AI,高估值高成長",
       "shares": "320M",
@@ -2020,9 +2606,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~30",
-      "price": "$14.97",
+      "price": "$14.85",
       "div": "0%",
-      "gross_margin": "73%",
+      "gross_margin": "73.2%",
       "fcf_ttm": "$268M",
       "note": "EDR 第二,CRWD 競爭者;2024 CRWD 大當機後分到客戶",
       "shares": "337M",
@@ -2032,11 +2618,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "FTNT",
       "name": "Fortinet",
       "type": "Stock",
-      "pe": "~52",
-      "fwd_pe": "~39",
-      "price": "$134.80",
+      "pe": "~57",
+      "fwd_pe": "~43",
+      "price": "$146.30",
       "div": "0%",
-      "gross_margin": "80%",
+      "gross_margin": "80.3%",
       "fcf_ttm": "$1.8B",
       "note": "防火牆 + SD-WAN,FCF 最強的資安股",
       "shares": "733M",
@@ -2046,11 +2632,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "OKTA",
       "name": "Okta",
       "type": "Stock",
-      "pe": "~85",
-      "fwd_pe": "~28",
-      "price": "$117.90",
+      "pe": "~84",
+      "fwd_pe": "~27",
+      "price": "$116.29",
       "div": "0%",
-      "gross_margin": "77%",
+      "gross_margin": "77.4%",
       "fcf_ttm": "$978M",
       "note": "身分驗證 (IAM),2022 被駭事件陰影未散",
       "shares": "166M",
@@ -2061,23 +2647,23 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "CyberArk",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~80",
-      "price": "$385 (估)",
+      "fwd_pe": "—",
+      "price": "—",
       "div": "0%",
-      "gross_margin": "82%",
-      "fcf_ttm": "$0.3B",
+      "gross_margin": "—",
+      "fcf_ttm": "—",
       "note": "特權帳號管理 (PAM) 利基龍頭"
     },
     {
       "ticker": "DELL",
       "name": "Dell Technologies",
       "type": "Stock",
-      "pe": "~29",
-      "fwd_pe": "~17",
-      "price": "$365.20",
-      "div": "0.6%",
-      "gross_margin": "19%",
-      "fcf_ttm": "$-128M",
+      "pe": "~32",
+      "fwd_pe": "~19",
+      "price": "$395.57",
+      "div": "64.0%",
+      "gross_margin": "19.2%",
+      "fcf_ttm": "$5.4B",
       "note": "ODM/OEM 美系龍頭,AI server (ISG) 占營收 ~40%,Tier-1 客戶含 xAI/Meta",
       "shares": "325M",
       "mcap": "$237.2B"
@@ -2086,11 +2672,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "HPE",
       "name": "Hewlett Packard Enterprise",
       "type": "Stock",
-      "pe": "~43",
+      "pe": "~45",
       "fwd_pe": "~12",
-      "price": "$46.49",
-      "div": "1.1%",
-      "gross_margin": "34%",
+      "price": "$48.17",
+      "div": "118.0%",
+      "gross_margin": "33.8%",
       "fcf_ttm": "$3.8B",
       "note": "企業 server + Juniper 整合後資料中心方案,AI server 落後 DELL",
       "shares": "1.32B",
@@ -2100,11 +2686,11 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "SMCI",
       "name": "Super Micro Computer",
       "type": "Stock",
-      "pe": "~21",
-      "fwd_pe": "~12",
-      "price": "$39.29",
+      "pe": "~16",
+      "fwd_pe": "~10",
+      "price": "$30.46",
       "div": "0%",
-      "gross_margin": "8%",
+      "gross_margin": "8.4%",
       "fcf_ttm": "$-7.4B",
       "note": "AI server 直接 NVDA 受惠股,2024 Hindenburg 做空 + 延遲 10-K 後復原中",
       "shares": "601M",
@@ -2114,12 +2700,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3231.TW",
       "name": "緯創 Wistron",
       "type": "Stock",
-      "pe": "~20",
+      "pe": "~19",
       "fwd_pe": "~9",
-      "price": "NT$166",
-      "div": "3.4%",
-      "gross_margin": "6%",
-      "fcf_ttm": "$-8.9B",
+      "price": "$156.00",
+      "div": "353.0%",
+      "gross_margin": "5.6%",
+      "fcf_ttm": "$-281.9B",
       "note": "AI server 純度高,GB200/Blackwell ODM 主力。子公司緯穎 (6669) 為 Hyperscale 王",
       "shares": "3.18B",
       "mcap": "$16.7B"
@@ -2128,12 +2714,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6669.TW",
       "name": "緯穎 Wiwynn",
       "type": "Stock",
-      "pe": "~20",
-      "fwd_pe": "~12",
-      "price": "NT$5,300",
-      "div": "2.7%",
-      "gross_margin": "8%",
-      "fcf_ttm": "$-700M",
+      "pe": "~18",
+      "fwd_pe": "~11",
+      "price": "$4,850",
+      "div": "298.0%",
+      "gross_margin": "8.0%",
+      "fcf_ttm": "$-22.1B",
       "note": "Hyperscale ODM 龍頭 (Meta/Microsoft/AWS),AI server 純度最高的台廠",
       "shares": "186M",
       "mcap": "$31.2B"
@@ -2142,12 +2728,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2376.TW",
       "name": "技嘉 Gigabyte",
       "type": "Stock",
-      "pe": "~21",
+      "pe": "~20",
       "fwd_pe": "~11",
-      "price": "NT$359",
-      "div": "2.9%",
-      "gross_margin": "10%",
-      "fcf_ttm": "$-708M",
+      "price": "$342.00",
+      "div": "351.0%",
+      "gross_margin": "10.4%",
+      "fcf_ttm": "$-22.4B",
       "note": "GPU 板卡 + AI server (B100/H200),CSP 與 Tier-2 客戶平衡",
       "shares": "670M",
       "mcap": "$7.6B"
@@ -2156,12 +2742,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2356.TW",
       "name": "英業達 Inventec",
       "type": "Stock",
-      "pe": "~29",
-      "fwd_pe": "~19",
-      "price": "NT$70.60",
-      "div": "2.5%",
-      "gross_margin": "5%",
-      "fcf_ttm": "$175M",
+      "pe": "~27",
+      "fwd_pe": "~18",
+      "price": "$66.20",
+      "div": "257.0%",
+      "gross_margin": "5.1%",
+      "fcf_ttm": "$5.5B",
       "note": "Server ODM 第三大,NVDA HGX/MGX 出貨;NB ODM (HP/Lenovo) 為傳統業務",
       "shares": "3.59B",
       "mcap": "$8.0B"
@@ -2170,12 +2756,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "4938.TW",
       "name": "和碩 Pegatron",
       "type": "Stock",
-      "pe": "~18",
+      "pe": "~17",
       "fwd_pe": "~14",
-      "price": "NT$95.10",
-      "div": "4.3%",
-      "gross_margin": "4%",
-      "fcf_ttm": "$556M",
+      "price": "$93.10",
+      "div": "431.0%",
+      "gross_margin": "4.0%",
+      "fcf_ttm": "$17.6B",
       "note": "iPhone 二供 (僅次鴻海),AI server 切入中,汽車電子佈局",
       "shares": "2.68B",
       "mcap": "$8.1B"
@@ -2184,12 +2770,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3017.TW",
       "name": "奇鋐 Auras Technology",
       "type": "Stock",
-      "pe": "~43",
-      "fwd_pe": "~19",
-      "price": "NT$2,545",
-      "div": "0.4%",
-      "gross_margin": "27%",
-      "fcf_ttm": "$1.2B",
+      "pe": "~40",
+      "fwd_pe": "~18",
+      "price": "$2,405",
+      "div": "41.0%",
+      "gross_margin": "27.0%",
+      "fcf_ttm": "$37.7B",
       "note": "AI 液冷 + 散熱模組龍頭,GB200/300 受惠最大;非 ODM 但與 ODM 鏈深度綁定",
       "shares": "393M",
       "mcap": "$31.6B"
@@ -2198,12 +2784,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "ARM",
       "name": "Arm Holdings",
       "type": "Stock",
-      "pe": "~210 (估)",
-      "fwd_pe": "~75 (估)",
-      "price": "$155 (估)",
+      "pe": "~453",
+      "fwd_pe": "~124",
+      "price": "$380.81",
       "div": "0%",
-      "gross_margin": "97%",
-      "fcf_ttm": "$1.4B (估)",
+      "gross_margin": "97.5%",
+      "fcf_ttm": "$750M",
       "note": "手機 CPU IP 授權壟斷,AI PC + DC CPU (Grace) 滲透中,SoftBank 持股 ~85%",
       "shares": "1.05B",
       "mcap": "$163B (估)"
@@ -2212,12 +2798,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "CRWV",
       "name": "CoreWeave",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "—(EPS-)",
-      "price": "$90 (估)",
+      "pe": "—",
+      "fwd_pe": "~-124",
+      "price": "$100.55",
       "div": "0%",
-      "gross_margin": "75% (cloud)",
-      "fcf_ttm": "$-5.2B (估)",
+      "gross_margin": "69.4%",
+      "fcf_ttm": "$-8.6B",
       "note": "AI 算力租賃,OpenAI/MSFT 大客戶,2025/3 IPO;債務 ~$15B 是最大風險",
       "shares": "480M",
       "mcap": "$43B (估)"
@@ -2226,12 +2812,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "NBIS",
       "name": "Nebius Group",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "~120 (估)",
-      "price": "$110 (估)",
+      "pe": "~90",
+      "fwd_pe": "~643",
+      "price": "$232.36",
       "div": "0%",
-      "gross_margin": "—",
-      "fcf_ttm": "$-1.1B (估)",
+      "gross_margin": "72.1%",
+      "fcf_ttm": "$-6.1B",
       "note": "前 Yandex 國際業務重組,歐洲 AI 算力供應商;市場視為「歐洲版 CRWV」",
       "shares": "240M",
       "mcap": "$26B (估)"
@@ -2240,12 +2826,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "FORM",
       "name": "FormFactor",
       "type": "Stock",
-      "pe": "~32 (估)",
-      "fwd_pe": "~22 (估)",
-      "price": "$48 (估)",
+      "pe": "~162",
+      "fwd_pe": "~50",
+      "price": "$139.21",
       "div": "0%",
-      "gross_margin": "40%",
-      "fcf_ttm": "$120M (估)",
+      "gross_margin": "42.2%",
+      "fcf_ttm": "$-566,875",
       "note": "晶圓探針卡龍頭,HBM 測試直接受惠;NVDA / 海力士擴產 HBM4 受惠股",
       "shares": "77M",
       "mcap": "$3.7B (估)"
@@ -2254,12 +2840,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "SNDK",
       "name": "SanDisk",
       "type": "Stock",
-      "pe": "~18 (估)",
-      "fwd_pe": "~9 (估)",
-      "price": "$135 (估)",
+      "pe": "~68",
+      "fwd_pe": "~11",
+      "price": "$1,980",
       "div": "0%",
-      "gross_margin": "35%",
-      "fcf_ttm": "$800M (估)",
+      "gross_margin": "56.0%",
+      "fcf_ttm": "$2.3B",
       "note": "2025 從 WDC 分拆,純 NAND Flash 公司;景氣循環股,AI server SSD 為增量需求",
       "shares": "145M",
       "mcap": "$19.5B (估)"
@@ -2268,12 +2854,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "NVTS",
       "name": "Navitas Semiconductor",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "—(EPS-)",
-      "price": "$8.5 (估)",
+      "pe": "—",
+      "fwd_pe": "~-169",
+      "price": "$23.39",
       "div": "0%",
-      "gross_margin": "38%",
-      "fcf_ttm": "$-50M (估)",
+      "gross_margin": "30.1%",
+      "fcf_ttm": "$44M",
       "note": "GaN 氮化鎵電源晶片,AI server PSU / 電動車 / 快充題材;NVDA 800V HVDC 合作",
       "shares": "200M",
       "mcap": "$1.7B (估)"
@@ -2282,12 +2868,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "POET",
       "name": "POET Technologies",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "—(EPS-)",
-      "price": "$8.5 (估)",
+      "pe": "—",
+      "fwd_pe": "~-74",
+      "price": "$12.53",
       "div": "0%",
-      "gross_margin": "—",
-      "fcf_ttm": "$-35M (估)",
+      "gross_margin": "100.0%",
+      "fcf_ttm": "$-42M",
       "note": "矽光子 / 光通訊 interposer,題材早期;800G/1.6T 滲透前需證明量產良率",
       "shares": "75M",
       "mcap": "$640M (估)"
@@ -2296,12 +2882,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "CIFR",
       "name": "Cipher Mining",
       "type": "Stock",
-      "pe": "~25 (估)",
-      "fwd_pe": "~15 (估)",
-      "price": "$15 (估)",
+      "pe": "—",
+      "fwd_pe": "~37",
+      "price": "$24.50",
       "div": "0%",
-      "gross_margin": "55%",
-      "fcf_ttm": "$-300M (估)",
+      "gross_margin": "12.4%",
+      "fcf_ttm": "$-2.9B",
       "note": "BTC 礦商,2025 簽 Google/Fluidstack HPC 託管合約 (10 年 $3B);本質仍是 BTC + 電力",
       "shares": "390M",
       "mcap": "$5.9B (估)"
@@ -2310,12 +2896,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "IREN",
       "name": "IREN (前 Iris Energy)",
       "type": "Stock",
-      "pe": "~45 (估)",
-      "fwd_pe": "~20 (估)",
-      "price": "$60 (估)",
+      "pe": "~78",
+      "fwd_pe": "~-64",
+      "price": "$59.77",
       "div": "0%",
-      "gross_margin": "60%",
-      "fcf_ttm": "$-200M (估)",
+      "gross_margin": "68.4%",
+      "fcf_ttm": "$-2.3B",
       "note": "BTC 礦商轉型 AI Cloud,主打 100% 再生能源;NVDA 客戶 (B200/H200)",
       "shares": "260M",
       "mcap": "$15.6B (估)"
@@ -2324,12 +2910,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "NOK",
       "name": "Nokia",
       "type": "Stock",
-      "pe": "~18 (估)",
-      "fwd_pe": "~14 (估)",
-      "price": "$6.2 (估)",
-      "div": "1.8%",
-      "gross_margin": "41%",
-      "fcf_ttm": "$1.2B (估)",
+      "pe": "~92",
+      "fwd_pe": "~30",
+      "price": "$14.80",
+      "div": "111.0%",
+      "gross_margin": "45.4%",
+      "fcf_ttm": "$1.6B",
       "note": "5G 網通設備,2025/11 NVDA 投資 $1B 切入 AI-RAN;成長有限但題材改善",
       "shares": "5.40B",
       "mcap": "$33.5B (估)"
@@ -2338,12 +2924,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "ASML",
       "name": "ASML",
       "type": "Stock",
-      "pe": "~38 (估)",
-      "fwd_pe": "~30 (估)",
-      "price": "$960 (估)",
-      "div": "0.9%",
-      "gross_margin": "51%",
-      "fcf_ttm": "$10.5B (估)",
+      "pe": "~62",
+      "fwd_pe": "~39",
+      "price": "$1,864",
+      "div": "47.0%",
+      "gross_margin": "52.6%",
+      "fcf_ttm": "$8.2B",
       "note": "EUV / High-NA EUV 光刻機壟斷;2nm 以下節點唯一供應商,中國禁令為主要風險",
       "shares": "388M",
       "mcap": "$372B (估)"
@@ -2352,12 +2938,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "AMAT",
       "name": "Applied Materials",
       "type": "Stock",
-      "pe": "~24 (估)",
-      "fwd_pe": "~21 (估)",
-      "price": "$230 (估)",
-      "div": "0.8%",
-      "gross_margin": "48%",
-      "fcf_ttm": "$8.0B (估)",
+      "pe": "~53",
+      "fwd_pe": "~35",
+      "price": "$567.25",
+      "div": "37.0%",
+      "gross_margin": "49.0%",
+      "fcf_ttm": "$3.0B",
       "note": "綜合半導體設備龍頭 (沉積 + CMP + 檢測 + 封裝);客戶分散、現金流穩定,中國占比偏高",
       "shares": "810M",
       "mcap": "$186B (估)"
@@ -2366,12 +2952,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "LRCX",
       "name": "Lam Research",
       "type": "Stock",
-      "pe": "~28 (估)",
-      "fwd_pe": "~22 (估)",
-      "price": "$96 (估)",
-      "div": "0.9%",
-      "gross_margin": "48%",
-      "fcf_ttm": "$5.0B (估)",
+      "pe": "~69",
+      "fwd_pe": "~46",
+      "price": "$366.81",
+      "div": "28.0%",
+      "gross_margin": "50.0%",
+      "fcf_ttm": "$4.4B",
       "note": "蝕刻 + 沉積龍頭,HBM 擴產直接受惠股 (3D NAND / DRAM 設備);AI 設備鏈彈性最大",
       "shares": "1.26B",
       "mcap": "$121B (估)"
@@ -2380,12 +2966,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "type": "Stock",
-      "pe": "~33 (估)",
-      "fwd_pe": "~28 (估)",
-      "price": "$870 (估)",
-      "div": "0.7%",
-      "gross_margin": "61%",
-      "fcf_ttm": "$3.8B (估)",
+      "pe": "~72",
+      "fwd_pe": "~51",
+      "price": "$254.54",
+      "div": "36.0%",
+      "gross_margin": "61.4%",
+      "fcf_ttm": "$2.9B",
       "note": "晶圓量測 + 缺陷檢測寡占,先進製程節點越微縮越受惠;設備毛利率最高",
       "shares": "132M",
       "mcap": "$115B (估)"
@@ -2394,12 +2980,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "TER",
       "name": "Teradyne",
       "type": "Stock",
-      "pe": "~38 (估)",
-      "fwd_pe": "~28 (估)",
-      "price": "$155 (估)",
-      "div": "0.3%",
-      "gross_margin": "58%",
-      "fcf_ttm": "$700M (估)",
+      "pe": "~75",
+      "fwd_pe": "~42",
+      "price": "$403.20",
+      "div": "13.0%",
+      "gross_margin": "58.7%",
+      "fcf_ttm": "$298M",
       "note": "ATE 半導體測試設備 (SoC + HBM 系統測試),NVDA / AMD 鏈受惠",
       "shares": "159M",
       "mcap": "$24.6B (估)"
@@ -2408,12 +2994,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "ACLS",
       "name": "Axcelis Technologies",
       "type": "Stock",
-      "pe": "~14 (估)",
-      "fwd_pe": "~16 (估)",
-      "price": "$95 (估)",
+      "pe": "~56",
+      "fwd_pe": "~39",
+      "price": "$180.12",
       "div": "0%",
-      "gross_margin": "44%",
-      "fcf_ttm": "$180M (估)",
+      "gross_margin": "43.6%",
+      "fcf_ttm": "$49M",
       "note": "離子植入機利基龍頭 (SiC / Power);AI server 電源端題材+EV 受惠,估值便宜",
       "shares": "32M",
       "mcap": "$3.0B (估)"
@@ -2422,12 +3008,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "IRDM",
       "name": "Iridium Communications",
       "type": "Stock",
-      "pe": "~22 (估)",
-      "fwd_pe": "~18 (估)",
-      "price": "$26 (估)",
-      "div": "2.3%",
-      "gross_margin": "73%",
-      "fcf_ttm": "$340M (估)",
+      "pe": "~48",
+      "fwd_pe": "~34",
+      "price": "$47.32",
+      "div": "127.0%",
+      "gross_margin": "71.6%",
+      "fcf_ttm": "$253M",
       "note": "全球 LEO 衛星電信龍頭 (66 顆營運中),IoT + 軍用通訊;Starlink 主要競爭對手",
       "shares": "108M",
       "mcap": "$2.8B (估)"
@@ -2436,12 +3022,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "GSAT",
       "name": "Globalstar",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "—",
-      "price": "$30 (估)",
+      "pe": "—",
+      "fwd_pe": "~265",
+      "price": "$81.16",
       "div": "0%",
-      "gross_margin": "55%",
-      "fcf_ttm": "$-60M (估)",
+      "gross_margin": "63.7%",
+      "fcf_ttm": "$-284M",
       "note": "Apple iPhone 衛星 SOS 主要合作方,XCOM RAN 切入",
       "shares": "180M",
       "mcap": "$5.4B (估)"
@@ -2450,12 +3036,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "ASTS",
       "name": "AST SpaceMobile",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "—",
-      "price": "$36 (估)",
+      "pe": "—",
+      "fwd_pe": "~-402",
+      "price": "$82.41",
       "div": "0%",
-      "gross_margin": "—",
-      "fcf_ttm": "$-380M (估)",
+      "gross_margin": "44.8%",
+      "fcf_ttm": "$-1.4B",
       "note": "Direct-to-cell LEO 衛星,AT&T/Verizon/Vodafone 合作;商業化前燒錢階段",
       "shares": "315M",
       "mcap": "$11.3B (估)"
@@ -2464,12 +3050,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "RKLB",
       "name": "Rocket Lab",
       "type": "Stock",
-      "pe": "—(EPS-)",
-      "fwd_pe": "~210 (估)",
-      "price": "$45 (估)",
+      "pe": "—",
+      "fwd_pe": "~-14084",
+      "price": "$102.39",
       "div": "0%",
-      "gross_margin": "28%",
-      "fcf_ttm": "$-130M (估)",
+      "gross_margin": "36.6%",
+      "fcf_ttm": "$-215M",
       "note": "小型火箭 + 衛星製造,Neutron 中型火箭 2026 試射;SpaceX 之外最主要美系發射商",
       "shares": "525M",
       "mcap": "$23.6B (估)"
@@ -2478,12 +3064,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6285.TW",
       "name": "啟碁 Wistron NeWeb",
       "type": "Stock",
-      "pe": "~20 (估)",
-      "fwd_pe": "~14 (估)",
-      "price": "NT$185 (估)",
-      "div": "3.2%",
-      "gross_margin": "13%",
-      "fcf_ttm": "$200M (估)",
+      "pe": "~43",
+      "fwd_pe": "~20",
+      "price": "$270.00",
+      "div": "178.0%",
+      "gross_margin": "12.9%",
+      "fcf_ttm": "$-834M",
       "note": "緯創旗下,Starlink 用戶終端 (UT) ODM 主供;LEO 純度最高台廠",
       "shares": "270M",
       "mcap": "$1.7B (估)"
@@ -2492,12 +3078,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3491.TW",
       "name": "昇達科 SDT",
       "type": "Stock",
-      "pe": "~38 (估)",
-      "fwd_pe": "~26 (估)",
-      "price": "NT$415 (估)",
-      "div": "2.0%",
-      "gross_margin": "47%",
-      "fcf_ttm": "NT$700M (估)",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "—",
+      "div": "0%",
+      "gross_margin": "—",
+      "fcf_ttm": "—",
       "note": "毫米波被動元件 + 衛星地面站射頻;SpaceX 供應鏈傳聞",
       "shares": "65M",
       "mcap": "$900M (估)"
@@ -2506,12 +3092,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2327.TW",
       "name": "國巨 Yageo",
       "type": "Stock",
-      "pe": "~18 (估)",
-      "fwd_pe": "~13 (估)",
-      "price": "NT$735 (估)",
-      "div": "3.0%",
-      "gross_margin": "37%",
-      "fcf_ttm": "NT$24B (估)",
+      "pe": "~68",
+      "fwd_pe": "~33",
+      "price": "$855.00",
+      "div": "70.0%",
+      "gross_margin": "36.8%",
+      "fcf_ttm": "$21.5B",
       "note": "全球被動元件第三大 (MLCC + 電阻),併購 Murata 部分產線後規模再擴張;AI server 用 MLCC 滲透中",
       "shares": "478M",
       "mcap": "$11.2B (估)"
@@ -2520,12 +3106,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2492.TW",
       "name": "華新科 Walsin",
       "type": "Stock",
-      "pe": "~16 (估)",
-      "fwd_pe": "~12 (估)",
-      "price": "NT$245 (估)",
-      "div": "4.5%",
-      "gross_margin": "27%",
-      "fcf_ttm": "NT$6B (估)",
+      "pe": "~86",
+      "fwd_pe": "~24",
+      "price": "$409.00",
+      "div": "59.0%",
+      "gross_margin": "17.6%",
+      "fcf_ttm": "$3.6B",
       "note": "MLCC 第二大台廠,AI server / EV 高容值產品比重提升",
       "shares": "780M",
       "mcap": "$6.0B (估)"
@@ -2534,12 +3120,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6981.T",
       "name": "Murata 村田製作所",
       "type": "Stock",
-      "pe": "~24 (估)",
-      "fwd_pe": "~18 (估)",
-      "price": "¥2,750 (估)",
-      "div": "2.0%",
-      "gross_margin": "38%",
-      "fcf_ttm": "¥350B (估)",
+      "pe": "~67",
+      "fwd_pe": "~36",
+      "price": "$8,556",
+      "div": "82.0%",
+      "gross_margin": "42.3%",
+      "fcf_ttm": "$115.0B",
       "note": "全球 MLCC 龍頭 (市占 ~40%),高階品 AI server / EV 不可替代;iPhone 主供",
       "shares": "2.02B",
       "mcap": "$36B (估)"
@@ -2548,12 +3134,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6762.T",
       "name": "TDK Corporation",
       "type": "Stock",
-      "pe": "~20 (估)",
-      "fwd_pe": "~16 (估)",
-      "price": "¥2,150 (估)",
-      "div": "1.8%",
-      "gross_margin": "30%",
-      "fcf_ttm": "¥200B (估)",
+      "pe": "~34",
+      "fwd_pe": "~33",
+      "price": "$3,504",
+      "div": "114.0%",
+      "gross_margin": "31.3%",
+      "fcf_ttm": "$35.0B",
       "note": "MLCC + 高頻電感 + 二次電池;iPhone 電池主供 (ATL 母公司)",
       "shares": "1.94B",
       "mcap": "$27B (估)"
@@ -2562,12 +3148,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6976.T",
       "name": "Taiyo Yuden 太陽誘電",
       "type": "Stock",
-      "pe": "~22 (估)",
-      "fwd_pe": "~14 (估)",
-      "price": "¥3,800 (估)",
-      "div": "2.5%",
-      "gross_margin": "26%",
-      "fcf_ttm": "¥35B (估)",
+      "pe": "~147",
+      "fwd_pe": "~84",
+      "price": "$15,725",
+      "div": "57.0%",
+      "gross_margin": "23.1%",
+      "fcf_ttm": "$600M",
       "note": "MLCC 第三大廠 (僅次村田/SEMCO),車用 + 高頻產品利基",
       "shares": "127M",
       "mcap": "$3.1B (估)"
@@ -2576,12 +3162,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "003670.KS",
       "name": "Samsung Electro-Mechanics (SEMCO)",
       "type": "Stock",
-      "pe": "~14 (估)",
-      "fwd_pe": "~10 (估)",
-      "price": "₩135,000 (估)",
-      "div": "2.0%",
-      "gross_margin": "13%",
-      "fcf_ttm": "₩400B (估)",
+      "pe": "—",
+      "fwd_pe": "~173",
+      "price": "₩199,400",
+      "div": "13.0%",
+      "gross_margin": "8.8%",
+      "fcf_ttm": "$-1490.1B",
       "note": "MLCC 全球第二 (僅次村田) + ABF 載板第二大;Samsung 集團 23.7% 持股,iPhone/Galaxy 雙供",
       "shares": "75M",
       "mcap": "$7.3B (估)"
@@ -2590,12 +3176,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6781.TW",
       "name": "AEM-KY 富世達",
       "type": "Stock",
-      "pe": "~25 (估)",
-      "fwd_pe": "~18 (估)",
-      "price": "NT$680 (估)",
-      "div": "1.5%",
-      "gross_margin": "40%",
-      "fcf_ttm": "NT$800M (估)",
+      "pe": "~30",
+      "fwd_pe": "~18",
+      "price": "$1,145",
+      "div": "109.0%",
+      "gross_margin": "35.3%",
+      "fcf_ttm": "$2.9B",
       "note": "AI server 連接器/銅纜 + 摺疊機軸承,GB200/300 連接料受惠",
       "shares": "75M",
       "mcap": "$1.6B (估)"
@@ -2604,12 +3190,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3037.TW",
       "name": "欣興 Unimicron",
       "type": "Stock",
-      "pe": "~22 (估)",
-      "fwd_pe": "~14 (估)",
-      "price": "NT$185 (估)",
-      "div": "4.0%",
-      "gross_margin": "20%",
-      "fcf_ttm": "NT$3.5B (估)",
+      "pe": "~208",
+      "fwd_pe": "~31",
+      "price": "$902.00",
+      "div": "22.0%",
+      "gross_margin": "15.1%",
+      "fcf_ttm": "$-337M",
       "note": "ABF 載板全球前三 (Ibiden / SEMCO / 欣興),NVDA/AMD GPU 載板主供",
       "shares": "1.52B",
       "mcap": "$9.0B (估)"
@@ -2618,12 +3204,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "8046.TW",
       "name": "南電 Nan Ya PCB",
       "type": "Stock",
-      "pe": "~32 (估)",
-      "fwd_pe": "~18 (估)",
-      "price": "NT$235 (估)",
-      "div": "1.5%",
-      "gross_margin": "18%",
-      "fcf_ttm": "NT$1.5B (估)",
+      "pe": "~270",
+      "fwd_pe": "~29",
+      "price": "$819.00",
+      "div": "24.0%",
+      "gross_margin": "11.6%",
+      "fcf_ttm": "$4.0B",
       "note": "ABF 載板高階產品 (Intel/NVDA),2024 衝擊後 2025-26 訂單回溫",
       "shares": "645M",
       "mcap": "$4.7B (估)"
@@ -2632,12 +3218,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3189.TW",
       "name": "景碩 Kinsus",
       "type": "Stock",
-      "pe": "~28 (估)",
-      "fwd_pe": "~16 (估)",
-      "price": "NT$160 (估)",
-      "div": "2.5%",
-      "gross_margin": "16%",
-      "fcf_ttm": "NT$1.0B (估)",
+      "pe": "~182",
+      "fwd_pe": "~30",
+      "price": "$610.00",
+      "div": "16.0%",
+      "gross_margin": "20.8%",
+      "fcf_ttm": "$6.0B",
       "note": "ABF 第三大台廠,iPhone SiP + 高階 IC 載板",
       "shares": "445M",
       "mcap": "$2.2B (估)"
@@ -2646,12 +3232,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "5347.TWO",
       "name": "世界先進 Vanguard Int'l",
       "type": "Stock",
-      "pe": "~28 (估)",
-      "fwd_pe": "~20 (估)",
-      "price": "NT$135 (估)",
-      "div": "3.5%",
-      "gross_margin": "30%",
-      "fcf_ttm": "NT$8B (估)",
+      "pe": "~40",
+      "fwd_pe": "~28",
+      "price": "$169.50",
+      "div": "265.0%",
+      "gross_margin": "27.9%",
+      "fcf_ttm": "$-64.6B",
       "note": "8 吋成熟製程,PMIC / DDIC 為主;與 NXP 合資新加坡 12 吋廠 (VSMC)",
       "shares": "1.63B",
       "mcap": "$7.2B (估)"
@@ -2660,12 +3246,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "3661.TW",
       "name": "世芯-KY Alchip",
       "type": "Stock",
-      "pe": "~35 (估)",
-      "fwd_pe": "~22 (估)",
-      "price": "NT$3,400 (估)",
-      "div": "1.2%",
-      "gross_margin": "20%",
-      "fcf_ttm": "NT$5B (估)",
+      "pe": "~61",
+      "fwd_pe": "~23",
+      "price": "$4,105",
+      "div": "89.0%",
+      "gross_margin": "31.8%",
+      "fcf_ttm": "$-800M",
       "note": "AI ASIC 設計服務,AWS Trainium 2/3 主要設計夥伴,純度極高",
       "shares": "75M",
       "mcap": "$8.5B (估)"
@@ -2677,13 +3263,48 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🧠",
       "desc": "HBM3E / HBM4 為 AI GPU 必要組件,NVDA B200/300、AMD MI350 全靠它。三星 / 海力士 / Micron 三家主供。",
       "members": [
-        { "ticker": "000660.KS", "co": "SK Hynix", "purity": 5, "role": "HBM3E 市占第一,NVDA 主供" },
-        { "ticker": "MU", "co": "Micron", "purity": 5, "role": "美系唯一 HBM3E,FQ4 26 HBM 過半營收" },
-        { "ticker": "005930.KS", "co": "Samsung", "purity": 4, "role": "HBM 良率追趕中,Foundry 拖累" },
-        { "ticker": "SNDK", "co": "SanDisk", "purity": 3, "role": "NAND 純股,AI server SSD 為增量" },
-        { "ticker": "FORM", "co": "FormFactor", "purity": 3, "role": "HBM 探針卡測試,擴產直接受惠" },
-        { "ticker": "LRCX", "co": "Lam Research", "purity": 3, "role": "DRAM / NAND 蝕刻沉積設備" },
-        { "ticker": "TER", "co": "Teradyne", "purity": 2, "role": "HBM 系統測試 ATE" }
+        {
+          "ticker": "000660.KS",
+          "co": "SK Hynix",
+          "purity": 5,
+          "role": "HBM3E 市占第一,NVDA 主供"
+        },
+        {
+          "ticker": "MU",
+          "co": "Micron",
+          "purity": 5,
+          "role": "美系唯一 HBM3E,FQ4 26 HBM 過半營收"
+        },
+        {
+          "ticker": "005930.KS",
+          "co": "Samsung",
+          "purity": 4,
+          "role": "HBM 良率追趕中,Foundry 拖累"
+        },
+        {
+          "ticker": "SNDK",
+          "co": "SanDisk",
+          "purity": 3,
+          "role": "NAND 純股,AI server SSD 為增量"
+        },
+        {
+          "ticker": "FORM",
+          "co": "FormFactor",
+          "purity": 3,
+          "role": "HBM 探針卡測試,擴產直接受惠"
+        },
+        {
+          "ticker": "LRCX",
+          "co": "Lam Research",
+          "purity": 3,
+          "role": "DRAM / NAND 蝕刻沉積設備"
+        },
+        {
+          "ticker": "TER",
+          "co": "Teradyne",
+          "purity": 2,
+          "role": "HBM 系統測試 ATE"
+        }
       ]
     },
     {
@@ -2691,14 +3312,54 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "☁️",
       "desc": "建 GPU cluster 出租給 OpenAI/Anthropic 等。資本支出極重,債務風險為核心議題。",
       "members": [
-        { "ticker": "CRWV", "co": "CoreWeave", "purity": 5, "role": "純度最高,OpenAI/MSFT 大客戶" },
-        { "ticker": "NBIS", "co": "Nebius", "purity": 5, "role": "歐洲版 CRWV,前 Yandex 國際業務" },
-        { "ticker": "IREN", "co": "IREN", "purity": 4, "role": "礦商轉型 AI Cloud,B200/H200 部署" },
-        { "ticker": "CIFR", "co": "Cipher Mining", "purity": 3, "role": "BTC + Google HPC 託管混血" },
-        { "ticker": "ORCL", "co": "Oracle", "purity": 3, "role": "OCI + Stargate,大型雲業者切入" },
-        { "ticker": "MSFT", "co": "Microsoft Azure", "purity": 2, "role": "Hyperscaler,但 AI 不是唯一" },
-        { "ticker": "GOOGL", "co": "Google Cloud", "purity": 2, "role": "Hyperscaler,TPU 自研" },
-        { "ticker": "AMZN", "co": "AWS", "purity": 2, "role": "Hyperscaler,Trainium 自研" }
+        {
+          "ticker": "CRWV",
+          "co": "CoreWeave",
+          "purity": 5,
+          "role": "純度最高,OpenAI/MSFT 大客戶"
+        },
+        {
+          "ticker": "NBIS",
+          "co": "Nebius",
+          "purity": 5,
+          "role": "歐洲版 CRWV,前 Yandex 國際業務"
+        },
+        {
+          "ticker": "IREN",
+          "co": "IREN",
+          "purity": 4,
+          "role": "礦商轉型 AI Cloud,B200/H200 部署"
+        },
+        {
+          "ticker": "CIFR",
+          "co": "Cipher Mining",
+          "purity": 3,
+          "role": "BTC + Google HPC 託管混血"
+        },
+        {
+          "ticker": "ORCL",
+          "co": "Oracle",
+          "purity": 3,
+          "role": "OCI + Stargate,大型雲業者切入"
+        },
+        {
+          "ticker": "MSFT",
+          "co": "Microsoft Azure",
+          "purity": 2,
+          "role": "Hyperscaler,但 AI 不是唯一"
+        },
+        {
+          "ticker": "GOOGL",
+          "co": "Google Cloud",
+          "purity": 2,
+          "role": "Hyperscaler,TPU 自研"
+        },
+        {
+          "ticker": "AMZN",
+          "co": "AWS",
+          "purity": 2,
+          "role": "Hyperscaler,Trainium 自研"
+        }
       ]
     },
     {
@@ -2706,11 +3367,36 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "💡",
       "desc": "AI 資料中心 GPU 之間需要高速光通訊,800G 滲透 1.6T 為下一波。EML / VCSEL / DSP 為三大關鍵零件。",
       "members": [
-        { "ticker": "LITE", "co": "Lumentum", "purity": 5, "role": "DC EML 龍頭,800G/1.6T 主供" },
-        { "ticker": "COHR", "co": "Coherent", "purity": 5, "role": "VCSEL + 矽光 + 收發器整合" },
-        { "ticker": "MRVL", "co": "Marvell", "purity": 4, "role": "光通訊 DSP (PAM4) 龍頭" },
-        { "ticker": "AVGO", "co": "Broadcom", "purity": 3, "role": "Tomahawk switch + 矽光" },
-        { "ticker": "POET", "co": "POET Tech", "purity": 3, "role": "矽光子 interposer,早期題材" }
+        {
+          "ticker": "LITE",
+          "co": "Lumentum",
+          "purity": 5,
+          "role": "DC EML 龍頭,800G/1.6T 主供"
+        },
+        {
+          "ticker": "COHR",
+          "co": "Coherent",
+          "purity": 5,
+          "role": "VCSEL + 矽光 + 收發器整合"
+        },
+        {
+          "ticker": "MRVL",
+          "co": "Marvell",
+          "purity": 4,
+          "role": "光通訊 DSP (PAM4) 龍頭"
+        },
+        {
+          "ticker": "AVGO",
+          "co": "Broadcom",
+          "purity": 3,
+          "role": "Tomahawk switch + 矽光"
+        },
+        {
+          "ticker": "POET",
+          "co": "POET Tech",
+          "purity": 3,
+          "role": "矽光子 interposer,早期題材"
+        }
       ]
     },
     {
@@ -2718,13 +3404,48 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "⚙️",
       "desc": "「賣鏟子的人」。AI 擴產 + 先進製程節點微縮 → 設備龍頭直接受惠,中國禁令為主要風險。",
       "members": [
-        { "ticker": "ASML", "co": "ASML", "purity": 5, "role": "EUV / High-NA EUV 壟斷,2nm 唯一" },
-        { "ticker": "LRCX", "co": "Lam Research", "purity": 5, "role": "蝕刻 + 沉積,HBM 擴產彈性最大" },
-        { "ticker": "AMAT", "co": "Applied Materials", "purity": 5, "role": "綜合設備龍頭,客戶最分散" },
-        { "ticker": "KLAC", "co": "KLA", "purity": 5, "role": "量測 + 檢測寡占,毛利率最高" },
-        { "ticker": "TER", "co": "Teradyne", "purity": 4, "role": "ATE 測試 (SoC + HBM)" },
-        { "ticker": "FORM", "co": "FormFactor", "purity": 4, "role": "探針卡,HBM 測試直接受惠" },
-        { "ticker": "ACLS", "co": "Axcelis", "purity": 3, "role": "離子植入機利基 (SiC / Power)" }
+        {
+          "ticker": "ASML",
+          "co": "ASML",
+          "purity": 5,
+          "role": "EUV / High-NA EUV 壟斷,2nm 唯一"
+        },
+        {
+          "ticker": "LRCX",
+          "co": "Lam Research",
+          "purity": 5,
+          "role": "蝕刻 + 沉積,HBM 擴產彈性最大"
+        },
+        {
+          "ticker": "AMAT",
+          "co": "Applied Materials",
+          "purity": 5,
+          "role": "綜合設備龍頭,客戶最分散"
+        },
+        {
+          "ticker": "KLAC",
+          "co": "KLA",
+          "purity": 5,
+          "role": "量測 + 檢測寡占,毛利率最高"
+        },
+        {
+          "ticker": "TER",
+          "co": "Teradyne",
+          "purity": 4,
+          "role": "ATE 測試 (SoC + HBM)"
+        },
+        {
+          "ticker": "FORM",
+          "co": "FormFactor",
+          "purity": 4,
+          "role": "探針卡,HBM 測試直接受惠"
+        },
+        {
+          "ticker": "ACLS",
+          "co": "Axcelis",
+          "purity": 3,
+          "role": "離子植入機利基 (SiC / Power)"
+        }
       ]
     },
     {
@@ -2732,10 +3453,30 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🔧",
       "desc": "Hyperscaler 為了降低對 NVDA 依賴,委託設計自家 AI 加速器。AVGO (Google TPU/Meta) 與 MRVL (AWS Trainium) 為兩大龍頭。",
       "members": [
-        { "ticker": "AVGO", "co": "Broadcom", "purity": 5, "role": "Google TPU / Meta MTIA 設計" },
-        { "ticker": "MRVL", "co": "Marvell", "purity": 5, "role": "AWS Trainium / 微軟 ASIC" },
-        { "ticker": "2454.TW", "co": "聯發科", "purity": 3, "role": "Google TPU 部分代設計傳聞" },
-        { "ticker": "ALAB", "co": "Astera Labs", "purity": 3, "role": "PCIe/CXL/UALink 連接 ASIC (註:本表暫無)" }
+        {
+          "ticker": "AVGO",
+          "co": "Broadcom",
+          "purity": 5,
+          "role": "Google TPU / Meta MTIA 設計"
+        },
+        {
+          "ticker": "MRVL",
+          "co": "Marvell",
+          "purity": 5,
+          "role": "AWS Trainium / 微軟 ASIC"
+        },
+        {
+          "ticker": "2454.TW",
+          "co": "聯發科",
+          "purity": 3,
+          "role": "Google TPU 部分代設計傳聞"
+        },
+        {
+          "ticker": "ALAB",
+          "co": "Astera Labs",
+          "purity": 3,
+          "role": "PCIe/CXL/UALink 連接 ASIC (註:本表暫無)"
+        }
       ]
     },
     {
@@ -2743,18 +3484,78 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🖥️",
       "desc": "NVDA GB200/300 機架由台廠 ODM 組裝出貨。緯穎 / 鴻海 / 廣達 為三大主力。",
       "members": [
-        { "ticker": "6669.TW", "co": "緯穎", "purity": 5, "role": "Hyperscale ODM 王 (Meta/MSFT/AWS)" },
-        { "ticker": "3231.TW", "co": "緯創", "purity": 5, "role": "GB200/300 ODM 主力,6669 母公司" },
-        { "ticker": "2382.TW", "co": "廣達", "purity": 5, "role": "Meta/Google AI server ODM" },
-        { "ticker": "2317.TW", "co": "鴻海", "purity": 4, "role": "GB200 機架代工,規模最大" },
-        { "ticker": "SMCI", "co": "Super Micro", "purity": 5, "role": "美系 AI server,xAI/Meta 客戶" },
-        { "ticker": "DELL", "co": "Dell", "purity": 4, "role": "ISG ~40% 營收為 AI server" },
-        { "ticker": "HPE", "co": "HP Enterprise", "purity": 3, "role": "Juniper 整合後追趕 DELL" },
-        { "ticker": "2356.TW", "co": "英業達", "purity": 4, "role": "Server ODM 第三大,HGX/MGX" },
-        { "ticker": "2376.TW", "co": "技嘉", "purity": 3, "role": "GPU 板卡 + Tier-2 server" },
-        { "ticker": "4938.TW", "co": "和碩", "purity": 2, "role": "AI server 切入中,iPhone 為主" },
-        { "ticker": "3017.TW", "co": "奇鋐", "purity": 4, "role": "AI 液冷散熱龍頭" },
-        { "ticker": "2308.TW", "co": "台達電", "purity": 3, "role": "AI 電源 + 散熱" }
+        {
+          "ticker": "6669.TW",
+          "co": "緯穎",
+          "purity": 5,
+          "role": "Hyperscale ODM 王 (Meta/MSFT/AWS)"
+        },
+        {
+          "ticker": "3231.TW",
+          "co": "緯創",
+          "purity": 5,
+          "role": "GB200/300 ODM 主力,6669 母公司"
+        },
+        {
+          "ticker": "2382.TW",
+          "co": "廣達",
+          "purity": 5,
+          "role": "Meta/Google AI server ODM"
+        },
+        {
+          "ticker": "2317.TW",
+          "co": "鴻海",
+          "purity": 4,
+          "role": "GB200 機架代工,規模最大"
+        },
+        {
+          "ticker": "SMCI",
+          "co": "Super Micro",
+          "purity": 5,
+          "role": "美系 AI server,xAI/Meta 客戶"
+        },
+        {
+          "ticker": "DELL",
+          "co": "Dell",
+          "purity": 4,
+          "role": "ISG ~40% 營收為 AI server"
+        },
+        {
+          "ticker": "HPE",
+          "co": "HP Enterprise",
+          "purity": 3,
+          "role": "Juniper 整合後追趕 DELL"
+        },
+        {
+          "ticker": "2356.TW",
+          "co": "英業達",
+          "purity": 4,
+          "role": "Server ODM 第三大,HGX/MGX"
+        },
+        {
+          "ticker": "2376.TW",
+          "co": "技嘉",
+          "purity": 3,
+          "role": "GPU 板卡 + Tier-2 server"
+        },
+        {
+          "ticker": "4938.TW",
+          "co": "和碩",
+          "purity": 2,
+          "role": "AI server 切入中,iPhone 為主"
+        },
+        {
+          "ticker": "3017.TW",
+          "co": "奇鋐",
+          "purity": 4,
+          "role": "AI 液冷散熱龍頭"
+        },
+        {
+          "ticker": "2308.TW",
+          "co": "台達電",
+          "purity": 3,
+          "role": "AI 電源 + 散熱"
+        }
       ]
     },
     {
@@ -2762,11 +3563,36 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🏭",
       "desc": "AI 晶片最終都要交給晶圓廠生產。台積電獨佔先進製程,三星 / Intel 在追趕。",
       "members": [
-        { "ticker": "TSM", "co": "TSMC ADR", "purity": 5, "role": "全球先進製程獨佔 (2nm/3nm)" },
-        { "ticker": "2330.TW", "co": "台積電 (台股)", "purity": 5, "role": "同上,0050 權重 ~57%" },
-        { "ticker": "005930.KS", "co": "Samsung", "purity": 3, "role": "Foundry 落後,3nm 良率追趕" },
-        { "ticker": "INTC", "co": "Intel", "purity": 3, "role": "18A 製程翻身賭注" },
-        { "ticker": "2303.TW", "co": "聯電", "purity": 2, "role": "成熟製程 (28nm/14nm)" }
+        {
+          "ticker": "TSM",
+          "co": "TSMC ADR",
+          "purity": 5,
+          "role": "全球先進製程獨佔 (2nm/3nm)"
+        },
+        {
+          "ticker": "2330.TW",
+          "co": "台積電 (台股)",
+          "purity": 5,
+          "role": "同上,0050 權重 ~57%"
+        },
+        {
+          "ticker": "005930.KS",
+          "co": "Samsung",
+          "purity": 3,
+          "role": "Foundry 落後,3nm 良率追趕"
+        },
+        {
+          "ticker": "INTC",
+          "co": "Intel",
+          "purity": 3,
+          "role": "18A 製程翻身賭注"
+        },
+        {
+          "ticker": "2303.TW",
+          "co": "聯電",
+          "purity": 2,
+          "role": "成熟製程 (28nm/14nm)"
+        }
       ]
     },
     {
@@ -2774,9 +3600,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "📦",
       "desc": "AI GPU 需要 2.5D/3D 封裝,CoWoS 為 NVDA / AMD 共用方案。台積電擴 CoWoS,封測廠分食外包。",
       "members": [
-        { "ticker": "TSM", "co": "TSMC", "purity": 5, "role": "CoWoS 主要產能持有者" },
-        { "ticker": "3711.TW", "co": "日月光投控", "purity": 5, "role": "全球封測龍頭,CoWoS 外包受惠" },
-        { "ticker": "AMAT", "co": "Applied Materials", "purity": 3, "role": "Advanced Packaging 設備" }
+        {
+          "ticker": "TSM",
+          "co": "TSMC",
+          "purity": 5,
+          "role": "CoWoS 主要產能持有者"
+        },
+        {
+          "ticker": "3711.TW",
+          "co": "日月光投控",
+          "purity": 5,
+          "role": "全球封測龍頭,CoWoS 外包受惠"
+        },
+        {
+          "ticker": "AMAT",
+          "co": "Applied Materials",
+          "purity": 3,
+          "role": "Advanced Packaging 設備"
+        }
       ]
     },
     {
@@ -2784,9 +3625,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "⚡",
       "desc": "AI server 從 12V 走向 48V/800V HVDC,GaN/SiC 取代矽 MOSFET。電動車 + 快充 + AI 電源為三大題材。",
       "members": [
-        { "ticker": "NVTS", "co": "Navitas", "purity": 5, "role": "GaN 純股,NVDA 800V HVDC 合作" },
-        { "ticker": "2308.TW", "co": "台達電", "purity": 4, "role": "AI server PSU + 電動車充電樁" },
-        { "ticker": "ACLS", "co": "Axcelis", "purity": 3, "role": "SiC 離子植入設備" }
+        {
+          "ticker": "NVTS",
+          "co": "Navitas",
+          "purity": 5,
+          "role": "GaN 純股,NVDA 800V HVDC 合作"
+        },
+        {
+          "ticker": "2308.TW",
+          "co": "台達電",
+          "purity": 4,
+          "role": "AI server PSU + 電動車充電樁"
+        },
+        {
+          "ticker": "ACLS",
+          "co": "Axcelis",
+          "purity": 3,
+          "role": "SiC 離子植入設備"
+        }
       ]
     },
     {
@@ -2794,14 +3650,54 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🛡️",
       "desc": "AI 普及 → 攻擊面擴大;Platform 化整併中。CRWD 大當機後 EDR 競爭格局重新洗牌。",
       "members": [
-        { "ticker": "CRWD", "co": "CrowdStrike", "purity": 5, "role": "EDR + Falcon platform 龍頭" },
-        { "ticker": "PANW", "co": "Palo Alto", "purity": 5, "role": "市值最大,Platformization" },
-        { "ticker": "ZS", "co": "Zscaler", "purity": 5, "role": "雲端 SASE / ZTNA 龍頭" },
-        { "ticker": "FTNT", "co": "Fortinet", "purity": 5, "role": "防火牆 + SD-WAN,FCF 最強" },
-        { "ticker": "S", "co": "SentinelOne", "purity": 5, "role": "EDR 第二,CRWD 大當機受惠" },
-        { "ticker": "OKTA", "co": "Okta", "purity": 4, "role": "IAM 身分驗證" },
-        { "ticker": "CYBR", "co": "CyberArk", "purity": 4, "role": "PAM 特權管理" },
-        { "ticker": "NET", "co": "Cloudflare", "purity": 3, "role": "邊緣 + 資安 + Workers AI" }
+        {
+          "ticker": "CRWD",
+          "co": "CrowdStrike",
+          "purity": 5,
+          "role": "EDR + Falcon platform 龍頭"
+        },
+        {
+          "ticker": "PANW",
+          "co": "Palo Alto",
+          "purity": 5,
+          "role": "市值最大,Platformization"
+        },
+        {
+          "ticker": "ZS",
+          "co": "Zscaler",
+          "purity": 5,
+          "role": "雲端 SASE / ZTNA 龍頭"
+        },
+        {
+          "ticker": "FTNT",
+          "co": "Fortinet",
+          "purity": 5,
+          "role": "防火牆 + SD-WAN,FCF 最強"
+        },
+        {
+          "ticker": "S",
+          "co": "SentinelOne",
+          "purity": 5,
+          "role": "EDR 第二,CRWD 大當機受惠"
+        },
+        {
+          "ticker": "OKTA",
+          "co": "Okta",
+          "purity": 4,
+          "role": "IAM 身分驗證"
+        },
+        {
+          "ticker": "CYBR",
+          "co": "CyberArk",
+          "purity": 4,
+          "role": "PAM 特權管理"
+        },
+        {
+          "ticker": "NET",
+          "co": "Cloudflare",
+          "purity": 3,
+          "role": "邊緣 + 資安 + Workers AI"
+        }
       ]
     },
     {
@@ -2809,12 +3705,42 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "💻",
       "desc": "Copilot+ PC 推動 NPU + ARM SoC 滲透;NVDA / MSFT / Qualcomm / Apple 為主要競爭者。",
       "members": [
-        { "ticker": "ARM", "co": "Arm Holdings", "purity": 5, "role": "CPU 架構 IP 授權壟斷" },
-        { "ticker": "QCOM", "co": "Qualcomm", "purity": 4, "role": "Snapdragon X PC 主力" },
-        { "ticker": "AAPL", "co": "Apple", "purity": 3, "role": "M 系列 ARM 自研 (非外賣)" },
-        { "ticker": "AMD", "co": "AMD", "purity": 3, "role": "Ryzen AI + Strix Halo" },
-        { "ticker": "INTC", "co": "Intel", "purity": 3, "role": "Core Ultra + Panther Lake" },
-        { "ticker": "NVDA", "co": "NVIDIA", "purity": 2, "role": "MediaTek 合作 ARM PC 傳聞" }
+        {
+          "ticker": "ARM",
+          "co": "Arm Holdings",
+          "purity": 5,
+          "role": "CPU 架構 IP 授權壟斷"
+        },
+        {
+          "ticker": "QCOM",
+          "co": "Qualcomm",
+          "purity": 4,
+          "role": "Snapdragon X PC 主力"
+        },
+        {
+          "ticker": "AAPL",
+          "co": "Apple",
+          "purity": 3,
+          "role": "M 系列 ARM 自研 (非外賣)"
+        },
+        {
+          "ticker": "AMD",
+          "co": "AMD",
+          "purity": 3,
+          "role": "Ryzen AI + Strix Halo"
+        },
+        {
+          "ticker": "INTC",
+          "co": "Intel",
+          "purity": 3,
+          "role": "Core Ultra + Panther Lake"
+        },
+        {
+          "ticker": "NVDA",
+          "co": "NVIDIA",
+          "purity": 2,
+          "role": "MediaTek 合作 ARM PC 傳聞"
+        }
       ]
     },
     {
@@ -2822,9 +3748,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🎮",
       "desc": "AI 訓練 / 推理核心算力。NVDA 一家獨大,AMD 追趕,Intel 失血。",
       "members": [
-        { "ticker": "NVDA", "co": "NVIDIA ★", "purity": 5, "role": "Blackwell / Rubin,毛利率 73%+" },
-        { "ticker": "AMD", "co": "AMD", "purity": 4, "role": "MI300/MI350/MI400,OpenAI 採用" },
-        { "ticker": "INTC", "co": "Intel", "purity": 2, "role": "Gaudi 系列,市占極低" }
+        {
+          "ticker": "NVDA",
+          "co": "NVIDIA ★",
+          "purity": 5,
+          "role": "Blackwell / Rubin,毛利率 73%+"
+        },
+        {
+          "ticker": "AMD",
+          "co": "AMD",
+          "purity": 4,
+          "role": "MI300/MI350/MI400,OpenAI 採用"
+        },
+        {
+          "ticker": "INTC",
+          "co": "Intel",
+          "purity": 2,
+          "role": "Gaudi 系列,市占極低"
+        }
       ]
     },
     {
@@ -2832,8 +3773,18 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "📡",
       "desc": "5G 末段已成熟,題材轉向 AI-RAN (NVDA 入股 NOK)。成長有限但估值便宜。",
       "members": [
-        { "ticker": "NOK", "co": "Nokia", "purity": 4, "role": "NVDA $1B 入股,AI-RAN" },
-        { "ticker": "AVGO", "co": "Broadcom", "purity": 3, "role": "switch / router ASIC" }
+        {
+          "ticker": "NOK",
+          "co": "Nokia",
+          "purity": 4,
+          "role": "NVDA $1B 入股,AI-RAN"
+        },
+        {
+          "ticker": "AVGO",
+          "co": "Broadcom",
+          "purity": 3,
+          "role": "switch / router ASIC"
+        }
       ]
     },
     {
@@ -2841,10 +3792,30 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🚗",
       "desc": "電動車 + 自駕為主題,中國競爭壓力大。TSLA 純度最高 (但同時也是 AI Robotics 故事股)。",
       "members": [
-        { "ticker": "TSLA", "co": "Tesla", "purity": 5, "role": "Robotaxi + FSD + Optimus" },
-        { "ticker": "NVDA", "co": "NVIDIA", "purity": 3, "role": "Drive Thor 自駕晶片" },
-        { "ticker": "2308.TW", "co": "台達電", "purity": 3, "role": "電動車充電樁 + 動力總成" },
-        { "ticker": "NVTS", "co": "Navitas", "purity": 3, "role": "GaN 車用電源" }
+        {
+          "ticker": "TSLA",
+          "co": "Tesla",
+          "purity": 5,
+          "role": "Robotaxi + FSD + Optimus"
+        },
+        {
+          "ticker": "NVDA",
+          "co": "NVIDIA",
+          "purity": 3,
+          "role": "Drive Thor 自駕晶片"
+        },
+        {
+          "ticker": "2308.TW",
+          "co": "台達電",
+          "purity": 3,
+          "role": "電動車充電樁 + 動力總成"
+        },
+        {
+          "ticker": "NVTS",
+          "co": "Navitas",
+          "purity": 3,
+          "role": "GaN 車用電源"
+        }
       ]
     },
     {
@@ -2852,9 +3823,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "⛏️",
       "desc": "純 BTC 礦商受幣價影響;IREN / CIFR 已切入 AI 託管,題材改善。",
       "members": [
-        { "ticker": "CIFR", "co": "Cipher Mining", "purity": 5, "role": "BTC + Google HPC 託管" },
-        { "ticker": "IREN", "co": "IREN", "purity": 4, "role": "BTC 礦商 → AI Cloud 轉型" },
-        { "ticker": "IBIT", "co": "iShares BTC ETF", "purity": 5, "role": "BTC 現貨曝險" }
+        {
+          "ticker": "CIFR",
+          "co": "Cipher Mining",
+          "purity": 5,
+          "role": "BTC + Google HPC 託管"
+        },
+        {
+          "ticker": "IREN",
+          "co": "IREN",
+          "purity": 4,
+          "role": "BTC 礦商 → AI Cloud 轉型"
+        },
+        {
+          "ticker": "IBIT",
+          "co": "iShares BTC ETF",
+          "purity": 5,
+          "role": "BTC 現貨曝險"
+        }
       ]
     },
     {
@@ -2862,11 +3848,36 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🧮",
       "desc": "AI 變現的「軟體層」,PLTR 為純度最高的純 AI 股,估值最敏感。",
       "members": [
-        { "ticker": "PLTR", "co": "Palantir", "purity": 5, "role": "AIP 政府 + 商業變現" },
-        { "ticker": "MSFT", "co": "Microsoft", "purity": 4, "role": "Copilot + Azure AI" },
-        { "ticker": "GOOGL", "co": "Alphabet", "purity": 4, "role": "Gemini + Workspace AI" },
-        { "ticker": "ORCL", "co": "Oracle", "purity": 3, "role": "OCI + Stargate 基建" },
-        { "ticker": "NET", "co": "Cloudflare", "purity": 3, "role": "Workers AI 邊緣推理" }
+        {
+          "ticker": "PLTR",
+          "co": "Palantir",
+          "purity": 5,
+          "role": "AIP 政府 + 商業變現"
+        },
+        {
+          "ticker": "MSFT",
+          "co": "Microsoft",
+          "purity": 4,
+          "role": "Copilot + Azure AI"
+        },
+        {
+          "ticker": "GOOGL",
+          "co": "Alphabet",
+          "purity": 4,
+          "role": "Gemini + Workspace AI"
+        },
+        {
+          "ticker": "ORCL",
+          "co": "Oracle",
+          "purity": 3,
+          "role": "OCI + Stargate 基建"
+        },
+        {
+          "ticker": "NET",
+          "co": "Cloudflare",
+          "purity": 3,
+          "role": "Workers AI 邊緣推理"
+        }
       ]
     },
     {
@@ -2874,14 +3885,54 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🛰️",
       "desc": "Starlink 為龍頭 (未上市),Direct-to-Cell + 軍用 + IoT 為三大應用。SpaceX 分拆 Starlink 上市為市場最大期待,台廠主供地面終端 (UT)。",
       "members": [
-        { "ticker": "RKLB", "co": "Rocket Lab", "purity": 5, "role": "小型火箭 + 衛星製造,Neutron 中型火箭 2026" },
-        { "ticker": "ASTS", "co": "AST SpaceMobile", "purity": 5, "role": "Direct-to-Cell,AT&T/Verizon/Vodafone 合作" },
-        { "ticker": "IRDM", "co": "Iridium", "purity": 5, "role": "66 顆 LEO 營運中,IoT + 軍用通訊" },
-        { "ticker": "GSAT", "co": "Globalstar", "purity": 4, "role": "Apple iPhone 衛星 SOS 主合作方" },
-        { "ticker": "6285.TW", "co": "啟碁", "purity": 5, "role": "Starlink 用戶終端 ODM 主供" },
-        { "ticker": "3491.TW", "co": "昇達科", "purity": 4, "role": "毫米波被動 + 地面站射頻,SpaceX 鏈" },
-        { "ticker": "NOK", "co": "Nokia", "purity": 2, "role": "AI-RAN 為主,衛星 backhaul 沾邊" },
-        { "ticker": "QCOM", "co": "Qualcomm", "purity": 2, "role": "Snapdragon Satellite (與 GSAT 合作)" }
+        {
+          "ticker": "RKLB",
+          "co": "Rocket Lab",
+          "purity": 5,
+          "role": "小型火箭 + 衛星製造,Neutron 中型火箭 2026"
+        },
+        {
+          "ticker": "ASTS",
+          "co": "AST SpaceMobile",
+          "purity": 5,
+          "role": "Direct-to-Cell,AT&T/Verizon/Vodafone 合作"
+        },
+        {
+          "ticker": "IRDM",
+          "co": "Iridium",
+          "purity": 5,
+          "role": "66 顆 LEO 營運中,IoT + 軍用通訊"
+        },
+        {
+          "ticker": "GSAT",
+          "co": "Globalstar",
+          "purity": 4,
+          "role": "Apple iPhone 衛星 SOS 主合作方"
+        },
+        {
+          "ticker": "6285.TW",
+          "co": "啟碁",
+          "purity": 5,
+          "role": "Starlink 用戶終端 ODM 主供"
+        },
+        {
+          "ticker": "3491.TW",
+          "co": "昇達科",
+          "purity": 4,
+          "role": "毫米波被動 + 地面站射頻,SpaceX 鏈"
+        },
+        {
+          "ticker": "NOK",
+          "co": "Nokia",
+          "purity": 2,
+          "role": "AI-RAN 為主,衛星 backhaul 沾邊"
+        },
+        {
+          "ticker": "QCOM",
+          "co": "Qualcomm",
+          "purity": 2,
+          "role": "Snapdragon Satellite (與 GSAT 合作)"
+        }
       ]
     },
     {
@@ -2889,14 +3940,54 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🔌",
       "desc": "AI server 用 MLCC 數量為傳統 server 數倍 (高容值 + 低 ESR),EV 同樣大量採用。日廠 Murata / TDK / Taiyo Yuden 為高階主力,韓 SEMCO 與台廠 國巨 / 華新科 為次階供應。",
       "members": [
-        { "ticker": "6981.T", "co": "Murata 村田", "purity": 5, "role": "全球 MLCC 龍頭 (市占 ~40%),高階品不可替代" },
-        { "ticker": "003670.KS", "co": "SEMCO", "purity": 5, "role": "MLCC 全球第二,Samsung 集團持股" },
-        { "ticker": "6976.T", "co": "Taiyo Yuden", "purity": 5, "role": "MLCC 第三大廠,車用 + 高頻利基" },
-        { "ticker": "2327.TW", "co": "國巨", "purity": 5, "role": "全球被動元件第三大,AI server MLCC 滲透中" },
-        { "ticker": "2492.TW", "co": "華新科", "purity": 5, "role": "MLCC 第二大台廠,AI/EV 高容值比重提升" },
-        { "ticker": "6762.T", "co": "TDK", "purity": 4, "role": "MLCC + 電感,iPhone 電池併營" },
-        { "ticker": "6781.TW", "co": "AEM-KY 富世達", "purity": 3, "role": "AI server 連接器/銅纜,GB200/300 受惠" },
-        { "ticker": "TER", "co": "Teradyne", "purity": 1, "role": "MLCC ATE 測試 (沾邊)" }
+        {
+          "ticker": "6981.T",
+          "co": "Murata 村田",
+          "purity": 5,
+          "role": "全球 MLCC 龍頭 (市占 ~40%),高階品不可替代"
+        },
+        {
+          "ticker": "003670.KS",
+          "co": "SEMCO",
+          "purity": 5,
+          "role": "MLCC 全球第二,Samsung 集團持股"
+        },
+        {
+          "ticker": "6976.T",
+          "co": "Taiyo Yuden",
+          "purity": 5,
+          "role": "MLCC 第三大廠,車用 + 高頻利基"
+        },
+        {
+          "ticker": "2327.TW",
+          "co": "國巨",
+          "purity": 5,
+          "role": "全球被動元件第三大,AI server MLCC 滲透中"
+        },
+        {
+          "ticker": "2492.TW",
+          "co": "華新科",
+          "purity": 5,
+          "role": "MLCC 第二大台廠,AI/EV 高容值比重提升"
+        },
+        {
+          "ticker": "6762.T",
+          "co": "TDK",
+          "purity": 4,
+          "role": "MLCC + 電感,iPhone 電池併營"
+        },
+        {
+          "ticker": "6781.TW",
+          "co": "AEM-KY 富世達",
+          "purity": 3,
+          "role": "AI server 連接器/銅纜,GB200/300 受惠"
+        },
+        {
+          "ticker": "TER",
+          "co": "Teradyne",
+          "purity": 1,
+          "role": "MLCC ATE 測試 (沾邊)"
+        }
       ]
     },
     {
@@ -2904,85 +3995,73 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "icon": "🧩",
       "desc": "AI GPU / CPU 用 ABF 載板層數高 (>20 層),全球僅日 Ibiden、韓 SEMCO、台 欣興 / 南電 / 景碩 能量產。2024 庫存調整後 2025-26 訂單回溫,Blackwell / MI350 / TPU 推升需求。",
       "members": [
-        { "ticker": "3037.TW", "co": "欣興", "purity": 5, "role": "ABF 全球前三,NVDA/AMD GPU 主供" },
-        { "ticker": "8046.TW", "co": "南電", "purity": 5, "role": "ABF 高階 (Intel/NVDA),2025 回溫" },
-        { "ticker": "003670.KS", "co": "SEMCO", "purity": 4, "role": "ABF 第二大,MLCC + 載板雙主業" },
-        { "ticker": "3189.TW", "co": "景碩", "purity": 4, "role": "ABF + iPhone SiP 載板" },
-        { "ticker": "2317.TW", "co": "鴻海", "purity": 2, "role": "PCB 子公司鴻名;組裝為主" },
-        { "ticker": "2382.TW", "co": "廣達", "purity": 1, "role": "PCB 採購方,非生產者 (沾邊)" }
+        {
+          "ticker": "3037.TW",
+          "co": "欣興",
+          "purity": 5,
+          "role": "ABF 全球前三,NVDA/AMD GPU 主供"
+        },
+        {
+          "ticker": "8046.TW",
+          "co": "南電",
+          "purity": 5,
+          "role": "ABF 高階 (Intel/NVDA),2025 回溫"
+        },
+        {
+          "ticker": "003670.KS",
+          "co": "SEMCO",
+          "purity": 4,
+          "role": "ABF 第二大,MLCC + 載板雙主業"
+        },
+        {
+          "ticker": "3189.TW",
+          "co": "景碩",
+          "purity": 4,
+          "role": "ABF + iPhone SiP 載板"
+        },
+        {
+          "ticker": "2317.TW",
+          "co": "鴻海",
+          "purity": 2,
+          "role": "PCB 子公司鴻名;組裝為主"
+        },
+        {
+          "ticker": "2382.TW",
+          "co": "廣達",
+          "purity": 1,
+          "role": "PCB 採購方,非生產者 (沾邊)"
+        }
       ]
     }
   ],
   "polymarket": [
     {
-      "title": "Fed decision in July 2026",
-      "prob": "Hold 62% / Cut 25bp 33%",
-      "vol": "$8M",
-      "url": "https://polymarket.com/markets/fed",
-      "tag": "Fed"
-    },
-    {
-      "title": "Fed rate cuts in 2026 (total)",
-      "prob": "2 cuts: 41%",
-      "vol": "$12M",
-      "url": "https://polymarket.com/markets/fed",
-      "tag": "Fed"
-    },
-    {
-      "title": "US recession in 2026",
-      "prob": "Yes 22%",
-      "vol": "$5M",
-      "url": "https://polymarket.com/markets",
-      "tag": "Macro"
-    },
-    {
-      "title": "Republicans hold House in 2026 midterm",
-      "prob": "Yes 48%",
-      "vol": "$25M",
-      "url": "https://polymarket.com/markets/elections",
-      "tag": "Politics"
-    },
-    {
-      "title": "GPT-5 / Claude 5 / Gemini 3 release before Q4 2026",
-      "prob": "Yes 78%",
-      "vol": "$3M",
-      "url": "https://polymarket.com/markets/ai",
+      "title": "Will Spain win the 2026 FIFA World Cup?",
+      "prob": "Yes 17%, No 83%",
+      "vol": "$2.0M",
+      "url": "https://polymarket.com/event/will-spain-win-the-2026-fifa-world-cup-963",
       "tag": "AI"
     },
     {
-      "title": "AGI by 2027 (Polymarket definition)",
-      "prob": "No 88%",
-      "vol": "$4M",
-      "url": "https://polymarket.com/markets/ai",
-      "tag": "AI"
+      "title": "Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$1.6M",
+      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-june-2026-meeting",
+      "tag": "Fed"
     },
     {
-      "title": "NVDA market cap > $5T by end 2026",
-      "prob": "Yes 45%",
-      "vol": "$2M",
-      "url": "https://polymarket.com/markets",
-      "tag": "Stocks"
+      "title": "Will there be no change in Fed interest rates after the June 2026 meeting?",
+      "prob": "Yes 99%, No 1%",
+      "vol": "$1.2M",
+      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-june-2026-meeting",
+      "tag": "Fed"
     },
     {
-      "title": "BTC > $150K by end 2026",
-      "prob": "Yes 38%",
-      "vol": "$7M",
-      "url": "https://polymarket.com/markets/crypto",
-      "tag": "Crypto"
-    },
-    {
-      "title": "TSMC Arizona Fab 2 begins production 2026",
-      "prob": "Yes 65%",
-      "vol": "$1M",
-      "url": "https://polymarket.com/markets",
-      "tag": "Tech"
-    },
-    {
-      "title": "OpenAI IPO announced in 2026",
-      "prob": "Yes 12%",
-      "vol": "$2M",
-      "url": "https://polymarket.com/markets",
-      "tag": "IPO"
+      "title": "Will the Fed decrease interest rates by 25 bps after the June 2026 meeting?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$1.0M",
+      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-june-2026-meeting",
+      "tag": "Fed"
     }
   ],
   "institutional_holders": [
@@ -2996,7 +4075,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "holdings": [
         {
           "ticker": "AAPL",
-          "pct": 22.0
+          "pct": 22
         },
         {
           "ticker": "AXP",
@@ -3140,7 +4219,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "holdings": [
         {
           "ticker": "TSLA",
-          "pct": 12.0
+          "pct": 12
         },
         {
           "ticker": "COIN",
@@ -3148,7 +4227,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         },
         {
           "ticker": "ROKU",
-          "pct": 7.0
+          "pct": 7
         },
         {
           "ticker": "PLTR",
@@ -3179,7 +4258,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "holdings": [
         {
           "ticker": "SPY",
-          "pct": 5.0
+          "pct": 5
         },
         {
           "ticker": "IVV",
@@ -3245,7 +4324,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "holdings": [
         {
           "ticker": "MSFT",
-          "pct": 8.0
+          "pct": 8
         },
         {
           "ticker": "GOOGL",
@@ -3261,7 +4340,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         },
         {
           "ticker": "ADBE",
-          "pct": 5.0
+          "pct": 5
         },
         {
           "ticker": "AAPL",
@@ -3483,7 +4562,27 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       ],
       "bias": "up",
       "note": "MAI 自研模型登場、Agent 平台、NVDA 深度整合",
-      "details": "**重大發表:**\n• MAI-Thinking-1 (35B, 256K context) - MSFT 首個自研推理模型,盲測勝 Claude Sonnet 4.6\n• MAI-Image/Voice/Transcribe/Code 系列模型\n• Microsoft IQ (Work/Fabric/Foundry/Web IQ) — agent context 層 GA\n• Microsoft Scout — always-on 個人 agent (Teams/Outlook)\n• Microsoft Execution Containers (MXC) — OS 級 agent 沙盒\n• Surface RTX Spark Dev Box — 1 petaflop, 128GB 統一記憶體,本機跑 120B LLM\n• DGX Station for Windows (NVIDIA GB300) — 本機跑 1T 模型 (Q4 2026)\n• Azure HorizonDB — 託管 PostgreSQL 3x 同類效能\n• Fabric Data Warehouse + NVIDIA GPU 加速 — 7x 三大競對\n• Maia 200 + Cobalt 200 部署 10+ 區域\n• MRC 開放網路協議 (AMD/AVGO/INTC/OpenAI/NVDA 共同開發)\n• Majorana 2 量子晶片 — 1000x 可靠性,2029 商用目標\n\n**投資觀點:**\n• MSFT 模型獨立性首次落地,結構性估值上修\n• NVDA 雙重受惠 (硬體 + agent runtime)\n• AVGO/AMD/INTC 受惠 MRC\n• CRWD/PANW 因 Agent 365 整合 Defender 短線承壓\n• GOOGL: Web IQ 直接挑戰 Search\n• Anthropic/OpenAI: MAI-Thinking-1 直接競爭",
+      "details": "**重大發表:**
+• MAI-Thinking-1 (35B, 256K context) - MSFT 首個自研推理模型,盲測勝 Claude Sonnet 4.6
+• MAI-Image/Voice/Transcribe/Code 系列模型
+• Microsoft IQ (Work/Fabric/Foundry/Web IQ) — agent context 層 GA
+• Microsoft Scout — always-on 個人 agent (Teams/Outlook)
+• Microsoft Execution Containers (MXC) — OS 級 agent 沙盒
+• Surface RTX Spark Dev Box — 1 petaflop, 128GB 統一記憶體,本機跑 120B LLM
+• DGX Station for Windows (NVIDIA GB300) — 本機跑 1T 模型 (Q4 2026)
+• Azure HorizonDB — 託管 PostgreSQL 3x 同類效能
+• Fabric Data Warehouse + NVIDIA GPU 加速 — 7x 三大競對
+• Maia 200 + Cobalt 200 部署 10+ 區域
+• MRC 開放網路協議 (AMD/AVGO/INTC/OpenAI/NVDA 共同開發)
+• Majorana 2 量子晶片 — 1000x 可靠性,2029 商用目標
+
+**投資觀點:**
+• MSFT 模型獨立性首次落地,結構性估值上修
+• NVDA 雙重受惠 (硬體 + agent runtime)
+• AVGO/AMD/INTC 受惠 MRC
+• CRWD/PANW 因 Agent 365 整合 Defender 短線承壓
+• GOOGL: Web IQ 直接挑戰 Search
+• Anthropic/OpenAI: MAI-Thinking-1 直接競爭",
       "url": "https://news.microsoft.com/build-2026-live-blog"
     },
     {
@@ -3496,7 +4595,56 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       ],
       "bias": "down",
       "note": "Siri AI 大改造 + Google Gemini 合作,但 AAPL 當日 -2.57% (歐盟/中國不支援)",
-      "details": "**主題: All Systems Glow · Tim Cook 最後一次 WWDC**\n\n**🔥 Siri AI 大改造 (重磅)**\n• Google Gemini 1.2T 客製化模型 + Apple Foundation Models 2.0 雙引擎\n• 三層路由: 簡單→裝置端;中等→Private Cloud;複雜→Gemini\n• 合約明定: Google 不能用 Siri 查詢訓練 Gemini\n• AFM Cloud Pro 跑在 Google Cloud + NVIDIA GPU\n• 三大新招: 多步驟跨 App 任務、Visual Intelligence (相機 AI 眼睛)、個人情境理解\n• 獨立 Siri App,iCloud 同步歷史對話\n• visionOS/macOS 上 3D orb 視覺化,無需 'Hey Siri'\n\n**📱 六大系統統一升 27 (對齊版本號)**\n• iOS 27 / iPadOS 27 / macOS 27 (Golden Gate) / watchOS 27 / visionOS 27 / tvOS 27\n• macOS Golden Gate **正式終止 Intel Mac 支援** (只支援 Apple Silicon)\n• iOS 27 支援 iPhone 11 以上 (老機友善)\n• 完整 Apple Intelligence 需 iPhone 15 Pro / 16 系列\n• Liquid Glass 透明度滑桿 (回應去年負評)\n\n**🤖 Apple Intelligence 功能轟炸**\n• Photos: Cleanup 強化、Extend 延伸、Spatial Reframing (改變視角)\n• Messages: 自動建議建立行事曆\n• Phone: Call Context 通話時自動查郵件\n• Safari: 自動組織標籤、頁面變化監控 (價格降通知)、自然語言建擴充\n• Home: 攝影機自動生成事件描述 (含 Face ID 辨識)\n• Shortcuts: 自然語言建立\n• Passwords: **Agentic 自動修不安全密碼**\n• Xcode: AI 編碼助手可模擬整個 App\n\n**🏠 全新平台 homeOS + HomePad 預告**\n• 第七個作業系統,專為 HomePad (HomePod + 7\" 螢幕 + A18) 設計\n• 秋季硬體: HomePad、新 HomePod mini、新 Apple TV 4K\n• 新 HomeKit 安全攝影機含 Face ID\n\n**⚠️ 區域限制 (股價殺手)**\n• Siri AI **歐盟與中國不上線** (歐盟 Mac 可用,iPhone/Watch 不行)\n• Apple 稱 DMA 條款,已協商數月被 EU 駁回\n• 中文 Siri AI 也要等 (僅英文先上)\n\n**📅 時程**\n• Dev beta: 即日\n• 公測: 2026/7\n• 正式版: 2026 秋季 (iPhone 18 發表後)\n\n**👋 Tim Cook 告別 + John Ternus 9 月接任 CEO**\n\n**💰 投資觀點 (AAPL 當日 -2.57%)**\n• 利空: 區域限制 = AI 收入結構性減損 (歐盟+中國 = ~30% 營收);Apple Intelligence 落後 GPT/Gemini/Claude\n• 利多: GOOGL Gemini 合作 (AAPL = Gemini 最大企業客戶,GOOGL 受惠);NVDA 受惠 (AFM Cloud Pro 跑 NVDA GPU)\n• 中性: Liquid Glass 修正、家庭生態系擴張 (HomePad 短期難貢獻營收)\n• 結論: AAPL FQ3 26 財報 (7/30) 服務業務成長為下一關鍵,Siri AI 未先實機體驗難評估再採用率",
+      "details": "**主題: All Systems Glow · Tim Cook 最後一次 WWDC**
+
+**🔥 Siri AI 大改造 (重磅)**
+• Google Gemini 1.2T 客製化模型 + Apple Foundation Models 2.0 雙引擎
+• 三層路由: 簡單→裝置端;中等→Private Cloud;複雜→Gemini
+• 合約明定: Google 不能用 Siri 查詢訓練 Gemini
+• AFM Cloud Pro 跑在 Google Cloud + NVIDIA GPU
+• 三大新招: 多步驟跨 App 任務、Visual Intelligence (相機 AI 眼睛)、個人情境理解
+• 獨立 Siri App,iCloud 同步歷史對話
+• visionOS/macOS 上 3D orb 視覺化,無需 'Hey Siri'
+
+**📱 六大系統統一升 27 (對齊版本號)**
+• iOS 27 / iPadOS 27 / macOS 27 (Golden Gate) / watchOS 27 / visionOS 27 / tvOS 27
+• macOS Golden Gate **正式終止 Intel Mac 支援** (只支援 Apple Silicon)
+• iOS 27 支援 iPhone 11 以上 (老機友善)
+• 完整 Apple Intelligence 需 iPhone 15 Pro / 16 系列
+• Liquid Glass 透明度滑桿 (回應去年負評)
+
+**🤖 Apple Intelligence 功能轟炸**
+• Photos: Cleanup 強化、Extend 延伸、Spatial Reframing (改變視角)
+• Messages: 自動建議建立行事曆
+• Phone: Call Context 通話時自動查郵件
+• Safari: 自動組織標籤、頁面變化監控 (價格降通知)、自然語言建擴充
+• Home: 攝影機自動生成事件描述 (含 Face ID 辨識)
+• Shortcuts: 自然語言建立
+• Passwords: **Agentic 自動修不安全密碼**
+• Xcode: AI 編碼助手可模擬整個 App
+
+**🏠 全新平台 homeOS + HomePad 預告**
+• 第七個作業系統,專為 HomePad (HomePod + 7\" 螢幕 + A18) 設計
+• 秋季硬體: HomePad、新 HomePod mini、新 Apple TV 4K
+• 新 HomeKit 安全攝影機含 Face ID
+
+**⚠️ 區域限制 (股價殺手)**
+• Siri AI **歐盟與中國不上線** (歐盟 Mac 可用,iPhone/Watch 不行)
+• Apple 稱 DMA 條款,已協商數月被 EU 駁回
+• 中文 Siri AI 也要等 (僅英文先上)
+
+**📅 時程**
+• Dev beta: 即日
+• 公測: 2026/7
+• 正式版: 2026 秋季 (iPhone 18 發表後)
+
+**👋 Tim Cook 告別 + John Ternus 9 月接任 CEO**
+
+**💰 投資觀點 (AAPL 當日 -2.57%)**
+• 利空: 區域限制 = AI 收入結構性減損 (歐盟+中國 = ~30% 營收);Apple Intelligence 落後 GPT/Gemini/Claude
+• 利多: GOOGL Gemini 合作 (AAPL = Gemini 最大企業客戶,GOOGL 受惠);NVDA 受惠 (AFM Cloud Pro 跑 NVDA GPU)
+• 中性: Liquid Glass 修正、家庭生態系擴張 (HomePad 短期難貢獻營收)
+• 結論: AAPL FQ3 26 財報 (7/30) 服務業務成長為下一關鍵,Siri AI 未先實機體驗難評估再採用率",
       "url": "https://developer.apple.com/wwdc/"
     },
     {
