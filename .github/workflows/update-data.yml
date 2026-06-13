@@ -2,9 +2,11 @@ name: Update market data
 
 on:
   schedule:
-    # 美東收盤 16:00 ET (UTC-5 = 21:00 UTC 夏令 / 21:00 UTC 冬令的差 1 小時)
-    # 用 22:10 UTC 給 yfinance 緩衝;週一到週五跑
-    - cron: '10 22 * * 1-5'
+    # 美東 09:35 ET pre-market = 13:35 UTC (夏令) / 14:35 UTC (冬令) — 抓開盤跳空
+    # 美東 16:10 ET 收盤後 = 20:10 UTC (夏令) / 21:10 UTC (冬令) — 抓當日收盤
+    # GitHub cron 用 UTC 固定,故夏冬都各偏 30 分,實際抓到的價格仍有效
+    - cron: '35 13 * * 1-5'
+    - cron: '10 21 * * 1-5'
   workflow_dispatch:  # 允許在 Actions 頁手動觸發
 
 permissions:
