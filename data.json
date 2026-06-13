@@ -4003,15 +4003,17 @@
   ],
   "conferences": [
     {
-      "date": "2026-05-13 (估)",
+      "date": "2026-05-19",
       "name": "Google I/O 2026",
       "tickers": [
         "GOOGL",
-        "NVDA"
+        "NVDA",
+        "AAPL"
       ],
       "bias": "up",
-      "note": "Gemini 3 / Gemini Nano / TPU v7 / Android 17 / Agent SDK;Sundar keynote",
-      "url": "https://io.google/"
+      "note": "Gemini 3.5 Flash + Omni + Spark agent / TPU 8t+8i / Antigravity 2.0 / Android Halo;Ben Thompson: 'AI everywhere, for better and for worse'",
+      "details": "**主題: Welcome to the Agentic Gemini Era**\n\n**🤖 模型 (Gemini 3.5 系列發表)**\n• Gemini 3.5 Flash — 號稱「快四倍於其他 frontier model」\n• Gemini 3.5 Pro — 隔月推出\n• Gemini Omni Flash — Omni 家族首發,可直接生成影片 (圖片/文字隨後)\n• Gemini Spark — 個人 AI agent,搭 Antigravity 引擎,U.S. AI Ultra 訂閱者先上\n• Antigravity 2.0 — 獨立桌面 app,orchestrate 多 agent cohort\n\n**🔍 Search + 產品線**\n• Information agents in Search — 含 generative UI + 持久化 dashboard\n• Ask YouTube — 影片內容對話式搜尋 (U.S. 夏季)\n• Docs Live — 語音建文件,將擴 Gmail / Keep\n• Daily Brief — agent 整合 inbox / calendar / tasks\n• Google Pics — Nano Banana 為底的影像生成編輯\n• Google Flow — 創意工作 planning agent\n\n**🧪 科學 + 平台**\n• Gemini for Science — Science Skills on GitHub + Antigravity\n• Personal Intelligence + SynthID 擴張 (OpenAI / Kakao / Eleven Labs 加入)\n• Bringing Gemini models to Apple developers — AAPL 平台正式整合\n\n**⚙️ TPU + 硬體**\n• TPU 8t (訓練) — 算力為前代「近 3x」,全球 100 萬+ TPU 規模\n• TPU 8i (推論) — performance-per-watt 2x 改善\n• Capex 全年指引: $180-190B\n• Intelligent Eyewear — audio glasses 秋季 2026 出貨,display glasses 預覽\n\n**📱 Android**\n• Android Halo — 新 UI 空間,顯示 agent 即時更新 + 任務進度 (2026 後段)\n• 未發數字版號 (與往年 Android 17 命名節奏不同)\n\n**💰 投資觀點**\n• 多頭: TPU 8t/8i 自研路徑落地,降低對 NVDA 依賴 + capex 折舊優勢;agent 全套 (Spark + Antigravity + Daily Brief) 與 MSFT/AAPL agent 戰直接競爭\n• 風險: Ben Thompson 標題暗示「AI everywhere, for better and for worse」+ 質疑「DeepMind alignment with Google's business objectives」,代表發表面廣但策略聚焦度有疑\n• NVDA: TPU 自研壓力 vs. Google capex $180B 仍要買大量 GPU,淨影響短期偏中性\n• AAPL: Gemini 進 iPhone developer SDK,深化合作 — 與 WWDC 2026 Gemini-Siri 合作呼應",
+      "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
     },
     {
       "date": "2026-06-02",
