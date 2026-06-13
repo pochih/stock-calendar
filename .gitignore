@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+_served.json
+_srv.log
+.DS_Store
+.vscode/
+.idea/
