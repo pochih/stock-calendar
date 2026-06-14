@@ -1352,6 +1352,18 @@
       "fcf_ttm": "—"
     },
     {
+      "ticker": "DRAM",
+      "name": "Roundhill Memory ETF",
+      "type": "ETF",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "$28 (估)",
+      "div": "0%",
+      "note": "全球純記憶體 ETF (2026/4 上市,史上最成功 ETF 之一);Hynix 18% + Samsung 13% + Micron ~24% + Kioxia 8% + SanDisk 6%。費用率 0.65%。HBM/AI 主題最直接 ETF",
+      "shares": "—",
+      "mcap": "$17.5B"
+    },
+    {
       "ticker": "EWY",
       "name": "iShares MSCI South Korea",
       "type": "ETF",
@@ -2725,6 +2737,12 @@
           "co": "Micron",
           "purity": 5,
           "role": "美系唯一 HBM3E,FQ4 26 HBM 過半營收"
+        },
+        {
+          "ticker": "DRAM",
+          "co": "Roundhill Memory ETF",
+          "purity": 5,
+          "role": "純記憶體 ETF (Hynix+三星+Micron+Kioxia+SNDK);最直接 HBM 曝險"
         },
         {
           "ticker": "005930.KS",
