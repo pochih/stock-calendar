@@ -207,6 +207,34 @@
   .tv-tickers .pill:hover { border-color: var(--blue); }
   .tv-tickers .pill.active { background: var(--blue); color: var(--bg); border-color: var(--blue); }
 
+  /* Sparkline + Watchlist + Leaderboard */
+  .spark { display: block; }
+  .star-btn {
+    background: none; border: none; cursor: pointer; padding: 0;
+    font-size: 16px; color: #3d4452; line-height: 1; user-select: none;
+  }
+  .star-btn:hover { color: var(--yellow); }
+  .star-btn.on { color: var(--yellow); }
+  .chg-up { color: var(--green); font-family: monospace; font-weight: 600; }
+  .chg-down { color: var(--red); font-family: monospace; font-weight: 600; }
+  .chg-flat { color: var(--muted); font-family: monospace; }
+  .leader-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .leader-card h4 {
+    color: var(--blue); font-size: 13px; margin: 0 0 8px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .leader-card h4 .leader-tag { color: var(--muted); font-size: 11px; font-weight: 400; }
+  .leader-row {
+    display: grid; grid-template-columns: 60px 1fr 60px; gap: 8px;
+    align-items: center; padding: 3px 0; font-size: 12px;
+    border-bottom: 1px dashed rgba(48,54,61,0.5);
+  }
+  .leader-row:last-child { border-bottom: none; }
+  .leader-row .ticker { font-size: 12px; }
+
   /* Themes 題材分類 */
   .theme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 14px; }
   .theme-card {
@@ -360,14 +388,26 @@
 <!-- ============ Tickers ============ -->
 <section id="tab-tickers" class="tab">
   <h2>💹 個股 / ETF 快照</h2>
-  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">點欄位標題排序 (再點切換升降冪)。</p>
+
+  <!-- Leaderboard cards -->
+  <div id="leaderboard-row" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 16px;"></div>
+
+  <!-- Watchlist + filter controls -->
+  <div style="display:flex; gap:10px; align-items:center; margin-bottom:10px; flex-wrap: wrap;">
+    <button id="wl-toggle" class="hist-filter">⭐ 只顯示 Watchlist (<span id="wl-count">0</span>)</button>
+    <span style="color:var(--muted); font-size:12px;">點 ticker 旁的 ☆ 加入 watchlist · 點欄位標題排序 (再點切換升降冪)</span>
+  </div>
+
   <h3>📦 ETF + Index</h3>
   <table class="sortable">
     <thead><tr>
+      <th style="width:24px;">★</th>
       <th data-sort="text">Ticker</th>
       <th data-sort="text">名稱</th>
       <th data-sort="text">類型</th>
       <th data-sort="num" data-field="price">價格</th>
+      <th data-sort="num" data-field="change_30d_pct">30D</th>
+      <th>30D 趨勢</th>
       <th data-sort="num" data-field="pe">PE</th>
       <th data-sort="num" data-field="fwd_pe">Fwd PE</th>
       <th data-sort="num" data-field="div">殖利率</th>
@@ -380,9 +420,12 @@
   <h3>🏢 個股</h3>
   <table class="sortable">
     <thead><tr>
+      <th style="width:24px;">★</th>
       <th data-sort="text">Ticker</th>
       <th data-sort="text">名稱</th>
       <th data-sort="num" data-field="price">價格</th>
+      <th data-sort="num" data-field="change_30d_pct">30D</th>
+      <th>30D 趨勢</th>
       <th data-sort="num" data-field="pe">PE</th>
       <th data-sort="num" data-field="fwd_pe">Fwd PE</th>
       <th data-sort="num" data-field="gross_margin">毛利率</th>
@@ -394,7 +437,7 @@
     </tr></thead>
     <tbody id="tick-stock"></tbody>
   </table>
-  <div class="disclaimer">⚠️ 價格為估算快照。執行 <code>run.py</code> 抓取即時。FCF = Free Cash Flow。ETF 的「市值」=AUM。</div>
+  <div class="disclaimer">⚠️ 價格為估算快照。執行 <code>run.py</code> 抓取即時。FCF = Free Cash Flow。ETF 的「市值」=AUM。Watchlist 存在瀏覽器 (localStorage)。</div>
 </section>
 
 <!-- ============ 題材分類 ============ -->
@@ -4872,6 +4915,7 @@ function initApp() {
   initCalendar();
   initTradingView();
   initThemes();
+  initWatchlist();
   initSortable();
 }
 
@@ -4995,12 +5039,16 @@ function renderIPO() {
 function renderTickers() {
   const etfs = DATA.tickers.filter(t => t.type === 'ETF' || t.type === 'Index');
   const stocks = DATA.tickers.filter(t => t.type === 'Stock');
-  document.getElementById('tick-etf').innerHTML = etfs.map(t => `
+  const filt = arr => WATCHLIST_ONLY ? arr.filter(t => WATCHLIST.has(t.ticker)) : arr;
+  document.getElementById('tick-etf').innerHTML = filt(etfs).map(t => `
     <tr>
+      <td>${starBtn(t.ticker)}</td>
       <td><span class="ticker" onclick="loadChart('${t.ticker}')">${esc(t.ticker)}</span></td>
       <td>${esc(t.name)}</td>
       <td>${esc(t.type)}</td>
       <td><strong>${esc(t.price)}</strong></td>
+      <td>${fmtChange(t.change_30d_pct)}</td>
+      <td>${sparklineSvg(t.sparkline_30d, t.change_30d_pct)}</td>
       <td>${esc(t.pe)}</td>
       <td>${esc(t.fwd_pe)}</td>
       <td>${esc(t.div)}</td>
@@ -5008,11 +5056,14 @@ function renderTickers() {
       <td><strong>${esc(t.mcap || '—')}</strong></td>
       <td style="color:var(--muted); font-size:12px;">${esc(t.note)}</td>
     </tr>`).join('');
-  document.getElementById('tick-stock').innerHTML = stocks.map(t => `
+  document.getElementById('tick-stock').innerHTML = filt(stocks).map(t => `
     <tr>
+      <td>${starBtn(t.ticker)}</td>
       <td><span class="ticker" onclick="loadChart('${t.ticker}')">${esc(t.ticker)}</span></td>
       <td>${esc(t.name)}</td>
       <td><strong>${esc(t.price)}</strong></td>
+      <td>${fmtChange(t.change_30d_pct)}</td>
+      <td>${sparklineSvg(t.sparkline_30d, t.change_30d_pct)}</td>
       <td>${esc(t.pe)}</td>
       <td>${esc(t.fwd_pe)}</td>
       <td>${esc(t.gross_margin)}</td>
@@ -5022,6 +5073,91 @@ function renderTickers() {
       <td><strong>${esc(t.mcap || '—')}</strong></td>
       <td style="color:var(--muted); font-size:12px;">${esc(t.note)}</td>
     </tr>`).join('');
+  renderLeaderboard();
+}
+
+// ========== Watchlist ==========
+let WATCHLIST = new Set(JSON.parse(localStorage.getItem('wl') || '[]'));
+let WATCHLIST_ONLY = false;
+function saveWatchlist() {
+  localStorage.setItem('wl', JSON.stringify([...WATCHLIST]));
+  document.getElementById('wl-count').textContent = WATCHLIST.size;
+}
+function starBtn(ticker) {
+  const on = WATCHLIST.has(ticker);
+  return `<button class="star-btn ${on ? 'on' : ''}" onclick="toggleStar('${ticker}', event)" title="加入 watchlist">${on ? '★' : '☆'}</button>`;
+}
+function toggleStar(ticker, ev) {
+  ev && ev.stopPropagation();
+  if (WATCHLIST.has(ticker)) WATCHLIST.delete(ticker);
+  else WATCHLIST.add(ticker);
+  saveWatchlist();
+  renderTickers();
+}
+window.toggleStar = toggleStar;
+function initWatchlist() {
+  saveWatchlist();
+  const btn = document.getElementById('wl-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    WATCHLIST_ONLY = !WATCHLIST_ONLY;
+    btn.classList.toggle('active', WATCHLIST_ONLY);
+    renderTickers();
+  });
+}
+
+// ========== Sparkline (inline SVG, 90×24) ==========
+function sparklineSvg(points, changePct) {
+  if (!points || points.length < 2) return '<span style="color:var(--muted); font-size:11px;">—</span>';
+  const W = 90, H = 24, pad = 1;
+  const min = Math.min(...points), max = Math.max(...points);
+  const range = max - min || 1;
+  const stepX = (W - 2 * pad) / (points.length - 1);
+  const ys = points.map(p => H - pad - ((p - min) / range) * (H - 2 * pad));
+  const d = points.map((_, i) => `${i === 0 ? 'M' : 'L'}${(pad + i * stepX).toFixed(1)},${ys[i].toFixed(1)}`).join(' ');
+  const color = (changePct ?? 0) >= 0 ? 'var(--green)' : 'var(--red)';
+  return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path d="${d}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+}
+function fmtChange(pct) {
+  if (pct === null || pct === undefined || isNaN(pct)) return '<span class="chg-flat">—</span>';
+  const cls = pct > 0.05 ? 'chg-up' : pct < -0.05 ? 'chg-down' : 'chg-flat';
+  const sign = pct > 0 ? '+' : '';
+  return `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
+}
+
+// ========== Leaderboard (Top 5 gainers / losers / vs QQQ) ==========
+function renderLeaderboard() {
+  const target = document.getElementById('leaderboard-row');
+  if (!target) return;
+  const all = DATA.tickers.filter(t => typeof t.change_30d_pct === 'number');
+  if (!all.length) { target.innerHTML = ''; return; }
+  const qqq = DATA.tickers.find(t => t.ticker === 'QQQ');
+  const qqqChg = qqq && typeof qqq.change_30d_pct === 'number' ? qqq.change_30d_pct : 0;
+
+  const sortDesc = [...all].sort((a, b) => b.change_30d_pct - a.change_30d_pct);
+  const gainers = sortDesc.slice(0, 5);
+  const losers = sortDesc.slice(-5).reverse();
+  const vsQqq = [...all]
+    .map(t => ({ ...t, _rel: t.change_30d_pct - qqqChg }))
+    .sort((a, b) => b._rel - a._rel)
+    .slice(0, 5);
+
+  const card = (title, tag, rows, valFmt) => `
+    <div class="leader-card">
+      <h4>${esc(title)}<span class="leader-tag">${esc(tag)}</span></h4>
+      ${rows.map(t => `
+        <div class="leader-row">
+          <span class="ticker" onclick="loadChart('${t.ticker}')">${esc(t.ticker)}</span>
+          <span style="color:var(--muted); font-size:11px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(t.name)}</span>
+          <span style="text-align:right;">${valFmt(t)}</span>
+        </div>`).join('')}
+    </div>`;
+
+  target.innerHTML =
+    card('📈 30 天漲幅榜 Top 5', '全部 ticker', gainers, t => fmtChange(t.change_30d_pct)) +
+    card('📉 30 天跌幅榜 Top 5', '全部 ticker', losers, t => fmtChange(t.change_30d_pct)) +
+    card('⚡ vs QQQ 強勢榜 Top 5', `QQQ 30 天 ${fmtChange(qqqChg)}`.replace(/<[^>]*>/g,''), vsQqq,
+         t => `<span class="${t._rel >= 0 ? 'chg-up' : 'chg-down'}">${t._rel > 0 ? '+' : ''}${t._rel.toFixed(1)}%</span>`);
 }
 
 // ========== Render 題材分類 ==========

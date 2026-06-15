@@ -72,7 +72,20 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
         fcf = info.get("freeCashflow")
         div_yield = info.get("dividendYield")  # yfinance 直接返回比例
 
-        return {
+        # 30 天 sparkline (限 30 個點,round 至 4 位)
+        sparkline = []
+        change_pct = None
+        try:
+            hist30 = tk.history(period="30d", interval="1d")
+            if not hist30.empty:
+                closes = hist30["Close"].dropna().tolist()
+                if len(closes) >= 2:
+                    sparkline = [round(float(c), 4) for c in closes[-30:]]
+                    change_pct = round((closes[-1] - closes[0]) / closes[0] * 100, 2)
+        except Exception:
+            pass
+
+        out = {
             "price": fmt_korean_won(price) if is_korean else fmt_price(price),
             "pe": f"~{pe:.0f}" if pe else "—",
             "fwd_pe": f"~{fwd_pe:.0f}" if fwd_pe else "—",
@@ -80,6 +93,11 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
             "fcf_ttm": fmt_billion(fcf),
             "div": fmt_pct(div_yield) if div_yield else "0%",
         }
+        if sparkline:
+            out["sparkline_30d"] = sparkline
+        if change_pct is not None:
+            out["change_30d_pct"] = change_pct
+        return out
     except Exception as e:
         print(f"  ⚠️  {symbol} 失敗: {e}", file=sys.stderr)
         return {}
