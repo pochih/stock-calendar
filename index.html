@@ -4890,6 +4890,64 @@ const biasClass = b => ({ up: 'bias-up', down: 'bias-down', neutral: 'bias-neutr
 const biasText = b => ({ up: '看漲', down: '看跌', neutral: '中性' })[b] || '—';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
 
+// ========== 時區轉換 ==========
+// AMC = 收盤後 16:30 ET,BMO = 開盤前 07:30 ET
+// 'HH:MM ET' 直接解析
+// FOMC 預設 14:00 ET (聲明) — Powell 記者會 14:30 ET
+const ET_DEFAULTS = { 'AMC': [16, 30], 'BMO': [7, 30] };
+const USER_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+function parseEtClock(timeHint) {
+  if (!timeHint) return null;
+  const s = String(timeHint).trim();
+  if (ET_DEFAULTS[s.toUpperCase()]) return ET_DEFAULTS[s.toUpperCase()];
+  const m = s.match(/(\d{1,2}):(\d{2})\s*ET/i);
+  if (m) return [parseInt(m[1], 10), parseInt(m[2], 10)];
+  return null;
+}
+// 給 wall-clock date (YYYY-MM-DD) + HH/MM in ET,回 Date 物件 (含 EDT/EST DST 自動判斷)
+function etWallClockToDate(dateStr, h, m) {
+  const d = String(dateStr).match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (!d) return null;
+  // 用 ICU formatToParts 反查:先 guess UTC,再用 America/New_York 看時差校正
+  // 簡化做法:DST 期間 (3月第二週日 ~ 11月第一週日) = EDT UTC-4, 否則 EST UTC-5
+  const y = +d[1], mo = +d[2], da = +d[3];
+  const offsetHours = isDST(y, mo, da) ? 4 : 5;
+  // 在 UTC 下,ET wall-clock h:m 對應 UTC = h + offsetHours
+  return new Date(Date.UTC(y, mo - 1, da, h + offsetHours, m));
+}
+function isDST(y, mo, da) {
+  // 美國 DST:3 月第二週日 ~ 11 月第一週日
+  if (mo > 3 && mo < 11) return true;
+  if (mo < 3 || mo > 11) return false;
+  // 算 3 月第二週日
+  const march1 = new Date(Date.UTC(y, 2, 1)).getUTCDay(); // 0=Sun
+  const dst2ndSun = 1 + ((7 - march1) % 7) + 7;
+  const nov1 = new Date(Date.UTC(y, 10, 1)).getUTCDay();
+  const stdSun = 1 + ((7 - nov1) % 7);
+  if (mo === 3) return da >= dst2ndSun;
+  return da < stdSun; // mo === 11
+}
+// 格式化:回傳 { etLabel, localLabel } 兩段
+function fmtTzPair(dateStr, timeHint) {
+  const hm = parseEtClock(timeHint);
+  if (!hm) return null;
+  const dt = etWallClockToDate(dateStr, hm[0], hm[1]);
+  if (!dt) return null;
+  const pad = n => String(n).padStart(2, '0');
+  const etLabel = `${pad(hm[0])}:${pad(hm[1])} ET`;
+  const local = new Intl.DateTimeFormat('zh-Hant', {
+    timeZone: USER_TZ, month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hour12: false,
+  }).format(dt);
+  return { etLabel, localLabel: `${local} ${USER_TZ.split('/').pop()}` };
+}
+// inline 顯示用:回 "AMC<small>16:30 ET → 06/24 04:30 Taipei</small>"
+function fmtTimeWithTz(dateStr, timeHint) {
+  const pair = fmtTzPair(dateStr, timeHint);
+  if (!pair) return esc(timeHint || '');
+  return `${esc(timeHint)}<br><small style="color:var(--muted); font-size:10px;">${pair.etLabel} → ${pair.localLabel}</small>`;
+}
+
 // ========== Render 財報 ==========
 function renderEarnings() {
   const fmtConsensus = c => {
@@ -4912,7 +4970,7 @@ function renderEarnings() {
       <td><span class="ticker" onclick="loadChart('${e.ticker.split(' ')[0]}')">${esc(e.ticker)}</span></td>
       <td>${esc(e.company)}</td>
       <td>${esc(e.fiscal)}</td>
-      <td>${esc(e.time)}</td>
+      <td>${fmtTimeWithTz(e.date, e.time)}</td>
       <td><strong>${esc(e.hist_move)}</strong></td>
       <td class="${biasClass(e.bias)}">${biasText(e.bias)}</td>
       <td>${fmtConsensus(e.consensus)}</td>
@@ -5059,17 +5117,26 @@ function renderEvents() {
   }).join('');
   document.getElementById('fomc-list').innerHTML = DATA.fomc.map(f => `
     <tr>
-      <td>${esc(f.date)}</td>
+      <td>${esc(f.date)}<br><small style="color:var(--muted); font-size:10px;">${(fmtTzPair(f.date, '14:00 ET') || {localLabel:''}).localLabel}${f.sep ? ' / Powell 14:30 ET → ' + (fmtTzPair(f.date, '14:30 ET') || {localLabel:''}).localLabel : ''}</small></td>
       <td>${f.sep ? '★ 含 SEP' : '無'}</td>
       <td style="color:var(--muted); font-size:12px;">${esc(f.note)}</td>
     </tr>`).join('');
-  document.getElementById('econ-list').innerHTML = DATA.econ.map(e => `
+  // 從 note 抽 'HH:MM ET' 做轉換
+  const extractEt = note => {
+    const m = String(note || '').match(/(\d{1,2}:\d{2})\s*ET/i);
+    return m ? m[1] + ' ET' : null;
+  };
+  document.getElementById('econ-list').innerHTML = DATA.econ.map(e => {
+    const et = extractEt(e.note);
+    const pair = et ? fmtTzPair(e.date, et) : null;
+    return `
     <tr>
-      <td>${esc(e.date)}</td>
+      <td>${esc(e.date)}${pair ? `<br><small style="color:var(--muted); font-size:10px;">${pair.etLabel} → ${pair.localLabel}</small>` : ''}</td>
       <td><span class="badge ${e.type.includes('期中') ? 'b-politics' : 'b-econ'}">${esc(e.type)}</span></td>
       <td>${esc(e.period)}</td>
       <td style="color:var(--muted); font-size:12px;">${esc(e.note)}</td>
-    </tr>`).join('');
+    </tr>`;
+  }).join('');
   const holidays = DATA.market_holidays || [];
   document.getElementById('holiday-list').innerHTML = holidays.map(h => {
     const isEarly = h.type === 'early_close';
