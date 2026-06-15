@@ -213,13 +213,22 @@ def update_earnings(data: dict, days: int = 120) -> None:
         except Exception as e:
             print(f"  ⚠️  {sym}: {e}", file=sys.stderr)
 
-    # 合併:保留手寫(有 hist_move 不是 —),補上自動抓的
+    # 合併:手寫優先 (有 hist_move != '—' 或 note != '(自動抓取)')
+    # 若 ticker 已有手寫項,完全跳過 yfinance 同 ticker 的 record (避免時區差造成
+    # 同一場財報出現在相鄰兩日)
     def merge(orig: list, new: list) -> list:
+        manual_tickers = {
+            o["ticker"] for o in orig
+            if o.get("note", "") != "(自動抓取)" and o.get("hist_move", "—") != "—"
+        }
         seen = {(o["ticker"], o["date"][:10]) for o in orig}
         out = list(orig)
         for n in new:
-            if (n["ticker"], n["date"][:10]) not in seen:
-                out.append(n)
+            if n["ticker"] in manual_tickers:
+                continue  # 已有手寫,不採 yfinance
+            if (n["ticker"], n["date"][:10]) in seen:
+                continue
+            out.append(n)
         out.sort(key=lambda x: x["date"])
         return out
 
