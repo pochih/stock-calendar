@@ -433,7 +433,7 @@
   <div class="tv-tickers" id="tv-tickers"></div>
   <div class="tv-chart-container" id="tv-chart"></div>
   <p style="color:var(--muted); font-size:12px; margin-top:10px;">
-    已預設 4 條 SMA:<strong>MA5 / MA10 / MA20 / MA60</strong>(可在右下角 Indicators 自行加更多)。日線 MA5≈週、MA20≈月、MA60≈季。
+    已預設 4 條 SMA:<span style="color:#f85149; font-weight:600;">MA5 紅</span> / <span style="color:#ffa657; font-weight:600;">MA10 橘</span> / <span style="color:#3fb950; font-weight:600;">MA20 綠</span> / <span style="color:#58a6ff; font-weight:600;">MA60 藍</span>(可在右下角 Indicators 自行加更多)。日線 MA5≈週、MA20≈月、MA60≈季。
   </p>
 </section>
 
@@ -5395,14 +5395,21 @@ function loadChart(symbol) {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.id === 'tab-charts'));
   document.getElementById('tv-input').value = symbol;
   document.querySelectorAll('.tv-tickers .pill').forEach(p => p.classList.toggle('active', p.textContent === symbol));
-  // 處理特殊 symbol
+  // 處理特殊 symbol — TradingView 對 prefix 嚴格,錯了會 blank
+  // NYSE-listed ADRs / 大型股: TSM, BABA, BAC, KO, CB, CVX, OXY, MCO, KHC, NKE, MOH, LULU, SLM, BN, UBER, COIN, ROKU, HOOD, RBLX, LEH, FB(已下市), AXP, ABBV, QSR, SNAP
+  const NYSE_TICKERS = new Set([
+    'TSM','BABA','BAC','KO','CB','CVX','OXY','MCO','KHC','NKE','MOH','LULU','SLM','BN','UBER',
+    'PLTR','RKLB','IRDM','GSAT','ASTS','NOK','SPY','IVV','GLD','XLK','VGT','IGV','CIBR','HACK','BUG',
+    'DELL','HPE','SMCI','S','NET','OKTA','SNDK','CIFR','IREN','AVGO','AXP','ABBV','QSR','SNAP'
+  ]);
   let tvSymbol = symbol;
   if (symbol === 'VIX') tvSymbol = 'CAPITALCOM:VIX';
   else if (symbol.endsWith('.KS')) tvSymbol = 'KRX:' + symbol.replace('.KS', '');
   else if (symbol.endsWith('.TWO')) tvSymbol = 'TPEX:' + symbol.replace('.TWO', '');
   else if (symbol.endsWith('.TW')) tvSymbol = 'TWSE:' + symbol.replace('.TW', '');
   else if (symbol.endsWith('.T')) tvSymbol = 'TSE:' + symbol.replace('.T', '');
-  else tvSymbol = 'NASDAQ:' + symbol;  // 大多 NASDAQ;TradingView 會自動 resolve
+  else if (NYSE_TICKERS.has(symbol)) tvSymbol = 'NYSE:' + symbol;
+  else tvSymbol = 'NASDAQ:' + symbol;  // 預設 NASDAQ;TradingView 通常會自動 fallback,但 prefix 對的時候穩
 
   const interval = document.getElementById('tv-interval').value;
   let tvInterval = 'W';
@@ -5426,11 +5433,22 @@ function loadChart(symbol) {
     hide_side_toolbar: false,
     allow_symbol_change: true,
     studies: [
-      { id: 'MASimple@tv-basicstudies', inputs: { length: 5 },  styles: { plot: { color: '#f85149', linewidth: 2 } } },
-      { id: 'MASimple@tv-basicstudies', inputs: { length: 10 }, styles: { plot: { color: '#ffa657', linewidth: 2 } } },
-      { id: 'MASimple@tv-basicstudies', inputs: { length: 20 }, styles: { plot: { color: '#3fb950', linewidth: 2 } } },
-      { id: 'MASimple@tv-basicstudies', inputs: { length: 60 }, styles: { plot: { color: '#58a6ff', linewidth: 2 } } }
+      { id: 'MASimple@tv-basicstudies', inputs: { length: 5 } },
+      { id: 'MASimple@tv-basicstudies', inputs: { length: 10 } },
+      { id: 'MASimple@tv-basicstudies', inputs: { length: 20 } },
+      { id: 'MASimple@tv-basicstudies', inputs: { length: 60 } }
     ],
+    studies_overrides: {
+      // TradingView widget 對多個同名 study 用順序編號
+      'moving average.plot.color':           '#f85149',  // MA5  紅
+      'moving average.plot.linewidth':       2,
+      'moving average copy.plot.color':      '#ffa657',  // MA10 橘
+      'moving average copy.plot.linewidth':  2,
+      'moving average copy 1.plot.color':    '#3fb950',  // MA20 綠
+      'moving average copy 1.plot.linewidth': 2,
+      'moving average copy 2.plot.color':    '#58a6ff',  // MA60 藍
+      'moving average copy 2.plot.linewidth': 2
+    },
     overrides: {
       'paneProperties.background': '#0d1117',
       'paneProperties.vertGridProperties.color': '#21262d',
