@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: update-data
@@ -18,6 +20,8 @@ concurrency:
 
 jobs:
   update:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -65,3 +69,10 @@ jobs:
           VERSION=$(python -c "import json; print(json.load(open('data.json'))['_meta']['version'])")
           git commit -m "chore: auto-update market data v${VERSION}"
           git push
+
+      # GITHUB_TOKEN push 不會觸發其他 workflow,所以這裡直接 deploy Pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4
