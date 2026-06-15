@@ -8817,21 +8817,38 @@ function loadChart(symbol) {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.id === 'tab-charts'));
   document.getElementById('tv-input').value = symbol;
   document.querySelectorAll('.tv-tickers .pill').forEach(p => p.classList.toggle('active', p.textContent === symbol));
-  // 處理特殊 symbol — TradingView 對 prefix 嚴格,錯了會 blank
-  // NYSE-listed ADRs / 大型股: TSM, BABA, BAC, KO, CB, CVX, OXY, MCO, KHC, NKE, MOH, LULU, SLM, BN, UBER, COIN, ROKU, HOOD, RBLX, LEH, FB(已下市), AXP, ABBV, QSR, SNAP
+  // TradingView 對 prefix 嚴格,錯了 chart 直接 blank
+  // ETF / Index 特殊 mapping (verified via tradingview.com/symbols/<ticker>)
+  const SYMBOL_OVERRIDES = {
+    'VIX':  'CAPITALCOM:VIX',
+    'DRAM': 'CBOE:DRAM',
+    'IGV':  'CBOE:IGV',
+    'SPY':  'AMEX:SPY',
+    'VOO':  'AMEX:VOO',
+    'VTI':  'AMEX:VTI',
+    'VT':   'AMEX:VT',
+    'XLK':  'AMEX:XLK',
+    'VGT':  'AMEX:VGT',
+    'IAUM': 'AMEX:IAUM',
+    'EWY':  'AMEX:EWY',
+    'HACK': 'AMEX:HACK',
+    'GLD':  'AMEX:GLD',
+    'IVV':  'AMEX:IVV',
+  };
+  // NYSE-listed (個股 ADR + 大型股)
   const NYSE_TICKERS = new Set([
     'TSM','BABA','BAC','KO','CB','CVX','OXY','MCO','KHC','NKE','MOH','LULU','SLM','BN','UBER',
-    'PLTR','RKLB','IRDM','GSAT','ASTS','NOK','SPY','IVV','GLD','XLK','VGT','IGV','CIBR','HACK','BUG',
+    'PLTR','RKLB','IRDM','GSAT','ASTS','NOK',
     'DELL','HPE','SMCI','S','NET','OKTA','SNDK','CIFR','IREN','AVGO','AXP','ABBV','QSR','SNAP'
   ]);
   let tvSymbol = symbol;
-  if (symbol === 'VIX') tvSymbol = 'CAPITALCOM:VIX';
+  if (SYMBOL_OVERRIDES[symbol]) tvSymbol = SYMBOL_OVERRIDES[symbol];
   else if (symbol.endsWith('.KS')) tvSymbol = 'KRX:' + symbol.replace('.KS', '');
   else if (symbol.endsWith('.TWO')) tvSymbol = 'TPEX:' + symbol.replace('.TWO', '');
   else if (symbol.endsWith('.TW')) tvSymbol = 'TWSE:' + symbol.replace('.TW', '');
   else if (symbol.endsWith('.T')) tvSymbol = 'TSE:' + symbol.replace('.T', '');
   else if (NYSE_TICKERS.has(symbol)) tvSymbol = 'NYSE:' + symbol;
-  else tvSymbol = 'NASDAQ:' + symbol;  // 預設 NASDAQ;TradingView 通常會自動 fallback,但 prefix 對的時候穩
+  else tvSymbol = 'NASDAQ:' + symbol;  // 預設 NASDAQ
 
   const interval = document.getElementById('tv-interval').value;
   let tvInterval = 'W';
