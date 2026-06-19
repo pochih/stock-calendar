@@ -603,10 +603,20 @@
 <section id="tab-briefing" class="tab">
   <h2>📰 每週洞察 (Weekly Briefing)</h2>
   <p style="color:var(--muted); margin-bottom: 14px; font-size: 13px;">
-    彙整自付費電子報(M報 / 馬斯克帝國觀察 / 富果直送)的每週重大新聞 + 觀點。
+    彙整自付費電子報(M報 / 馬斯克帝國觀察 / 富果直送 / 股癌 / All-In Podcast)的每週重大新聞 + 觀點。
     <strong>category</strong> 為主題分類,<strong>stance</strong> 為作者立場,<strong>implication</strong> 為投資含意。
     點 ticker 看 K 線,點題材跳到題材分類。
   </p>
+
+  <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px; flex-wrap:wrap;">
+    <label style="color:var(--muted); font-size:12px;">📅 選擇週次:</label>
+    <select id="briefing-week-filter"
+            style="background:var(--card); color:var(--text); border:1px solid var(--border);
+                   border-radius:6px; padding:6px 10px; font-size:13px; min-width:240px; cursor:pointer;">
+      <option value="all">全部週次</option>
+    </select>
+    <span style="color:var(--muted); font-size:12px;" id="briefing-count">—</span>
+  </div>
 
   <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;" id="briefing-cat-filters">
     <button class="hist-filter active" data-cat="all">全部</button>
@@ -1837,6 +1847,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "status": "傳聞 2026",
       "valuation": "~$13B",
       "note": "金融資料 API"
+    },
+    {
+      "company": "Solidigm (SK Hynix 子公司)",
+      "status": "傳聞 2026-2027 分拆",
+      "valuation": "~$15-25B (預估)",
+      "note": "SK Hynix 2021 年以 $9B 收購 Intel NAND 業務,改名 Solidigm,第二期交割 2025 完成。AI/Data Center 企業 SSD 需求暴增,Solidigm 重回獲利。SK Hynix 集中資源在 HBM,分拆 Solidigm 是合理選項。母公司 SK Hynix 已上市 KOSPI 000660"
     }
   ],
   "tickers": [
@@ -6516,6 +6532,34 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         4380.0
       ],
       "change_30d_pct": -10.43
+    },
+    {
+      "ticker": "ANTH",
+      "name": "Anthropic (未上市)",
+      "type": "Private",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "~$1T (傳聞估值)",
+      "div": "—",
+      "gross_margin": "—",
+      "fcf_ttm": "—",
+      "shares": "—",
+      "mcap": "~$1T",
+      "note": "Claude 系列開發商。Amazon $8B + Google 投資。傳 2026 H2 跟進 SpaceX 上市。Fable 5 出口管制下架後企業客戶轉向風險升高"
+    },
+    {
+      "ticker": "OPENAI",
+      "name": "OpenAI (未上市)",
+      "type": "Private",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "~$1T (傳聞估值)",
+      "div": "—",
+      "gross_margin": "—",
+      "fcf_ttm": "—",
+      "shares": "—",
+      "mcap": "~$1T",
+      "note": "ChatGPT / GPT-5.5 開發商。MSFT 大股東 + AMZN 算力 + GPU on Azure。capped-profit 結構需先脫離才能 IPO,Sam Altman 過去稱『不專注 IPO』,但 SpaceX 上市後傳將跟進"
     }
   ],
   "themes": [
@@ -6995,6 +7039,49 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "co": "Axcelis",
           "purity": 3,
           "role": "SiC 離子植入設備"
+        }
+      ]
+    },
+    {
+      "name": "功率半導體 (Power IDM)",
+      "icon": "🔋",
+      "desc": "離散元件 + 功率半導體 IDM 大廠 (Onsemi/英飛凌/瑞薩/德州儀器)。AI 機櫃從 12V 走向 48V/800V HVDC、DrMOS、Super Junction、SiC MOSFET 全面受惠。Nexperia 制裁事件推動廠商做非中國佈局。股癌 EP671 觀察:被動元件炒作後資金可能輪動到此。",
+      "members": [
+        {
+          "ticker": "ON",
+          "co": "Onsemi 安森美",
+          "purity": 5,
+          "role": "SiC + IGBT + 離散元件全線。EV / 工業 / AI 電源三引擎"
+        },
+        {
+          "ticker": "IFNNY",
+          "co": "Infineon 英飛凌",
+          "purity": 5,
+          "role": "全球功率半導體龍頭。汽車 + 工業 + AI Server PSU"
+        },
+        {
+          "ticker": "TXN",
+          "co": "Texas Instruments 德州儀器",
+          "purity": 4,
+          "role": "類比 + 電源管理 IC 大廠,DrMOS 受惠 AI server GPU 用量"
+        },
+        {
+          "ticker": "STM",
+          "co": "STMicroelectronics 意法",
+          "purity": 4,
+          "role": "SiC MOSFET + 車用 + 工業電源"
+        },
+        {
+          "ticker": "MCHP",
+          "co": "Microchip",
+          "purity": 3,
+          "role": "MCU + 類比 + 電源管理"
+        },
+        {
+          "ticker": "ADI",
+          "co": "Analog Devices",
+          "purity": 3,
+          "role": "高性能類比 + 電源管理"
         }
       ]
     },
@@ -7905,7 +7992,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
     {
       "week": "2026-W25",
       "date_range": "2026-06-15 ~ 2026-06-21",
-      "sources": ["M報 #531", "馬斯克帝國觀察 #74-#75", "富果直送 (新日興/家登/豐達科/台郡)", "All-In Podcast 6/13 (Anthropic's Fable Backlash)"],
+      "sources": ["M報 #531", "馬斯克帝國觀察 #74-#75", "富果直送 (新日興/家登/豐達科/台郡)", "All-In Podcast 6/13 (Anthropic's Fable Backlash)", "股癌 EP670-#671"],
       "headlines": [
         {
           "category": "宏觀資金",
@@ -7987,13 +8074,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "富果立場明顯偏多,但本益比仍合理區間。",
           "implication": "三檔同步指向蘋果摺疊機 + AI 機櫃 + 太空(火箭/衛星扣件) 三大長線題材的台股供應鏈卡位。",
           "themes_touched": ["蘋果摺疊手機供應鏈", "封測 / CoWoS / Advanced Packaging", "太空運算 / 軌道資料中心"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "離散元件 + 功率半導體輪動 (Nexperia 制裁推非中國佈局)",
+          "tickers": ["ON", "TXN"],
+          "summary": "股癌 EP671 觀察:被動元件炒作風向漸轉,資金可能輪動到離散元件、功率半導體題材。Nexperia 制裁事件推動廠商做非中國佈局,DrMOS、800V DC 等高階功率元件商機浮現。",
+          "stance": "股癌:市場百花齊放,主流族群休息後資金輪動方向值得追蹤。投信法規鬆綁後,資金可能回流台積電。",
+          "implication": "IDM 廠商(英飛凌/安森美/瑞薩/德州儀器)、Super Junction 高壓應用、SiC MOSFET 全面受惠。台廠後段封裝有驗證機會。",
+          "themes_touched": ["功率半導體 (Power IDM)", "GaN / SiC 第三類半導體 / 電源"]
         }
       ]
     },
     {
       "week": "2026-W24",
       "date_range": "2026-06-08 ~ 2026-06-14",
-      "sources": ["M報 #528-#529", "馬斯克帝國觀察 #72-#73", "富果直送 (詮欣/威鋒/達發/OCP)"],
+      "sources": ["M報 #528-#529", "馬斯克帝國觀察 #72-#73", "富果直送 (詮欣/威鋒/達發/OCP)", "股癌 EP668-#670"],
       "headlines": [
         {
           "category": "AI 模型",
@@ -8030,13 +8126,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "M觀點:中度修正而非泡沫。基本面估值不貴但市場槓桿水位極高(『世貸同堂』)。",
           "implication": "高槓桿者降槓桿。AI Infra 漲多者(Micron/Credo/Coherent 一年 3-5x)可能修 20-30%,但長線多頭未變。",
           "themes_touched": ["AI GPU (主戰場)", "光通訊 (Optical / 800G·1.6T)", "HBM / 記憶體"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "衛星估值崩跌反思 + 被動元件漲價超預期",
+          "tickers": ["SPCX", "META"],
+          "summary": "股癌 EP669-#670 觀察:衛星股崩跌但 SpaceX 估值是『藝術而非絕對數字』,本夢比不必太認真算。被動元件漲價有超乎預期的進展。Apple WWDC 推螢幕感知 AI + Google 合作模式,保守但合理。",
+          "stance": "股癌:Semi Analysis 空頭言論搭配回檔被放大,光通/CPO/800G 趨勢沒變,只是短期股價被嚇出來。修正是洗籌碼與信仰考驗,資金可能傾向流動性好、有實際獲利的標的。",
+          "implication": "Meta AI 模型受美國監管管制可能反推 edge computing 發展。台積電傳聞漲價算好消息。台股修正底部判斷重點看被動元件漲價節奏。",
+          "themes_touched": ["太空運算 / 軌道資料中心", "光通訊 (Optical / 800G·1.6T)"]
         }
       ]
     },
     {
       "week": "2026-W23",
       "date_range": "2026-06-01 ~ 2026-06-07",
-      "sources": ["M報 #526-#527", "馬斯克帝國觀察 #70-#71", "富果直送 (高力/OCP)"],
+      "sources": ["M報 #526-#527", "馬斯克帝國觀察 #70-#71", "富果直送 (高力/OCP)", "股癌 EP667-#668"],
       "headlines": [
         {
           "category": "Tesla",
@@ -8073,13 +8178,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "富果認為 OCP 標準化會帶來殺價紅海,須篩選有議價能力的長線贏家。",
           "implication": "OCP 標準化 vs 客製化溢價的拉鋸,長線散熱/電源廠仍受惠 AI 機櫃功率上行。",
           "themes_touched": ["AI Server ODM (台廠為主)", "封測 / CoWoS / Advanced Packaging"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "Computex AIPC 新局 + 開源模型逐漸追上閉鎖式",
+          "tickers": ["NVDA", "MRVL"],
+          "summary": "股癌 EP667-#668 Computex 心得:今年展會展示的都是實用具體的技術應用而非空談未來。NVDA Enterprise + 消費端 RTX Spark 高度記憶體整合對剪片/修圖/遊戲加速效果亮眼。Marvell 在光通訊噴發。",
+          "stance": "股癌:開源模型逐漸追上閉鎖式大模型,未來地端部署有望降低成本。光與銅線並行發展。美股暴跌 + 台股夜盤狂殺是『正常的槓桿清洗與天譴』。",
+          "implication": "AI PC 終於進入實用展示階段,RTX Spark 帶動高階記憶體整合需求。光通訊持續演進,Marvell + NVDA 是直接受惠者。",
+          "themes_touched": ["AI PC / CPU IP", "光通訊 (Optical / 800G·1.6T)"]
         }
       ]
     },
     {
       "week": "2026-W22",
       "date_range": "2026-05-25 ~ 2026-05-31",
-      "sources": ["M報 #524-#525", "馬斯克帝國觀察 #68-#69", "富果直送 (SoIC/高力)"],
+      "sources": ["M報 #524-#525", "馬斯克帝國觀察 #68-#69", "富果直送 (SoIC/高力)", "股癌 EP665-#666"],
       "headlines": [
         {
           "category": "財報",
@@ -8107,13 +8221,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "富果:零容錯極端良率挑戰 → 高力等散熱檢測廠率先吃到紅利。",
           "implication": "SoIC 不只台積電獨享,封測產業鏈整體升級。3D 封裝是下一個十年戰場。",
           "themes_touched": ["封測 / CoWoS / Advanced Packaging", "晶圓代工 / 先進製程"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "衛星 AI 算力前瞻 + 軟體股輪動 + 業務能力決勝",
+          "tickers": ["SPCX", "PLTR"],
+          "summary": "股癌 EP665-#666 觀察:被動元件持續上漲、台積電配息調整、SpaceX IPO 前景看好。重點聚焦衛星 AI 運算作為下一個題材,馬斯克可透過軌道伺服器做算力出租成為新 Neo Cloud 概念。",
+          "stance": "股癌:未來 AI 佈署的關鍵不在模型強弱,而在企業的『業務能力、商務能力與可規責性』 — 能真正解決客戶問題的公司才能脫穎而出。",
+          "implication": "PLTR + Anthropic FDE 模式被進一步驗證。台股供應鏈有機會跟到衛星 AI 算力題材。被動元件、老 AI 族群與軟體股輪動延續。",
+          "themes_touched": ["太空運算 / 軌道資料中心", "AI 軟體 / 平台"]
         }
       ]
     },
     {
       "week": "2026-W21",
       "date_range": "2026-05-18 ~ 2026-05-24",
-      "sources": ["M報 #522-#523", "馬斯克帝國觀察 #66-#67"],
+      "sources": ["M報 #522-#523", "馬斯克帝國觀察 #66-#67", "股癌 EP663-#664"],
       "headlines": [
         {
           "category": "宏觀政治",
@@ -8141,13 +8264,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "馬斯克 4 週內第二次對 OpenAI 敗訴(前一次是商業祕密案被駁回不得再起訴)。",
           "implication": "OpenAI 估值故事不受司法干擾,IPO 之路更順。Grok 5 若僅與 GPT-5.5 持平就算成功。",
           "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "AI 算力軍備競賽 + 被動元件全面噴射,留意 Power 櫃",
+          "tickers": ["ANTH", "SPCX", "GOOGL"],
+          "summary": "股癌 EP663-#664 深入 AI 硬體軍備競賽:Anthropic 轉獲利代表 AI 模型商可盈利。馬斯克 Colossus One 短期回本。Google 與 Blackstone 合作 TPU 外銷將掀起晶片與零組件搶產能大戰。被動元件供應鏈漲價潮(Panasonic 漲價函發出)持續蔓延。",
+          "stance": "股癌:被動元件全面噴射但要留意雜魚跟風,『隔壁的 Power 櫃才是下一個金礦』。Broadcom 晶片線產品規劃變化與市場輪動值得追蹤。",
+          "implication": "AI 算力 → 電源(800V HVDC、PSU、DrMOS) 為下一個受惠族群。被動元件已大漲,但雜魚要避開,挑龍頭。台廠後段封裝有驗證機會。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)", "GaN / SiC 第三類半導體 / 電源", "功率半導體 (Power IDM)"]
         }
       ]
     },
     {
       "week": "2026-W20",
       "date_range": "2026-05-11 ~ 2026-05-17",
-      "sources": ["M報 #520-#521", "馬斯克帝國觀察 #64-#65"],
+      "sources": ["M報 #520-#521", "馬斯克帝國觀察 #64-#65", "股癌 EP661-#662"],
       "headlines": [
         {
           "category": "AI 軟體",
@@ -8184,13 +8316,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "M觀點:初期能穩定執行 ~10 種任務(搬運/品檢/簡單組裝)就很有商業價值,不必追求一開始什麼都會。",
           "implication": "Tesla 從『汽車公司』敘事正式擴展到人形機器人量產階段。NVDA 與 Tesla 自家 AI5 晶片雙線受惠。",
           "themes_touched": ["EV / Robotaxi / FSD", "AI ASIC / 客製化晶片"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "被動元件狂熱 + 台積電額度放寬投信輪動效應",
+          "tickers": ["TSM"],
+          "summary": "股癌 EP661-#662 觀察:被動元件(MLCC、鋁電容)狂熱持續,台系廠商跟上國際節奏,低階料可能也有後續漲價空間。Legacy 晶圓代工補庫存行為確認。Panasonic 超級電容漲價三成、大廠停止接單在即。",
+          "stance": "股癌:成本驅動 vs 需求驅動漲價要分清楚,現在位置過高謹慎追高。台積電額度放寬後投信輪動效應 — 中小股投信停利救火台積電,盤面修正反而是汰弱留強好機會。",
+          "implication": "MLCC / 鋁電容族群(國巨/華新科/禾伸堂)受惠最直接但已大漲,挑龍頭。Legacy 晶圓代工(聯電/世界先進)補庫存驗證。",
+          "themes_touched": ["被動元件 (MLCC / 電阻)", "晶圓代工 / 先進製程"]
         }
       ]
     },
     {
       "week": "2026-W19",
       "date_range": "2026-05-04 ~ 2026-05-10",
-      "sources": ["M報 #518-#519", "馬斯克帝國觀察 #62-#63"],
+      "sources": ["M報 #518-#519", "馬斯克帝國觀察 #62-#63", "股癌 EP659-#660"],
       "headlines": [
         {
           "category": "AI 雲端",
@@ -8227,13 +8368,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "M觀點:Manus know-how 已部分被 Meta 吸收,真正可惜的是團隊整體性。長線會讓更多優秀中國團隊更早出走。",
           "implication": "AI Agent 落地需大量真實工作流資料 → 企業會越來越想用內部員工操作資料訓練模型。",
           "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "AI Slop 警報 + 台股 ASIC 全面走強 + 國巨 AI 日",
+          "tickers": ["PLTR", "AMD"],
+          "summary": "股癌 EP659-#660 觀察:Palantir 財報中『No AI Slop Zone』概念 — AI 生成廉價內容氾濫,企業應用必須精準不容許模糊。國巨陳泰銘 AI 日帶動被動元件整體轉強。AMD 上修 server CPU TAM、聯發科今年意外噴出、台股 ASIC 全面走強。",
+          "stance": "股癌:台股 42000 點行情下大戶財富暴增,高位難以降槓桿心態。NVIDIA 散熱材料調整衝擊供應鏈個股。融資額度收緊與處置股機制影響市場。",
+          "implication": "好的軟體股(PLTR)未來仍具關鍵價值。成熟製程與消費性電子補貨循環需要分辨真實需求 vs 結構性拉貨。被動元件全面噴發進入第二段。",
+          "themes_touched": ["AI 軟體 / 平台", "AI ASIC / 客製化晶片", "被動元件 (MLCC / 電阻)"]
         }
       ]
     },
     {
       "week": "2026-W18",
       "date_range": "2026-04-27 ~ 2026-05-03",
-      "sources": ["M報 #516-#517", "馬斯克帝國觀察 #60-#61"],
+      "sources": ["M報 #516-#517", "馬斯克帝國觀察 #60-#61", "股癌 EP657-#658"],
       "headlines": [
         {
           "category": "Intel 復活",
@@ -8270,6 +8420,15 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "stance": "M觀點:這是 lag 訊息,九局上半比賽看八局下半畫面。GPT-5.5 推出後敘事已轉折,且 OpenAI 慢不代表整個 AI 需求消失。",
           "implication": "三大雲財報同期共同訊號:AI CapEx 正在轉成雲端營收動能,需求並未消失。",
           "themes_touched": ["AI GPU (主戰場)", "AI 算力租賃 (Neocloud)"]
+        },
+        {
+          "category": "股癌觀點",
+          "title": "Intel EMIB 封裝突破 + 聯發科挖台積電 CoWoS 大將",
+          "tickers": ["INTC", "TSM", "META"],
+          "summary": "股癌 EP657-#658 產業重點:Intel EMIB 後段封裝良率據稱達 90%,若屬實代表先進封裝能力被市場低估,牽動聯發科、Google 與相關供應鏈。聯發科挖台積電先進封裝大將,暗示對 CoWoS 路線的重視。OpenAI 與立訊 AI 裝置難取代 iPhone。Meta 採用 AWS Graviton5 顯示 server CPU 需求仍熱。",
+          "stance": "股癌:外資賣壓壓制台積電,原本可能上攻的劇本轉為混沌。中小型股、記憶體、被動元件開始輪動表態。仍偏好指數化投資,槓桿須有停損與資金管理。Atlassian 表現打臉 SaaS apocalypse。",
+          "implication": "Intel Foundry 封裝產業重新估值。Server CPU 需求(AMD/Graviton/x86) 延續。AI 取代論被反駁:軟體工程師需求其實上升,只是工作內容變了。",
+          "themes_touched": ["封測 / CoWoS / Advanced Packaging", "晶圓代工 / 先進製程", "AI 軟體 / 平台"]
         }
       ]
     }
@@ -8984,6 +9143,22 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "bias": "up",
       "note": "Gemini 4 / TPU v8 預估時段",
       "url": "https://io.google/"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Anthropic Code with Claude 2026 (推測)",
+      "tickers": ["ANTH", "AMZN", "GOOGL"],
+      "bias": "up",
+      "note": "去年 (2025-05-22) 首屆 Code with Claude 在 SF 舉辦。2026 推測同期。Fable 5 / Mythos / Claude Code 重大更新可能。",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "OpenAI DevDay 2026 (推測)",
+      "tickers": ["OPENAI", "MSFT", "AMZN"],
+      "bias": "up",
+      "note": "2024 (10/1) / 2025 (10/6) 都在 10 月初。2026 推測同期。GPT-6 / 新 Agent / Hardware (with 立訊) 可能首發。",
+      "url": "https://openai.com/devday"
     }
   ],
   "market_holidays": [
@@ -9707,15 +9882,33 @@ function renderInstitutional() {
 
 // ========== Render 每週洞察 ==========
 let BRIEFING_CAT_FILTER = 'all';
+let BRIEFING_WEEK_FILTER = 'all';
 const BRIEF_CAT_CLS = {
   'AI 模型': 'brief-cat-ai',
+  'AI 算力': 'brief-cat-ai',
+  'AI 硬體': 'brief-cat-ai',
+  'AI 軟體': 'brief-cat-ai',
   'IPO + 估值': 'brief-cat-ipo',
   '併購': 'brief-cat-merger',
   '宏觀資金': 'brief-cat-macro',
+  '宏觀政治': 'brief-cat-macro',
   '市場修正': 'brief-cat-correct',
   '蘋果': 'brief-cat-apple',
+  'Tesla': 'brief-cat-tesla',
   'Tesla / FSD': 'brief-cat-tesla',
+  'Tesla / Robotaxi': 'brief-cat-tesla',
   '台股個股': 'brief-cat-tw',
+  '台股深度': 'brief-cat-tw',
+  '股癌觀點': 'brief-cat-tw',
+  '司法': 'brief-cat-correct',
+  '微軟/OpenAI': 'brief-cat-ai',
+  'Meta': 'brief-cat-ai',
+  'Intel 復活': 'brief-cat-merger',
+  'SpaceX': 'brief-cat-tesla',
+  'AI 雲端': 'brief-cat-ai',
+  '財報': 'brief-cat-ipo',
+  'AI 鬼故事': 'brief-cat-correct',
+  '馬斯克': 'brief-cat-tesla',
 };
 
 function jumpToTheme(name) {
@@ -9768,11 +9961,30 @@ function renderWeeklyBriefing() {
     });
   }
 
+  // 動態建週次 dropdown (只建一次)
+  const weekSel = document.getElementById('briefing-week-filter');
+  if (weekSel && weekSel.options.length <= 1) {
+    weeks.forEach(w => {
+      const opt = document.createElement('option');
+      opt.value = w.week;
+      opt.textContent = `${w.week} (${w.date_range})`;
+      weekSel.appendChild(opt);
+    });
+    weekSel.addEventListener('change', e => {
+      BRIEFING_WEEK_FILTER = e.target.value;
+      renderWeeklyBriefing();
+    });
+  }
+
+  // 過濾:week + cat
+  let renderedHeadlines = 0;
   const html = weeks.map(w => {
+    if (BRIEFING_WEEK_FILTER !== 'all' && w.week !== BRIEFING_WEEK_FILTER) return '';
     const headlines = (w.headlines || []).filter(h =>
       BRIEFING_CAT_FILTER === 'all' || h.category === BRIEFING_CAT_FILTER
     );
     if (!headlines.length) return '';
+    renderedHeadlines += headlines.length;
 
     const cards = headlines.map(h => {
       const catCls = BRIEF_CAT_CLS[h.category] || '';
@@ -9808,8 +10020,17 @@ function renderWeeklyBriefing() {
     </div>`;
   }).join('');
 
+  // 更新計數
+  const countEl = document.getElementById('briefing-count');
+  if (countEl) {
+    const totalHeadlines = weeks.reduce((s, w) => s + (w.headlines || []).length, 0);
+    countEl.textContent = (BRIEFING_WEEK_FILTER === 'all' && BRIEFING_CAT_FILTER === 'all')
+      ? `${totalHeadlines} 條 / ${weeks.length} 週`
+      : `${renderedHeadlines} 條 (篩選後)`;
+  }
+
   document.getElementById('briefing-list').innerHTML = html ||
-    '<p style="color:var(--muted)">(該分類本週無資料)</p>';
+    '<p style="color:var(--muted)">(無符合的條目)</p>';
 }
 
 // ========== Render 經典觀念 ==========
