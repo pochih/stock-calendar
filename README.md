@@ -16,6 +16,9 @@ A lightweight, self-hosted market dashboard inspired by Google Finance. It track
 - **Earnings & IPO calendar** — upcoming reports and listings
 - **Macro events** — FOMC meetings, CPI/NFP/GDP releases
 - **Polymarket integration** — top trending prediction markets
+- **📰 Weekly Briefing** — curated weekly news/insights from M報, 馬斯克帝國觀察, 富果直送, and All-In Podcast transcripts
+- **📚 Wisdom Classics** — 60+ timeless investing principles extracted from 股癌 (Gooaye) Podcast classic episodes, with full-text search + tag filter
+- **Transcript pipeline** — `transcribe.py` (YouTube auto-subs + Whisper fallback) and `fetch_gooaye.py` (download all 671 股癌 episodes from whatmkreallysaid.com)
 - **Auto-update via GitHub Actions** — twice-daily refresh (pre-market + post-close ET)
 - **Auto-deploy via GitHub Pages** — push to `main`, your dashboard goes live
 
@@ -50,6 +53,28 @@ python update_data.py --earnings       # 用 yfinance 重抓財報日
 python update_data.py --all            # 全部更新
 ```
 
+### Transcript pipeline / 逐字稿工具
+
+```bash
+# 抓 YouTube 字幕(快,無需 Whisper) — All-In Podcast 等英文頻道
+pip install --user yt-dlp
+python transcribe.py "https://youtu.be/XXXX" --lang en
+
+# Whisper fallback(需 ffmpeg + whisper) — 股癌等中文 podcast
+pip install --user yt-dlp openai-whisper imageio-ffmpeg
+python transcribe.py "https://youtu.be/XXXX" --whisper --lang zh \
+    --initial-prompt "台積電,輝達,聯發科,SoIC,CoWoS"
+
+# 從 whatmkreallysaid.com 一鍵抓股癌全 671 集
+pip install --user brotli
+python fetch_gooaye.py                # 全 671 集
+python fetch_gooaye.py --classics     # 11 集精選經典
+python fetch_gooaye.py --since 600    # EP600+
+python fetch_gooaye.py --episodes 671,670,550  # 指定集數
+```
+
+輸出到 `transcripts/`(英文)與 `transcripts/gooaye/`(股癌 markdown + index.json)。
+
 ---
 
 ## Project structure / 專案結構
@@ -58,8 +83,14 @@ python update_data.py --all            # 全部更新
 stock-calendar/
 ├── index.html         # Single-page dashboard (vanilla JS, no build step)
 ├── data.json          # All market data — read by index.html at runtime
+│                      # 含 weekly_briefing (每週洞察) 與 wisdom_classics (經典觀念)
 ├── run.py             # One-shot: update data + serve + open browser
 ├── update_data.py     # Refresh data.json (tickers / earnings / Polymarket)
+├── transcribe.py      # YouTube/podcast → text (yt-dlp + Whisper)
+├── fetch_gooaye.py    # 股癌全 671 集逐字稿一鍵下載 (whatmkreallysaid.com)
+├── transcripts/       # 逐字稿輸出
+│   ├── *.txt          # All-In Podcast 等英文 transcripts
+│   └── gooaye/        # 股癌 markdown (EPxxx.md) + index.json
 ├── requirements.txt   # yfinance, requests
 └── .github/workflows/ # Auto-update + GitHub Pages deploy
 ```

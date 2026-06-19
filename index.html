@@ -619,9 +619,16 @@
 <section id="tab-classics" class="tab">
   <h2>📚 經典觀念 (Wisdom Classics)</h2>
   <p style="color:var(--muted); margin-bottom: 14px; font-size: 13px;">
-    歷久不變的投資心法 / 風險管理 / 配置策略,精選自股癌 11 集經典(來源 <a href="https://whatmkreallysaid.com/" target="_blank" style="color:var(--blue);">whatmkreallysaid.com</a>)。
-    <strong>非時事,可長期 reference</strong>。點 tag 篩選。
+    歷久不變的投資心法 / 風險管理 / 配置策略,精選自股癌 60+ 集經典(來源 <a href="https://whatmkreallysaid.com/" target="_blank" style="color:var(--blue);">whatmkreallysaid.com</a>)。
+    <strong>非時事,可長期 reference</strong>。輸入關鍵字搜尋 title/principle/apply_when,或點 tag 篩選。
   </p>
+
+  <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px; flex-wrap:wrap;">
+    <input type="text" id="classics-search" placeholder="🔍 搜尋觀念 (例: 槓桿、估值、台積電)..."
+           style="background:var(--card); color:var(--text); border:1px solid var(--border);
+                  border-radius:6px; padding:6px 12px; font-size:13px; min-width:280px;">
+    <span style="color:var(--muted); font-size:12px;" id="classics-count">—</span>
+  </div>
 
   <div style="display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap;" id="classics-tag-filters">
     <button class="hist-filter active" data-tag="all">全部</button>
@@ -7398,12 +7405,44 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
   ],
   "wisdom_classics": [
     {
+      "source": "股癌 EP7",
+      "date": "2020-03-09",
+      "title": "VIX / 石油正 2 不能長期持有",
+      "principle": "VIX、原油正 2 這類期貨型 ETF 有轉倉費,長期持有會被內耗;再加融資就是引爆器。元大石油正 2 就是這樣搞到散戶被斷頭。",
+      "apply_when": "看到任何『正 2』『反 1』『TQQQ 五倍』類期貨型槓桿 ETF 想抱長期前。",
+      "tags": ["槓桿", "ETF", "風險"]
+    },
+    {
+      "source": "股癌 EP13",
+      "date": "2020-03-17",
+      "title": "市場集體失智時保持清醒",
+      "principle": "搶衛生紙 / 搶口罩 / 美債流動性危機都是集體失智。混亂時代不要盲目抄底或逆勢操作,控制部位、分批投入,耐心等真正穩定。",
+      "apply_when": "看到全民瘋同一件事(搶 GPU、搶比特幣、搶 AI 股)時,先停下。",
+      "tags": ["心法", "風險", "羊群"]
+    },
+    {
       "source": "股癌 EP20",
       "date": "2020-04-01",
       "title": "財你個鳥富自由",
       "principle": "股市三大騙人名詞:『財富自由』『懶人投資』『被動投資』。沒有真正零風險的理財,連 ETF 都要理解標的。",
       "apply_when": "看到『躺著賺』『穩賺不賠』類話術時,先警覺。考慮買 ETF 前,先讀 holdings。",
       "tags": ["心法", "ETF", "風險"]
+    },
+    {
+      "source": "股癌 EP55",
+      "date": "2020-06-22",
+      "title": "重押大股本不如關注小金雞",
+      "principle": "宏碁這種大股本公司即使斜槓轉型(按摩椅/電競/能量飲料),新事業對股價貢獻被稀釋。小金雞(展碁國際)股本小,成長更容易反映在股價上。",
+      "apply_when": "看到大公司轉型題材時,先想是否能找到子公司或更純的標的。",
+      "tags": ["選股", "股本", "個股"]
+    },
+    {
+      "source": "股癌 EP56",
+      "date": "2020-06-26",
+      "title": "現金為王,跌時逢低加碼",
+      "principle": "市場從高檔下跌時,進階對沖(期貨/選擇權/VXX)不如簡單減碼保留現金,趁下跌加碼。Microsoft 跌到 200 別找理由,重點是有沒有現金可以買便宜貨。勝率 4-5 成 + 資金控制得宜就能賺錢。",
+      "apply_when": "看到指數跌到讓自己心慌時。判斷要不要砍倉時,先檢查現金水位。",
+      "tags": ["現金", "心法", "部位管理"]
     },
     {
       "source": "股癌 EP57",
@@ -7414,12 +7453,28 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tags": ["匯率", "央行", "台積電"]
     },
     {
+      "source": "股癌 EP100",
+      "date": "2020-12-26",
+      "title": "中國政策風險:睡得好優先",
+      "principle": "馬雲被中共整頓本質是權力鬥爭非金融防範。中國黨養大的企業說殺就殺。先觀察不要急著抄底,但也別急著全部出脫,重點是做好資產配置讓自己睡得好。",
+      "apply_when": "投資中國/中概股 (BABA/PDD/JD) 時。新興市場政策不確定性升溫時。",
+      "tags": ["中國", "宏觀", "心法"]
+    },
+    {
       "source": "股癌 EP102",
       "date": "2021-01-02",
       "title": "小朋友才做選擇 (七三配置)",
       "principle": "被動 vs 主動投資不是二選一,七三配置入門。台股 0050、美股 VTI/VOO、全球 VT 是市值型大盤 ETF 三大選擇。重點是認清自己個性、本金與時間成本。",
       "apply_when": "規劃資產配置時。新手第一次想買股票時。",
       "tags": ["配置", "ETF", "心法"]
+    },
+    {
+      "source": "股癌 EP115",
+      "date": "2021-02-17",
+      "title": "Spawner 理論 (Mohnish Pabrai)",
+      "principle": "識別能持續創造新業務的優質企業 — Adjacent (亞馬遜 → AWS)、Embryonic (Tesla → 能源)、Clone、Non-adjacent 四類。避免短期刺激(雞蛋水餃股)侵蝕長期思維。",
+      "apply_when": "判斷『故事股』含金量時。決定是否長抱平台型企業時。",
+      "tags": ["選股", "心法", "成長股"]
     },
     {
       "source": "股癌 EP117",
@@ -7430,12 +7485,92 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tags": ["估值", "DCF", "風險管理"]
     },
     {
+      "source": "股癌 EP119",
+      "date": "2021-03-03",
+      "title": "ARK vs 巴菲特:本金侵蝕最致命",
+      "principle": "巴菲特浮存金特性必須保守。ARK 用 Sortino 分析其實只是靠波動性換報酬,長期未必勝 QQQ 加槓桿。年輕人不要為了追求報酬而過度槓桿,本金侵蝕才是最致命的風險。",
+      "apply_when": "羨慕網紅基金績效時。考慮跟 ARK / 主題 ETF 加碼時。",
+      "tags": ["槓桿", "ETF", "風險"]
+    },
+    {
+      "source": "股癌 EP120",
+      "date": "2021-03-06",
+      "title": "this too shall pass (本多終勝)",
+      "principle": "去槓桿、不要硬凹攤平(用保險套比喻槓桿風險)。本多終勝靠時間複利而非一夜暴富。修正中學會控制情緒、反省紀律,才能長期留在場上。",
+      "apply_when": "市場大修正時。被槓桿套牢想攤平時。",
+      "tags": ["槓桿", "心法", "複利"]
+    },
+    {
+      "source": "股癌 EP134",
+      "date": "2021-04-24",
+      "title": "短線『便當錢』迷思",
+      "principle": "當沖追求賺便當錢,常忽視淘帝-KY 類假帳爆雷 + 內線消息陷阱。動能交易必須精算風險報酬比、不可只看獲利忽視下檔空間,降低槓桿做最壞準備。",
+      "apply_when": "想當沖時。聽到內線消息時。",
+      "tags": ["當沖", "風險", "心法"]
+    },
+    {
+      "source": "股癌 EP139",
+      "date": "2021-05-12",
+      "title": "價值陷阱:便宜不等於撿便宜",
+      "principle": "景氣循環股(宏達電/國巨/撼訊)景氣好時 EPS 漂亮,但股價便宜不等於撿便宜,很多人因此套牢。台股暴跌時別期待政府救援、別急著抄底,等十年線附近。",
+      "apply_when": "看到低本益比個股時,先確認是不是景氣循環股。融資斷頭潮時。",
+      "tags": ["估值", "景氣循環", "陷阱"]
+    },
+    {
+      "source": "股癌 EP149",
+      "date": "2021-06-16",
+      "title": "順勢而為 + 不預設立場",
+      "principle": "兩大核心原則:順勢而為與不預設立場,相信市場價格反應,而非盲目依賴指標或跟單。盤石理論(基本面)與空中樓閣理論(市場情緒)都有其價值。",
+      "apply_when": "想預測底部 / 頭部時。被名師報牌誘惑時。",
+      "tags": ["心法", "趨勢"]
+    },
+    {
+      "source": "股癌 EP157",
+      "date": "2021-06-14",
+      "title": "景氣循環股看報價不看本益比",
+      "principle": "景氣循環股(原物料 / 航運 / 半導體記憶體)應該看報價而非本益比;EPS 高峰時本益比看似最便宜,實際是賣點。",
+      "apply_when": "看記憶體 / 航運 / DRAM / 鋼鐵類股時。",
+      "tags": ["景氣循環", "估值"]
+    },
+    {
+      "source": "股癌 EP165",
+      "date": "2021-08-11",
+      "title": "估值因人而異 + 測不準",
+      "principle": "分析師再專業也看錯,散戶更不該自信喊低估或錯殺。資金面驅動估值,沒聖杯策略,高賣低買在預期充分市場幾乎不可能。摸底不如做好風險控管。",
+      "apply_when": "對自己的估值結論太有信心時。想用單一估值模型重押時。",
+      "tags": ["估值", "心法", "風險管理"]
+    },
+    {
+      "source": "股癌 EP166",
+      "date": "2021-08-14",
+      "title": "看不懂盤勢就休息 / 換策略",
+      "principle": "動能交易最近慘被洗臉的『時也運也命也』。看不懂盤勢可先放假休息或換策略做價值投資。經歷完整多空循環才能說懂股票。分批進場 + 微笑曲線。",
+      "apply_when": "連續輸錢時。對盤勢完全混亂時。",
+      "tags": ["心法", "策略輪替"]
+    },
+    {
       "source": "股癌 EP169",
       "date": "2021-08-25",
       "title": "損害控制 (部位 > 進出場點)",
       "principle": "左右側交易定義沒必要糾結,重點是用部位控制做風險管理,不要一次把子彈打完。投資路上撞牆期難免,耐心分享本身就是互利。",
       "apply_when": "想 all-in 重押一檔時。對自己交易方向沒把握時。",
       "tags": ["部位管理", "心法"]
+    },
+    {
+      "source": "股癌 EP177",
+      "date": "2021-09-22",
+      "title": "德州撲克交易學 (帶狀加碼)",
+      "principle": "高手選牌 + 控制部位 + 心理戰,菜鳥 All-in 碰運氣。買股票敢滿倉押一支卻沒有帶狀加碼的觀念,本身就有問題。分散部位、不預設立場、順勢而為。",
+      "apply_when": "想一次重押時。對單一標的過度有信心時。",
+      "tags": ["部位管理", "心法", "撲克"]
+    },
+    {
+      "source": "股癌 EP178",
+      "date": "2021-09-25",
+      "title": "量化交易天才的提款邏輯",
+      "principle": "Edward Thorp 破解賭場 → Jim Simons 文藝復興 → Citadel 高頻交易。台灣當沖少年跟量化交易人最大差異是後者有完整數學模型 + 規模化執行。",
+      "apply_when": "覺得自己當沖很厲害時,先想對手是誰。",
+      "tags": ["量化", "當沖"]
     },
     {
       "source": "股癌 EP180",
@@ -7446,6 +7581,102 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tags": ["心法", "投資派別"]
     },
     {
+      "source": "股癌 EP181",
+      "date": "2021-10-06",
+      "title": "鑽石手要看基本面有沒有變",
+      "principle": "查理蒙格加碼阿里巴巴的鑽石手操作,要建立在資金管理與風險控制基礎上。下跌趨勢中保留彈藥、避免過度加碼,持股邏輯改變(基本面壞掉)時就該重新思考。",
+      "apply_when": "想跟單大師抄底時。個股下跌想無腦攤平時。",
+      "tags": ["攤平", "心法"]
+    },
+    {
+      "source": "股癌 EP182",
+      "date": "2021-10-09",
+      "title": "Tesla 不能用傳統車廠估值",
+      "principle": "Tesla 兼具硬體、軟體、能源、保險、自動駕駛多元商業模式,用傳統車廠 P/E 看會永遠覺得貴。資產配置 + 房貸投資的平衡比追逐單一概念股重要。",
+      "apply_when": "看 Tesla / SpaceX 之類平台型公司時。被『PE 太貴』論點影響時。",
+      "tags": ["Tesla", "估值"]
+    },
+    {
+      "source": "股癌 EP189",
+      "date": "2021-11-03",
+      "title": "停損的藝術 (有限 vs 無限)",
+      "principle": "停損本質是避免無限虧損、珍惜有限資源。指數投資 vs 主動選股的停損差異很大。停損的藝術:既要避免過度停損的摩擦成本,也別死抱到傾家蕩產。",
+      "apply_when": "個股套牢要不要砍時。決定指數型 ETF 是否需要停損時。",
+      "tags": ["停損", "心法"]
+    },
+    {
+      "source": "股癌 EP190",
+      "date": "2021-11-06",
+      "title": "期貨是避險工具不只投機",
+      "principle": "期貨幫航空公司對沖油價、漁夫鎖定魚價,本質是避險。保證金交易槓桿最高 7.4 倍 + 零和市場。期貨在不開槓桿下相比現貨有低手續費 + 稅賦優勢。先做好現貨再進階期貨。",
+      "apply_when": "聽到『期貨很危險』全盤否定時。考慮用期貨對沖時。",
+      "tags": ["期貨", "避險"]
+    },
+    {
+      "source": "股癌 EP191",
+      "date": "2021-11-10",
+      "title": "幣圈資金推升傳統金融估值",
+      "principle": "NFT / 元宇宙概念股能推到不合理高度,是幣圈資金流入傳統金融市場。Tesla 回吐別怪罪 Kimbal 賣股或內線。散戶應調整部位配置、避免 ALL IN 單一標的。",
+      "apply_when": "看到非主流概念股暴漲時。想找下跌『元兇』時。",
+      "tags": ["元宇宙", "心法"]
+    },
+    {
+      "source": "股癌 EP208",
+      "date": "2022-01-08",
+      "title": "升息循環:停損 > 攤平",
+      "principle": "升息循環衝擊房貸族。成長股估值已跌至便宜卻無人接盤、市場偏好難測。停損與部位管理比攤平更重要,新手先定期定額買大盤而非重壓單一標的。",
+      "apply_when": "升息循環啟動時。成長股看似超跌想抄底時。",
+      "tags": ["升息", "停損", "攤平"]
+    },
+    {
+      "source": "股癌 EP224",
+      "date": "2022-05-05",
+      "title": "衰退觸發點:破關鍵支撐 + 原物料狂漲",
+      "principle": "若 S&P 500 跌破 4100、Nasdaq 跌破 13000,搭配原物料持續狂漲 → 極可能觸發全球衰退。應轉向防守(日用品/醫療/保險/高殖利率),加碼黃金做空原物料。",
+      "apply_when": "衰退討論升溫時。判斷是否該降低風險部位時。",
+      "tags": ["衰退", "防守", "宏觀"]
+    },
+    {
+      "source": "股癌 EP234",
+      "date": "2022-04-09",
+      "title": "穩健現金流 + 定期定額才是正路",
+      "principle": "市場全面看空時不要被短期恐慌嚇跑,檢視自己耐受度與方法是否合適,適度配置海外資產(VT/VTI/QQQ)分散。早期進場不等於要開槓桿,找到穩健現金流 + 定期定額才是長期致富。",
+      "apply_when": "市場恐慌想全部砍倉時。考慮要不要開槓桿時。",
+      "tags": ["定期定額", "現金流", "心法"]
+    },
+    {
+      "source": "股癌 EP235",
+      "date": "2022-04-13",
+      "title": "All in / All out 極端操作會害死人",
+      "principle": "Munger 減碼阿里巴巴的案例說明:跟單大師有陷阱。分批進場 + 分散部位才能在市場磨人時活得久。",
+      "apply_when": "想 all-in 一檔或一個方向時。看到自己關注的大師調倉想跟單時。",
+      "tags": ["部位管理", "心法"]
+    },
+    {
+      "source": "股癌 EP246",
+      "date": "2022-05-21",
+      "title": "交易策略要符合邏輯不能朝令夕改",
+      "principle": "新創融資寒冬 + 聯準會升降息 + 美股創百年連跌。台灣小台期貨與融資指標失效。檢討美股部位難做空、台股 long-short 相對成功。防守駕駛 + 現金準備。",
+      "apply_when": "想頻繁切換策略時。一個方法剛失敗就想換時。",
+      "tags": ["策略", "現金", "心法"]
+    },
+    {
+      "source": "股癌 EP248",
+      "date": "2022-05-28",
+      "title": "暴力反彈:槓桿期貨 vs 個股的取捨",
+      "principle": "暴力反彈時選槓桿期貨而非個股,因為防守點位好抓 + 小型成長股可能有機會。長線部位與短線部位心態不同。多頭思想源自觀察富豪與機構的配置邏輯。",
+      "apply_when": "預期短期反彈想加碼時。考慮用期貨 vs 個股做短線時。",
+      "tags": ["期貨", "短線", "部位管理"]
+    },
+    {
+      "source": "股癌 EP258",
+      "date": "2022-07-02",
+      "title": "存活率比績效更重要",
+      "principle": "美股硬吃全部跌幅、Tesla / 輝達腰斬,反思沒及時做對沖。社群比較帶來心態失衡,觸及率高不等於最強。控制部位大小比追求績效更重要,存活率才是長期致勝關鍵。",
+      "apply_when": "看到網紅績效比較時。想 leverage 績效時。",
+      "tags": ["存活率", "對沖", "心法"]
+    },
+    {
       "source": "股癌 EP260",
       "date": "2022-07-09",
       "title": "槓桿型 ETF (盤整殺手)",
@@ -7454,12 +7685,76 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tags": ["槓桿", "ETF", "風險"]
     },
     {
+      "source": "股癌 EP267",
+      "date": "2022-08-03",
+      "title": "台灣戰爭風險:海外分散",
+      "principle": "Pelosi 訪台後地緣政治影響升高,中共可能經濟制裁。資產配置應考量台灣戰爭熱點風險,可透過海外證券戶分散部位。Renaissance / 量化套利策略也是另一條路。",
+      "apply_when": "兩岸局勢緊張時。所有資產都集中在台灣時。",
+      "tags": ["地緣", "配置", "海外"]
+    },
+    {
       "source": "股癌 EP275",
       "date": "2022-08-31",
       "title": "期貨在長期配置的優勢",
       "principle": "台指期 vs 006208/0050 的差異:標的分散度、交易費率、稅務優勢。期貨沒有絕對好壞,關鍵是認清自己需求。投資自己不是穩賺不賠,買快樂指數比躺著看盤划算。",
       "apply_when": "考慮用期貨做長期配置時。被『節稅』話術誘惑時。",
       "tags": ["期貨", "配置", "心法"]
+    },
+    {
+      "source": "股癌 EP286",
+      "date": "2022-10-08",
+      "title": "BIS 對中禁令重創半導體鏈",
+      "principle": "AMD 財報預告大爆雷 + Intel 衰退 + 美國 BIS 對中禁令。台積電、記憶體廠商風險與機會並存。育兒花費 + 房地產迷思 + 職涯選擇都該整合考量。",
+      "apply_when": "美中半導體政策變動時。看半導體股財報前。",
+      "tags": ["半導體", "BIS", "中美"]
+    },
+    {
+      "source": "股癌 EP287",
+      "date": "2022-10-12",
+      "title": "堅持比頻繁切換更重要",
+      "principle": "在同一策略上堅持比頻繁切換更重要,過程中的執行力比短期績效更有價值。期貨英雄後來都轉向長線。人性在市場中始終無法進步。",
+      "apply_when": "想換策略前。檢討自己績效時。",
+      "tags": ["執行力", "心法"]
+    },
+    {
+      "source": "股癌 EP289",
+      "date": "2022-10-19",
+      "title": "報價與股價脫鉤的機會財",
+      "principle": "之前看空飛機、現在看好天然氣類股 — 機會財股票的報價與股價會脫鉤。空單部位配置要避免被軋爆。台股結算日主力會壓盤。",
+      "apply_when": "看商品類股(航空/能源/航運)時。要不要做空時。",
+      "tags": ["機會財", "空單", "結算日"]
+    },
+    {
+      "source": "股癌 EP298",
+      "date": "2022-11-19",
+      "title": "短線:只有第一單能停損",
+      "principle": "短線交易的紀律 — 催化劑很重要;虧轉盈公司(浪子回頭) vs 成長減速優質公司(能人踩屎坑)機會不同。右上角強勢股追漲 + 嚴格停損 + 分批加碼。『只有第一單能停損,後續加碼必須停利』。",
+      "apply_when": "做短線交易時。決定停損 / 停利規則時。",
+      "tags": ["短線", "停損", "紀律"]
+    },
+    {
+      "source": "股癌 EP299",
+      "date": "2022-11-23",
+      "title": "族群輪動 vs 維持空單對沖",
+      "principle": "健康的族群輪動 — 生技股選舉炒作、金融股債券跌深機會、半導體車用零件供應鏈。短期缺乏利多支撐續漲時,傾向維持空單對沖部位直到有明顯回檔。",
+      "apply_when": "判斷族群輪動 vs 主升段時。",
+      "tags": ["輪動", "對沖"]
+    },
+    {
+      "source": "股癌 EP300",
+      "date": "2022-11-26",
+      "title": "巴菲特日本 carry trade",
+      "principle": "若擔憂衰退可採股債配,熊市時勇敢加碼。阿根廷/土耳其等貨幣貶值國家可透過本幣計價股市對沖通膨。巴菲特日本 carry trade 優於新興市場。當前極度看空類似 2020,警惕集體心理。",
+      "apply_when": "熊市最深時。考慮新興市場 vs 日本配置時。",
+      "tags": ["巴菲特", "日本", "carry trade"]
+    },
+    {
+      "source": "股癌 EP310",
+      "date": "2022-12-31",
+      "title": "熊市正是布局良機",
+      "principle": "馬斯克 margin call 爭議 + 特斯拉股權質押風險。2023 年加碼台灣部位、押科技股,看好台積電與台達電。活在當下而非物質追求。熊市正是布局良機。",
+      "apply_when": "熊市末期。年度檢討配置時。",
+      "tags": ["熊市", "心法", "台積電"]
     },
     {
       "source": "股癌 EP327",
@@ -7478,12 +7773,132 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tags": ["AI", "台積電", "記憶體"]
     },
     {
+      "source": "股癌 EP345",
+      "date": "2023-05-03",
+      "title": "投資的鼓勵與潑冷水",
+      "principle": "回覆 YouTube 留言:該鼓勵就鼓勵、該潑冷水就潑冷水。育兒壓力 + 投資心態 + 槓桿 + 技術派 vs 基本面 + 興櫃 + 配置 + 停損 + 交易孤獨感 + 自動駕駛評價,全是 retail 投資人會遇到的真實問題。",
+      "apply_when": "想找『正能量』股市心法時。",
+      "tags": ["心法", "QA"]
+    },
+    {
+      "source": "股癌 EP374",
+      "date": "2023-08-12",
+      "title": "好還要更好 + GPU 缺貨即高點",
+      "principle": "好財報已經不夠,市場要求『好還要更好』,估值必須從激進改為保守。SMCI 啟示:GPU 缺貨時期反而是高點,一旦供給解決反而面臨削價競爭。觀念比操作更重要,專注最有把握的領域。",
+      "apply_when": "看 AI 硬體股財報時。判斷供需轉折時。",
+      "tags": ["AI", "GPU", "估值"]
+    },
+    {
+      "source": "股癌 EP387",
+      "date": "2023-09-27",
+      "title": "衰退板塊輪動 + 指數型 ETF 內建停損",
+      "principle": "指數型 ETF 內建停損,不用額外砍。歷史數據看各板塊在衰退前中後表現循環,科技股(特別 CSP 與機房營運)是衰退後首選。美國汽車工會罷工影響未來成本。",
+      "apply_when": "判斷衰退進展時。決定 ETF 是否需要主動停損時。",
+      "tags": ["衰退", "ETF", "板塊輪動"]
+    },
+    {
+      "source": "股癌 EP415",
+      "date": "2024-01-03",
+      "title": "K 棒才是最領先指標",
+      "principle": "技術分析本質 — K 棒才是最領先指標,MACD 等都是落後。收斂派 vs 發散派操作邏輯不同。技術面只是輔助,中長線投資不用過度關注日線雜訊。",
+      "apply_when": "想用 MACD/KD 等指標判斷進出時。沉迷日線交易時。",
+      "tags": ["技術分析", "K 棒"]
+    },
+    {
+      "source": "股癌 EP417",
+      "date": "2024-01-10",
+      "title": "減肥 = 少吃 + 投資 = 紀律",
+      "principle": "減肥就是少吃沒祕訣。AI 族群反彈 + Marvell 投注邏輯 + 製造業半導體復甦。從 Fed 降息時序、SaaS 與小型股估值機會、槓桿 ETF 風險等總經角度做出提醒。",
+      "apply_when": "想找『輕鬆致富』方法時。",
+      "tags": ["心法", "Fed", "SaaS"]
+    },
+    {
+      "source": "股癌 EP464",
+      "date": "2024-07-22",
+      "title": "減硬轉軟 + ASIC 侵蝕 NVDA 毛利",
+      "principle": "減碼硬體轉往軟體:MSFT/AAPL 為美股核心持股,台股看好 To B 廠商與資服業者槓桿美國軟體機會。回調鬼故事 — 美光後里廠失火、HBM3E 驗證、NVDA vs CSP 博弈。預期 AMD/Meta/MSFT ASIC 在 2025-2026 逐步侵蝕 NVDA 毛利。",
+      "apply_when": "AI 硬體漲多想換軟體時。判斷 NVDA 競爭格局時。",
+      "tags": ["AI 軟體", "ASIC", "NVDA"]
+    },
+    {
+      "source": "股癌 EP476",
+      "date": "2024-08-03",
+      "title": "日圓 carry trade 爆破 → 連鎖斷頭",
+      "principle": "日圓升值引發全球 carry trade 槓桿爆破 → 市場連鎖斷頭。風控極重要,識別斷頭潮機會。Intel 衰退 + NVIDIA 產能 push out 但明年基本面健康。股債配 + 定期定額,不要亂槓桿。",
+      "apply_when": "日圓快速升值時。看到融資斷頭新聞時。",
+      "tags": ["日圓", "carry trade", "斷頭"]
+    },
+    {
+      "source": "股癌 EP477",
+      "date": "2024-08-07",
+      "title": "別怪黃仁勳,要對自己負責",
+      "principle": "參訪小公司後重新認知基本面,買股票要理解公司本質而不只跟風炒作。股災中融資斷頭 + 期貨流動性危機 + 萬股跌停。要對自己決策負責,別怪黃仁勳。期貨與現貨配置策略持續補部位。",
+      "apply_when": "股災後想找代罪羔羊時。考慮基本面深度研究時。",
+      "tags": ["心法", "基本面"]
+    },
+    {
+      "source": "股癌 EP519",
+      "date": "2025-01-01",
+      "title": "小規模股的優勢:看出實力差異",
+      "principle": "押注小規模股(市值<50 億)的心得:電話篩選 + 年報分析 + 實地訪查。低檔承接 + 高檔減碼賺短線。小規模股流動性差、參與者少,反而讓投資人更清楚掌握投資邏輯,比做大型股更容易看出自己的實力差異。",
+      "apply_when": "覺得大盤股無聊時。想精進選股能力時。",
+      "tags": ["小型股", "選股"]
+    },
+    {
+      "source": "股癌 EP530",
+      "date": "2025-02-08",
+      "title": "硬體停損 + 軟體看多 + 汰弱留強",
+      "principle": "軟體股迎來春天、資金全面移動。IPC 工業電腦在 Edge Computing 有機會但面臨 DIGITS / 消費卡競爭。科技巨頭 CapEx 狂飆代表 AI 模型變商品後用戶反增,但短期風險在 rerate 與川普亂牌。硬體設停損 + 軟體看多 + 汰弱留強。",
+      "apply_when": "AI 模型變商品化跡象時。考慮硬體 vs 軟體配置時。",
+      "tags": ["AI 軟體", "Edge", "停損"]
+    },
+    {
+      "source": "股癌 EP540",
+      "date": "2025-05-15",
+      "title": "人道走廊 = 減碼好時機",
+      "principle": "人道走廊出現後減碼、反彈時調整現金水位。買進爛財報公司 / 板卡股 / 調整記憶體與動能股。市場容易犯錯時要把握機會,但控制槓桿避免被踩死。",
+      "apply_when": "戰爭/危機出現緩和訊號時。反彈想加碼時。",
+      "tags": ["現金", "減碼", "心法"]
+    },
+    {
       "source": "股癌 EP550",
       "date": "2025-04-19",
       "title": "台積電 + 川普關稅不確定性",
       "principle": "台積電 Q2 財報超預期,NVDA 製程灌單 + CoWoS 樂觀,但川普關稅不確定性壓著市場到 7-8 月。光通元件已開始砍單(微軟那邊)。維持率安全邊際 + 質押買房要小心。",
       "apply_when": "面對關稅政策不確定性時。教家人認識市場迷惑行為時。",
       "tags": ["台積電", "CoWoS", "光通", "宏觀"]
+    },
+    {
+      "source": "股癌 EP557",
+      "date": "2025-05-14",
+      "title": "Uber 司機定期定額勝主動選股",
+      "principle": "Uber 司機小藥用定期定額 + 大跌加碼,績效遠勝主動選股。選定投資路線後要堅持,別整天改來改去。中美關稅協議只是暫緩非終局,中東達沃斯 NVDA 訂單實際規模需打折。",
+      "apply_when": "看不起定期定額時。覺得自己選股很厲害時。",
+      "tags": ["定期定額", "心法"]
+    },
+    {
+      "source": "股癌 EP576",
+      "date": "2025-07-19",
+      "title": "看對大方向就能賺錢",
+      "principle": "台達電、台積電財報強勁但預期明年增速趨緩,長線故事無大問題。Meta 砸錢建資料中心 + H200 解禁對供應鏈影響有限。市場波動要尊重,短線無法精準估值,關鍵是看對大方向就能賺錢。",
+      "apply_when": "想精準預測短期波動時。",
+      "tags": ["心法", "大方向"]
+    },
+    {
+      "source": "股癌 EP585",
+      "date": "2025-08-20",
+      "title": "Howard Marks: 高估值只是預期報酬低",
+      "principle": "Howard Marks《The Calculus of Value》:買在高估值位置只是隱含未來報酬較低,並非致命錯誤。買對好東西最重要,要有耐心等價值被市場認可。",
+      "apply_when": "對高估值股猶豫時。Marks 新 memo 出來時。",
+      "tags": ["Howard Marks", "估值"]
+    },
+    {
+      "source": "股癌 EP610",
+      "date": "2025-11-15",
+      "title": "現金多了心態反而從容",
+      "principle": "現金變多後心態轉變 — 敢花錢改善生活品質,投資更從容。抄底策略:技術面買點 + NVDA 等科技股分批進場 + 風險管理 + 資金配置。Google MCL 散熱、川湖滑軌爭議、Humanoid 機器人題材早晚。",
+      "apply_when": "累積一定資產後。考慮抄底策略時。",
+      "tags": ["現金", "心法", "抄底"]
     }
   ],
   "weekly_briefing": [
@@ -9399,6 +9814,7 @@ function renderWeeklyBriefing() {
 
 // ========== Render 經典觀念 ==========
 let CLASSICS_TAG_FILTER = 'all';
+let CLASSICS_SEARCH = '';
 function renderClassics() {
   const items = DATA.wisdom_classics || [];
   if (!items.length) {
@@ -9434,23 +9850,59 @@ function renderClassics() {
     });
   }
 
-  const filtered = CLASSICS_TAG_FILTER === 'all'
+  // 綁定搜尋 input (只綁一次)
+  const searchInput = document.getElementById('classics-search');
+  if (searchInput && !searchInput.dataset.bound) {
+    searchInput.dataset.bound = '1';
+    searchInput.addEventListener('input', e => {
+      CLASSICS_SEARCH = e.target.value.trim().toLowerCase();
+      renderClassics();
+    });
+  }
+
+  // 過濾:tag + search
+  let filtered = CLASSICS_TAG_FILTER === 'all'
     ? items
     : items.filter(i => (i.tags || []).includes(CLASSICS_TAG_FILTER));
 
+  if (CLASSICS_SEARCH) {
+    const q = CLASSICS_SEARCH;
+    filtered = filtered.filter(w => {
+      const hay = [w.title, w.principle, w.apply_when, w.source,
+                   ...(w.tags || [])].join(' ').toLowerCase();
+      return hay.includes(q);
+    });
+  }
+
+  // 更新計數
+  const countEl = document.getElementById('classics-count');
+  if (countEl) {
+    countEl.textContent = filtered.length === items.length
+      ? `${items.length} 條`
+      : `${filtered.length} / ${items.length} 條`;
+  }
+
   document.getElementById('classics-list').innerHTML = filtered.map(w => {
+    // 搜尋 hit 時把關鍵字加亮
+    const highlight = s => {
+      if (!CLASSICS_SEARCH) return esc(s);
+      const safe = esc(s);
+      // 為了 case-insensitive 高亮,做不破壞 HTML 的簡單替換
+      const re = new RegExp(`(${CLASSICS_SEARCH.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return safe.replace(re, '<mark style="background:var(--yellow); color:var(--bg); padding:0 2px; border-radius:2px;">$1</mark>');
+    };
     const tags = (w.tags || []).map(t => `<span class="wisdom-tag">${esc(t)}</span>`).join('');
     return `<div class="wisdom-card">
       <div class="wisdom-head">
         <span class="wisdom-source">${esc(w.source)}</span>
-        <span class="wisdom-title">${esc(w.title)}</span>
+        <span class="wisdom-title">${highlight(w.title)}</span>
         <span class="wisdom-date">${esc(w.date)}</span>
       </div>
-      <div class="wisdom-principle">${esc(w.principle)}</div>
-      <div class="wisdom-apply"><strong>使用情境</strong> · ${esc(w.apply_when)}</div>
+      <div class="wisdom-principle">${highlight(w.principle)}</div>
+      <div class="wisdom-apply"><strong>使用情境</strong> · ${highlight(w.apply_when)}</div>
       <div class="wisdom-tags">${tags}</div>
     </div>`;
-  }).join('') || '<p style="color:var(--muted)">(該 tag 下無資料)</p>';
+  }).join('') || '<p style="color:var(--muted)">(無符合的觀念)</p>';
 }
 
 // ========== Render 歷史財報事件 ==========
