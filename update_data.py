@@ -72,9 +72,11 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
         fcf = info.get("freeCashflow")
         div_yield = info.get("dividendYield")  # yfinance 直接返回比例
 
-        # 30 天 sparkline (限 30 個點,round 至 4 位)
+        # 30 天 sparkline (限 30 個點,round 至 4 位) + 成交量爆量比 (5d avg / 30d avg)
         sparkline = []
         change_pct = None
+        vol_5d_avg = None
+        vol_30d_avg = None
         try:
             hist30 = tk.history(period="30d", interval="1d")
             if not hist30.empty:
@@ -82,6 +84,13 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
                 if len(closes) >= 2:
                     sparkline = [round(float(c), 4) for c in closes[-30:]]
                     change_pct = round((closes[-1] - closes[0]) / closes[0] * 100, 2)
+                # 成交量 (排除 0,有些 ETF/指數會缺)
+                if "Volume" in hist30.columns:
+                    vols = [v for v in hist30["Volume"].dropna().tolist() if v and v > 0]
+                    if len(vols) >= 5:
+                        vol_5d_avg = int(sum(vols[-5:]) / 5)
+                    if len(vols) >= 10:
+                        vol_30d_avg = int(sum(vols) / len(vols))
         except Exception:
             pass
 
@@ -97,6 +106,10 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
             out["sparkline_30d"] = sparkline
         if change_pct is not None:
             out["change_30d_pct"] = change_pct
+        if vol_5d_avg is not None:
+            out["vol_5d_avg"] = vol_5d_avg
+        if vol_30d_avg is not None:
+            out["vol_30d_avg"] = vol_30d_avg
         return out
     except Exception as e:
         print(f"  ⚠️  {symbol} 失敗: {e}", file=sys.stderr)

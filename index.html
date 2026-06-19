@@ -9386,6 +9386,66 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "CPI",
       "period": "11 月",
       "note": "8:30 ET"
+    },
+    {
+      "date": "2026-07-16",
+      "type": "Humphrey-Hawkins",
+      "period": "上半年國會作證",
+      "note": "★ Fed 主席半年度貨幣政策報告(參議院 + 眾議院)。鷹鴿派表態關鍵"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "Jackson Hole",
+      "period": "經濟研討會",
+      "note": "★★ KC Fed 主辦,週五早上主席演說。歷史上多次為市場轉折點(Powell 2022 'pain' 演說 / 2024 降息 pivot)"
+    },
+    {
+      "date": "2026-07-15",
+      "type": "Beige Book",
+      "period": "FOMC 7/29 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "Beige Book",
+      "period": "FOMC 9/16 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "Beige Book",
+      "period": "FOMC 10/28 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "Beige Book",
+      "period": "FOMC 12/9 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "FOMC Minutes",
+      "period": "7/29 會議",
+      "note": "★ 解讀內部分歧 / 鷹鴿派比例。常引發二次波動"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "FOMC Minutes",
+      "period": "9/16 會議",
+      "note": "★ 含點陣圖會議的紀要,影響更大"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "FOMC Minutes",
+      "period": "10/28 會議",
+      "note": "FOMC 後 3 週發布"
+    },
+    {
+      "date": "2026-12-30",
+      "type": "FOMC Minutes",
+      "period": "12/9 會議",
+      "note": "★ 年底點陣圖會議紀要"
     }
   ]
 }/*__EMBEDDED_DATA_END__*/;
@@ -9688,21 +9748,82 @@ function fmtChange(pct) {
   return `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
 }
 
-// ========== Leaderboard (Top 5 gainers / losers / vs QQQ) ==========
+// ========== Leaderboard (Top 5 gainers / losers / vs benchmark / 成交量 / 波動) ==========
+
+// 半導體 themes (用來判定美股要 benchmark vs SMH 而非 QQQ)
+const SEMI_THEME_KEYWORDS = ['HBM','光通','封測','晶圓','GPU','ASIC','半導體','記憶體','功率','CoWoS'];
+
+function deriveSemiTickers() {
+  const themes = DATA.themes || [];
+  const set = new Set();
+  themes.forEach(th => {
+    if (SEMI_THEME_KEYWORDS.some(k => th.name.includes(k))) {
+      (th.members || []).forEach(m => {
+        const sym = m.ticker || '';
+        if (!sym.endsWith('.TW') && !sym.endsWith('.KS')) {
+          set.add(sym);
+        }
+      });
+    }
+  });
+  return set;
+}
+
+function pickBenchmark(ticker) {
+  // 回傳該 ticker 對應的 benchmark ticker (落不到對應時回 QQQ)
+  const sym = ticker.ticker;
+  if (sym.endsWith('.TW')) return '0050.TW';
+  if (sym.endsWith('.KS')) return '005930.KS';  // 三星當韓股代理
+  // 美股: ETF / Index 都 vs QQQ;個股看是不是半導體
+  if (ticker.type === 'ETF' || ticker.type === 'Index') return 'QQQ';
+  if (ticker.type === 'Private') return null;   // 未上市跳過
+  const semi = deriveSemiTickers();
+  return semi.has(sym) ? 'SMH' : 'QQQ';
+}
+
 function renderLeaderboard() {
   const target = document.getElementById('leaderboard-row');
   if (!target) return;
   const all = DATA.tickers.filter(t => typeof t.change_30d_pct === 'number');
   if (!all.length) { target.innerHTML = ''; return; }
-  const qqq = DATA.tickers.find(t => t.ticker === 'QQQ');
-  const qqqChg = qqq && typeof qqq.change_30d_pct === 'number' ? qqq.change_30d_pct : 0;
 
+  // benchmark 速查表
+  const benchmarks = {};
+  ['QQQ', 'SMH', '0050.TW', '005930.KS'].forEach(sym => {
+    const t = DATA.tickers.find(x => x.ticker === sym);
+    benchmarks[sym] = (t && typeof t.change_30d_pct === 'number') ? t.change_30d_pct : 0;
+  });
+
+  // 1) 漲幅榜
   const sortDesc = [...all].sort((a, b) => b.change_30d_pct - a.change_30d_pct);
   const gainers = sortDesc.slice(0, 5);
+
+  // 2) 跌幅榜
   const losers = sortDesc.slice(-5).reverse();
-  const vsQqq = [...all]
-    .map(t => ({ ...t, _rel: t.change_30d_pct - qqqChg }))
+
+  // 3) vs 大盤 alpha 榜
+  const vsBench = all
+    .map(t => {
+      const bsym = pickBenchmark(t);
+      if (!bsym) return null;
+      const bchg = benchmarks[bsym] ?? 0;
+      return { ...t, _rel: t.change_30d_pct - bchg, _benchSym: bsym, _benchChg: bchg };
+    })
+    .filter(x => x)
     .sort((a, b) => b._rel - a._rel)
+    .slice(0, 5);
+
+  // 4) 30 天波動度榜 (絕對值)
+  const volatile = [...all]
+    .map(t => ({ ...t, _abs: Math.abs(t.change_30d_pct) }))
+    .sort((a, b) => b._abs - a._abs)
+    .slice(0, 5);
+
+  // 5) 成交量爆量榜 (若有 vol_5d_avg / vol_30d_avg 才顯示)
+  const volSurge = all
+    .filter(t => typeof t.vol_5d_avg === 'number' && typeof t.vol_30d_avg === 'number' && t.vol_30d_avg > 0)
+    .map(t => ({ ...t, _ratio: t.vol_5d_avg / t.vol_30d_avg }))
+    .sort((a, b) => b._ratio - a._ratio)
     .slice(0, 5);
 
   const card = (title, tag, rows, valFmt) => `
@@ -9716,11 +9837,37 @@ function renderLeaderboard() {
         </div>`).join('')}
     </div>`;
 
-  target.innerHTML =
-    card('📈 30 天漲幅榜 Top 5', '全部 ticker', gainers, t => fmtChange(t.change_30d_pct)) +
-    card('📉 30 天跌幅榜 Top 5', '全部 ticker', losers, t => fmtChange(t.change_30d_pct)) +
-    card('⚡ vs QQQ 強勢榜 Top 5', `QQQ 30 天 ${fmtChange(qqqChg)}`.replace(/<[^>]*>/g,''), vsQqq,
-         t => `<span class="${t._rel >= 0 ? 'chg-up' : 'chg-down'}">${t._rel > 0 ? '+' : ''}${t._rel.toFixed(1)}%</span>`);
+  const cards = [
+    card('📈 30 天漲幅榜 Top 5', '全部 ticker', gainers, t => fmtChange(t.change_30d_pct)),
+    card('📉 30 天跌幅榜 Top 5', '全部 ticker', losers, t => fmtChange(t.change_30d_pct)),
+    card('⚡ vs 大盤 alpha 榜 Top 5', '台股 vs 0050 / 韓股 vs 三星 / 美股半導 vs SMH / 其他 vs QQQ',
+         vsBench, t => `
+           <span class="${t._rel >= 0 ? 'chg-up' : 'chg-down'}">
+             ${t._rel > 0 ? '+' : ''}${t._rel.toFixed(1)}%
+           </span>
+           <span style="color:var(--muted); font-size:10px; display:block;">vs ${esc(t._benchSym)} ${t._benchChg >= 0 ? '+' : ''}${t._benchChg.toFixed(1)}%</span>
+         `),
+    card('🎢 30 天波動度榜 Top 5', '|漲跌| 絕對值 (大漲或大跌都上榜)',
+         volatile, t => `
+           <span class="${t.change_30d_pct >= 0 ? 'chg-up' : 'chg-down'}">
+             ${t.change_30d_pct > 0 ? '+' : ''}${t.change_30d_pct.toFixed(1)}%
+           </span>`),
+  ];
+
+  // 成交量榜若有資料才顯示
+  if (volSurge.length) {
+    cards.push(
+      card('🔊 30 天成交量爆量榜 Top 5', '近 5 日均量 / 30 日均量 比率',
+           volSurge, t => `
+             <span class="${t._ratio >= 1 ? 'chg-up' : 'chg-down'}">
+               ${t._ratio.toFixed(2)}x
+             </span>
+             <span style="color:var(--muted); font-size:10px; display:block;">${fmtChange(t.change_30d_pct)}</span>
+           `)
+    );
+  }
+
+  target.innerHTML = cards.join('');
 }
 
 // ========== Render 題材分類 ==========

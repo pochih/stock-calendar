@@ -8671,6 +8671,66 @@
       "type": "CPI",
       "period": "11 月",
       "note": "8:30 ET"
+    },
+    {
+      "date": "2026-07-16",
+      "type": "Humphrey-Hawkins",
+      "period": "上半年國會作證",
+      "note": "★ Fed 主席半年度貨幣政策報告(參議院 + 眾議院)。鷹鴿派表態關鍵"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "Jackson Hole",
+      "period": "經濟研討會",
+      "note": "★★ KC Fed 主辦,週五早上主席演說。歷史上多次為市場轉折點(Powell 2022 'pain' 演說 / 2024 降息 pivot)"
+    },
+    {
+      "date": "2026-07-15",
+      "type": "Beige Book",
+      "period": "FOMC 7/29 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "Beige Book",
+      "period": "FOMC 9/16 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "Beige Book",
+      "period": "FOMC 10/28 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-11-25",
+      "type": "Beige Book",
+      "period": "FOMC 12/9 前",
+      "note": "區域經濟現況描述,FOMC 前 2 週發布"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "FOMC Minutes",
+      "period": "7/29 會議",
+      "note": "★ 解讀內部分歧 / 鷹鴿派比例。常引發二次波動"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "FOMC Minutes",
+      "period": "9/16 會議",
+      "note": "★ 含點陣圖會議的紀要,影響更大"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "FOMC Minutes",
+      "period": "10/28 會議",
+      "note": "FOMC 後 3 週發布"
+    },
+    {
+      "date": "2026-12-30",
+      "type": "FOMC Minutes",
+      "period": "12/9 會議",
+      "note": "★ 年底點陣圖會議紀要"
     }
   ]
 }
