@@ -1075,21 +1075,27 @@
     },
     {
       "company": "Anthropic",
-      "status": "無 IPO 計畫",
-      "valuation": "~$60-100B",
-      "note": "Amazon $8B + Google 投資,結構複雜 (PBC),CEO Dario 未表態 IPO。Claude 系列模型開發商"
+      "status": "傳聞 2026 下半",
+      "valuation": "~$1T (傳聞)",
+      "note": "Amazon $8B + Google 投資。原本無 IPO 計畫,但 SpaceX 上市後傳將跟進。Fable 5 出口管制下架後企業客戶轉向風險升高"
     },
     {
       "company": "OpenAI",
-      "status": "結構重組中,無 IPO",
-      "valuation": "~$300-500B",
-      "note": "Sam Altman 表示「不專注 IPO」。與 MSFT 合作架構複雜,需先脫離 capped-profit 結構"
+      "status": "傳聞 2026 下半",
+      "valuation": "~$1T (傳聞)",
+      "note": "Sam Altman 過去表示「不專注 IPO」,但 SpaceX 上市後傳將跟進。仍需先脫離 capped-profit 結構"
     },
     {
-      "company": "SpaceX (Starlink 分拆)",
-      "status": "傳聞 2026-2027",
-      "valuation": "SpaceX ~$350B",
-      "note": "Musk 多次表示 Starlink 現金流穩定後可能分拆 IPO。SpaceX 本體無上市計畫"
+      "company": "SpaceX",
+      "status": "✅ 已上市 2026-06-12 (NASDAQ: SPCX)",
+      "valuation": "$2.1T (首日收盤)",
+      "note": "定價 $135 → 首日收 $160 (+19%)。馬斯克成史上首位 trillionaire ($1.1T)。散戶配 30% (極罕見),中港被排除。M觀點 拆解合理估值 ~$1T (火箭 $100B + Starlink $200B + xAI 模型 $200B + 地面 NeoCloud $100B + 太空 NeoCloud $300B + 火星夢想 $100B),目前已含明顯馬斯克溢價。Sequoia (Roelof Botha) 進董事會,持股 1.5% 約 $350B"
+    },
+    {
+      "company": "Cursor (Anysphere)",
+      "status": "❌ 已被 SpaceX 收購 ($600 億)",
+      "valuation": "—",
+      "note": "全股票交易併入 SpaceX/xAI。ARR 從 2025 初 $100M → 目前 $40 億。原本與 Anthropic 是合作夥伴,Claude Code 推出後變競爭對手 → 需要新算力靠山。Composer 2.5 模型實力接近頂尖。補上 xAI 原團隊離職的人才洞"
     },
     {
       "company": "Klarna",
@@ -5809,6 +5815,74 @@
   ],
   "themes": [
     {
+      "name": "太空運算 / 軌道資料中心",
+      "icon": "🛰️🧠",
+      "desc": "SpaceX AI-1 衛星 = 一組 NVL72 GB300 機櫃送上太空 (峰值 150kW、太陽能板翼展 70m ≈ 波音 747)。2027 技術驗證、2028 商業部署。Starship 穩定發射為前提。第一代用 NVDA GPU,後續可能 Google TPU 與 Tesla AI5/AI6 (馬斯克稱 AI5 成本是 Blackwell 的 <10%、能源效率 3 倍)。長線天花板:可擴展至地球能源的「一兆倍」(Kardashev II)。與既有「低軌衛星」題材切割:後者偏通訊、本題材偏算力。",
+      "members": [
+        {
+          "ticker": "SPCX",
+          "co": "SpaceX",
+          "purity": 5,
+          "role": "AI-1 衛星本體 + Starship 運輸 + xAI 算力出租 (Anthropic + Google 年化 $260 億)"
+        },
+        {
+          "ticker": "NVDA",
+          "co": "NVIDIA",
+          "purity": 4,
+          "role": "第一代 AI-1 用 GB300 機櫃,SpaceX 2027 開始送上軌道"
+        },
+        {
+          "ticker": "GOOGL",
+          "co": "Google",
+          "purity": 3,
+          "role": "TPU 版 AI-1 合作,同時為 xAI 算力大客戶 (月租 $9.2 億)"
+        },
+        {
+          "ticker": "TSLA",
+          "co": "Tesla",
+          "purity": 3,
+          "role": "AI5 (2026 底量產) / AI6 為太空特化方向 (低功耗高效)"
+        },
+        {
+          "ticker": "ASML",
+          "co": "ASML",
+          "purity": 2,
+          "role": "Terafab (馬斯克願景的 100M sqft 晶圓廠,Tesla Gigafactory 10x) 必須的 EUV 設備"
+        },
+        {
+          "ticker": "8482.TW",
+          "co": "豐達科 (Nafco)",
+          "purity": 2,
+          "role": "航太精密扣件,SPS 火災後填補三年產能真空,馬來西亞新廠卡位太空藍海 (火箭/衛星高溫超合金扣件),訂單到 2027"
+        }
+      ]
+    },
+    {
+      "name": "蘋果摺疊手機供應鏈",
+      "icon": "📱🔁",
+      "desc": "蘋果 2026 H2 推出首款摺疊手機。專用軸承單價是筆電數十倍,二十萬次極限開合壽命大幅拉高精密技術門檻。富果直送認為短期內紅利集中在卡到首波量產的台廠。",
+      "members": [
+        {
+          "ticker": "3376.TW",
+          "co": "新日興",
+          "purity": 5,
+          "role": "軸承首波卡位,海外新廠就位將吞下首波供應份額。手機軸承營收占比預期衝破 40%,擺脫筆電週期。Forward PE ~14 (富果認為嚴重低估)"
+        },
+        {
+          "ticker": "6269.TW",
+          "co": "台郡",
+          "purity": 3,
+          "role": "次世代摺疊機天線軟板規格升級 (其三大戰略之一,另含 AI 機櫃液冷漏液檢測 + CPO 高速傳輸軟板)"
+        },
+        {
+          "ticker": "AAPL",
+          "co": "Apple",
+          "purity": 3,
+          "role": "終端品牌,但摺疊機初期出貨量小,對 AAPL 整體營收影響有限 — 主要是長線拉高 ASP 與創新敘事"
+        }
+      ]
+    },
+    {
       "name": "HBM / 記憶體",
       "icon": "🧠",
       "desc": "HBM3E / HBM4 為 AI GPU 必要組件,NVDA B200/300、AMD MI350 全靠它。三星 / 海力士 / Micron 三家主供。",
@@ -5879,6 +5953,12 @@
           "co": "Nebius",
           "purity": 5,
           "role": "歐洲版 CRWV,前 Yandex 國際業務"
+        },
+        {
+          "ticker": "SPCX",
+          "co": "SpaceX / xAI",
+          "purity": 5,
+          "role": "新一哥:Anthropic 月租 $12.5 億 + Google 月租 $9.2 億 (11 萬 GPU,2026/10–2029/6),年化營收 $260 億 ≫ CRWV+NBIS 加總。Colossus 1+2 為 GB200/GB300 集群,仍保留 ~40% 算力給 Grok 訓練 + Cursor 合作"
         },
         {
           "ticker": "IREN",
@@ -6154,19 +6234,31 @@
     {
       "name": "封測 / CoWoS / Advanced Packaging",
       "icon": "📦",
-      "desc": "AI GPU 需要 2.5D/3D 封裝,CoWoS 為 NVDA / AMD 共用方案。台積電擴 CoWoS,封測廠分食外包。",
+      "desc": "AI GPU 需要 2.5D/3D 封裝,CoWoS 為 NVDA / AMD 共用方案。台積電擴 CoWoS,封測廠分食外包。SoIC 垂直堆疊 (混合鍵合,跨越焊錫物理障礙) 為下一代戰場 — 富果認為製程紅利轉至高精度檢測與耗材台廠。",
       "members": [
         {
           "ticker": "TSM",
           "co": "TSMC",
           "purity": 5,
-          "role": "CoWoS 主要產能持有者"
+          "role": "CoWoS 主要產能持有者 + SoIC 製程主導 (3D 堆疊)"
         },
         {
           "ticker": "3711.TW",
           "co": "日月光投控",
           "purity": 5,
           "role": "全球封測龍頭,CoWoS 外包受惠"
+        },
+        {
+          "ticker": "3680.TW",
+          "co": "家登 (Gudeng)",
+          "purity": 5,
+          "role": "全球半導體高階載具領導廠商 (EUV Pod、12 吋晶圓盒)。EUV 黃光道數倍增推升剛性需求,GP 版本光罩盒拉高獲利結構。Panel FOUP / CoWoS 載具切入先進封裝。富果預估 2027 EPS 挑戰 25 元"
+        },
+        {
+          "ticker": "8996.TW",
+          "co": "高力 (Highly)",
+          "purity": 4,
+          "role": "AI 伺服器液冷散熱關鍵供應商,訂單能見度上修,富果預估 2026~2027 獲利倍數成長"
         },
         {
           "ticker": "AMAT",
@@ -6402,7 +6494,7 @@
     {
       "name": "AI 軟體 / 平台",
       "icon": "🧮",
-      "desc": "AI 變現的「軟體層」,PLTR 為純度最高的純 AI 股,估值最敏感。",
+      "desc": "AI 變現的「軟體層」,PLTR 為純度最高的純 AI 股,估值最敏感。MSFT 透過 MAI 自研模型逐步取代外採 Anthropic Sonnet (通路品牌取代供應商品牌邏輯)。",
       "members": [
         {
           "ticker": "PLTR",
@@ -6414,13 +6506,13 @@
           "ticker": "MSFT",
           "co": "Microsoft",
           "purity": 4,
-          "role": "Copilot + Azure AI"
+          "role": "Copilot + Azure AI + MAI-Thinking-1 (1T 總參數 / A35B MoE,盲測勝 Claude Sonnet 4.6,coding 接近 Opus)"
         },
         {
           "ticker": "GOOGL",
           "co": "Alphabet",
           "purity": 4,
-          "role": "Gemini + Workspace AI"
+          "role": "Gemini + Workspace AI + AFM3 蘋果合作 (蘋果 NeoCloud Pro 跑在 Google Cloud + NVDA GPU)"
         },
         {
           "ticker": "ORCL",
@@ -6604,6 +6696,87 @@
       "vol": "$1.0M",
       "url": "https://polymarket.com/event/will-rebecca-shepherd-win-the-2026-makerfield-by-election",
       "tag": "Politics"
+    }
+  ],
+  "weekly_briefing": [
+    {
+      "week": "2026-W25",
+      "date_range": "2026-06-15 ~ 2026-06-21",
+      "sources": ["M報 #531", "馬斯克帝國觀察 #74-#75", "富果直送 (新日興/家登/豐達科/台郡)"],
+      "headlines": [
+        {
+          "category": "AI 模型",
+          "title": "Anthropic Claude Fable 5 上架不到一週遭出口管制下架",
+          "tickers": ["AMZN", "MSFT", "GOOGL", "NVDA"],
+          "summary": "Amazon 紅隊 jailbreak 成功 → 5+ 家科技高層警告白宮 → 商務部以國安為由禁外國人存取 → Anthropic 因無法逐帳號 KYC 被迫下架。30 天資料保留政策觸雷,微軟禁內部員工使用,大企業/政府幾乎無法採用。",
+          "stance": "M觀點:Anthropic 自食惡果。長期宣稱 AI 危險如核武 + 主動要求政府監管,卻在自家模型出事時改口『只是小漏洞』,雙重標準明顯。",
+          "implication": "短線 → 替 OpenAI/Google 創造企業客戶轉移空間。長線 → 最強模型未來必走 KYC,Anthropic 正變成『AI 真理部』(每個 prompt 過安全審查),預期 2 年內聯邦立法強制審查紀錄與第三方稽核。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "IPO + 估值",
+          "title": "SpaceX IPO 首日 +19% 市值 $2.1T,Musk 成史上首位 trillionaire",
+          "tickers": ["SPCX", "TSLA", "GOOGL", "NVDA"],
+          "summary": "定價 $135 → 收 $160,馬斯克身價 $1.1T。打破多項華爾街慣例(盤中定價、散戶配售 30%、中港排除)。M觀點 拆解合理估值 ~$1T,目前已含明顯馬斯克溢價。",
+          "stance": "M觀點:好公司一般價格 > 壞公司便宜價格。建議分批買、不一次重押,容忍中期回檔。",
+          "implication": "Sequoia (Roelof Botha) 進董事會。MSCI 預期將快速納入 SpaceX,被動買盤 ~$5.79T 資產追蹤;但 S&P 500 因 SpaceX 仍虧損暫不納。Magnificent 7 可能改名 MANGOS (Meta/Anthropic/Nvidia/Alphabet/OpenAI/SpaceX)。",
+          "themes_touched": ["太空運算 / 軌道資料中心", "AI 算力租賃 (Neocloud)"]
+        },
+        {
+          "category": "併購",
+          "title": "SpaceX $600 億全股票併購 Cursor (Anysphere)",
+          "tickers": ["SPCX", "ANTH (未上市)"],
+          "summary": "Cursor ARR 從 2025 初 $100M → $40 億。原本與 Anthropic 合作,Claude Code 推出後變競爭對手。Composer 2.5 模型實力接近頂尖,補上 xAI 原團隊離職的人才洞。",
+          "stance": "戰略意義 > 財務意義。SpaceX/xAI 取得 coding 場景 + 模型團隊 + 算力使用客戶。",
+          "implication": "GitHub Copilot / Claude Code / Cursor 三強格局明朗化。Anthropic 失去重要付費客戶,加上 Fable 5 出口管制雙重承壓。",
+          "themes_touched": ["AI 軟體 / 平台", "AI 算力租賃 (Neocloud)"]
+        },
+        {
+          "category": "宏觀資金",
+          "title": "Google 發 $847.5 億新股 — 最會印鈔的科技巨頭把 AI CapEx 金融化",
+          "tickers": ["GOOGL", "MSFT", "AMZN", "BRK.B"],
+          "summary": "Google 2026 CapEx 預估 $1900B vs 營業現金流 $2000B,緩衝僅 $100B。Berkshire (Greg Abel 時代) 大買 GOOGL,可能成 Abel 代表作。為何不發債發新股?新股不用還+不付息,把風險交股權市場分擔。",
+          "stance": "M觀點:Google 寧可稀釋股權踩油門 = 它看到的 AI 機會大到『現在減速才是最大風險』。",
+          "implication": "悲觀解讀:連 GOOGL 都缺錢=泡沫頂部訊號。樂觀解讀:現金流怪物的 conviction = AI Infra 還在前期。MSFT/AMZN 暫未跟進。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)"]
+        },
+        {
+          "category": "市場修正",
+          "title": "Broadcom 指引保守 + 美就業太強 → SOX 單日 -10%,AI Infra 群修",
+          "tickers": ["AVGO", "MU", "CRDO", "COHR"],
+          "summary": "雙觸發點:就業太強壓抑降息預期 + AVGO 沒上調展望(它一向給保守財測,但市場期待大谷打 50 全壘打卻說下季 55)。S&P -2.6% / NDX -4.2% / SOX -10%。",
+          "stance": "M觀點:中度修正非泡沫破裂。基本面估值不算貴,但市場槓桿水位極高(『世貸同堂』現象)。",
+          "implication": "高槓桿者降槓桿,無槓桿者分批加碼。漲多的 Micron/Credo/Coherent (一年 3-5x) 可能修 20-30%,但長線 AI 多頭未變。",
+          "themes_touched": ["AI GPU (主戰場)", "光通訊 (Optical / 800G·1.6T)", "HBM / 記憶體"]
+        },
+        {
+          "category": "蘋果",
+          "title": "WWDC 2026:AFM3 五大模型陣列 + Siri 接 Gemini",
+          "tickers": ["AAPL", "GOOGL", "NVDA"],
+          "summary": "AFM3 Core (3B 手機) / Core Advanced (20B MoE,A1-4B,塞 NAND Flash) / Cloud (Apple Silicon) / Cloud Pro (Google Cloud + NVDA GPU) / Cloud Image (Diffusion)。蘋果說沒拿 Gemini 換皮,但有用 Gemini 做蒸餾。",
+          "stance": "M觀點 給 70 分:該補的都補了,但 New Siri 還沒真正交卷。蘋果保底沒問題,但拿不到 80-90 分需要更不一樣做法。",
+          "implication": "GOOGL 與 NVDA 雙重受惠 (AFM Cloud Pro 跑 NVDA GPU on Google Cloud)。AAPL 估值結構性壓力 — 首次低頭跟外部模型合作,被視為自研進度落後訊號。",
+          "themes_touched": ["AI 軟體 / 平台", "AI GPU (主戰場)", "蘋果摺疊手機供應鏈"]
+        },
+        {
+          "category": "Tesla / FSD",
+          "title": "FSD 歐洲 4 國核准 (荷比立丹),台灣正式送件,Cybercab 認證曝光",
+          "tickers": ["TSLA"],
+          "summary": "歐洲核准:荷蘭 (4/10) → 立陶宛 / 愛沙尼亞 / 比利時 / 丹麥跟進,西班牙 6/30 前可能批准。捷克拒絕互認 (疑 Škoda 遊說)。台灣 6/16 送件,FSD 一次性買斷 6/30 截止改訂閱制。Cybercab 整備重量僅 1414kg / 48kWh / 續航 673km,EPA 史上最節能 EV。",
+          "stance": "RDW 18 個月 / 180 萬公里數據 / 3000 小時測試後核准,扎實。但 ETSC 仍致函要求暫停認證。",
+          "implication": "馬斯克行使 3.04 億股選擇權 (成本 $71 億),直接持股升至 19.9% — 鎖定長期影響力。AI6 晶片每片晶圓可用算力可能破紀錄。",
+          "themes_touched": ["EV / Robotaxi / FSD"]
+        },
+        {
+          "category": "台股個股",
+          "title": "富果直送本週個股焦點:新日興 / 家登 / 豐達科 / 台郡",
+          "tickers": ["3376.TW", "3680.TW", "8482.TW", "6269.TW"],
+          "summary": "新日興:蘋果摺疊軸承首波,Forward PE ~14 嚴重低估。家登:EUV Pod + CoWoS 載具,2027 EPS 估 25 元。豐達科:航太扣件 SPS 火災轉單,訂單到 2027,馬國新廠卡位太空藍海。台郡:三戰略(液冷漏液檢測 + CPO 軟板 + 摺疊機天線)。",
+          "stance": "富果立場明顯偏多,但本益比仍合理區間。",
+          "implication": "三檔同步指向蘋果摺疊機 + AI 機櫃 + 太空(火箭/衛星扣件) 三大長線題材的台股供應鏈卡位。",
+          "themes_touched": ["蘋果摺疊手機供應鏈", "封測 / CoWoS / Advanced Packaging", "太空運算 / 軌道資料中心"]
+        }
+      ]
     }
   ],
   "institutional_holders": [
@@ -6893,6 +7066,61 @@
     }
   ],
   "historical_events": [
+    {
+      "date": "2026-06-19",
+      "ticker": "ANTH",
+      "event": "Anthropic Claude Fable 5 上架不到一週,遭美國商務部出口管制下架",
+      "move": "—",
+      "mcap_loss": "—",
+      "spx": "—",
+      "qqq": "—",
+      "type": "下跌",
+      "lesson": "Amazon 紅隊 jailbreak Fable 5 成功 (繞過安全護欄輸出網攻指引) → Andy Jassy + 5 家科技高層警告白宮 → 商務部以國安為由,禁止外國人存取 Fable 5/Mythos 5 (出口管制不只擋 IP,連境內外籍員工都不能用)。Anthropic 因無法逐帳號 KYC 只能全面下架。Dario Amodei 認為「只是窄域越獄」,白宮僅給 90 分鐘最後通牒。30 天資料保留政策觸雷:微軟禁內部員工使用 Fable 5,大企業/政府幾乎無法採用 → 反而替 OpenAI/Google 創造企業客戶空間。Anthropic 長期宣稱 AI 危險如核武 + 要求政府監管,如今監管真的擋到生意又改口「只是小漏洞」=「自掘墳墓」(M觀點)。長線含意:最強模型未來必走 KYC 制度,Anthropic 正變成「AI 真理部」(每個 prompt 都先過安全審查) → 預期 2 年內聯邦立法強制審查紀錄與第三方稽核。"
+    },
+    {
+      "date": "2026-06-15",
+      "ticker": "GOOGL",
+      "event": "Google 發 $847.5 億新股 — 連最會印鈔的科技巨頭都要金融化 AI CapEx",
+      "move": "—",
+      "mcap_loss": "+$84.75B (募資)",
+      "spx": "—",
+      "qqq": "—",
+      "type": "下跌",
+      "lesson": "Google 2026 CapEx 預估 $1900B vs 營業現金流 $2000B,緩衝只剩 $100B。原計畫 $800B 新股,因大戶超額認購追加到 $847.5B (Berkshire 在 Greg Abel 時代首次大買 GOOGL — 可能成 Abel 代表作,類比巴菲特晚期重押 AAPL)。為何不發債發新股?債要還+付息,新股不用 → Google 把 AI 軍備競賽風險「金融化」交給股權市場分擔。MSFT/AMZN 暫未跟進 (CapEx 也都 $1800-2000B,但 MSFT 現金流更強)。最關鍵訊號:Google 只要把 CapEx 從 $1900B 砍到 $1500B 就完全不需發股,卻寧可稀釋股權踩油門 → 代表 Google 看到的 AI 機會大到「現在減速才是最大風險」。悲觀解讀:連 GOOGL 都缺錢=泡沫頂部訊號。樂觀解讀:現金流怪物的 conviction = AI Infra 還在前期。"
+    },
+    {
+      "date": "2026-06-12",
+      "ticker": "SPCX",
+      "event": "SpaceX IPO 首日 +19%,市值 $2.1T,馬斯克成為史上首位身價破 1 兆美元的人",
+      "move": "+19%",
+      "mcap_loss": "+$2.1T (首日市值)",
+      "spx": "—",
+      "qqq": "—",
+      "type": "暴漲",
+      "lesson": "定價 $135/股 (估值 $1.77T) → 收盤 $160 → Musk 淨資產 $1.1T (Forbes 標 trillionaire)。打破多項華爾街慣例:盤中定價、散戶配售 30% (極罕見)、中港投資人被排除、Musk 仍掌 82% 投票權。M觀點 拆解合理估值:火箭發射 $100B + Starlink $200B + xAI 模型 $200B + 地面 NeoCloud $100B + 太空 NeoCloud $300B + 火星/月球夢想 $100B = 約 $1T → 目前 $2.1T 已含明顯「馬斯克溢價」。早期股東閉鎖期幾個月後解除,可能有賣壓。歷史對標:Tesla 曾在一年內 $400→$200→$400→$200。長線意義:SpaceX 已不只是火箭/衛星公司,而是「太空 AI Infra 公司」— xAI 算力出租 ARR 已超越 CoreWeave + Nebius 加總。波克夏 (Greg Abel 時代) 同期重押 GOOGL,顯示 AI 主題機構承接力強。Sequoia (Roelof Botha) 進董事會,持股 ~1.5% 約 $350 億。"
+    },
+    {
+      "date": "2026-06-09",
+      "ticker": "GOOGL",
+      "event": "Google 向 SpaceX/xAI 租 11 萬顆 GPU — 月租 $9.2 億,xAI 變身 NeoCloud 一哥",
+      "move": "—",
+      "mcap_loss": "—",
+      "spx": "—",
+      "qqq": "—",
+      "type": "暴漲",
+      "lesson": "合約 2026/10–2029/6 共 33 個月,總值近 $300 億 (明年後雙方可 90 天通知終止)。加上 Anthropic 月租 $12.5 億,xAI 算力出租年化營收 ~$260 億 ≫ CoreWeave $120 億 + Nebius $30 億。GPU 為 Colossus 2 的 GB200/GB300。背後關鍵:Agent AI 在 2026 Q1 爆發,Google/Anthropic/MSFT 去年規劃 CapEx 時是 reasoning AI 思維,完全沒料到 → 突然全市場算力荒,xAI 蓋 Colossus 1+2 「歪打正著」站在賣方位置。對 SpaceX IPO 估值貢獻巨大:原本被質疑「賺錢的火箭部門併購燒錢的 xAI」變成「xAI 直接損益兩平」。xAI 仍保留 ~40% 算力給 Grok 訓練 + Cursor 合作 (隨後以 $600 億併購)。CoreWeave/Nebius 短線承壓,但長線市場是「全球算力都不夠」的零和遊戲。"
+    },
+    {
+      "date": "2026-06-05",
+      "ticker": "AVGO",
+      "event": "Broadcom 指引保守 + 美就業太強 → SOX 單日 -10%, AI Infra 群體修正",
+      "move": "-7% (週)",
+      "mcap_loss": "—",
+      "spx": "-2.6%",
+      "qqq": "-4.2%",
+      "type": "下跌",
+      "lesson": "雙觸發點:(1) 美國就業數據太漂亮,2026 降息預期下降甚至傳升息,資金面承壓;(2) AVGO 財報其實很好,但市場期待繼續上調展望落空 (AVGO 一向給保守財測 — 像大谷打 50 全壘打卻說下季 55,市場失望要 60)。台股同期跟跌 ~3%。M觀點 判斷為「中度修正」非泡沫破裂:S&P -2.6% / NDX -4.2% / SOX -10%,但漲多的 AI Infra (Micron/Credo/Coherent 過去一年漲 3-5x) 可能修 20-30%。基本面分析:估值不算貴,但市場槓桿水位極高 (融資+信貸+質押,「世貸同堂」現象)。建議:高槓桿者降槓桿、無槓桿者分批加碼長線標的。長線多頭未變,定義:5% 內小修正 / 10-13% 中修正 / 15-20% 大修正 / 20%+ 才算熊市。"
+    },
     {
       "date": "2026-06-08",
       "ticker": "AAPL",
