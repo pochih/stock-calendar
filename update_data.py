@@ -120,6 +120,9 @@ def update_tickers(data: dict) -> None:
     print(f"更新 {len(data['tickers'])} 個 ticker...")
     for t in data["tickers"]:
         sym = t["ticker"]
+        # 跳過 Private 未上市標的 (Anthropic / OpenAI 等估值寫死,不抓 yfinance)
+        if t.get("type") == "Private":
+            continue
         # 跳過 VIX(需特殊處理)
         if sym == "VIX":
             try:

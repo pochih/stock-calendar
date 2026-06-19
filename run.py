@@ -95,6 +95,9 @@ def update_tickers(data: dict) -> bool:
     success = 0
     for t in data["tickers"]:
         sym = t["ticker"]
+        # 跳過 Private 未上市標的 (Anthropic / OpenAI 等估值寫死,不抓 yfinance)
+        if t.get("type") == "Private":
+            continue
         if sym == "VIX":
             try:
                 v = yf.Ticker("^VIX").info.get("regularMarketPrice")
