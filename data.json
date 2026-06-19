@@ -6777,6 +6777,289 @@
           "themes_touched": ["蘋果摺疊手機供應鏈", "封測 / CoWoS / Advanced Packaging", "太空運算 / 軌道資料中心"]
         }
       ]
+    },
+    {
+      "week": "2026-W24",
+      "date_range": "2026-06-08 ~ 2026-06-14",
+      "sources": ["M報 #528-#529", "馬斯克帝國觀察 #72-#73", "富果直送 (詮欣/威鋒/達發/OCP)"],
+      "headlines": [
+        {
+          "category": "AI 模型",
+          "title": "微軟 MAI-Thinking-1 發表 — 對 Claude Sonnet 4.6 盲測勝出",
+          "tickers": ["MSFT", "ANTH (未上市)"],
+          "summary": "1T 總參數 / A35B MoE 模型,完全沒做蒸餾(自訓練)。Sonnet 4.6 是 Anthropic 真正的工作馬,不是賽榜旗艦,所以 MAI 取代它對 Microsoft Copilot 成本意義巨大。",
+          "stance": "M觀點:通路品牌取代供應商品牌邏輯。MSFT 像 Costco 推 Kirkland,先用 Claude 試水溫,等自家成本更低就替換。",
+          "implication": "GitHub Copilot / 365 Copilot 內部 Sonnet token 成本可大降 + 不用付 Anthropic 權利金 → MSFT 毛利結構改善。Anthropic 中端模型市場長線承壓。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "AI 算力",
+          "title": "Google 向 xAI 租 11 萬顆 GPU,月租 $9.2 億",
+          "tickers": ["GOOGL", "SPCX", "CRWV", "NBIS"],
+          "summary": "合約 2026/10–2029/6,33 個月共近 $300 億。加 Anthropic 月租 $12.5 億 → xAI 年化 $260 億 ≫ CRWV+NBIS 加總,變身 NeoCloud 一哥。",
+          "stance": "Agent AI Q1 爆發超出所有公司 CapEx 規劃 → 算力荒至少持續到明年初。xAI 蓋 Colossus 1+2 「歪打正著」站賣方位置。",
+          "implication": "提前確認 SpaceX IPO 估值故事(xAI 不再是燒錢部門)。Cursor 隨後被 SpaceX 以 $600 億併購。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)"]
+        },
+        {
+          "category": "AI 硬體",
+          "title": "NVIDIA RTX Spark — Windows 終於有可跑本地 LLM 的 AI PC",
+          "tickers": ["NVDA", "AMD"],
+          "summary": "聯發科設計 ARM 20 核 + Blackwell 入門版 GPU,128GB 統一記憶體可跑 120B 量化模型(過去要 Mac 或 Linux DGX Spark 才行)。",
+          "stance": "M觀點:售價 $13-14 萬台幣,初期市場是 AI Agent 重度玩家(個人開發者),非大眾 PC。",
+          "implication": "Windows on ARM 補上開源模型本地部署缺口,守住 CUDA 生態。AMD AI Max 走 x86 相容路線,兩家不同市場。",
+          "themes_touched": ["AI PC / CPU IP", "AI GPU (主戰場)"]
+        },
+        {
+          "category": "宏觀資金",
+          "title": "Broadcom 指引保守觸發 SOX -10% 修正",
+          "tickers": ["AVGO", "MU", "CRDO"],
+          "summary": "雙觸發:就業太強壓抑降息預期 + AVGO 沒上調展望(它向來保守給財測但市場期待要超過大谷打 55 全壘打)。S&P -2.6% / NDX -4.2% / SOX -10%。",
+          "stance": "M觀點:中度修正而非泡沫。基本面估值不貴但市場槓桿水位極高(『世貸同堂』)。",
+          "implication": "高槓桿者降槓桿。AI Infra 漲多者(Micron/Credo/Coherent 一年 3-5x)可能修 20-30%,但長線多頭未變。",
+          "themes_touched": ["AI GPU (主戰場)", "光通訊 (Optical / 800G·1.6T)", "HBM / 記憶體"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W23",
+      "date_range": "2026-06-01 ~ 2026-06-07",
+      "sources": ["M報 #526-#527", "馬斯克帝國觀察 #70-#71", "富果直送 (高力/OCP)"],
+      "headlines": [
+        {
+          "category": "Tesla",
+          "title": "SpaceX 併特斯拉?華為韜定律與軟體股回神",
+          "tickers": ["TSLA", "SPCX"],
+          "summary": "馬斯克再度公開談 SpaceX 併購 Tesla 的可能性,主因是 Optimus 與 FSD 都需要 SpaceX 太空算力支持。華為提出『韜定律』(壓制中國 AI 算力),Meta AI 賺錢計畫成形。",
+          "stance": "M觀點:軟體股經歷 Q1 估值打壓後,第二季開始反彈,回到 AI 工作流敘事。",
+          "implication": "PLTR 反彈、Cursor 估值水漲船高,SpaceX-Tesla 併購若成局可能改寫 Magnificent 7 結構。",
+          "themes_touched": ["EV / Robotaxi / FSD", "AI 軟體 / 平台"]
+        },
+        {
+          "category": "AI 軟體",
+          "title": "AI 公司為何狂殺 SaaS — Agentic 工作流的新規則",
+          "tickers": ["PLTR", "ORCL", "MSFT"],
+          "summary": "OpenAI/Anthropic 找四大顧問(BCG/McKinsey/Accenture/Capgemini) + 私募基金組 Deployment Company,開始搶 PLTR 的企業 AI 導入市場。",
+          "stance": "M觀點:PLTR 五大護城河(平台/模型/Ontology/責任鏈/文化)很難被簡單複製,AI Lab + 顧問頂多做 Beta 版,PLTR 走 Alpha 路線。",
+          "implication": "PLTR 仍會吃高階市場,AI Lab 吃中階市場,MSFT 吃企業關係 — 市場大到三家共贏。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "Tesla / Robotaxi",
+          "title": "FSD 歐洲開花:荷蘭 4/10 首批准後,立陶宛/愛沙尼亞跟進",
+          "tickers": ["TSLA"],
+          "summary": "RDW 18 個月 / 180 萬公里 / 3000 小時測試後核准 FSD Supervised。Tesla 歐洲總部設於阿姆斯特丹,荷蘭核准等於開歐盟大門。",
+          "stance": "ETSC 致函要求暫停認證,但 RDW 數據紮實。",
+          "implication": "為後續比利時/丹麥/西班牙跟進鋪路,並間接打開台灣送件機會。",
+          "themes_touched": ["EV / Robotaxi / FSD"]
+        },
+        {
+          "category": "台股個股",
+          "title": "富果直送 6 月初:OCP 機櫃規格演進與高力散熱",
+          "tickers": ["8996.TW"],
+          "summary": "OCP 從 IT 降本工具升級為整合電力+散熱的系統核心,規格競賽全面升級。高力散熱訂單能見度上修,2026~2027 預估獲利倍數成長。",
+          "stance": "富果認為 OCP 標準化會帶來殺價紅海,須篩選有議價能力的長線贏家。",
+          "implication": "OCP 標準化 vs 客製化溢價的拉鋸,長線散熱/電源廠仍受惠 AI 機櫃功率上行。",
+          "themes_touched": ["AI Server ODM (台廠為主)", "封測 / CoWoS / Advanced Packaging"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W22",
+      "date_range": "2026-05-25 ~ 2026-05-31",
+      "sources": ["M報 #524-#525", "馬斯克帝國觀察 #68-#69", "富果直送 (SoIC/高力)"],
+      "headlines": [
+        {
+          "category": "財報",
+          "title": "NVIDIA 財報 Q1 26 與 AI 回檔,Google 努力跟上,Meta 大裁員",
+          "tickers": ["NVDA", "GOOGL", "META"],
+          "summary": "NVIDIA 財報強勁但市場已完全 priced in,小回檔。Google 在 Agent 工作流 strike team 努力追趕。Meta 啟動新一輪大裁員(中階主管為主),AI 取代部分職能。",
+          "stance": "M觀點:NVDA 短期回檔不改長線;Meta 裁員是 AI 落地後的人力結構優化,不是業務衰退。",
+          "implication": "AI Infra 從『無腦多』走入『區分受惠程度』階段;Meta CapEx 持續攀升仍合理(智能眼鏡 + Agent)。",
+          "themes_touched": ["AI GPU (主戰場)", "AI 軟體 / 平台"]
+        },
+        {
+          "category": "SpaceX",
+          "title": "Starship V3 首飛成功 + Anthropic 獲利傳聞 + 艾克曼看好微軟",
+          "tickers": ["SPCX", "MSFT"],
+          "summary": "Starship V3 首次測試大成功,SpaceX 在通訊與太空競賽全面壓制對手。Anthropic 傳已轉正獲利。Bill Ackman 公開看好 MSFT。",
+          "stance": "Starship 穩定發射是太空運算敘事的關鍵前提,V3 成功大幅推升 SpaceX IPO 期待值。",
+          "implication": "SpaceX 6 月 IPO 估值故事更紮實。Anthropic 獲利傳聞促使其後續推 Claude Fable 5 加速變現。",
+          "themes_touched": ["太空運算 / 軌道資料中心", "AI 軟體 / 平台"]
+        },
+        {
+          "category": "台股深度",
+          "title": "富果直送:SoIC 製程深度報告 — 半導體垂直堆疊紅利",
+          "tickers": ["TSM", "8996.TW"],
+          "summary": "AI 晶片光罩面積撞牆 → 從『平房擴建』走向『垂直堆疊』(SoIC + 混合鍵合,跨越焊錫物理障礙)。封裝向晶圓製造靠攏,紅利移轉至高精度檢測與耗材台廠。",
+          "stance": "富果:零容錯極端良率挑戰 → 高力等散熱檢測廠率先吃到紅利。",
+          "implication": "SoIC 不只台積電獨享,封測產業鏈整體升級。3D 封裝是下一個十年戰場。",
+          "themes_touched": ["封測 / CoWoS / Advanced Packaging", "晶圓代工 / 先進製程"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W21",
+      "date_range": "2026-05-18 ~ 2026-05-24",
+      "sources": ["M報 #522-#523", "馬斯克帝國觀察 #66-#67"],
+      "headlines": [
+        {
+          "category": "宏觀政治",
+          "title": "川習會結果分析 + 馬斯克可能放棄 Grok?",
+          "tickers": ["TSLA", "NVDA", "TSM"],
+          "summary": "川習會聚焦半導體出口管制與台海。馬斯克否認放棄 Grok,但 SpaceXAI 整合敘事讓外界懷疑 xAI 戰略地位。",
+          "stance": "M觀點:Grok 對馬斯克有獨特『非政治正確』使命,加上 X 即時資料優勢,即使落後也會繼續。",
+          "implication": "中美 AI 算力競爭框架不變,台積電仍是核心。Grok 在新聞/即時資訊類 niche 持續有競爭力。",
+          "themes_touched": ["AI 軟體 / 平台", "晶圓代工 / 先進製程"]
+        },
+        {
+          "category": "AI 軟體",
+          "title": "AI 公司為何狂殺 SaaS — 企業 AI Harness 才是價值核心",
+          "tickers": ["PLTR", "MSFT"],
+          "summary": "M觀點:模型只是聊天框沒價值,真正創造生產力的是 Harness(駕馭模型 + 管理資料 + 連接工作流 + 控制權限)。PLTR 兩年來把這件事做到最好。",
+          "stance": "Foundry/AIP 不只是軟體平台,是『企業內部資料 + 流程 + 權限 + 行動 + 責任』的整套系統。",
+          "implication": "OpenAI/Anthropic 開始抄 PLTR 路線(找顧問公司導入),但 PLTR 五大護城河相乘很難被複製。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "馬斯克",
+          "title": "OpenAI 案陪審團全票駁回馬斯克 + Grok 還有下一版嗎?",
+          "tickers": ["TSLA"],
+          "summary": "聯邦陪審團駁回馬斯克對 OpenAI 的 $1500 億訴訟。Grok 5 (1.5T 參數) 傳 6 月底 / 7 月初推出。",
+          "stance": "馬斯克 4 週內第二次對 OpenAI 敗訴(前一次是商業祕密案被駁回不得再起訴)。",
+          "implication": "OpenAI 估值故事不受司法干擾,IPO 之路更順。Grok 5 若僅與 GPT-5.5 持平就算成功。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W20",
+      "date_range": "2026-05-11 ~ 2026-05-17",
+      "sources": ["M報 #520-#521", "馬斯克帝國觀察 #64-#65"],
+      "headlines": [
+        {
+          "category": "AI 軟體",
+          "title": "PLTR 財報年增 84.7% Rule of 40 達 145,但 OpenAI/Anthropic 入侵企業 AI 市場引焦慮",
+          "tickers": ["PLTR", "MSFT"],
+          "summary": "PLTR 美國商業 +133%(扣轉移因素達 +143%)、美國政府 +84%、NRR 150%。但 OpenAI 與四大顧問 + Anthropic 與 Blackstone/Goldman 組 Deployment Company,搶 PLTR 高階市場。",
+          "stance": "M觀點:PLTR 五大護城河(軟體平台/模型中立性/Ontology/責任鏈/文化)相乘難複製,Alpha vs Beta 之爭 PLTR 仍勝。",
+          "implication": "市場大到三方共贏(PLTR 高階 / AI Lab 中階 / MSFT 企業關係)。財報後股價反跌反映市場過度焦慮。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "SpaceX/算力",
+          "title": "SpaceXAI 把 Colossus 1 (22 萬顆 H100/H200) 租給 Anthropic",
+          "tickers": ["SPCX"],
+          "summary": "Anthropic 算力跟不上需求暴增。SpaceXAI 因 Colossus 2 (50 萬顆 GB200/300) 已啟用,Colossus 1 多餘算力月租 $12.5 億,年化 $50-60 億高毛利。",
+          "stance": "M觀點:多餘 AI Infra 不只自用,可變印鈔機。提前驗證未來太空資料中心也是『出租模式』。",
+          "implication": "替 Meta CapEx 質疑解套(萬一用不完可以租出去)。為下個月 Google 加碼 $9.2 億/月鋪路。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)", "太空運算 / 軌道資料中心"]
+        },
+        {
+          "category": "宏觀市場",
+          "title": "台股美股過熱了嗎?台股 4 萬點與蘋果下單英特爾",
+          "tickers": ["TSM", "INTC", "AAPL"],
+          "summary": "台股 +42% YTD 上 4 萬點,融資餘額創高(『世貸同堂』)。蘋果下初步協議讓 Intel 18A 代工(可能是 MacBook Neo A21)。",
+          "stance": "M觀點:情緒 90 度但資金面 80 度,還沒沸騰。Intel 拿到關鍵驗證但短期難撼動 TSMC(ADR 僅 -0.6%)。",
+          "implication": "TSMC 合理估值 NT$2200-2500;2027 H2 後毛利率將自高位回落為正常化。Intel Foundry 從『不可能』走到『第二選項』。",
+          "themes_touched": ["晶圓代工 / 先進製程", "封測 / CoWoS / Advanced Packaging"]
+        },
+        {
+          "category": "Tesla",
+          "title": "Optimus V3 通過工程驗證,5 月 Fremont 工廠轉產線",
+          "tickers": ["TSLA"],
+          "summary": "AI4 → AI5 晶片升級、靈巧手 ~50 個致動器。5 月小規模試量產,7 月供應商正式量產訂單,年底前可生產 1000-3000 台。",
+          "stance": "M觀點:初期能穩定執行 ~10 種任務(搬運/品檢/簡單組裝)就很有商業價值,不必追求一開始什麼都會。",
+          "implication": "Tesla 從『汽車公司』敘事正式擴展到人形機器人量產階段。NVDA 與 Tesla 自家 AI5 晶片雙線受惠。",
+          "themes_touched": ["EV / Robotaxi / FSD", "AI ASIC / 客製化晶片"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W19",
+      "date_range": "2026-05-04 ~ 2026-05-10",
+      "sources": ["M報 #518-#519", "馬斯克帝國觀察 #62-#63"],
+      "headlines": [
+        {
+          "category": "AI 雲端",
+          "title": "三大雲財報同日:Google +63.4% / AWS +28.4% / Azure +40%",
+          "tickers": ["GOOGL", "AMZN", "MSFT"],
+          "summary": "市場給分:Google 100 / AMZN 70 / MSFT 50,但 M觀點 認為差距沒這麼大。AI Cloud 進入『供給面經濟』:三家每季可新增的 GPU/電力差不多,Google 因基期最小成長率被放大。",
+          "stance": "M觀點:Azure OM 下滑非『NVDA GPU 太貴』,而是 Azure 雲服務佔比提高 + Copilot token 暴增 + Maia ASIC 進度慢。Azure 純 OM 估仍 35%+。",
+          "implication": "AI 算力供不應求至少持續到明年初。三大雲市占未真正分出勝負,只是被供給瓶頸拉進同賽道。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)", "AI 軟體 / 平台"]
+        },
+        {
+          "category": "司法",
+          "title": "馬斯克 OpenAI 法庭戰:Greg Brockman 2017 日記曝光",
+          "tickers": [],
+          "summary": "日記寫道『我們真正想要的是 for-profit 結構』、『不能說我們仍承諾 non-profit』、『若把 non-profit 從馬斯克手中偷走,等於道德破產』。",
+          "stance": "M觀點:事實敘事上馬斯克一方占上風,但 OpenAI 不太可能被打回非營利(微軟資金 + 既成事實太大)。",
+          "implication": "可能結果為金錢/股權/治理改革『溫和版救濟』。OpenAI 估值結構不會被根本撼動,但 Sam Altman 信用受損。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "微軟/OpenAI",
+          "title": "微軟『放開』OpenAI:失去 Azure 獨家換到三大長線優勢",
+          "tickers": ["MSFT", "AMZN"],
+          "summary": "MSFT 換到:(1) OpenAI 產品優先推出權 (2) 技術授權延長至 2032 (3) 自家平台賣 OpenAI 服務不用分潤。OpenAI 解除 Azure 枷鎖,可進 AWS/Oracle/GCP。",
+          "stance": "M觀點:納德拉用價值已下降的獨家換到 7-Eleven 賣可口可樂進貨成本價邏輯。市場誤判微軟吃虧,實則納德拉下漂亮的棋。",
+          "implication": "AWS 取得 OpenAI 模型供應大利多。Azure 短期成長率受影響但長期成本結構更佳。",
+          "themes_touched": ["AI 算力租賃 (Neocloud)", "AI 軟體 / 平台"]
+        },
+        {
+          "category": "Meta",
+          "title": "中國發改委擋下 Meta $20 億併購 Manus AI Agent",
+          "tickers": ["META"],
+          "summary": "Manus 已搬至新加坡但創辦人被叫回中國禁出境。中國以反制美方限制中國 AI 為由擋案。Meta 同步推 MCI 員工工作電腦監控以蒐集 AI Agent 訓練資料。",
+          "stance": "M觀點:Manus know-how 已部分被 Meta 吸收,真正可惜的是團隊整體性。長線會讓更多優秀中國團隊更早出走。",
+          "implication": "AI Agent 落地需大量真實工作流資料 → 企業會越來越想用內部員工操作資料訓練模型。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        }
+      ]
+    },
+    {
+      "week": "2026-W18",
+      "date_range": "2026-04-27 ~ 2026-05-03",
+      "sources": ["M報 #516-#517", "馬斯克帝國觀察 #60-#61"],
+      "headlines": [
+        {
+          "category": "Intel 復活",
+          "title": "Intel 財報暴擊 +23.6%,YTD +123% — IDM 2.0 路線被重新證明",
+          "tickers": ["INTC", "AMD", "TSM"],
+          "summary": "Non-GAAP EPS $0.29 vs 預期 $0.01-0.02 (高出 10x+)。Intel 7/4/3/18A 良率全優於預期。市場缺貨缺到 AMD EPYC 售完只能買 Xeon 6。",
+          "stance": "M觀點:Pat Gelsinger 種樹陳立武乘涼。Intel Foundry 長線重要性可能超過 Intel Product。Foundry 第二選項剛性需求(沒人想要 TSMC 一家獨大)。",
+          "implication": "Agentic AI Q1 爆發讓 CPU 需求暴增,GPU:CPU 從 1:4 走向 1:2 甚至 1:1。Intel 2026/2027 仍能受惠缺貨紅利,2028 Coral Rapids 才真正補產品力。",
+          "themes_touched": ["晶圓代工 / 先進製程", "AI PC / CPU IP"]
+        },
+        {
+          "category": "AI 模型",
+          "title": "OpenAI GPT-5.5 (代號 Spud) 推出,重回 Artificial Analysis 第一",
+          "tickers": ["MSFT", "GOOGL"],
+          "summary": "打敗 Gemini 3.1 與 Claude Opus 4.6。Agent 工作流能力大幅提升,過去重度用 Claude Opus 的人有過半轉回 GPT。Token 用量也比較大方。",
+          "stance": "M觀點:壓力轉到 Anthropic 身上 — Claude Mythos 推不出可能就是算力不夠。前段班會持續輪流領先,不該假設單一公司贏者全拿。",
+          "implication": "Anthropic 6 月後最終拿出 Fable 5,但出口管制反而成為 Claude 危機。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "馬斯克",
+          "title": "蘋果接班正式啟動 + SpaceX 合作 Cursor (預示 6 月併購)",
+          "tickers": ["AAPL", "SPCX"],
+          "summary": "Tim Cook 將卸任,John Ternus 9 月接任。SpaceX 與 Cursor 達成算力 + 模型合作,並約定 SpaceX 可用 $600 億收購(若放棄付 $100 億分手費)。",
+          "stance": "M觀點:Cook 最後 WWDC,蘋果接班過渡到工程主導。SpaceX-Cursor 合作為 6 月正式併購鋪路。",
+          "implication": "AAPL 估值結構性壓力(自研 AI 進度落後 → 接 Gemini)。SpaceX 補上 xAI 原團隊離職的人才洞。",
+          "themes_touched": ["AI 軟體 / 平台"]
+        },
+        {
+          "category": "AI 鬼故事",
+          "title": "WSJ 報導 OpenAI 沒達成 2025 ChatGPT 目標 → AI Infra 修正",
+          "tickers": ["NVDA", "AVGO"],
+          "summary": "WSJ 翻出去年 Q4 數據(9 億 WAU vs 10 億目標),引發市場擔心 OpenAI CapEx 採購承諾履行問題。",
+          "stance": "M觀點:這是 lag 訊息,九局上半比賽看八局下半畫面。GPT-5.5 推出後敘事已轉折,且 OpenAI 慢不代表整個 AI 需求消失。",
+          "implication": "三大雲財報同期共同訊號:AI CapEx 正在轉成雲端營收動能,需求並未消失。",
+          "themes_touched": ["AI GPU (主戰場)", "AI 算力租賃 (Neocloud)"]
+        }
+      ]
     }
   ],
   "institutional_holders": [
