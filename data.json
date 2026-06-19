@@ -6702,14 +6702,23 @@
     {
       "week": "2026-W25",
       "date_range": "2026-06-15 ~ 2026-06-21",
-      "sources": ["M報 #531", "馬斯克帝國觀察 #74-#75", "富果直送 (新日興/家登/豐達科/台郡)"],
+      "sources": ["M報 #531", "馬斯克帝國觀察 #74-#75", "富果直送 (新日興/家登/豐達科/台郡)", "All-In Podcast 6/13 (Anthropic's Fable Backlash)"],
       "headlines": [
+        {
+          "category": "宏觀資金",
+          "title": "5 月 CPI 4.2% YoY 創 4 月以來新高 + Polymarket 21% 機率 2026 通膨破 5%",
+          "tickers": [],
+          "summary": "PPI 同步走高。All-In 解讀:政府支出失控 → 通膨失控,Fed 降息預期進一步壓縮。",
+          "stance": "All-In:這是 late-stage 高利率對抗通膨情境,根源是 excess government spending。",
+          "implication": "搭配 6/5 就業數據強勁,2026 H2 降息基本沒戲,可能要等 2027。高槓桿 + AI Infra 漲多者持續承壓。",
+          "themes_touched": []
+        },
         {
           "category": "AI 模型",
           "title": "Anthropic Claude Fable 5 上架不到一週遭出口管制下架",
           "tickers": ["AMZN", "MSFT", "GOOGL", "NVDA"],
           "summary": "Amazon 紅隊 jailbreak 成功 → 5+ 家科技高層警告白宮 → 商務部以國安為由禁外國人存取 → Anthropic 因無法逐帳號 KYC 被迫下架。30 天資料保留政策觸雷,微軟禁內部員工使用,大企業/政府幾乎無法採用。",
-          "stance": "M觀點:Anthropic 自食惡果。長期宣稱 AI 危險如核武 + 主動要求政府監管,卻在自家模型出事時改口『只是小漏洞』,雙重標準明顯。",
+          "stance": "M觀點:Anthropic 自食惡果。長期宣稱 AI 危險如核武 + 主動要求政府監管,卻在自家模型出事時改口『只是小漏洞』,雙重標準明顯。All-In 補強:開發者實測被 Fable 5 突然降級(問粒線體/癌症/GLP1 都被擋),Sacks 批 Anthropic 為『deeply hypocritical』。",
           "implication": "短線 → 替 OpenAI/Google 創造企業客戶轉移空間。長線 → 最強模型未來必走 KYC,Anthropic 正變成『AI 真理部』(每個 prompt 過安全審查),預期 2 年內聯邦立法強制審查紀錄與第三方稽核。",
           "themes_touched": ["AI 軟體 / 平台"]
         },
