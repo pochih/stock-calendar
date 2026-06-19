@@ -5,3 +5,11 @@ _srv.log
 .DS_Store
 .vscode/
 .idea/
+
+# transcripts: 保留 .txt 與 .meta.json,其他大檔/中間檔不入 git
+transcripts/*.mp3
+transcripts/*.webm
+transcripts/*.m4a
+transcripts/*.wav
+transcripts/*.vtt
+transcripts/*.srt
