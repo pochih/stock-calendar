@@ -609,7 +609,13 @@
   </p>
 
   <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px; flex-wrap:wrap;">
-    <label style="color:var(--muted); font-size:12px;">📅 選擇週次:</label>
+    <label style="color:var(--muted); font-size:12px;">📅 年份:</label>
+    <select id="briefing-year-filter"
+            style="background:var(--card); color:var(--text); border:1px solid var(--border);
+                   border-radius:6px; padding:6px 10px; font-size:13px; min-width:100px; cursor:pointer;">
+      <option value="all">全部年份</option>
+    </select>
+    <label style="color:var(--muted); font-size:12px;">週次:</label>
     <select id="briefing-week-filter"
             style="background:var(--card); color:var(--text); border:1px solid var(--border);
                    border-radius:6px; padding:6px 10px; font-size:13px; min-width:240px; cursor:pointer;">
@@ -9857,6 +9863,422 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           ]
         }
       ]
+    },
+    {
+      "week": "2025-W52",
+      "date_range": "2025-12-22 ~ 2025-12-28",
+      "sources": ["股癌 EP621-#622"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "年度回顧 + 記憶體持續上漲 + NVIDIA 收購 Groq 分析",
+          "tickers": ["NVDA", "MU"],
+          "summary": "股癌 EP621-#622:2025 年度回顧與投資心態調整。記憶體 supercycle 持續(從 W45 EP608 開始的主題)。NVIDIA 收購 Groq 傳聞 — 補上 inference-specialized 短板。",
+          "stance": "股癌:記憶體上漲不是炒短線,是 AI infra 結構性需求。NVDA 補強 inference 是反向把 LPU 等競爭者吸收。",
+          "implication": "Micron / SK Hynix / Samsung 三家 HBM/SOCAMM 訂單能見度推到 2027。NVDA inference-tier GPU 為防禦但毛利低於訓練卡。",
+          "themes_touched": ["HBM / 記憶體", "AI GPU (主戰場)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W51",
+      "date_range": "2025-12-15 ~ 2025-12-21",
+      "sources": ["股癌 EP619-#620"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "低軌衛星題材 + AI 保險應用 + 社群爭議",
+          "tickers": ["ASTS", "RKLB"],
+          "summary": "股癌 EP619-#620:低軌衛星題材(ASTS 升空計畫 + Starlink 直連手機),AI 保險(Tesla 自家保險業務 + Lemonade)應用。",
+          "stance": "股癌:低軌衛星已從題材初升段進入交付期,要看實際 cellular service 收入。",
+          "implication": "ASTS 2026 服務上線、RKLB 增加每月發射 — 為 2026 W4 EP629 衛星股題材熱炒鋪路。",
+          "themes_touched": ["低軌衛星 (LEO Satellite)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W50",
+      "date_range": "2025-12-08 ~ 2025-12-14",
+      "sources": ["股癌 EP617-#618"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Broadcom 財報 + 封裝瓶頸 + 設備股 vs 軟體股配置",
+          "tickers": ["AVGO"],
+          "summary": "股癌 EP617-#618:Broadcom Q4 25 財報強勁(Google TPU + Meta MTIA 訂單),CoWoS 封裝瓶頸延續至 2026。設備股(AMAT/LRCX/KLAC)vs 軟體股(PLTR/CRM)配置討論。",
+          "stance": "股癌:AVGO 是 ASIC + 網通雙引擎,但短期估值已飆。設備股相對被低估。",
+          "implication": "ASIC 概念股後續延燒(W23-W24 馬斯克觀察提到 Google TPU 外銷 + Blackstone 合作)。",
+          "themes_touched": ["AI ASIC / 客製化晶片", "半導體設備"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W49",
+      "date_range": "2025-12-01 ~ 2025-12-07",
+      "sources": ["股癌 EP615-#616"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "AWS re:Invent + EMIB 後段封裝 + 散熱供應鏈",
+          "tickers": ["AMZN", "INTC"],
+          "summary": "股癌 EP615-#616:AWS re:Invent 大會(Trainium2 / Bedrock / Strands Agents),散熱供應鏈觀察。Intel EMIB 後段封裝題材首次浮現(後續 W18 EP657 90% 良率傳聞印證)。",
+          "stance": "股癌:AWS Trainium2 真實 demand 強,挑戰 NVDA。EMIB 是 Intel Foundry 翻身關鍵。",
+          "implication": "散熱供應鏈(雙鴻/奇鋐/泰碩)受惠 AI server 持續放量。Intel EMIB 為 2026 Q1 蘋果下單先兆。",
+          "themes_touched": ["封測 / CoWoS / Advanced Packaging", "AI 算力租賃 (Neocloud)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W48",
+      "date_range": "2025-11-24 ~ 2025-11-30",
+      "sources": ["股癌 EP613-#614"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "遊戲資本進展 + Google 供應鏈 + AI 變現",
+          "tickers": ["GOOGL"],
+          "summary": "股癌 EP613-#614:肖楠資本遊戲投資進展。Google 供應鏈(TPU + 自研晶片)分析。AI 變現討論(企業 vs 消費端)。",
+          "stance": "股癌:Google TPU 路線確立後,博通 + GUC + Marvell 受惠,反 NVDA 概念股機會。",
+          "implication": "GUC 後續 2026 H1 受惠 Google TPU v7 + Meta MTIA 訂單。",
+          "themes_touched": ["AI ASIC / 客製化晶片"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W47",
+      "date_range": "2025-11-17 ~ 2025-11-23",
+      "sources": ["股癌 EP611-#612"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "市場恐慌應對 + 抄底策略 + 台通訪談回顧",
+          "tickers": [],
+          "summary": "股癌 EP611-#612:11 月底市場恐慌(NVDA 財報後賣壓)應對策略。抄底分批進場 vs 等再跌。",
+          "stance": "股癌:11 月恐慌反而是 2026 Q1 加碼起點。資金管理 > 預測底部。",
+          "implication": "為 2026 W12 EP643-#644 美光毛利風暴後抄底決策鋪心法。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W46",
+      "date_range": "2025-11-10 ~ 2025-11-16",
+      "sources": ["股癌 EP609-#610"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "市場策略調整 + 抄底規劃 + Humanoid 題材",
+          "tickers": ["TSLA"],
+          "summary": "股癌 EP609-#610:現金變多後心態轉變,敢花錢改善生活品質 + 投資更從容。抄底技術面買點設定。Humanoid 機器人題材早晚討論。",
+          "stance": "股癌:Humanoid 題材太早,但 Tesla Optimus 是少數有實際量產規畫的(後續 W13 EP647 玻璃基板 / W18 V3 工程驗證)。",
+          "implication": "Humanoid 供應鏈(本田/上銀/F-亞德 等減速機)2026-2027 才會放量。",
+          "themes_touched": ["EV / Robotaxi / FSD"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W45",
+      "date_range": "2025-11-03 ~ 2025-11-09",
+      "sources": ["股癌 EP607-#608"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "烏衫資本成立 + 記憶體 Supercycle 啟動",
+          "tickers": ["MU", "WDC"],
+          "summary": "股癌 EP607-#608:烏衫資本(投資 fund)成立。記憶體 supercycle 正式啟動(DRAM 漲價 + HBM 缺貨 + NAND 觸底)。",
+          "stance": "股癌:記憶體 supercycle 本次特別在 HBM + 一般 DRAM 雙引擎,不是單一品類週期。",
+          "implication": "全年最重要的台股投資主題之一(MU / 群聯 / 南亞科 / 華邦電)持續到 2026 H2。",
+          "themes_touched": ["HBM / 記憶體"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W44",
+      "date_range": "2025-10-27 ~ 2025-11-02",
+      "sources": ["股癌 EP605-#606"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Tesla 財報 + AWS 供應鏈 + 日本家庭旅遊",
+          "tickers": ["TSLA", "AMZN"],
+          "summary": "股癌 EP605-#606:Tesla Q3 25 財報(交車數據 + Optimus 進度),AWS 供應鏈(Trainium / Inferentia 訂單)分析。",
+          "stance": "股癌:Tesla Q3 25 數據邊際好轉但 Optimus 進度 vs 馬斯克承諾仍有落差。",
+          "implication": "Tesla 故事主軸從『汽車公司』向『Robotaxi + Optimus + Energy』轉變,財報估值方法重整。",
+          "themes_touched": ["EV / Robotaxi / FSD"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W43",
+      "date_range": "2025-10-20 ~ 2025-10-26",
+      "sources": ["股癌 EP603-#604"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Nexperia 供應鏈變局 + Tesla 財報解析",
+          "tickers": ["TSLA"],
+          "summary": "股癌 EP603-#604:Nexperia(中資荷蘭半導體公司)供應鏈變局首次浮現 — 後續演化成 2026 W25 EP671『Nexperia 制裁推動非中國佈局』題材。",
+          "stance": "股癌:Nexperia 事件是中美科技戰的縮影,離散元件 + 功率半導體供應鏈重組機會。",
+          "implication": "為 2026 W25『功率半導體 (Power IDM)』題材的台廠驗證機會埋伏筆(ON / IFNNY / TXN 受惠)。",
+          "themes_touched": ["功率半導體 (Power IDM)", "GaN / SiC 第三類半導體 / 電源"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W42",
+      "date_range": "2025-10-13 ~ 2025-10-19",
+      "sources": ["股癌 EP601-#602"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Google TPU 供應鏈 + 核能記憶體投資",
+          "tickers": ["GOOGL", "MU"],
+          "summary": "股癌 EP601-#602:Google TPU 供應鏈(博通 + GUC + 創意 + 智原)分析,核能(SMR + Constellation Energy + Vistra)+ 記憶體投資觀察。",
+          "stance": "股癌:Google TPU v7 為 ASIC 領域最強訊號,GUC / 創意 是台廠 IP 主要受惠者。",
+          "implication": "核能配 AI 資料中心是 2025 H2 主題之一,後續 2026 Constellation / Vistra 持續走強。",
+          "themes_touched": ["AI ASIC / 客製化晶片"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W41",
+      "date_range": "2025-10-06 ~ 2025-10-12",
+      "sources": ["股癌 EP599-#600"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "稀土禁令 + 崩盤應對 + OpenAI + AMD 合作",
+          "tickers": ["AMD", "OPENAI"],
+          "summary": "股癌 EP599-#600:中國稀土禁令(影響電動車 + AI 散熱 + 風電)崩盤應對策略。OpenAI 與 AMD 大單合作 — AMD MI400/MI500 拿到 OpenAI 訂單。",
+          "stance": "股癌:OpenAI 不再 NVDA 唯一,AMD 取得突破。稀土禁令推升 MP Materials / USA Rare Earth 等概念。",
+          "implication": "AMD AI GPU 故事重啟,後續 2026 W17 OpenAI 與多家 ASIC + AMD 並進獲驗證。",
+          "themes_touched": ["AI GPU (主戰場)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W40",
+      "date_range": "2025-09-29 ~ 2025-10-05",
+      "sources": ["股癌 EP597-#598"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "CIS 去中化 + 緯創產業變革",
+          "tickers": ["SONY", "3231.TW"],
+          "summary": "股癌 EP597-#598:CIS(CMOS image sensor)去中化趨勢(Sony 為主受益者),緯創(3231.TW)產業變革(AI server ODM)。",
+          "stance": "股癌:緯創從筆電 ODM 轉 AI server 王者,但要分清 GB200 出貨節奏 vs 毛利結構變化。",
+          "implication": "緯創 + 廣達 + 鴻海後續 2026 H1 持續走強,GB200 → GB300 升級節奏。",
+          "themes_touched": ["AI Server ODM (台廠為主)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W39",
+      "date_range": "2025-09-22 ~ 2025-09-28",
+      "sources": ["股癌 EP595-#596"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Marvell 光通訊晶片 + 飛利浦咖啡機 (生活)",
+          "tickers": ["MRVL"],
+          "summary": "股癌 EP595-#596:Marvell 光通訊晶片觀察 — 為後續 2026 W14 EP649『NVIDIA 投資 Marvell』題材的種子。",
+          "stance": "股癌:Marvell 在 800G/1.6T 光通訊 DSP 是寡頭(配 Coherent / Lumentum),NVDA 認可。",
+          "implication": "Marvell 後續 2026 5 月漲幅 +94% / 6 月成交量爆量榜第二的伏筆。",
+          "themes_touched": ["光通訊 (Optical / 800G·1.6T)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W38",
+      "date_range": "2025-09-15 ~ 2025-09-21",
+      "sources": ["股癌 EP593-#594"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "記憶體產業大轉向 + NVIDIA 入股 Intel",
+          "tickers": ["INTC", "NVDA", "MU"],
+          "summary": "股癌 EP593-#594:記憶體產業從低谷轉向(後續 W45 supercycle 啟動的源頭)。NVIDIA 入股 Intel($5B,以 $23.28/股入股 4%)— Foundry 合作但 Intel 仍獨立。",
+          "stance": "股癌:NVDA 入股 Intel = 多元供應鏈分散風險,不是 TSM 取代。Intel 18A 後續(2026 W18)獲蘋果初步協議印證。",
+          "implication": "Intel 股價 2025 Q4 起爆漲(後續 2026 W18 +123% YTD)的關鍵起點。記憶體開始輪動。",
+          "themes_touched": ["晶圓代工 / 先進製程", "HBM / 記憶體"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W37",
+      "date_range": "2025-09-08 ~ 2025-09-14",
+      "sources": ["股癌 EP591-#592"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "NVIDIA CPX 解析 + 國巨收購茂達",
+          "tickers": ["NVDA", "2327.TW"],
+          "summary": "股癌 EP591-#592:NVIDIA CPX(Compute Platform Extension)解析。國巨收購茂達(電源管理 IC)— 後續 W21-W25 被動元件浪潮的整合動作。",
+          "stance": "股癌:國巨從 MLCC 龍頭擴張到電源管理 IC,垂直整合野心強。",
+          "implication": "國巨 + 華新科 + 禾伸堂 後續成被動元件浪潮三巨頭。",
+          "themes_touched": ["被動元件 (MLCC / 電阻)"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W36",
+      "date_range": "2025-09-01 ~ 2025-09-07",
+      "sources": ["股癌 EP589-#590"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "Broadcom 投資 + 持股輪動 + 家庭關係修復",
+          "tickers": ["AVGO"],
+          "summary": "股癌 EP589-#590:Broadcom 投資觀察(Q3 25 財報 ASIC 業務暴增,Google TPU + Meta MTIA + OpenAI 等新客戶)。",
+          "stance": "股癌:AVGO 從 'AI ASIC 第二名' 變成『誰都要找他做』,但估值飆速度太快。",
+          "implication": "AVGO 持續成 2025 H2 最受惠 AI 標的之一,到 2026 W24 後才因財報指引保守觸發 SOX -10%。",
+          "themes_touched": ["AI ASIC / 客製化晶片"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W35",
+      "date_range": "2025-08-25 ~ 2025-08-31",
+      "sources": ["股癌 EP587-#588"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "技術分析的投資哲學 + 育兒軍備競賽",
+          "tickers": [],
+          "summary": "股癌 EP587-#588:技術分析的投資哲學 — K 棒 vs MACD/KD 落後指標討論(後續 2026 W15 EP651 戒菸與深呼吸啟示中重提)。",
+          "stance": "股癌:技術面是輔助,中長線投資不該過度關注日線雜訊。",
+          "implication": "提供 stock-calendar wisdom_classics 風格化參照(EP415 K 棒理論的延續)。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W34",
+      "date_range": "2025-08-18 ~ 2025-08-24",
+      "sources": ["股癌 EP585-#586"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "台灣米其林 + Howard Marks 投資價值觀",
+          "tickers": [],
+          "summary": "股癌 EP585-#586:參加台灣米其林 2025 頒獎典禮的心得。引用 Howard Marks《The Calculus of Value》— 買在高估值位置只是隱含未來報酬較低,並非致命錯誤。",
+          "stance": "股癌:買對好東西最重要,要有耐心等待價值被市場認可。",
+          "implication": "wisdom_classics EP585 條目的源頭。Jackson Hole(8/21-23)同期 Powell 演說預鋪鴿派 pivot。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W33",
+      "date_range": "2025-08-11 ~ 2025-08-17",
+      "sources": ["股癌 EP583-#584"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "肖楠資本成立 + 台灣遊戲投資 + 市場白熱化",
+          "tickers": [],
+          "summary": "股癌 EP583-#584:肖楠資本(投資台灣遊戲產業 fund)成立。市場白熱化(VIX 低 + 槓桿水位高)的投資心態調整。",
+          "stance": "股癌:市場白熱化 = 注意降槓桿時機,但不離場(後續 2026 W20 4 萬點論述源頭)。",
+          "implication": "對 2026 W20 EP661『台股美股過熱了嗎』論點的前期鋪墊。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W32",
+      "date_range": "2025-08-04 ~ 2025-08-10",
+      "sources": ["股癌 EP581-#582"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "獨裁者威脅 + 台灣軍工機會",
+          "tickers": [],
+          "summary": "股癌 EP581-#582:中俄朝獨裁者威脅論,台灣軍工機會(漢翔/雷虎/中科院 + Anduril 供應鏈)。",
+          "stance": "股癌:Trump 第二任期下,台灣軍工自主 + 美國軍工供應鏈雙線受惠。",
+          "implication": "為 2026 W17 EP655『Anduril 無人軍團』台灣供應鏈題材鋪路。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W31",
+      "date_range": "2025-07-28 ~ 2025-08-03",
+      "sources": ["股癌 EP579-#580"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "美股回檔 + 台灣關稅衝擊 + 健身變壯",
+          "tickers": [],
+          "summary": "股癌 EP579-#580:美股 8 月初回檔(日圓 carry trade 引發 — 對應 EP476 黑色星期一)。台灣關稅衝擊(Trump 對 TWN 32% 關稅威脅)。",
+          "stance": "股癌:8 月初是 buy the dip 機會,但要小心 carry trade 連鎖斷頭。",
+          "implication": "為 2026 H1 美股反彈 + 台股 4 萬點主升段的調整期起點。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W30",
+      "date_range": "2025-07-21 ~ 2025-07-27",
+      "sources": ["股癌 EP577-#578"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "礁溪溫泉度假 + 手遊課金 + 投資機會",
+          "tickers": [],
+          "summary": "股癌 EP577-#578:7 月底市場進入 NVDA 財報前等待期。手遊課金 = 虛擬消費分析(對應 EP576 同主題)。",
+          "stance": "股癌:NVDA 財報前壓力測試,持股不重壓單一標的。",
+          "implication": "為 NVDA Q2 26 財報(8 月)後的盤整期心態鋪墊。",
+          "themes_touched": []
+        }
+      ]
+    },
+    {
+      "week": "2025-W29",
+      "date_range": "2025-07-14 ~ 2025-07-20",
+      "sources": ["股癌 EP575-#576"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "膽固醇大作戰 + 台達電 / 台積電財報",
+          "tickers": ["2308.TW", "TSM"],
+          "summary": "股癌 EP575-#576:台達電 + 台積電 2025 Q2 財報表現強勁,但預期 2026 增速趨緩。Meta 砸錢建資料中心 + H200 解禁。",
+          "stance": "股癌:長線故事仍無大問題,看對大方向就能賺錢,短線無法精準估值。",
+          "implication": "wisdom_classics EP576 條目的源頭。台達電後續成 AI server PSU 主要受惠者。",
+          "themes_touched": ["AI Server ODM (台廠為主)", "晶圓代工 / 先進製程"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W28",
+      "date_range": "2025-07-07 ~ 2025-07-13",
+      "sources": ["股癌 EP573-#574"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "馬斯克 vs 川普紛爭 + 股市風控 + Apple 展望",
+          "tickers": ["TSLA", "AAPL"],
+          "summary": "股癌 EP573-#574:馬斯克 vs 川普紛爭(BBB Act 法案爭議,馬斯克退出 DOGE)。Apple 展望(iPhone 17 + Vision Pro 2)。",
+          "stance": "股癌:馬斯克退出 DOGE 後重回 Tesla / SpaceX 全職,反而對 TSLA 股價是利多。",
+          "implication": "為 2026 W18 EP657『SpaceX 合作 Cursor』+ W19 馬斯克 OpenAI 法庭戰留下伏筆。",
+          "themes_touched": ["EV / Robotaxi / FSD"]
+        }
+      ]
+    },
+    {
+      "week": "2025-W27",
+      "date_range": "2025-06-30 ~ 2025-07-06",
+      "sources": ["股癌 EP571-#572"],
+      "headlines": [
+        {
+          "category": "股癌觀點",
+          "title": "社群怨念 + 投資散打哲學 + 烏克蘭無人機戰術",
+          "tickers": [],
+          "summary": "股癌 EP571-#572:社群怨念與投資散打哲學。烏克蘭無人機戰術與市場投資機遇(後續 W32 軍工題材的開端)。",
+          "stance": "股癌:無人機戰爭是新時代軍工(Anduril / Palantir / Shield AI)機會。",
+          "implication": "為 2025 W32 + 2026 W17『Anduril 無人軍團』題材鋪路。",
+          "themes_touched": []
+        }
+      ]
     }
   ],
   "institutional_holders": [
@@ -11475,6 +11897,7 @@ function renderInstitutional() {
 // ========== Render 每週洞察 ==========
 let BRIEFING_CAT_FILTER = 'all';
 let BRIEFING_WEEK_FILTER = 'all';
+let BRIEFING_YEAR_FILTER = 'all';
 const BRIEF_CAT_CLS = {
   'AI 模型': 'brief-cat-ai',
   'AI 算力': 'brief-cat-ai',
@@ -11553,24 +11976,60 @@ function renderWeeklyBriefing() {
     });
   }
 
-  // 動態建週次 dropdown (只建一次)
+  // 動態建年份 + 週次 dropdown (週次會根據年份篩選後重建)
+  const yearSel = document.getElementById('briefing-year-filter');
   const weekSel = document.getElementById('briefing-week-filter');
-  if (weekSel && weekSel.options.length <= 1) {
-    weeks.forEach(w => {
+
+  // 從 week 字串抽年份
+  const weekYear = wk => (wk || '').split('-')[0];
+
+  // build year dropdown (only once)
+  if (yearSel && yearSel.options.length <= 1) {
+    const years = Array.from(new Set(weeks.map(w => weekYear(w.week)))).sort().reverse();
+    years.forEach(y => {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      yearSel.appendChild(opt);
+    });
+    yearSel.addEventListener('change', e => {
+      BRIEFING_YEAR_FILTER = e.target.value;
+      BRIEFING_WEEK_FILTER = 'all';  // 換年份時重置週次
+      rebuildWeekDropdown();
+      renderWeeklyBriefing();
+    });
+  }
+
+  // 重建週次 dropdown 的 helper (年份改變時 / 初始化時呼叫)
+  function rebuildWeekDropdown() {
+    if (!weekSel) return;
+    // 清掉除 "all" 之外的 option
+    while (weekSel.options.length > 1) weekSel.remove(1);
+    const filteredWeeks = BRIEFING_YEAR_FILTER === 'all'
+      ? weeks
+      : weeks.filter(w => weekYear(w.week) === BRIEFING_YEAR_FILTER);
+    filteredWeeks.forEach(w => {
       const opt = document.createElement('option');
       opt.value = w.week;
       opt.textContent = `${w.week} (${w.date_range})`;
       weekSel.appendChild(opt);
     });
+    weekSel.value = 'all';
+  }
+
+  // build week dropdown (only first call)
+  if (weekSel && weekSel.options.length <= 1) {
+    rebuildWeekDropdown();
     weekSel.addEventListener('change', e => {
       BRIEFING_WEEK_FILTER = e.target.value;
       renderWeeklyBriefing();
     });
   }
 
-  // 過濾:week + cat
+  // 過濾:year + week + cat
   let renderedHeadlines = 0;
   const html = weeks.map(w => {
+    if (BRIEFING_YEAR_FILTER !== 'all' && weekYear(w.week) !== BRIEFING_YEAR_FILTER) return '';
     if (BRIEFING_WEEK_FILTER !== 'all' && w.week !== BRIEFING_WEEK_FILTER) return '';
     const headlines = (w.headlines || []).filter(h =>
       BRIEFING_CAT_FILTER === 'all' || h.category === BRIEFING_CAT_FILTER
@@ -11616,7 +12075,8 @@ function renderWeeklyBriefing() {
   const countEl = document.getElementById('briefing-count');
   if (countEl) {
     const totalHeadlines = weeks.reduce((s, w) => s + (w.headlines || []).length, 0);
-    countEl.textContent = (BRIEFING_WEEK_FILTER === 'all' && BRIEFING_CAT_FILTER === 'all')
+    const noFilter = BRIEFING_WEEK_FILTER === 'all' && BRIEFING_CAT_FILTER === 'all' && BRIEFING_YEAR_FILTER === 'all';
+    countEl.textContent = noFilter
       ? `${totalHeadlines} 條 / ${weeks.length} 週`
       : `${renderedHeadlines} 條 (篩選後)`;
   }
