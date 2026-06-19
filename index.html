@@ -302,6 +302,32 @@
     padding: 2px 6px; border-radius: 3px; cursor: pointer;
   }
   .brief-theme-tag:hover { color: var(--blue); border-color: var(--blue); }
+  /* Wisdom Classics 經典觀念 */
+  .wisdom-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 18px; margin-bottom: 12px;
+  }
+  .wisdom-head {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;
+  }
+  .wisdom-source {
+    font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600;
+    background: var(--blue); color: var(--bg); white-space: nowrap;
+    font-family: "SF Mono", Consolas, monospace;
+  }
+  .wisdom-title { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; min-width: 200px; }
+  .wisdom-date { color: var(--muted); font-size: 11px; font-family: "SF Mono", Consolas, monospace; }
+  .wisdom-principle { font-size: 13px; line-height: 1.7; color: var(--text); margin: 8px 0; }
+  .wisdom-apply {
+    font-size: 12px; line-height: 1.6; color: var(--muted);
+    border-left: 3px solid var(--yellow); padding-left: 10px; margin: 8px 0 6px 0;
+  }
+  .wisdom-apply strong { color: var(--yellow); }
+  .wisdom-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .wisdom-tag {
+    font-size: 10px; color: var(--muted); background: rgba(48,54,61,0.5);
+    padding: 2px 6px; border-radius: 3px;
+  }
   .theme-role { color: var(--text); font-size: 12px; line-height: 1.35; }
   .theme-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
   .theme-filters .label { color: var(--muted); font-size: 12px; margin-right: 4px; }
@@ -374,6 +400,7 @@
     <li data-tab="events">🎤 發表會 / FOMC</li>
     <li data-tab="institutional">🐋 大戶持倉</li>
     <li data-tab="briefing">📰 每週洞察</li>
+    <li data-tab="classics">📚 經典觀念</li>
     <li data-tab="history">📜 歷史財報事件</li>
   </ul>
 </nav>
@@ -586,6 +613,21 @@
   </div>
 
   <div id="briefing-list"></div>
+</section>
+
+<!-- ============ 經典觀念 ============ -->
+<section id="tab-classics" class="tab">
+  <h2>📚 經典觀念 (Wisdom Classics)</h2>
+  <p style="color:var(--muted); margin-bottom: 14px; font-size: 13px;">
+    歷久不變的投資心法 / 風險管理 / 配置策略,精選自股癌 11 集經典(來源 <a href="https://whatmkreallysaid.com/" target="_blank" style="color:var(--blue);">whatmkreallysaid.com</a>)。
+    <strong>非時事,可長期 reference</strong>。點 tag 篩選。
+  </p>
+
+  <div style="display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap;" id="classics-tag-filters">
+    <button class="hist-filter active" data-tag="all">全部</button>
+  </div>
+
+  <div id="classics-list"></div>
 </section>
 
 <!-- ============ 歷史財報事件 ============ -->
@@ -7354,6 +7396,96 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "tag": "Politics"
     }
   ],
+  "wisdom_classics": [
+    {
+      "source": "股癌 EP20",
+      "date": "2020-04-01",
+      "title": "財你個鳥富自由",
+      "principle": "股市三大騙人名詞:『財富自由』『懶人投資』『被動投資』。沒有真正零風險的理財,連 ETF 都要理解標的。",
+      "apply_when": "看到『躺著賺』『穩賺不賠』類話術時,先警覺。考慮買 ETF 前,先讀 holdings。",
+      "tags": ["心法", "ETF", "風險"]
+    },
+    {
+      "source": "股癌 EP57",
+      "date": "2020-06-29",
+      "title": "柳樹理論 (央行干預)",
+      "principle": "央行像柳樹,順著熱錢吹的方向彎,但根扎得深 → 短期讓台幣走升,長期不會棄守。熱錢湧入推升高殖利率傳產股,但追高台積電風險相對大。",
+      "apply_when": "判斷台幣 / 央行干預走向時。當追高權值股時,先想是否被低估個股更值得關注。",
+      "tags": ["匯率", "央行", "台積電"]
+    },
+    {
+      "source": "股癌 EP102",
+      "date": "2021-01-02",
+      "title": "小朋友才做選擇 (七三配置)",
+      "principle": "被動 vs 主動投資不是二選一,七三配置入門。台股 0050、美股 VTI/VOO、全球 VT 是市值型大盤 ETF 三大選擇。重點是認清自己個性、本金與時間成本。",
+      "apply_when": "規劃資產配置時。新手第一次想買股票時。",
+      "tags": ["配置", "ETF", "心法"]
+    },
+    {
+      "source": "股癌 EP117",
+      "date": "2021-02-24",
+      "title": "腳麻ㄉ來 (估值重置)",
+      "principle": "美債殖利率上升改變 DCF 評估 → 科技股下殺是估值重置,不代表終點。大權值股下跌反而是降低成本機會。槓桿部位要趕快去槓桿,減部位時要汰弱留強。",
+      "apply_when": "面對科技股急跌時,先判斷是估值重置還是基本面壞掉。市場恐慌時優先檢視標的基本面與心理承受度。",
+      "tags": ["估值", "DCF", "風險管理"]
+    },
+    {
+      "source": "股癌 EP169",
+      "date": "2021-08-25",
+      "title": "損害控制 (部位 > 進出場點)",
+      "principle": "左右側交易定義沒必要糾結,重點是用部位控制做風險管理,不要一次把子彈打完。投資路上撞牆期難免,耐心分享本身就是互利。",
+      "apply_when": "想 all-in 重押一檔時。對自己交易方向沒把握時。",
+      "tags": ["部位管理", "心法"]
+    },
+    {
+      "source": "股癌 EP180",
+      "date": "2021-10-02",
+      "title": "走火入魔 (工具箱思維)",
+      "principle": "基本面、技術指標、籌碼追蹤,每個派別都有人穩定獲利,但沒有一套方法永遠有效。時空變了、市場變了,方法也要跟著變。培養工具箱比找仙丹更重要。",
+      "apply_when": "對自己的投資方法產生『信仰』時。看到別人用某派方法賺很多錢羨慕時。",
+      "tags": ["心法", "投資派別"]
+    },
+    {
+      "source": "股癌 EP260",
+      "date": "2022-07-09",
+      "title": "槓桿型 ETF (盤整殺手)",
+      "principle": "TQQQ/QQQ5 每日平衡機制最怕盤整,2022 年跌 70-90%,長期持有會被內耗蝕。除非十足把握長期向上且能承受大幅回檔,否則不要亂搞槓桿。",
+      "apply_when": "看到槓桿型 ETF 廣告 / 教學文時。任何要開槓桿(融資/期權/CFD)決策前。",
+      "tags": ["槓桿", "ETF", "風險"]
+    },
+    {
+      "source": "股癌 EP275",
+      "date": "2022-08-31",
+      "title": "期貨在長期配置的優勢",
+      "principle": "台指期 vs 006208/0050 的差異:標的分散度、交易費率、稅務優勢。期貨沒有絕對好壞,關鍵是認清自己需求。投資自己不是穩賺不賠,買快樂指數比躺著看盤划算。",
+      "apply_when": "考慮用期貨做長期配置時。被『節稅』話術誘惑時。",
+      "tags": ["期貨", "配置", "心法"]
+    },
+    {
+      "source": "股癌 EP327",
+      "date": "2023-05-01",
+      "title": "快速致富必有風險",
+      "principle": "任何快速獲利都隱含極高風險。古早農奴時代根本沒翻身機會,現在資本主義反而更有機會,但該承擔多少風險全看自己。所有暴賺故事背後幾乎都是大槓桿。",
+      "apply_when": "聽到『一年翻三倍』『某某股神』故事時。羨慕別人快速致富時。",
+      "tags": ["心法", "風險", "槓桿"]
+    },
+    {
+      "source": "股癌 EP339",
+      "date": "2023-04-12",
+      "title": "AI 長線布局元年",
+      "principle": "台積電年減在預期內,年增/月增/季增要正確使用。股價已反應未來 2-3 季,要看 2024 有沒有超預期成長。AI 需求確實進來,建議布局 AI、邊緣運算、記憶體標的。",
+      "apply_when": "看半導體財報判斷季節性 vs 結構性時。重新審視 AI 長線布局時。",
+      "tags": ["AI", "台積電", "記憶體"]
+    },
+    {
+      "source": "股癌 EP550",
+      "date": "2025-04-19",
+      "title": "台積電 + 川普關稅不確定性",
+      "principle": "台積電 Q2 財報超預期,NVDA 製程灌單 + CoWoS 樂觀,但川普關稅不確定性壓著市場到 7-8 月。光通元件已開始砍單(微軟那邊)。維持率安全邊際 + 質押買房要小心。",
+      "apply_when": "面對關稅政策不確定性時。教家人認識市場迷惑行為時。",
+      "tags": ["台積電", "CoWoS", "光通", "宏觀"]
+    }
+  ],
   "weekly_briefing": [
     {
       "week": "2026-W25",
@@ -8731,6 +8863,7 @@ function rerenderAll() {
   renderEvents();
   renderInstitutional();
   renderWeeklyBriefing();
+  renderClassics();
   renderHistory();
   buildEventIndex();
   if (typeof renderCal === 'function') renderCal();
@@ -8749,6 +8882,7 @@ function initApp() {
   renderEvents();
   renderInstitutional();
   renderWeeklyBriefing();
+  renderClassics();
   renderHistory();
   buildEventIndex();
   initCalendar();
@@ -9261,6 +9395,62 @@ function renderWeeklyBriefing() {
 
   document.getElementById('briefing-list').innerHTML = html ||
     '<p style="color:var(--muted)">(該分類本週無資料)</p>';
+}
+
+// ========== Render 經典觀念 ==========
+let CLASSICS_TAG_FILTER = 'all';
+function renderClassics() {
+  const items = DATA.wisdom_classics || [];
+  if (!items.length) {
+    document.getElementById('classics-list').innerHTML =
+      '<p style="color:var(--muted)">(尚未匯入經典觀念)</p>';
+    return;
+  }
+
+  // 動態建 tag filter
+  const allTags = Array.from(new Set(items.flatMap(i => i.tags || []))).sort();
+  const filterBar = document.getElementById('classics-tag-filters');
+  if (filterBar && filterBar.children.length <= 1) {
+    allTags.forEach(tg => {
+      const b = document.createElement('button');
+      b.className = 'hist-filter';
+      b.dataset.tag = tg;
+      b.textContent = tg;
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#classics-tag-filters .hist-filter')
+          .forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        CLASSICS_TAG_FILTER = tg;
+        renderClassics();
+      });
+      filterBar.appendChild(b);
+    });
+    filterBar.querySelector('[data-tag="all"]').addEventListener('click', () => {
+      document.querySelectorAll('#classics-tag-filters .hist-filter')
+        .forEach(x => x.classList.remove('active'));
+      filterBar.querySelector('[data-tag="all"]').classList.add('active');
+      CLASSICS_TAG_FILTER = 'all';
+      renderClassics();
+    });
+  }
+
+  const filtered = CLASSICS_TAG_FILTER === 'all'
+    ? items
+    : items.filter(i => (i.tags || []).includes(CLASSICS_TAG_FILTER));
+
+  document.getElementById('classics-list').innerHTML = filtered.map(w => {
+    const tags = (w.tags || []).map(t => `<span class="wisdom-tag">${esc(t)}</span>`).join('');
+    return `<div class="wisdom-card">
+      <div class="wisdom-head">
+        <span class="wisdom-source">${esc(w.source)}</span>
+        <span class="wisdom-title">${esc(w.title)}</span>
+        <span class="wisdom-date">${esc(w.date)}</span>
+      </div>
+      <div class="wisdom-principle">${esc(w.principle)}</div>
+      <div class="wisdom-apply"><strong>使用情境</strong> · ${esc(w.apply_when)}</div>
+      <div class="wisdom-tags">${tags}</div>
+    </div>`;
+  }).join('') || '<p style="color:var(--muted)">(該 tag 下無資料)</p>';
 }
 
 // ========== Render 歷史財報事件 ==========

@@ -6,10 +6,13 @@ _srv.log
 .vscode/
 .idea/
 
-# transcripts: 保留 .txt 與 .meta.json,其他大檔/中間檔不入 git
+# transcripts: 保留 .txt / .md / .meta.json,其他大檔/中間檔不入 git
 transcripts/*.mp3
 transcripts/*.webm
 transcripts/*.m4a
 transcripts/*.wav
 transcripts/*.vtt
 transcripts/*.srt
+
+# gooaye fetch cache (37MB raw pack,只是 local fast-reload 用)
+transcripts/gooaye/_cache.*
