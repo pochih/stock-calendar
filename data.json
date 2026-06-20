@@ -8137,19 +8137,10 @@
         "M報 #531",
         "馬斯克帝國觀察 #74-#75",
         "富果直送 (新日興/家登/豐達科/台郡)",
-        "All-In Podcast 6/13 (Anthropic's Fable Backlash)",
-        "股癌 EP670-#671"
+        "股癌 EP670-#671",
+        "All-In 6/19 (World's First Trillionaire, Fable Banned)"
       ],
       "headlines": [
-        {
-          "category": "宏觀資金",
-          "title": "5 月 CPI 4.2% YoY 創 4 月以來新高 + Polymarket 21% 機率 2026 通膨破 5%",
-          "tickers": [],
-          "summary": "PPI 同步走高。All-In 解讀:政府支出失控 → 通膨失控,Fed 降息預期進一步壓縮。",
-          "stance": "All-In:這是 late-stage 高利率對抗通膨情境,根源是 excess government spending。",
-          "implication": "搭配 6/5 就業數據強勁,2026 H2 降息基本沒戲,可能要等 2027。高槓桿 + AI Infra 漲多者持續承壓。",
-          "themes_touched": []
-        },
         {
           "category": "AI 模型",
           "title": "Anthropic Claude Fable 5 上架不到一週遭出口管制下架",
@@ -8294,6 +8285,28 @@
             "功率半導體 (Power IDM)",
             "GaN / SiC 第三類半導體 / 電源"
           ]
+        },
+        {
+          "category": "馬斯克",
+          "title": "All-In:馬斯克成史上首位 trillionaire,Freeberg 把『新寡頭』指控反甩回 Bernie/Warren",
+          "tickers": [
+            "SPCX",
+            "TSLA",
+            "ANTH",
+            "AMZN",
+            "NVDA",
+            "ORCL"
+          ],
+          "summary": "Sacks 親自走完整個 SpaceX IPO『最大 IPO of all time』的內幕脈絡 + Elon 的 trillionaire 身價拆解:這是 25 年累積的 paper wealth,馬斯克實際銀行存款一塊錢都沒多,鎖定期還有一年,SpaceX 短暫超越 Amazon/Microsoft 成第四大公司後回到第七(緊跟 TSMC 後面)。但 All-In 真正的爆點是 Freeberg 把媒體『tech 新寡頭』敘事整個翻轉:他直接點名真正的『new oligarchs / great American polit bureau』是 Elizabeth Warren、Bernie Sanders、Ro Khanna 三人組 — 試圖透過 unrealized gain tax(Illinois 剛通過)+ AI 股權沒收 + wealth tax 把『私有財產』從美國抹除。Chamath 接力解構:tech 已經夠透明,真正寡頭化的是政府,且因為 Frontier Lab(尤其 Anthropic)自爆 — Fable 5 被白宮以國安為由全面下架(Howard Lutnick 親自下令、Amazon 紅隊找到 jailbreak、Anthropic 私下把 Mythos 給 SK Telecom 沒通知白宮、Dario 拒絕 Treasury Secretary 親自要求下架)— 這次 own goal 等於把 AI 直接送進 hyperscaler 寡頭手裡(KYC + VPC + 政府 audit trail 都只有 AWS/Azure/GCP 撐得起)。對 Trillionaire 排序,Chamath 隱含路徑:Elon 的下一位最可能是 Jensen Huang(NVDA)+ Larry Ellison(Oracle)+ 然後才是 Bezos / Zuckerberg(資產規模仍落後)。",
+          "stance": "All-In 四人聯合反擊『仇富 / 反 oligarch』敘事:鈔票不是『stuff』而是『生產 stuff 的機器』的 DCF,馬斯克身價是市場對 SpaceX 未來 25 年產出的折現,denounce 它等於 denounce 後代的階級流動權。Chamath 同時補刀:Frontier Lab 領導層『evasiveness + immaturity』已讓矽谷 21 世紀好不容易重建的聲望崩塌,Anthropic 從『AI safety company』變成『private foreign policy actor』。",
+          "implication": "短線:SpaceX 入指數預期(MSCI 已展開 fast-track 諮詢)+ SpaceX-Tesla 合併耳語延燒 → TSLA 估值結構性重評(Optimus + FSD 接 SpaceX 軌道算力)。中線:Fable 5 全面下架等於把 Anthropic IPO 估值故事破了一個大洞 → OpenAI / xAI / Google 受惠企業客戶外溢;Cursor 60B 併入 SpaceX 後 Anthropic 失去最大 coding 付費客戶,Composer 2.5 + xAI Colossus 結合鎖死 SaaS coding 賽道。長線:KYC over AI 成型 → AWS / Azure / GCP 變新 AI 守門人(Chamath 預警的『oligopoly』),Neocloud(CRWV/NBIS)被擠出政府客戶與大企業客戶,只剩開源模型 + 中小企業市場;NVDA 表面受惠所有路徑但要押注『主權 GPU 配額制』政治風險。",
+          "themes_touched": [
+            "太空運算",
+            "AI 軟體/平台",
+            "AI 算力租賃",
+            "EV/Robotaxi/FSD",
+            "衛星通訊"
+          ]
         }
       ]
     },
@@ -8304,7 +8317,8 @@
         "M報 #528-#529",
         "馬斯克帝國觀察 #72-#73",
         "富果直送 (詮欣/威鋒/達發/OCP)",
-        "股癌 EP668-#670"
+        "股癌 EP668-#670",
+        "All-In 6/13 (Anthropic's Fable Backlash, Inflation)"
       ],
       "headlines": [
         {
@@ -8383,6 +8397,34 @@
             "太空運算 / 軌道資料中心",
             "光通訊 (Optical / 800G·1.6T)"
           ]
+        },
+        {
+          "category": "宏觀資金",
+          "title": "5 月 CPI 4.2% YoY 創 4 月以來新高 + Polymarket 21% 機率 2026 通膨破 5%",
+          "tickers": [],
+          "summary": "PPI 同步走高。All-In 解讀:政府支出失控 → 通膨失控,Fed 降息預期進一步壓縮。",
+          "stance": "All-In:這是 late-stage 高利率對抗通膨情境,根源是 excess government spending。",
+          "implication": "搭配 6/5 就業數據強勁,2026 H2 降息基本沒戲,可能要等 2027。高槓桿 + AI Infra 漲多者持續承壓。",
+          "themes_touched": []
+        },
+        {
+          "category": "AI 鬼故事",
+          "title": "All-In:Fable 5 開發者反彈 + Bernie 提案沒收 AI 公司 50% 股權",
+          "tickers": [
+            "ANTH",
+            "OPENAI",
+            "AMZN",
+            "MSFT",
+            "NVDA"
+          ],
+          "summary": "兩起連動事件被 All-In 直接打成『Anthropic 自找的 regulatory capture 反噬』:(1) Fable 5(Mythos 加 guardrail 版)上線立刻被 dev 圈炎上 — 所有 prompt 強制保留 30 天(連簽 ZDR 的企業客戶也不例外),且 Anthropic 暗中偵測使用者是否在做 AI/ML 研究、晶片設計,單方面把對方 downgrade 到弱模型卻不告知,還照收 Frontier 模型費用。Ben Thompson 問 GLP1 與癌症關係被踢出,有人單純問粒線體被降級。Chamath 痛批:對企業客戶這是 non-starter。Freeberg(經營 Ohio 做基因組學)現身說法:他公司因為 Anthropic 限制 RNA guide design + 基因建構,被迫轉用『最好的中國開源模型』。(2) 同週 Bernie Sanders 提案沒收 Anthropic/OpenAI 50% 股權。Sacks 反建立場但承認『stupidity tax』是 Anthropic 咎由自取;Chamath 提一個更務實版:政府應該入股 75% 並當 sovereign wealth fund 還國債,等同於 nationalizing AI 但走資本主義路徑。Freeberg 則認為 Social Security $4T 信託基金應重編成 sovereign wealth fund 直接投 AI 公司,讓每位美國人變股東。",
+          "stance": "All-In 罕見『四人都不挺 Anthropic』:Sacks 8 個月前『Anthropic 在搞 regulatory capture』從 spicy take 變新共識,Chamath 直言『AI 真理部』風險(Anthropic 可埋商業偏袒 → 給 Lilly 不給 Novartis、給 JPM 不給 Citi 都查不到 audit trail),Freeberg 不情願但承認限制 frontier 模型只會把流量推往中國開源(DeepSeek/Qwen 系)。集體共識:Anthropic 開創的『模型發行需政府預審』路線=幫 hyperscaler 開特權 + 滅 open-source neocloud。",
+          "implication": "短線:企業 AI 訂單從 Anthropic 移到 OpenAI/Google → 對應 MSFT MAI-Thinking-1 取代 Sonnet 4.6 的故事得到強化。中線:Chamath 透露自己已買 2GW Arizona 數據中心(本想 flip 給 Blackstone/Google),現在傾向自己蓋 + 多加 1GW,專門 host 開源模型 → 為 Neocloud(CRWV/NBIS)+ 中國開源模型(間接)創造算力需求。Apple Silicon(M5)+ 本地 SLM 路線進一步合理化。長線:nationalizing AI 提案在 Trump 政府『戰略物資國家持股』邏輯下實現機率上修(Trump 已收 Intel/MP/AMD/SPCX 股權組合),2026 H2 可能看到聯邦正式入股 OpenAI 或 Anthropic;NVDA 短期不受影響但長線最大不確定性是『主權 GPU 配額制』(KYC over GPU access)。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 算力租賃",
+            "AI GPU"
+          ]
         }
       ]
     },
@@ -8393,7 +8435,8 @@
         "M報 #526-#527",
         "馬斯克帝國觀察 #70-#71",
         "富果直送 (高力/OCP)",
-        "股癌 EP667-#668"
+        "股癌 EP667-#668",
+        "All-In Summit 6/4 (Thomas Laffont: $4T AI IPO Wave)"
       ],
       "headlines": [
         {
@@ -8467,6 +8510,27 @@
             "AI PC / CPU IP",
             "光通訊 (Optical / 800G·1.6T)"
           ]
+        },
+        {
+          "category": "IPO + 估值",
+          "title": "All-In Summit:Coatue Laffont『$4T AI IPO 浪潮即將到來』",
+          "tickers": [
+            "SPCX",
+            "ANTH",
+            "OPENAI",
+            "MU"
+          ],
+          "summary": "Thomas Laffont(Coatue 共同創辦人,$55B AUM)在 All-In Summit 整場 deck 把當前獨角獸經濟核心壓在 8 家公司:SpaceX、Stripe、Anthropic、Databricks、Revolut、ByteDance、Anduril、外加 OpenAI — 他稱之為 Magnificent 8,合計接近 $4T 估值,過去 12 個月幾乎家家跑贏傳統 Mag 7。Anthropic 規模從 2025/1 起 18 個月內 ARR 已超越 Workday → ServiceNow → Adobe → Salesforce → Google Cloud + Azure,預測 2028 前超越整個 Microsoft;OpenAI + Anthropic + SpaceX 三家若在 12 個月內全部 IPO,單年退出金額將超過過去 10 年總和。Chamath 補強兩個關鍵觀察:(1) 公開市場才是 the great equalizer,T+1 估值會被洗禮,但因為大量被動買盤,真正的『antiseptic』要等 6 個月鎖定期解除才看得到。(2) AI 經濟學跟網際網路根本不同 — 邊際成本『不為零』(每個用戶都吃 GPU + 電 + 記憶體),這結構性限制 AI 公司會有完全不同的競爭動態(甚至可能爆發 OpenAI vs Anthropic 的價格戰)。",
+          "stance": "All-In(Coatue + 4 besties)一致認定:私募端 AI 集中度創新高(前 10 名吃絕大部份新資金),且 centacorn(>$100B)有 31% 機率變 trillion-dollar 公司 — 遠高於 unicorn → decacorn 的 8%,證明 winner take all 在 AI 比過去更極端。Jason 異議:散戶被排除在最大價值創造階段(IPO 前)是制度性不公,需要 SEC 改革讓 retail 提早參與。",
+          "implication": "短線:SpaceX 2026/6 IPO + Anthropic 已秘密遞交 S-1 + OpenAI 跟進 → 12 個月內近 $4T 解鎖,Sequoia/Coatue/a16z 等 GP 將大量返金給 LP,2027 起 Silicon Valley 進入新一輪『recycle into next bet』循環。記憶體股(MU / 海力士 / 三星)Laffont 直接點名:沒有 TSMC 級別代工的對應產業,每用戶記憶體需求隨 AI memory/context 可 5x → 重估邏輯仍未走完。光通訊與 AI server ODM 同步受惠 Anthropic/OpenAI ARR 倍速擴張帶動的下游 capex。長線:若 OpenAI 真為了佔市率打『價格戰』,Anthropic 中端 token 利潤(對應 MSFT MAI 替換議題)會雪上加霜。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 算力租賃",
+            "HBM",
+            "AI server ODM",
+            "衛星通訊",
+            "光通訊"
+          ]
         }
       ]
     },
@@ -8477,7 +8541,8 @@
         "M報 #524-#525",
         "馬斯克帝國觀察 #68-#69",
         "富果直送 (SoIC/高力)",
-        "股癌 EP665-#666"
+        "股癌 EP665-#666",
+        "All-In 5/29 (Anthropic's Digital God, Job Loss Flips)"
       ],
       "headlines": [
         {
@@ -8540,6 +8605,25 @@
             "太空運算 / 軌道資料中心",
             "AI 軟體 / 平台"
           ]
+        },
+        {
+          "category": "AI 軟體",
+          "title": "All-In:Job Loss 敘事 180 度反轉 + Anthropic 朝向『Digital God』",
+          "tickers": [
+            "ANTH",
+            "GS",
+            "META",
+            "MSFT",
+            "GOOGL"
+          ],
+          "summary": "Sacks 開香檳:他 1 月『AI 創造就業而非毀滅就業』的非共識預測本週幾乎完勝。Dario(Anthropic)與 Sam(OpenAI)為了 IPO 紛紛收回 50% 失業率預測,Goldman CEO David Solomon 直接在紐時投書『AI Job Apocalypse 被誇大』,軟體工程師職缺反創 3 年新高 +15% YoY,Yale Budget Lab 找不到 AI 造成的勞動市場失序。Bill Gurley 與 Chamath 反向解讀更尖銳:Gurley 讀完 Dario 的『Machines of Loving Grace』+ Chris Olah 的 Constitution 後拋出『Dr. Frankenstein 理論』— Anthropic 領導層自認在『midwife 一個 digital god』、目標是建構決定人類獎賞分配的演算法神祇,這不是寫軟體,是 narcissism 等級的造神運動。",
+          "stance": "All-In 罕見集體一致:job loss 短期是『AI washing』(meta/block/Microsoft 把多年 over-hire 推給 AI 當代罪羔羊),但長期 Chamath/Gurley 與 Sacks 分歧 — Chamath 警告 CEO 會持續用 AI 為由縮人(因股市獎勵 do more with less),Sacks/Gurley 則押注就業淨增。所有人在 Anthropic 風險上同調:這家公司一邊壟斷『AI 安全』敘事爭取 regulatory capture,一邊內部相信自己在造神,雙重風險。",
+          "implication": "短線:SaaS / 顧問業勞動力受影響有限 → MSFT / GOOGL / CRM Copilot 客戶不會大幅砍員工(實際反過來加碼工程師),企業 AI 預算從 cost-cut 故事轉回 revenue-expansion 故事,SaaS 估值多殺多風險降低。中線:Anthropic 的『安全 = 必須走我這條路』論述為後續 Fable 5 出口管制與國家化辯論埋下伏筆,Apple Silicon (M5 / 新 Mac Studio 1TB 統一記憶體) 跑開源模型成為企業 AI 主權對沖選項。長線:若 Frontier Lab 真的目標是 AGI 等級『裁判型 AI』,反壟斷將是市場唯一護欄。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "SaaS",
+            "雲端基建"
+          ]
         }
       ]
     },
@@ -8549,7 +8633,8 @@
       "sources": [
         "M報 #522-#523",
         "馬斯克帝國觀察 #66-#67",
-        "股癌 EP663-#664"
+        "股癌 EP663-#664",
+        "All-In 5/22 (SpaceX $2T Case, NVDA Shock Selloff)"
       ],
       "headlines": [
         {
@@ -8611,6 +8696,27 @@
             "GaN / SiC 第三類半導體 / 電源",
             "功率半導體 (Power IDM)"
           ]
+        },
+        {
+          "category": "IPO + 估值",
+          "title": "SpaceX S-1 揭密:EWS 已是 Starlink 級營收(Anthropic 簽 $45B / 3 年,月付 $1.25B)— Chamath 拆 $2T 估值合理路徑",
+          "tickers": [
+            "SPCX",
+            "ANTH",
+            "NVDA",
+            "TSLA"
+          ],
+          "summary": "S-1 揭露 2025 數字:Starlink $11.4B 營收 / $4.4B 營業利益、Space $4B / -$650M、xAI $3.2B / -$6.4B,capex $20B(>60% 砸 AI)。最大驚喜 — Anthropic 租 Colossus 簽 $45B / 3 年(15B/年,任一方 90 天可終止)= 直接複製一條 Starlink。Gavin Baker 補料:資料中心建造週期從 122 → 91 → 66 天,Jensen 願意把 GPU 給能最快插電的人。同週 NVDA 報 Q1 $81.6B 營收 +85% YoY、$58B 淨利、$48B FCF、宣布額外 $80B 買回 + 季配息 25x,股價今年只 +16%;Cursor Composer 2.5(僅靠 Colossus 2 做三週 RL)在 Pareto 前緣超越 Codex/Claude。",
+          "stance": "Chamath 給 $2T 一個下行情境也站得住的承銷邏輯:今年 25-30B、明年 40-45B、後年再翻倍 → 20x revenue 只買到地面資料中心($100-200B 2030 營收),Starlink 是 GDP+10/+15 grower 但是 internet 級基礎建設,xAI + Tesla 合併後 Elon 是『唯一還能 one more thing 級驚喜』的 CEO,溢價合理。Gavin 點出 AI 板塊 cross-sectionally inefficient:memory(SK Hynix 5x / Samsung 6x / Micron 7x)、NVDA(forward PE 低 teens)被低估,power/cooling/optical 反而過熱。",
+          "implication": "短線:SpaceX 6/12 IPO + NVDA 強勁財報疊加,但 Korea retail 槓桿買 AI 晶片股 + 10Y 4.6% + 30Y 5.2%(Japan 5.1% 歷史高)構成『派對最後階段』訊號。中線最大 alpha:NVDA 揭露 $20B CPU 業務 + DC-to-DC 與 Elon 合作 → 老 GPU 透過 disaggregated inference + 平價 financing(CoreWeave 6%)可用 10-15 年,救了所有 neocloud 折舊空頭(致敬 Michael Burry)。風險:Chamath 警告『America Turns on AI』政治反撲已成形 — Cloudflare/Matthew Prince 把員工分『measurers』後裁 20%、Zuckerberg 邊裁 8K 邊在員工電腦裝錄影軟體訓練模型 — 這些 PR 災難正餵養 anti-AI 民意,2026 是否會逼出立法是後續觀察重點。",
+          "themes_touched": [
+            "太空運算",
+            "AI 算力租賃",
+            "AI GPU",
+            "HBM",
+            "AI 軟體/平台",
+            "衛星通訊"
+          ]
         }
       ]
     },
@@ -8620,7 +8726,8 @@
       "sources": [
         "M報 #520-#521",
         "馬斯克帝國觀察 #64-#65",
-        "股癌 EP661-#662"
+        "股癌 EP661-#662",
+        "All-In 5/15 (Trump-Xi Summit, Benioff SaaSpocalypse)"
       ],
       "headlines": [
         {
@@ -8703,6 +8810,24 @@
           "stance": "市場關注 Warsh 是否比 Powell 更鴿派/鷹派。Warsh 過去以鷹派著稱,但 2024-2025 公開言論已偏向支持降息以應對房市與信貸壓力。Trump 期待『更聽話的 Fed』。",
           "implication": "未來 FOMC 點陣圖 + Humphrey-Hawkins 國會作證的 tone 是觀察 Warsh 風格的第一手訊號。短期不確定性升高,長線取決於通膨/就業實際數據。獨立性疑慮可能推高長端債券殖利率。",
           "themes_touched": []
+        },
+        {
+          "category": "SaaS",
+          "title": "Benioff 親上 All-In 拒認輸:『這不是我第一次 SaaS 末日』— 同週宣布 $50B 史上最大買回",
+          "tickers": [
+            "CRM",
+            "NOW",
+            "WDAY",
+            "HUBS"
+          ],
+          "summary": "CRM 自高點 -37%、market cap 蒸發 $90B;NOW -42%、WDAY -45%。Benioff 親上節目反擊 SaaS apocalypse 敘事:他點名經歷過 2016 / 2020 兩次類似週期,堅持 customer success / cash flow / innovation 才是錨,不看 stock price。具體佈局:(1) 今年花 $300M 在 Anthropic 寫程式;(2) Slack 走 headless + 新 AXL API 把 app 串進任何 LLM/裝置;(3) 完成 $9B Informatica 收購補資料層;(4) 宣布 $50B 史上最大規模 buyback。同集 Sam Altman 傳考慮告 Apple(Siri 整合失敗,billions in subscription revenue 沒到位)。",
+          "stance": "All-In 對 SaaS 罕見出現分歧:Chamath 立場軟化承認『低端 SaaS 已完蛋,但高端(Mark 操作的層級)其實 oversold』,點名 negative churn + CXO 級關係的老牌 SaaS 將反向受惠 — 因為 hyperscaler 們最終必須回頭找 Benioff 這類業者『請幫我賣 token』。Friedberg 觀察 8090 內部砍掉 vertical SaaS、All-in 押注 horizontal platform,認為這個 vertical/horizontal 套利交易『目前定價相同,可以拆開做』。",
+          "implication": "短線:$50B 買回 + 10x FCF 給 CRM 強估值底,可能領 SaaS 反彈。中線:Benioff 已示範『創辦人 CEO + headless API + 燒船心態』的活路 path — 把『創辦人指數』當成 SaaS 倖存者篩選器(Chamath 上週論點)。風險:Apple vs OpenAI 法律戰升溫凸顯 LLM 廠商與 platform 客戶關係極度脆弱,Benioff 已暗示 Salesforce 內部正測『中介層 router』讓 token 走到最便宜模型,長期會壓縮 frontier model 廠商的單位經濟學。",
+          "themes_touched": [
+            "SaaS",
+            "AI 軟體/平台",
+            "蘋果"
+          ]
         }
       ]
     },
@@ -8712,7 +8837,8 @@
       "sources": [
         "M報 #518-#519",
         "馬斯克帝國觀察 #62-#63",
-        "股癌 EP659-#660"
+        "股癌 EP659-#660",
+        "All-In 5/8 (Elon's Anthropic Deal, AI Monopoly)"
       ],
       "headlines": [
         {
@@ -8785,6 +8911,27 @@
             "AI ASIC / 客製化晶片",
             "被動元件 (MLCC / 電阻)"
           ]
+        },
+        {
+          "category": "AI 算力",
+          "title": "Elon 把 Colossus 1 全部租給 Anthropic(220K GPU/300MW)— Sacks 警告『人類史上最大壟斷』正在成形",
+          "tickers": [
+            "ANTH",
+            "NVDA",
+            "TSLA",
+            "GOOGL",
+            "META"
+          ],
+          "summary": "為解 Anthropic compute 荒,Elon 把 H100 為主的 Colossus 1 整廠租給 Dario,xAI 自己搬到 Colossus 2(Blackwell)。Brad Gerstner 估這筆增量帶來 $4-5B 年化收入,直接化解 SpaceX IPO 路演最大 bear case(xAI 燒錢沒對價)。Sacks 算給大家看:Anthropic Q1 ARR 從 $10B → $30B,4 月再衝到 $44B,若維持 10x/年到 2027 將觸及 $1T ARR — 可能比 Mag 7 加總更大。",
+          "stance": "All-In 大分裂:Sacks(滿口 satire 與 John D. Rockefeller 類比)挑明 Anthropic 正在用 'safety' 包裝建構史上最大壟斷,呼籲華府別被 regulatory capture 騙;Brad 強硬反駁『連起跑線都沒過談什麼 monopoly』,雙方在節目上正面對撞。Chamath 站隊 power 才是真瓶頸的供給面論述,順勢吹捧 SpaceX 拿 40-50x revenue 倍數合理。",
+          "implication": "短線:Anthropic 解 token 荒 → Claude Code 翻倍 rate limit,coding token 戰場重回頂峰;Elon 升格 hyperscaler (EWS) 直接挑戰 AWS/Azure/GCP。中線:White House 同週流出『FDA for AI』EO 草案(NYT 報導 Anthropic Mythos 嚇到白宮),Hassett 公開背書 → 引爆業界恐慌,Sacks 揭露已被 Susie Wiles 否決;Bessent 仍堅持 'safety calculus'。預期未來 6 個月圍繞 KYC、模型 logging、frontier model 預審的政策戰會持續。",
+          "themes_touched": [
+            "AI 算力租賃",
+            "AI GPU",
+            "AI 軟體/平台",
+            "AI 雲端",
+            "太空運算"
+          ]
         }
       ]
     },
@@ -8794,7 +8941,8 @@
       "sources": [
         "M報 #516-#517",
         "馬斯克帝國觀察 #60-#61",
-        "股癌 EP657-#658"
+        "股癌 EP657-#658",
+        "All-In 5/1 (OpenAI Misses Targets, Codex vs Claude)"
       ],
       "headlines": [
         {
@@ -8872,6 +9020,25 @@
             "晶圓代工 / 先進製程",
             "AI 軟體 / 平台"
           ]
+        },
+        {
+          "category": "微軟/OpenAI",
+          "title": "OpenAI 同時錯失 1B WAU 與 2025 營收目標,$600B compute 承諾 vs 二級市場估值幾乎 1:1",
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "ORCL",
+            "AMZN"
+          ],
+          "summary": "WSJ 爆料 OpenAI 沒達標,Sarah Friar 認為公司未準備好 IPO、與 Altman 起衝突。Sacks 反向觀點:GPT-5.5(基於新 base model Spud)+ Codex 在 coding 拿回 momentum,而 Opus 4.7 被視為 bust(rationing compute、rolling back to 4.6);Anthropic token-constrained 反而幫 OpenAI 爭取追擊空間。Chamath 強調 miss 不是需求問題,純粹是 power supply 卡關,9GW 計畫已有 50% 遭抗議。Polymarket OpenAI 2026 IPO 機率從 60% 砍到 32%。Elon v. Sam 訴訟同週開審,Brockman 日記變呈堂證供。",
+          "stance": "All-In 分歧:Sacks 看好『Sam 會因錯誤理由賺到對的結果』— 消費端輸給 Google Gemini(已 700M WAU),但 enterprise coding 大爆發。Chamath 認為 power/compute 才是真正瓶頸,將迫使 OpenAI/Anthropic 把更多股權交給 hyperscaler 換算力,真正受益者是 Oracle/AMZN/META/MSFT/GOOGL + Elon(EWS)。",
+          "implication": "OpenAI 估值與 $600B capex 1:1 是定時炸彈;若 SpaceX 先 IPO 吸光二級市場流動性,OpenAI 2026 上市機率持續壓縮。受益者:hyperscaler 議價力上升、Elon 用 xAI 剩餘算力 jujitsu 整個市場(預告下一個併購)。風險:Q2 capex 揭露時若看到單位 token 經濟學沒改善,可能觸發 Chamath 所說『500 天後的 ROI 大檢視』提前發生。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 雲端",
+            "AI GPU",
+            "AI 算力租賃"
+          ]
         }
       ]
     },
@@ -8881,7 +9048,8 @@
       "sources": [
         "M報 #514-#515",
         "馬斯克帝國觀察 #58-#59",
-        "股癌 EP655-#656"
+        "股癌 EP655-#656",
+        "All-In 4/24 (SpaceX-Cursor Deal, SaaS Debt Bomb)"
       ],
       "headlines": [
         {
@@ -8924,6 +9092,24 @@
           "themes_touched": [
             "晶圓代工 / 先進製程"
           ]
+        },
+        {
+          "category": "IPO + 估值",
+          "title": "SaaS 債務炸彈引爆:Thoma Bravo 把 Medallia 鑰匙還給債權人,5.1B 股權歸零",
+          "tickers": [
+            "CRM",
+            "NOW",
+            "WDAY",
+            "SNOW",
+            "ADBE"
+          ],
+          "summary": "Sacks 拆解 SaaS 私募債融資邏輯崩塌:Medallia 2021 被 TB 以 $6.4B 全現金併購、加掛 $3B 債務,2026 利息成本從 $100M/年跳到 $300M,Blackstone 拒絕續命。Chamath 補強核心問題=AI agent 取代 vertical SaaS,客戶到期不續約或砍 50-75%。當天 CRM -9%、NOW -54%、SNOW -43%、ADBE -33%、FIGM -67%。",
+          "stance": "All-In:SaaS 不是週期問題是結構性死亡。Sacks 直言『預測現金流前提不存在』,Chamath 指 SaaS 單位售價已從 10% value 漲到 30%,客戶等續約日狂砍,private equity 套利模型失效。Friedberg 看 Benioff『燒船去 headless』為唯一活路。",
+          "implication": "SaaS 名單將分流:創辦人在位且願意自我顛覆者(CRM/Benioff)有翻身機會,職業經理人主導者繼續死。CRM 10x FCF 進入 deep value 區間,Salesforce/Workday 可能成下一個關注標的。被打回 3x ARR 的高品質 SaaS 是私募 PE roll-up 機會,但 PE 要先克服 cash flow 不再 predictable 的承銷難題。",
+          "themes_touched": [
+            "SaaS",
+            "AI 軟體/平台"
+          ]
         }
       ]
     },
@@ -8933,7 +9119,8 @@
       "sources": [
         "M報 #512-#513",
         "馬斯克帝國觀察 #56-#57",
-        "股癌 EP653-#654"
+        "股癌 EP653-#654",
+        "All-In 4/17 (OpenAI's Identity Crisis, Datacenter Wars)"
       ],
       "headlines": [
         {
@@ -8979,6 +9166,28 @@
           "themes_touched": [
             "AI ASIC / 客製化晶片"
           ]
+        },
+        {
+          "category": "AI 軟體",
+          "title": "OpenAI 認同危機:FT 質疑 $850B 估值、Anthropic 二級市場首次反超,Chamath 警告 datacenter 變成『新石化廠』被全美民眾抵制",
+          "tickers": [
+            "OPENAI",
+            "ANTH",
+            "MSFT",
+            "META",
+            "GOOGL",
+            "TSLA"
+          ],
+          "summary": "OpenAI CRO Denise Dresser 流出 4 頁備忘錄,點名 Anthropic $30B 中有 $8B 是 revenue share 灌出來,Anthropic 故事建立在『恐懼、限制、菁英控制』。FT 同步爆 OpenAI 投資人不滿『1B 用戶業務 50–100% 成長,你卻在搞 enterprise + coding』,$850B 估值在二級市場無人接、Anthropic 首次在 secondary 反超。Chamath 估 OpenAI 若聚焦 consumer 值 $3–4T、加上 Codex enterprise 可再 $2–3T → 長期 $7–9T,但要拆成兩個團隊跑。Sacks 認為 frontier labs 不得不自建 datacenter(Stargate 路徑無解)。Chamath 拋『五級火警』:民眾翻臉、Maine 全面禁建、6B 案 town board 一夜被罷免,Bloom Energy 因現地天然氣 + 快通環評才能突圍。",
+          "stance": "All-In:Chamath/Sacks/Travis Kalanick(客座)一致看空 OpenAI 焦點分散、看多 Anthropic flywheel + xAI Colossus 555K GPU 後來居上;但全員警告 datacenter NIMBY = 對 CRWV/Nebius/IREN 的 land+power+shell 模式是直接威脅,『Friendster effect』(伺服器跟不上需求)隨時可能掐住 frontier labs。",
+          "implication": "為 W18+ OpenAI 可能 miss model release target、Spud 跳票、估值修正鋪陳;CRWV/Nebius/IREN 短線受惠『frontier 自建 + 租用混合』需求爆,但中長期 datacenter 過剩 + 在地阻力是台股 ABF 載板/光通訊/液冷供應鏈估值的下行尾風險;Bloom Energy + 燃氣 SMR 供應鏈短線題材確立。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "雲端基建",
+            "AI 算力租賃",
+            "AI server ODM",
+            "AI 鬼故事"
+          ]
         }
       ]
     },
@@ -8988,7 +9197,8 @@
       "sources": [
         "M報 #510-#511",
         "馬斯克帝國觀察 #54-#55",
-        "股癌 EP651-#652"
+        "股癌 EP651-#652",
+        "All-In 4/10 (Anthropic's $30B Ramp, Mythos Doomsday)"
       ],
       "headlines": [
         {
@@ -9036,6 +9246,25 @@
           "themes_touched": [
             "AI PC / CPU IP"
           ]
+        },
+        {
+          "category": "AI 模型",
+          "title": "Anthropic 三個月衝上 $30B 年化、All-In 視為『TAM 無限大』鐵證,但 Chamath 抓出 gross vs net revenue 灰色地帶",
+          "tickers": [
+            "ANTH",
+            "OPENAI",
+            "NVDA",
+            "AMZN"
+          ],
+          "summary": "Brad Gerstner(客座)拆解 Anthropic revenue ramp:2023 開 API、2024 末 $1B、2025 Q1 $4B、2025 末 $9B、2026/4 衝 $30B run rate,單月新增 $4B → $7B → $10–11B 等於 Databricks + Palantir 合體一個月加上去。$1,000+ 家企業客戶年付 >$1M。Brad 預估年底有機會做到 $80–100B,且只有 1.5 GW 算力、2,500 員工 — gross margin 從 −18% 翻到推估 ~50%。Chamath 點出『我們正卡在 gross vs net revenue 灰色地帶』,提醒投資人別被 narrative 蓋過,Sacks 質疑 Anthropic 把 Mythos『太危險不釋出』的安全敘事其實是 compute 不夠 + 為 Opus 4.7 留 capacity 的行銷術。",
+          "stance": "All-In:Brad/Jason 多頭(『intelligence TAM 無限大』、AI 工具是 labor 取代而非 IT 預算),Chamath 中性偏謹慎(rev rec 不透明、開源占大企業 65–70% token、Jevons 反轉是 unit cost 下降而非 token 下降),Sacks 對 Anthropic 安全論最尖銳。",
+          "implication": "為 W16『OpenAI identity crisis』預先校準預期(OpenAI 在 Q2 初也是 $30B 但 net 計算後 Anthropic 落後約 20%);後續週次若 OpenAI 沒交出 Spud/Opus 4.7 等級模型,主持人已埋好『miss target』敘事線;對 AI 算力鏈(NVDA、AMZN Bedrock、CRWV)是強烈正面催化,但 hyperscaler 控 60% 算力、頻寬掐脖風險已浮上檯面。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 算力租賃",
+            "雲端基建",
+            "AI GPU"
+          ]
         }
       ]
     },
@@ -9045,7 +9274,8 @@
       "sources": [
         "M報 #508-#509",
         "馬斯克帝國觀察 #53-#54",
-        "股癌 EP649-#650"
+        "股癌 EP649-#650",
+        "All-In 4/3 (SpaceX IPO, Quantum BTC Hack)"
       ],
       "headlines": [
         {
@@ -9090,6 +9320,23 @@
           "themes_touched": [
             "光通訊 (Optical / 800G·1.6T)"
           ]
+        },
+        {
+          "category": "IPO + 估值",
+          "title": "Chamath 喊 99.999% Tesla+SpaceX 最終會合併,Friedberg 端出月球工業化『二十年』願景",
+          "tickers": [
+            "SPCX",
+            "TSLA"
+          ],
+          "summary": "All-In 確認 SpaceX 4/1 秘密遞 S-1、目標估值 $1.75T(全球第八大,僅次 TSMC/Aramco)、擬募資 $750 億(史上最大 IPO),6 月送出;Starlink 占營收 50–80%(年化 ~$200 億)、發射占 40%(2024 $50 億),2025 總營收 $150–160 億、淨利 $80 億。Chamath 押 99.999% Tesla 與 SpaceX 最終合併、IPO 提供 mark-to-market 才能讓 Elon 擺脫 Tesla 薪酬訴訟那種『股東勒索稅』。Friedberg 把太空產業比喻成『新鐵路』,SpaceX = 月球與火星的 Union Pacific,並指出 Starlink + 太空 data center 已是『備援網際網路』。",
+          "stance": "All-In:Chamath/Friedberg/Jason 三人都『極挺 Elon』,把 SpaceX IPO 定位成 2026 最大事件;只有對量子計算破解 Bitcoin 風險(BTC 公鑰暴露)Chamath 警告社群得開始準備抗量子方案,把 quantum/space/AI 串成同一個敘事。",
+          "implication": "強化 W15+ Intel 加入 Terafab、SpaceX 6 月正式上市的時程鋪陳;同時為後續週次太空概念股 (RKLB / 衛星通訊 ETF)、量子題材(IONQ/QBTS)、抗量子加密供應鏈打開資金行情窗口。",
+          "themes_touched": [
+            "太空運算",
+            "衛星通訊",
+            "量子運算",
+            "BTC 礦商"
+          ]
         }
       ]
     },
@@ -9099,7 +9346,8 @@
       "sources": [
         "M報 #506-#507",
         "馬斯克帝國觀察 #51-#52",
-        "股癌 EP647-#648"
+        "股癌 EP647-#648",
+        "All-In 3/27 (Anthropic's Generational Run, OpenAI Panics)"
       ],
       "headlines": [
         {
@@ -9144,6 +9392,24 @@
           "themes_touched": [
             "封測 / CoWoS / Advanced Packaging"
           ]
+        },
+        {
+          "category": "AI 模型",
+          "title": "All-In 為 Anthropic 一代盛世背書,Chamath 拆穿 OpenAI vs Anthropic 是『蘋果比橘子』",
+          "tickers": [
+            "ANTH",
+            "OPENAI",
+            "GOOGL",
+            "META"
+          ],
+          "summary": "Sacks 罕見讚賞 Anthropic 產品(MCP、Claude Code),稱其『最 AGI-pilled』、押注 coding 通往 recursive self-improvement。Chamath 強調 OpenAI 仍是 3/4 consumer subscription + 1/4 API、Anthropic 反之,且兩者 revenue recognition 一個 net 一個 gross,媒體比較全是 narrative play;但企業端 80/90 portfolio『all Anthropic all the time』。Chamath 進一步預言『品牌歸零』:Tesla 對 BMW、BYD 對 Mercedes 才是 AI 時代範本,只有 abundance + value 能存活。",
+          "stance": "All-In:Sacks/Chamath/Jason 一致認為 Anthropic 在 enterprise 是 Steph Curry 般爆發,但分歧在 moat — Sacks 主張 brand/network effect/實體製造仍是護城河,Chamath 唱反調說 brand 在 AI 商品化下會被 erosion(連 LVMH/Ferrari 訂價權都在掉)。",
+          "implication": "為 W15 Anthropic $30B run rate 故事預埋伏筆;OpenAI 反擊節奏(關 Sora、Disney $1B 取消、追 enterprise)將在 W16 變成『identity crisis』主線;台股 SaaS/品牌股 (含部分 ABF 載板買單方) 估值 framework 要重做。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "SaaS",
+            "雲端基建"
+          ]
         }
       ]
     },
@@ -9153,7 +9419,8 @@
       "sources": [
         "M報 #504-#505",
         "馬斯克帝國觀察 #49-#50",
-        "股癌 EP645-#646"
+        "股癌 EP645-#646",
+        "All-In 3/19 (Jensen Huang on Nvidia's Future)"
       ],
       "headlines": [
         {
@@ -9183,6 +9450,23 @@
           "themes_touched": [
             "HBM / 記憶體"
           ]
+        },
+        {
+          "category": "AI 硬體",
+          "title": "Jensen 親上 All-In:Inference 才剛起跑、Vera Rubin 一個 Token 比 ASIC 還便宜",
+          "tickers": [
+            "NVDA",
+            "AMD"
+          ],
+          "summary": "Jason 直球問 Jensen 為何 Vera Rubin Inference Factory 報價 $500 億、ASIC/AMD 只要 $250–300 億卻仍能贏:Jensen 回 $500 億工廠的 token 單位成本是對手的 1/10,從 generative→reasoning→agentic 兩年內算力需求漲了 10,000 倍,『我們絕對在 1 million X 的路上』。Chamath 也讓 Jensen 確認 Vera Rubin 的 25% 將留給 Groq LPU/GPU 混合工作負載。",
+          "stance": "All-In:Jason 對 NVDA 推論護城河押注、Chamath 用買下的 Groq 角度挑戰多晶片混搭、Friedberg 帶到 Physical AI/Robotics 是『$50T 產業首次數位化』的 TAM 故事;主持人共識是 inference 還沒 peak、Nvidia 一兆美元 Blackwell+Rubin 能見度成立。",
+          "implication": "為 W13 之後 GTC 2026 Vera CPU + Rubin 路線圖細節做鋪墊,並奠定 W15+ Anthropic/OpenAI compute constrained 主線(主持人預告 inference 100x consumption 還沒開始 scale);ASIC 路線(MRVL/AVGO)短線會有雜訊但難撼動 CUDA + 整廠 token 成本優勢。",
+          "themes_touched": [
+            "AI GPU",
+            "AI 算力租賃",
+            "AI server ODM",
+            "機器人"
+          ]
         }
       ]
     },
@@ -9192,7 +9476,8 @@
       "sources": [
         "M報 #502-#503",
         "馬斯克帝國觀察 #47-#48",
-        "股癌 EP643-#644"
+        "股癌 EP643-#644",
+        "All-In 3/13 (Iran War, AI's Revenue Explosion)"
       ],
       "headlines": [
         {
@@ -9236,6 +9521,29 @@
           "themes_touched": [
             "光通訊 (Optical / 800G·1.6T)"
           ]
+        },
+        {
+          "category": "宏觀政治",
+          "title": "伊朗戰爭引爆油價衝擊 + Anthropic 14B run rate:Chamath『實驗性收入』vs Brad『核分裂時刻』的真實性辯論",
+          "tickers": [
+            "XOM",
+            "CVX",
+            "PLTR",
+            "NVDA",
+            "MSFT",
+            "GOOGL",
+            "AMZN"
+          ],
+          "summary": "Brent 從 84 跳 119、又回 99,Hormuz 海峽關閉,Polymarket sharps 57% 押注年底前美軍進伊朗。Goldman 把 PCE inflation 從 2.1 拉到 2.9、GDP 砍 30bp。Sacks 警告升級風險:伊朗反擊 Gulf states 的 desal 廠會讓 1 億人沒水可喝,以色列防空可能耗盡甚至動核——『現在就該宣布勝利下車』。Chamath:Trump 一句『戰爭很快結束』油價 nano-second 從 120 跌到 90,加上 Chris Wright 釋出 1.72 億桶戰備油,代表 sharps 不信長期衝突,真正大棋是月底川習 3 天峰會。Brad 切到 AI:Anthropic 二月單月營收 6 億美元(超過 Databricks/Snowflake 12 年累積年營收),年化 run rate 140 億美元、估值 380 億美元;OpenAI 200 億 run rate / 840 億美元估值——這是『核分裂時刻,模型不再跟 IT budget 競爭、是在跟 labor budget 競爭』。Chamath 嚴厲反駁:這 140 億 + 200 億有多少是 production、多少是『每家公司董事會都要打個 AI 勾』的實驗預算?Amazon 剛因為 agent 寫的程式造成 sev-1 才下令 AWS 必須人類 review,『critical workflow 還沒一個成功案例』。",
+          "stance": "All-In 三向分歧:(1) Iran 戰爭——Sacks/Chamath/Brad 一致認為 Trump 會找 off-ramp(Brad『Trump doctrine 不是 Cheney doctrine』、Chamath『月底川習峰會是 grand bargain 籌碼』),J-Cal 警告若不快收場 2026 midterm 民主黨橫掃機率 45%;(2) AI 收入真實性——Brad 多頭(production-grade、6B/月證明 augment labor)vs Chamath 嚴格(experimental run rate 不等於 ARR、Amazon sev-1 是警鐘)vs Sacks 中性偏多(coding assistance 是真實 breakout,Fortune 500 transformation 還很投機);(3) AI 公關災難——Chamath 點名 Dario『sentient supergod』訊息+ Sam『賣 tokens 像賣電』+ Alex Karp 警告 = 三套自相矛盾的訊息把 AI 民調打到比 ICE 還低,Sacks 加碼:這是 EA 億萬富翁(Moskovitz、Buterin 600M)資助 doomer think tank + 業者刻意要 regulatory capture 的結果。",
+          "implication": "油價衝擊驗證 W10 Dalio 實物資產 thesis,短期能源(XOM/CVX)有 spike 機會但 sharps 預期是短週期(off-ramp 共識)。AI 投資的真正風險不是估值,而是 Chamath 點出的『experimental run rate 何時轉成 ARR』——下一個檢驗點是 (a) Anthropic 3 月營收是否續成長(Brad 賭 yes),(b) Amazon-style sev-1 是否擴散到其他 hyperscaler(Chamath 賭會),(c) 公關民調是否回升讓 NIMBY/Bernie Sanders 的 AI 暫停令派失溫。後續週次重點:川習峰會結果(若 grand bargain → 風險溢價解除、AI/油雙降溫)、Anthropic 是否成為 W09『Claude 殺 SaaS』清單繼續擴張的執行者。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI GPU",
+            "雲端基建",
+            "AI server ODM",
+            "AI 算力租賃"
+          ]
         }
       ]
     },
@@ -9245,7 +9553,8 @@
       "sources": [
         "M報 #500-#501",
         "馬斯克帝國觀察 #45-#46",
-        "股癌 EP641-#642"
+        "股癌 EP641-#642",
+        "All-In 3/3 (Ray Dalio: AI Is Eating Everything)"
       ],
       "headlines": [
         {
@@ -9276,6 +9585,26 @@
             "EV / Robotaxi / FSD",
             "AI 算力租賃 (Neocloud)"
           ]
+        },
+        {
+          "category": "宏觀資金",
+          "title": "Ray Dalio 在 All-In Interview 雙重警告:美債危機與 AI 估值泡沫並行,『AI 在吃掉一切,也可能吃掉自己』",
+          "tickers": [
+            "GLD",
+            "TLT",
+            "NVDA",
+            "MSFT",
+            "GOOGL"
+          ],
+          "summary": "Friedberg 1v1 訪 Ray Dalio(第三次上 All-In)。Dalio 直接點名 2026 美國赤字/GDP 6%,2 兆赤字裡一半是利息,還有 9 兆要 rollover,外國買家(占 1/3)在地緣政治風險下會抽手;DOGE 過去一年『裁聯邦員工 31.7 萬(14%)但 Congress 沒把 cut 寫進預算』,等同失敗。Dalio 親自確認:他的黃金部位過去一年從 2,900 漲到 5,200/oz(+80%),Bitcoin 同期 -25%——因為央行買的是黃金不是 BTC(BTC 沒隱私、與科技股高度相關)。最關鍵的雙重警告:(1) AI 雖技術會贏,但歷史上 2000 年泡沫顯示『技術會留下、大多數公司不會留下』,差異很大;(2) 中國 AI 接近美國水準但用『免費 + 開源 + 公用事業』模型運作,『AI 在吃一切,也可能吃自己』(吃不出足夠利潤)。Dalio 認為美國已進入『stage 5 of the big cycle』——bad finances + irreconcilable differences + external threats,類似 1929-45 或羅馬 Caesar 時期。",
+          "stance": "Dalio (透過 Friedberg 的引導):明確看多黃金(個人/機構配置應 5-15%)、看空美元計價資產的可持續性、看好 AI 技術但對任何特定 AI 公司高估值持懷疑(連 OpenAI/Anthropic 都可能被中國免費開源邊緣化)。Friedberg 主要扮演追問者,沒明確反駁。這集無 Sacks/Chamath/J-Cal 對沖視角,屬 All-In 同調空頭/防禦觀點。",
+          "implication": "Dalio 把 W07 Friedberg 的 debt spiral 警告升級為『制度週期 stage 5』框架,並第一次直接對 AI 估值說重話。投資啟示:(1) 黃金/實物資產配置應從 0 拉到 5-15%(後續 W11 oil shock 進一步驗證實物資產 thesis);(2) AI 投資要分『技術 vs 公司』——買 picks-and-shovels(NVDA、能源、資料中心 REIT)勝於 bet 單一 model 公司;(3) 中國 AI 免費化是對美國 AI utility 估值的 binary 風險。後續 W11 Chamath 對 Anthropic 14B run rate 是否『實驗 vs production』的辯論可視為對 Dalio 警告的具體 stress test。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI GPU",
+            "AI 算力租賃",
+            "雲端基建"
+          ]
         }
       ]
     },
@@ -9285,7 +9614,8 @@
       "sources": [
         "M報 #499",
         "馬斯克帝國觀察 #43-#44",
-        "股癌 EP639-#640"
+        "股癌 EP639-#640",
+        "All-In 2/28 (Software Stocks Implode, Claude's Hit List)"
       ],
       "headlines": [
         {
@@ -9312,6 +9642,28 @@
           "themes_touched": [
             "被動元件 (MLCC / 電阻)"
           ]
+        },
+        {
+          "category": "AI 軟體",
+          "title": "Sacks 解讀 SaaS 大屠殺:從『when』變『if』,Claude Code/Open Claude 開始啃 SaaS 護城河",
+          "tickers": [
+            "CRM",
+            "NOW",
+            "OKTA",
+            "CRWD",
+            "IBM",
+            "TRI",
+            "ANET"
+          ],
+          "summary": "Anthropic 二月『三連殺』:2/3 Claude Co-work 法律外掛上線(Thomson Reuters、LexisNexis、LegalZoom 全跌 >10%);2/20 Claude Code Security 預覽(CrowdStrike、Cloudflare、Okta 全倒);2/23 宣布 Claude 能改寫 COBOL,IBM 單日 -13%、市值蒸發 310 億美元(2000 年以來最慘)。Sacks(資深 SaaS VC)解構:過去 SaaS 是『growth annuity』靠 120% NDR 模型化、PE 13x ARR;現在無法定價因為 AI 會不會吃掉 Salesforce 沒人知道,加上 Catrini 那篇假病毒 Substack(後被揭發共同作者是放空對應 ticker 的對沖基金)推波助瀾。Chamath:市場已從『when 現金流出問題』進入『if 現金流還在不在』模式,WACC 從 6% 跳到 12-13%,PE 砍半,SBC 是下一個會掉的鞋。Friedberg 拋震撼彈:『knowledge work 可能是介於 PC 與 AI 之間的過渡型業態』,SaaS 連同知識工作整體可能蒸發。J-Cal:Open Claude agent 已能在他基金內部完成 SDR/法務/PR/CRM,Slack/HubSpot 訂閱可以直接踢掉換 Mattermost 自架。",
+          "stance": "All-In 共識:SaaS 的 multiple compression 才剛開始,從『年金成長』變成『事件風險定價』。內部分歧:Friedberg 全面悲觀(知識工作整體 obsolete);Sacks(VC 出身)走 Jevons paradox 路線——軟體工程師價格降反而需求大爆發,SaaS 不會歸零但成長率被啃;Chamath 押 OpEx/總營收會崖式下滑、但其中科技投入佔比反而拉高。J-Cal 站在『自架 + agent』就能取代任何 SaaS 的實證派。",
+          "implication": "投資人對純 SaaS(尤其法務 / 文件 / IT 安全 / 客服 / 程式碼修改)應 de-rating,革命性轉變正在發生而非單純大盤回檔。需區分:(1) 工作流關鍵但未被 LLM 吃掉的 SaaS(Palantir 類產線型 vs 純 license 型);(2) tokens 計價的賣鏟人(NVDA、雲端 GPU);(3) 數據生成/驗證護城河(獨家 dataset)。後續 W10 Ray Dalio『AI is eating everything and might eat itself』、後續 W11 Anthropic 14B run rate + Chamath『實驗 vs production』辯論將直接印證。",
+          "themes_touched": [
+            "SaaS",
+            "AI 軟體/平台",
+            "雲端基建",
+            "資安"
+          ]
         }
       ]
     },
@@ -9320,7 +9672,8 @@
       "date_range": "2026-02-16 ~ 2026-02-22",
       "sources": [
         "馬斯克帝國觀察 #42",
-        "股癌 EP637-#638"
+        "股癌 EP637-#638",
+        "All-In 2/20 (Epstein Files Special)"
       ],
       "headlines": [
         {
@@ -9346,6 +9699,15 @@
           "themes_touched": [
             "AI 軟體 / 平台"
           ]
+        },
+        {
+          "category": "司法",
+          "title": "本週 All-In 主軸是 Epstein 司法新聞,Sacks 單獨主持探討菁英公信力崩塌",
+          "tickers": [],
+          "summary": "本集為 Sacks solo 主持的 Epstein 特別節目(其他三位 besties 滑雪假期),Prince Andrew 同日被英方逮捕、Lord Mandelson 涉嫌洩露 UK 內幕給 Epstein 的調查升溫。三位來賓對『Epstein 是否操作全球菁英 compromat 網路』立場相反:Sagar Enjeti 認定他是凌駕法律的『Epstein class』洗錢/情報節點,Michael Tracy 質疑大量 salacious 指控缺乏證據,Kevin Bass 則專攻 Reid Hoffman 的關係鏈。Sacks 收尾:自己保持開放心態,但『mob 拒絕被點名為 mob』的反射性反咬令此議題變得有毒。",
+          "stance": "Sacks 個人立場:不站任一極端,但承認 Reid Hoffman 公開說法與證據不符、citizen journalism 翻 Epstein files 是必要工作;暗示矽谷大佬的清白光環將持續剝落。",
+          "implication": "對市場的傳導:當美國/英國菁英機構公信力同步被質疑(法院、媒體、銀行如 JP Morgan、勞工階層的政治對立),投資人對 US Treasury 與美元作為『無條件信任資產』的溢價將緩慢侵蝕——後續 W10 Ray Dalio 用『stage 5 of the cycle、irreconcilable differences』把這個非經濟議題直接連回美債/黃金題材印證。短期市場無立即定價,但屬於宏觀政治風險溢價的累積。",
+          "themes_touched": []
         }
       ]
     },
@@ -9354,7 +9716,8 @@
       "date_range": "2026-02-09 ~ 2026-02-15",
       "sources": [
         "馬斯克帝國觀察 #40-#41",
-        "股癌 EP635-#636"
+        "股癌 EP635-#636",
+        "All-In 2/13 (Debt Spiral or NEW Golden Age?)"
       ],
       "headlines": [
         {
@@ -9378,6 +9741,27 @@
           "stance": "股癌:滿倉過年 — 對長線基本面的信任,不該因節慶閉市而避險。",
           "implication": "股癌長線多頭立場明確。",
           "themes_touched": []
+        },
+        {
+          "category": "宏觀資金",
+          "title": "All-In 二元辯論:CBO 預警債務死亡螺旋,Sacks/Chamath 卻押注 AI 黃金時代",
+          "tickers": [
+            "NVDA",
+            "MSFT",
+            "GOOGL",
+            "AMZN",
+            "META",
+            "GLD"
+          ],
+          "summary": "Friedberg(Dr. Doom)援引 2/11 CBO 報告:2026 赤字 1.9 兆美元、6% GDP、債務 2036 飆 56 兆,利率若回 5% 利息支出將近 2 兆,還沒算州/地方退休金缺口聯邦化的風險。Sacks 反駁:CBO 假設 2026 GDP 僅成長 2.2% 太低,Q3 4%+/Q4 5%+,四大 hyperscaler 今年 CapEx 將達 6,000 億美元(等同 2% GDP 順風);1 月新增 17.2 萬私部門就業、聯邦工作減 4.2 萬,失業率回到 4.3%,這是『新黃金時代的開端』。Chamath:全世界主要經濟體債務/GDP 同向上升,相對而言問題沒那麼急,但 fiat 終究會貶值,黃金/實物資產才是真避險(個人配置應 5-15% 黃金)。",
+          "stance": "All-In 分歧明顯:Sacks vs Friedberg 是『Golden Age vs Debt Spiral』二元對立;Chamath 居中,認為短期沒事但長期一定要持有實物資產;J-Cal 站 Sacks 邊但加一個 populist 提高最低工資的腦洞。共識:DOGE 已裁聯邦員工 30 萬人(歷史最低自 1966),但 Congress 並未把 cut 寫成法令,代表結構性財政改革幾乎做不到。",
+          "implication": "黃金時代 vs 債務螺旋的並存表示市場將維持高 beta、高估值的 AI CapEx 主題,但同時黃金/實物資產配置需求結構性上升(後續 W10 Ray Dalio 印證金價已從 2,900 漲到 5,200/oz)。投資人需做槓鈴配置:AI CapEx 主題(NVDA/MSFT/META 等)+ 防守性實物資產。若 2028 民主黨入主白宮並聯邦化州退休金,信用評級與美元計價資產同步重新定價的風險將兌現。",
+          "themes_touched": [
+            "AI GPU",
+            "AI 算力租賃",
+            "雲端基建",
+            "AI server ODM"
+          ]
         }
       ]
     },
@@ -9386,7 +9770,8 @@
       "date_range": "2026-02-02 ~ 2026-02-08",
       "sources": [
         "馬斯克帝國觀察 #38-#39",
-        "股癌 EP633-#634"
+        "股癌 EP633-#634",
+        "All-In 2/7 (Is SaaS Dead?, SpaceX-xAI Merger)"
       ],
       "headlines": [
         {
@@ -9419,6 +9804,30 @@
           "themes_touched": [
             "AI Server ODM (台廠為主)"
           ]
+        },
+        {
+          "category": "SaaS",
+          "title": "SaaS 死亡論辯:Sacks 反駁『Salesforce 不會被拔掉』、Friedberg 喊 SaaS 將變 services 業 + Brad/Jason 解析 SpaceX-xAI $1.25T 合併 → 太空資料中心 30 個月內",
+          "tickers": [
+            "CRM",
+            "NOW",
+            "ADBE",
+            "TSLA",
+            "NVDA",
+            "GOOGL"
+          ],
+          "summary": "Brad Gerstner(代替出差的 Chamath):軟體類股 fwd P/S 跌到歷史低 3.9x、FCF 倍數歷史新低,Salesforce 從 30x FCF 砍到 15x,『不是營收倒了,是市場把 terminal value 折現率拉爆』 — 90% 該跌的都跌得有理。Sacks:SaaS 並沒死(沒人會把 25 年累積 millions 個 bug fix 的 Salesforce 換成 AI 一日生成的 code),但『未來 value capture 移到 agentic layer』 — Claude Co-work 這種跨工具 workspace 把 SaaS 內建 AI 副駕擠成 sandbox 玩具,SaaS 變成『legacy infra 層』。Freeberg:SaaS 將從 per-seat 變 value-based pricing,實質『吃掉 services 業』(設計藥/造工廠/設計飛機都丟給 SaaS 做),5 年內全 SaaS 市值可 4-10x。Brad/Jason 解析 Elon 動作:SpaceX 收購 xAI(含 X)成 $1.25T 史上最大併購,可能成史上最大 IPO;Elon 親口承諾 30 個月內太空資料中心(power 是 AI 原料,太空逃離地球能源/監管瓶頸)。Freeberg:同時 chip + model architecture 將帶 70-100x compute efficiency(Groq 賣給 Jensen 的能效跳是 2-3x、是序章)。",
+          "stance": "Sacks vs Freeberg 對 SaaS 命運分歧:Sacks(SaaS 老兵)認為 incumbent 護城河仍在但成長空間沒了;Freeberg 更激進 — SaaS 將吞掉整個服務業 TAM 變超大產業。All-In 對 Elon 太空資料中心一致 bullish 但承認『end of one』風險(其他人怎麼追?Friedberg:靠地表能效創新追趕)。",
+          "implication": "SaaS 群股估值多重壓縮:per-seat 模式 → value pricing 過渡期會痛,但能完成轉型者(Databricks/Snowflake 已加速 60%+)會勝出。NVDA + 美國地表 AI infra 在『太空資料中心』威脅下反而更急著卡位地表算力(W06 後續四大 hyperscaler CapEx 印證,後續 6 月 SpaceX IPO 估值故事與 Tesla-SpaceX 整合是全年主軸)。",
+          "themes_touched": [
+            "SaaS",
+            "AI 軟體/平台",
+            "AI 雲端",
+            "AI GPU",
+            "太空運算",
+            "衛星通訊",
+            "EV/Robotaxi/FSD"
+          ]
         }
       ]
     },
@@ -9427,7 +9836,8 @@
       "date_range": "2026-01-26 ~ 2026-02-01",
       "sources": [
         "馬斯克帝國觀察 #36-#37",
-        "股癌 EP631-#632"
+        "股癌 EP631-#632",
+        "All-In 1/31 (Claudbot Takeover, Dollar dropping)"
       ],
       "headlines": [
         {
@@ -9451,6 +9861,28 @@
           "stance": "股癌:不能只看『有 AI 就買』,要看『AI 佔該公司營收幾%』 — 純度才是關鍵。",
           "implication": "影響後續 stock-calendar themes 的『純度導向』設計邏輯。",
           "themes_touched": []
+        },
+        {
+          "category": "AI 軟體",
+          "title": "Claudebot/Maltbot 一週爆紅 + 美元年跌 10% — All-In:Personal AI agent 元年來了,Google 是最大受惠者,但美元疲弱埋下美股實質報酬陷阱",
+          "tickers": [
+            "GOOGL",
+            "MSFT",
+            "NVDA",
+            "TSLA",
+            "AMZN"
+          ],
+          "summary": "Jason:過去 72 小時用開源 Claudebot(因 Anthropic 抗議改名 Maltbot)建了 4 個虛擬員工(Producer X 等),做客邀、CRM、寄信、自學排程,『producer 50 小時/週的工作做掉 40 小時,SDR 95%』,API 帳單一天破百美元。Sacks:這是『AI Agent 元年』,form factor 從 chatbot(只是更好的搜尋)轉為 agent;最大贏家是 Google(他們已有你所有 email/calendar/docs,而你信任他們),Cloudbot 把對手 SaaS 自家 AI 副駕變成『sandbox 玩具』。Chamath:這是『super-worker』+『army of super workers』雛形,Elon 同週停產 Model S/X 把 Fremont 產線轉 Optimus,印證物理版 super worker 已啟動。Friedberg(macro):美元指數年跌 10%(四年新低),central banks 黃金存量首次超越 US Treasury,M2 money supply 加速,30-year yield 4.9%,若全部 refi 利息成本+$700B/年(=70% 國防預算);S&P 用黃金計價 7 年實際是下跌的 — 『股市創高只是貨幣放水的錯覺』。",
+          "stance": "All-In 集體 bullish AI agent 技術 + 看好 GOOGL 為最佳 distribution play,但 Friedberg vs Sacks/Chamath 出現分歧:Friedberg 警告美元 debasement 已成國本(甚至開始接受 wealth tax 是『非暴力 redistribution』必要之惡);Sacks 反駁這是 government 浪費的結果(audit 優先而非加稅)。",
+          "implication": "AI agent 平台戰看好 GOOGL 估值重估(已有 data moat + Gemini);agent token 需求暴增持續推 NVDA / Microsoft / Anthropic(API 帳單級數成長);macro 層 — 黃金/copper/Bitcoin 等『real asset』對美元的 hedge 是 2026 主軸。後續 W06 SaaS 群股大跌 trillions(Sacks 的『agent 偷走 SaaS value capture』論點印證)。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 雲端",
+            "AI GPU",
+            "機器人",
+            "EV/Robotaxi/FSD",
+            "BTC 礦商"
+          ]
         }
       ]
     },
@@ -9459,7 +9891,8 @@
       "date_range": "2026-01-19 ~ 2026-01-25",
       "sources": [
         "馬斯克帝國觀察 #34-#35",
-        "股癌 EP629-#630"
+        "股癌 EP629-#630",
+        "All-In 1/21 (Satya Nadella @ Davos)"
       ],
       "headlines": [
         {
@@ -9491,6 +9924,25 @@
             "低軌衛星 (LEO Satellite)",
             "太空運算 / 軌道資料中心"
           ]
+        },
+        {
+          "category": "微軟/OpenAI",
+          "title": "Satya Nadella 親上 All-In 駁 SaaS 死亡論:Azure 是 token factory,模型像資料庫會百花齊放,Microsoft 不靠單一前沿模型",
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "NVDA",
+            "META"
+          ],
+          "summary": "Sacks 在 Davos 即興訪問 Satya(Microsoft CEO):Satya 認為大家高估『one model to rule them all』,模型未來會像資料庫市場一樣分裂(SQL → NoSQL → Postgres open source → 各種專用),『世上有多少家公司就有多少個模型』,每家公司會把 tacit knowledge 內嵌進自有 weights。Microsoft 兩條主軸:(1) Azure 當 token factory,異質硬體軟體最佳化降 TCO;(2) Foundry App Server 同時編排所有家模型(healthcare decision orchestrator 用多 model role-play 已勝過任一單一前沿模型)。Sacks 反問 SaaS 死亡論,Satya 沒正面接,而是引用 Bill Gates『ecosystem revenue 須是自身營收 7x 才算 platform』,強調 Microsoft 是 platform 不是 app。對 OpenAI 關係:Microsoft『擁有 IP』但策略是 orchestrator + token factory + local model(NPU/GPU,DGX 工作站本機跑模型即將回歸)。",
+          "stance": "Sacks(主導訪問):AI race 看『市佔率/usage』,5 年後美國技術佔全球 80% 就贏。Satya:不是 zero-sum,tech as % of GDP 5 年後會更大,個別 firm 的價值在 ecosystem。All-In 隱含背書 Microsoft 模型不可知論(model-agnostic)策略勝過 OpenAI 單押。",
+          "implication": "MSFT 估值錨點:Azure tokens 量 + Foundry orchestrator + 本機 NPU/DGX 工作站業務;模型百花齊放對 NVDA 是繼續利多(token factory 規模 = GPU 需求)。後續 W06 Brad Gerstner 在 SaaS Dead 那集印證 Satya 的『應用層被吃但 data 層(Databricks/Snowflake/ClickHouse 再加速)是 AI 受惠者』邏輯。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 雲端",
+            "AI GPU",
+            "SaaS"
+          ]
         }
       ]
     },
@@ -9499,7 +9951,8 @@
       "date_range": "2026-01-12 ~ 2026-01-18",
       "sources": [
         "馬斯克帝國觀察 #33",
-        "股癌 EP627-#628"
+        "股癌 EP627-#628",
+        "All-In CES 1/14 (Why AI will dwarf every tech revolution)"
       ],
       "headlines": [
         {
@@ -9528,6 +9981,28 @@
             "晶圓代工 / 先進製程",
             "封測 / CoWoS / Advanced Packaging"
           ]
+        },
+        {
+          "category": "AI 算力",
+          "title": "All-In CES 現場:AI 比任何科技革命都大 — Anthropic 一年再 10x、製造業回流靠機器人、Optimus 將取代 Tesla 成為馬斯克招牌",
+          "tickers": [
+            "NVDA",
+            "TSLA",
+            "GOOGL",
+            "MSFT",
+            "AMZN"
+          ],
+          "summary": "Jason Calacanis 在 CES 主持,與 Bob Sternfels(McKenzie CEO)+ Hemant Taneja(General Catalyst,Anthropic 投資人)對談:Hemant 揭露 Anthropic 從 $60B 估值年初投資後 ARR 又 10x(去年 $880M → 今年再 10 倍以上),Stripe 花 12-13 年到 $100B、Anthropic 才一年多就到幾百億,是『壓縮的價值創造』。Jason:『沒人會記得 Tesla 曾經做車,大家只會記得 Optimus』,親訪 Optimus 3 後判斷 Elon 已贏定,humanoid 將達 1:1 人類比例。Bob:McKenzie 自己 client-facing 加 25%、non-client 砍 25%,40,000 人類員工配 25,000 個 personalized agents,年底前 1:1 對等。製造業回流靠機器人 — 韓國 robot:worker 已是 1:10,德國中國並列第二,美國遠遠落後。",
+          "stance": "All-In(Jason)+ 來賓:AI 規模是 PC + 雲端 + 行動 + 網路加總後再放大;受惠股不是『狹義 SaaS』而是 NVDA(token factory)、TSLA(Optimus + FSD)、Anthropic/OpenAI 模型層、AI infra 製造商。分歧:Hemant 認為 robotics 模型擴散會比預期慢(沒有像 ChatGPT 那樣的雲端 API 通用層)。",
+          "implication": "NVDA + AI infra ODM 還在超級週期早期(訂單 visibility 拉長);Optimus 量產時程是 Tesla 估值新錨點(後續 W05 Model S/X 停產讓出產線給 Optimus 印證);製造業回流 + 機器人化是台廠 ABF/PCB/散熱/Server 供應鏈的延伸 narrative。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI GPU",
+            "機器人",
+            "AI server ODM",
+            "EV/Robotaxi/FSD",
+            "封測/CoWoS"
+          ]
         }
       ]
     },
@@ -9535,7 +10010,8 @@
       "week": "2026-W02",
       "date_range": "2026-01-05 ~ 2026-01-11",
       "sources": [
-        "股癌 EP625-#626"
+        "股癌 EP625-#626",
+        "All-In 1/10 (2026 Predictions)"
       ],
       "headlines": [
         {
@@ -9550,6 +10026,30 @@
           "themes_touched": [
             "HBM / 記憶體",
             "AI GPU (主戰場)"
+          ]
+        },
+        {
+          "category": "宏觀資金",
+          "title": "All-In 2026 預測:Sacks 喊 Trump Boom 5% GDP + Chamath 押 copper + Friedberg DSA 接管 + Jason Amazon 機器人",
+          "tickers": [
+            "AMZN",
+            "TSLA",
+            "NVDA",
+            "META",
+            "GOOGL",
+            "MSFT"
+          ],
+          "summary": "Sacks:2026 為 Trump Boom 元年,GDP 4-5% 起跳,Atlanta Fed Q4 GDPNow 已跳到 5.4%,6 月前再降息 75-100 bp,IPO 大爆發(coding assistants/tool use 是下一個 ChatGPT moment)。Chamath:押注 copper 與關鍵金屬籃,並大膽預測 SpaceX 不會 IPO 而是反向併入 Tesla,中央銀行將找全新加密典範對抗量子;傳統 M&A 已死,改走 IP licensing 路線(Google/Character、Microsoft、Nvidia/Groq 模式)。Friedberg:DSA(民主社會主義者)接管民主黨、tech 業 2026 變政治避雷針、Huawei 與 Polymarket 是黑馬贏家、州政府退休金大洞將爆;反向看法是 Iran 政變後中東反而更亂。Jason:Amazon 是第一家『企業奇點』(機器人超越人類員工貢獻)。",
+          "stance": "All-In 集體共識:2026 美國 GDP 有機會印 5-6%(Chamath 上緣到 6.2),股市 + 企業 capex 都會大噴(big beautiful bill 100% 加速折舊推動);分歧在 Mandani vs Trump 政治走向、SAS 是否真死、SpaceX 路線(Chamath 反 IPO 派)。",
+          "implication": "全年看多美股 risk-on,但點名 SaaS / 加州豪宅 / 美元 / 石化為輸家;copper 與關鍵金屬是 hedge。後續 W06 印證:SpaceX-xAI 合併新聞發酵(Chamath 預測命中)、SaaS 群股 W06 被砍 trillions 市值(Chamath 與 Jason 軟體工業複合體論點獲驗證)。",
+          "themes_touched": [
+            "AI 軟體/平台",
+            "AI 算力租賃",
+            "EV/Robotaxi/FSD",
+            "太空運算",
+            "量子運算",
+            "SaaS",
+            "機器人"
           ]
         }
       ]
