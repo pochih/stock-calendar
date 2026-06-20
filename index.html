@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>美股科技股 Dashboard 2026</title>
+<title>📊 Tech Alpha — 美股科技股投資儀表板</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -414,6 +414,7 @@
     main { padding: 12px; }
     .cal-event { font-size: 9px; }
     .tv-chart-container { height: 400px; }
+    .h1-sub { display: none; }
 
     /* === Table → Card list (sortable 表格通用) === */
     table.sortable, table.sortable thead, table.sortable tbody,
@@ -435,12 +436,29 @@
       color: var(--muted); font-size: 11px; font-weight: 600;
       text-transform: none; line-height: 1.5;
     }
-    table.sortable td:empty, table.sortable td:not([data-label]) { display: none; }
+    /* 空 label 的 td (例:★ watchlist column, 趨勢圖) 不要佔欄位名空間 */
+    table.sortable td[data-label=""] {
+      grid-template-columns: 1fr;
+    }
+    table.sortable td[data-label=""]::before { display: none; }
     /* 第一個 td (通常是日期/ticker) 高亮 */
     table.sortable tr td:first-child::before { color: var(--blue); }
 
-    /* === 題材分類強制 1 列 === */
+    /* === 題材分類強制 1 列 + 內部 row 改 2 列 layout === */
     .theme-grid { grid-template-columns: 1fr !important; }
+    .theme-card { padding: 12px 14px; }
+    .theme-row {
+      grid-template-columns: auto auto !important;
+      grid-template-rows: auto auto;
+      grid-template-areas: "ticker purity" "role role";
+      gap: 4px 8px !important;
+      padding: 8px 0 !important;
+    }
+    .theme-row > :nth-child(1) { grid-area: ticker; }
+    .theme-row > :nth-child(2) { grid-area: purity; justify-self: end; }
+    .theme-row > :nth-child(3) {
+      grid-area: role; color: var(--muted); font-size: 12px; line-height: 1.5;
+    }
 
     /* === 行事曆 mobile list view === */
     #cal-month-view .cal-grid { display: none; }
@@ -477,7 +495,7 @@
 
 <header>
   <div class="header-inner">
-    <h1>📊 美股科技股 Dashboard 2026</h1>
+    <h1>📊 Tech Alpha <span class="h1-sub">— 美股科技股投資儀表板</span></h1>
     <div class="meta" style="display:none">
       資料更新:<span id="gen-date">—</span>
       · v<span id="gen-version">—</span>
@@ -12838,12 +12856,11 @@ function parseNum(s) {
   return v;
 }
 
-function initSortable() {
+// 為所有 table.sortable 的 td 自動加 data-label (mobile card layout 用)
+function applyTableLabels() {
   document.querySelectorAll('table.sortable').forEach(table => {
     const ths = table.querySelectorAll('thead th');
-    // 為每個 td 加 data-label (mobile card layout 用)
     const headerTexts = Array.from(ths).map(th => {
-      // 去掉 sort arrow 等 inner element 的文字
       const clone = th.cloneNode(true);
       const arrow = clone.querySelector('.sort-arrow');
       if (arrow) arrow.remove();
@@ -12851,11 +12868,22 @@ function initSortable() {
     });
     table.querySelectorAll('tbody tr').forEach(tr => {
       tr.querySelectorAll('td').forEach((td, idx) => {
-        if (headerTexts[idx] && !td.hasAttribute('data-label')) {
-          td.setAttribute('data-label', headerTexts[idx]);
+        const label = headerTexts[idx];
+        if (label) {
+          td.setAttribute('data-label', label);
+        } else {
+          // 空 label 也明確 mark,避免被 td:not([data-label]) 規則隱藏
+          td.setAttribute('data-label', '');
         }
       });
     });
+  });
+}
+
+function initSortable() {
+  applyTableLabels();
+  document.querySelectorAll('table.sortable').forEach(table => {
+    const ths = table.querySelectorAll('thead th');
     ths.forEach((th, idx) => {
       const sortType = th.dataset.sort;
       if (!sortType) return;
