@@ -207,17 +207,27 @@ def classify_tag(title: str) -> str:
 
 
 # ────────────────── 抓財報日 (Finnhub or yfinance) ──────────────────
-def update_earnings(data: dict, days: int = 120) -> None:
-    """用 yfinance 重抓未來 N 天財報日,覆蓋 june_2026_earnings / h2_2026_earnings"""
+def update_earnings(data: dict, days: int = 180) -> None:
+    """用 yfinance 重抓未來 N 天財報日,覆蓋 june_2026_earnings / h2_2026_earnings。
+
+    時區處理:
+      - 美股 (無後綴): yfinance 回 ET 日期。財報多半盤前 (BMO ≈ ET 8:00)
+        或盤後 (AMC ≈ ET 16:00)。盤後 AMC 在台北為隔日凌晨,但行事曆以
+        ET 當日為主 (台股投資人通常看『美股 6/15 盤後』而非『台北 6/16 早上』)。
+      - 台股 .TW: yfinance 回的就是台北日期,直接用。
+      - 韓股 .KS: 韓國 KST = UTC+9 (與台北 UTC+8 差 1 小時),日期級別視為一致。
+      - 日股 .T: JST = UTC+9,同上。
+    """
     import yfinance as yf
 
-    print(f"重抓未來 {days} 天財報日...")
+    print(f"重抓未來 {days} 天財報日 (含台股/韓股/日股)...")
     today = date.today()
     until = today + timedelta(days=days)
     june, h2 = [], []
 
+    # 包含所有 Stock,不再 skip .KS / .TW
     symbols = [t["ticker"] for t in data["tickers"]
-               if t["type"] == "Stock" and not t["ticker"].endswith(".KS")]
+               if t.get("type") == "Stock"]
     for sym in symbols:
         try:
             tk = yf.Ticker(sym)
@@ -227,6 +237,15 @@ def update_earnings(data: dict, days: int = 120) -> None:
             dates = cal.get("Earnings Date", [])
             if not isinstance(dates, list):
                 dates = [dates]
+            # 判斷 ticker 市場 + 時區註記
+            if sym.endswith(".TW") or sym.endswith(".TWO"):
+                tz_note = "TPE"
+            elif sym.endswith(".KS"):
+                tz_note = "KST"
+            elif sym.endswith(".T"):
+                tz_note = "JST"
+            else:
+                tz_note = "ET"
             for d in dates:
                 if isinstance(d, datetime):
                     d = d.date()
@@ -237,13 +256,13 @@ def update_earnings(data: dict, days: int = 120) -> None:
                     "ticker": sym,
                     "company": sym,
                     "fiscal": "TBD",
-                    "time": "?",
+                    "time": tz_note,
                     "note": "(自動抓取)",
                     "hist_move": "—",
                     "bias": "neutral",
                 }
                 (june if d.month == 6 and d.year == 2026 else h2).append(rec)
-                print(f"  ✓ {sym} {d}")
+                print(f"  ✓ {sym:10s} {d} [{tz_note}]")
         except Exception as e:
             print(f"  ⚠️  {sym}: {e}", file=sys.stderr)
 
