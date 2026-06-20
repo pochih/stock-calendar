@@ -12695,5 +12695,269 @@
       "period": "11 月",
       "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
     }
+  ],
+  "valuations": [
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "category_label": "Memory / HBM (cyclical semi)",
+      "updated_at": "2026-06-21",
+      "current_price": 1133.99,
+      "key_stats": {
+        "trailing_pe": 53.464878,
+        "forward_pe": 9.61384,
+        "ps_ttm": 22.003803,
+        "pb": 17.653221,
+        "ev_ebitda": 34.645,
+        "peg": 0.36,
+        "mcap_b": 1278.8,
+        "fcf_ttm_b": 2.89,
+        "gross_margin": 58.4,
+        "profit_margin": 41.5,
+        "beta": 2.173,
+        "w52_high": 1149.43,
+        "w52_low": 103.38
+      },
+      "analyst_consensus": {
+        "count": 44,
+        "rating_dist": {
+          "strongBuy": 9,
+          "buy": 30,
+          "hold": 4,
+          "sell": 1,
+          "strongSell": 0
+        },
+        "rating_dist_1m_ago": {
+          "strongBuy": 9,
+          "buy": 30,
+          "hold": 4,
+          "sell": 1,
+          "strongSell": 0
+        },
+        "avg_rating_score": 1.93,
+        "consensus_label": "Buy",
+        "price_target": {
+          "current": 1133.99,
+          "mean": 945.6,
+          "median": 1075.0,
+          "high": 1750.0,
+          "low": 249.0
+        }
+      },
+      "forecasts": [
+        {
+          "period": "FY 當期",
+          "period_key": "0y",
+          "eps_avg": 61.01,
+          "eps_low": 28.42,
+          "eps_high": 75.0,
+          "eps_90d_ago": 57.05,
+          "eps_revision_pct": 6.9,
+          "rev_avg_b": 113.26,
+          "rev_low_b": 72.22,
+          "rev_high_b": 131.8,
+          "n_analysts": 34,
+          "growth_pct": 635.94
+        },
+        {
+          "period": "FY +1年",
+          "period_key": "+1y",
+          "eps_avg": 117.95,
+          "eps_low": 70.77,
+          "eps_high": 159.0,
+          "eps_90d_ago": 96.34,
+          "eps_revision_pct": 22.4,
+          "rev_avg_b": 190.98,
+          "rev_low_b": 91.35,
+          "rev_high_b": 262.93,
+          "n_analysts": 34,
+          "growth_pct": 93.34
+        }
+      ],
+      "valuation_models": [
+        {
+          "model": "PE × FY 當期 EPS (歷史均 P/E 15x)",
+          "implied_price": 915.15,
+          "rationale": "Memory cyclical 歷史中段 fwd P/E 15x × FY0y EPS $61.01"
+        },
+        {
+          "model": "PE × FY +1y EPS (AI premium 維持 15x)",
+          "implied_price": 1769.25,
+          "rationale": "若 HBM 故事兌現,FY+1 EPS $117.95 維持中段 P/E"
+        },
+        {
+          "model": "P/S × FY 當期 Rev (歷史均 P/S 3x)",
+          "implied_price": 301.29,
+          "rationale": "Memory 歷史 P/S 2-4x 取中位 3x × FY 當期 $113.26B 營收"
+        },
+        {
+          "model": "EV/EBITDA × FY 當期 (10x)",
+          "implied_price": 639.33,
+          "rationale": "Cyclical semi 歷史 EV/EBITDA 8-12x,EBITDA 用 margin 63% × FY 當期 Rev"
+        },
+        {
+          "model": "DCF (10% disc, 5y FCF 25% → 終值 3%)",
+          "implied_price": 1728.22,
+          "rationale": "基準 FCF $55.0B (= FY 當期 NI (EPS $61.01 × 1.13B 股) × 80% FCF conversion),5 年 25% CAGR 後降至 3% terminal"
+        },
+        {
+          "model": "Analyst Mean Target",
+          "implied_price": 945.6,
+          "rationale": "yfinance 共識:945.6 (n=8)"
+        }
+      ],
+      "fair_value_summary": {
+        "bear": 301.0,
+        "base": 1075.0,
+        "bull": 1769.0,
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($301),多頭給 AI 全週期溢價 ($1769)。"
+      },
+      "support_resistance": {
+        "support_levels": [
+          {
+            "price": 1100.0,
+            "type": "整數心理關 $1100",
+            "strength": "弱"
+          },
+          {
+            "price": 732.8,
+            "type": "50 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 400.62,
+            "type": "200 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 104.73,
+            "type": "52 週低",
+            "strength": "強 (深支撐)"
+          }
+        ],
+        "resistance_levels": [
+          {
+            "price": 1133.99,
+            "type": "正測 52 週新高",
+            "strength": "強"
+          },
+          {
+            "price": 1150.0,
+            "type": "整數心理關 $1150",
+            "strength": "弱"
+          },
+          {
+            "price": 1200.0,
+            "type": "整數心理關 $1200",
+            "strength": "弱"
+          },
+          {
+            "price": 1250.0,
+            "type": "整數心理關 $1250",
+            "strength": "弱"
+          }
+        ]
+      },
+      "recent_actions": [
+        {
+          "date": "2026-06-18",
+          "firm": "Rosenblatt",
+          "action": "main",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 600.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-18",
+          "firm": "Stifel",
+          "action": "main",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 550.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-18",
+          "firm": "Wedbush",
+          "action": "main",
+          "from_grade": "Outperform",
+          "to_grade": "Outperform",
+          "old_target": 550.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-17",
+          "firm": "Citigroup",
+          "action": "main",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 840.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-17",
+          "firm": "Deutsche Bank",
+          "action": "main",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 1000.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-15",
+          "firm": "TD Cowen",
+          "action": "main",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 660.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-15",
+          "firm": "RBC Capital",
+          "action": "main",
+          "from_grade": "Outperform",
+          "to_grade": "Outperform",
+          "old_target": 525.0,
+          "new_target": null
+        },
+        {
+          "date": "2026-06-11",
+          "firm": "Wolfe Research",
+          "action": "main",
+          "from_grade": "Outperform",
+          "to_grade": "Outperform",
+          "old_target": 550.0,
+          "new_target": null
+        }
+      ],
+      "bull_thesis": [
+        "HBM3E 訂單能見度到 2027,SK 海力士產能吃緊讓 MU 拿到 NVDA 二供 ~25% 份額",
+        "DRAM 價格 6 季連漲,AI server / GPU 需求結構性 (Brad Gerstner / All-In W21 多次提到)",
+        "FY27 EPS 共識 $118 vs FY26 $61,接近翻倍成長 — 若維持中段 fwd P/E,目標價自然上修",
+        "Coatue Laffont (All-In W23 Summit) 點名:每用戶記憶體需求隨 AI memory/context 可 5x → 重估邏輯仍未走完",
+        "FY26 毛利率 58%、ROE ~40%,cyclical 高點但 cash flow 真實"
+      ],
+      "bear_thesis": [
+        "歷史 cyclical:DRAM 每次景氣高峰後股價回吐 50-70% (2018, 2022)",
+        "P/S 22x vs 歷史 2-4x 已 fully priced AI 故事 (空頭觀點:Chamath W23 點名記憶體已過熱)",
+        "中國長存 (YMTC) NAND 突破 + 國家補貼,DRAM 中國國產替代 2027 前可能放量",
+        "Forward PE 9.6x 看似便宜,但前提是 FY27 EPS $118 共識成真 — 若 HBM4 良率不及預期,EPS 砍半即 PE 跳到 20x+",
+        "Beta 2.17,跌起來幅度比大盤大 2 倍以上;Memory 一旦轉空頭,52w 跌 50% 是 base case"
+      ],
+      "briefing_mentions": [
+        {
+          "week": "2026-W21",
+          "category": "IPO + 估值",
+          "snippet": "Gavin Baker 點出 AI 板塊 cross-sectionally inefficient:memory(SK Hynix 5x / Samsung 6x / Micron 7x)、NVDA(forward PE 低 teens)被低估"
+        },
+        {
+          "week": "2026-W23",
+          "category": "IPO + 估值",
+          "snippet": "Coatue Laffont 直接點名:沒有 TSMC 級別代工的對應產業,每用戶記憶體需求隨 AI memory/context 可 5x → 重估邏輯仍未走完"
+        }
+      ]
+    }
   ]
 }
