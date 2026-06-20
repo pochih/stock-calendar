@@ -31,7 +31,7 @@
   .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   h1 { color: var(--blue); font-size: 18px; }
   .meta { color: var(--muted); font-size: 12px; }
-  nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; overflow-x: auto; }
+  nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; overflow-x: auto; position: relative; }
   nav ul { display: flex; gap: 4px; list-style: none; min-width: max-content; }
   nav li {
     padding: 12px 18px; cursor: pointer; color: var(--muted); font-size: 14px;
@@ -39,6 +39,52 @@
   }
   nav li:hover { color: var(--text); }
   nav li.active { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
+  /* Hamburger 在手機才出現 */
+  .nav-hamburger { display: none; }
+  .nav-current-tab { display: none; }
+  @media (max-width: 768px) {
+    nav { padding: 0; overflow-x: visible; }
+    nav ul {
+      display: none; flex-direction: column; gap: 0; min-width: 100%;
+      background: var(--card); border-top: 1px solid var(--border);
+    }
+    nav.open ul { display: flex; }
+    nav li {
+      padding: 14px 20px; border-bottom: 1px solid var(--border);
+      border-left: 3px solid transparent; font-size: 15px;
+    }
+    nav li.active {
+      border-bottom-color: var(--border);
+      border-left-color: var(--blue); background: rgba(88,166,255,0.08);
+    }
+    .nav-hamburger {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 20px; cursor: pointer; user-select: none;
+      background: var(--card); width: 100%; box-sizing: border-box;
+      border: none; color: var(--text); font-size: 15px; text-align: left;
+    }
+    .nav-hamburger-icon {
+      display: inline-flex; flex-direction: column; gap: 4px;
+      width: 22px; transition: transform 0.2s;
+    }
+    .nav-hamburger-icon span {
+      display: block; height: 2px; background: var(--text); border-radius: 1px;
+      transition: 0.2s;
+    }
+    nav.open .nav-hamburger-icon span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    nav.open .nav-hamburger-icon span:nth-child(2) { opacity: 0; }
+    nav.open .nav-hamburger-icon span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    .nav-current-tab {
+      display: inline; color: var(--muted); font-size: 13px; margin-left: auto;
+    }
+    main { padding: 16px 12px; }
+    header { padding: 12px 16px; }
+    h1 { font-size: 20px; }
+  }
   main { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
   .tab { display: none; }
   .tab.active { display: block; }
@@ -388,7 +434,14 @@
   </div>
 </header>
 
-<nav>
+<nav id="main-nav">
+  <button class="nav-hamburger" id="nav-toggle" type="button" aria-label="開關選單">
+    <span class="nav-hamburger-icon" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span>選單</span>
+    <span class="nav-current-tab" id="nav-current"></span>
+  </button>
   <ul>
     <li class="active" data-tab="calendar">📅 行事曆</li>
     <li data-tab="earnings">📈 財報</li>
@@ -11565,15 +11618,41 @@ function initApp() {
   initSortable();
 }
 
-// ========== Tab 切換 ==========
+// ========== Tab 切換 + Hamburger ==========
+const _navEl = document.getElementById('main-nav');
+const _navToggle = document.getElementById('nav-toggle');
+const _navCurrent = document.getElementById('nav-current');
+
+function _syncCurrentTab(li) {
+  if (_navCurrent && li) _navCurrent.textContent = li.textContent.trim();
+}
+// init
+_syncCurrentTab(document.querySelector('nav li.active'));
+
 document.querySelectorAll('nav li').forEach(li => {
   li.addEventListener('click', () => {
     document.querySelectorAll('nav li').forEach(x => x.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
     li.classList.add('active');
     document.getElementById('tab-' + li.dataset.tab).classList.add('active');
+    _syncCurrentTab(li);
+    // 手機點完 tab 自動收起選單
+    if (_navEl) _navEl.classList.remove('open');
   });
 });
+
+if (_navToggle) {
+  _navToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    _navEl.classList.toggle('open');
+  });
+  // 點選單外的地方關閉
+  document.addEventListener('click', e => {
+    if (_navEl && _navEl.classList.contains('open') && !_navEl.contains(e.target)) {
+      _navEl.classList.remove('open');
+    }
+  });
+}
 
 // ========== Helper ==========
 const biasClass = b => ({ up: 'bias-up', down: 'bias-down', neutral: 'bias-neutral' })[b] || 'bias-neutral';
@@ -12546,6 +12625,8 @@ function loadChart(symbol) {
   // 切到 K 線分頁
   document.querySelectorAll('nav li').forEach(x => x.classList.toggle('active', x.dataset.tab === 'charts'));
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.id === 'tab-charts'));
+  _syncCurrentTab(document.querySelector('nav li[data-tab="charts"]'));
+  if (_navEl) _navEl.classList.remove('open');
   document.getElementById('tv-input').value = symbol;
   document.querySelectorAll('.tv-tickers .pill').forEach(p => p.classList.toggle('active', p.textContent === symbol));
   // TradingView 對 prefix 嚴格,錯了 chart 直接 blank
