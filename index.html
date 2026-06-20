@@ -412,11 +412,64 @@
 
   @media (max-width: 768px) {
     main { padding: 12px; }
-    .cal-day { min-height: 60px; padding: 3px; }
     .cal-event { font-size: 9px; }
-    table { font-size: 11px; }
-    th, td { padding: 6px 8px; }
     .tv-chart-container { height: 400px; }
+
+    /* === Table → Card list (sortable 表格通用) === */
+    table.sortable, table.sortable thead, table.sortable tbody,
+    table.sortable tr, table.sortable td {
+      display: block; width: 100%; box-sizing: border-box;
+    }
+    /* 隱藏原 thead (改用 td::before 顯示欄位名) */
+    table.sortable thead { position: absolute; left: -9999px; }
+    table.sortable tr {
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+      margin-bottom: 10px; padding: 8px 4px; overflow: hidden;
+    }
+    table.sortable td {
+      border: none; padding: 6px 12px; font-size: 13px;
+      display: grid; grid-template-columns: 90px 1fr; gap: 8px; align-items: start;
+    }
+    table.sortable td::before {
+      content: attr(data-label);
+      color: var(--muted); font-size: 11px; font-weight: 600;
+      text-transform: none; line-height: 1.5;
+    }
+    table.sortable td:empty, table.sortable td:not([data-label]) { display: none; }
+    /* 第一個 td (通常是日期/ticker) 高亮 */
+    table.sortable tr td:first-child::before { color: var(--blue); }
+
+    /* === 題材分類強制 1 列 === */
+    .theme-grid { grid-template-columns: 1fr !important; }
+
+    /* === 行事曆 mobile list view === */
+    #cal-month-view .cal-grid { display: none; }
+    #cal-month-view .cal-mobile-list { display: block !important; }
+    .cal-mobile-list-hint {
+      color: var(--muted); font-size: 12px;
+      margin-bottom: 10px; padding: 0 4px;
+    }
+    .cal-mobile-list {
+      display: block; margin-bottom: 14px;
+    }
+    .cal-mobile-day {
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 14px; margin-bottom: 8px; cursor: pointer;
+      border-left: 3px solid var(--yellow);
+    }
+    .cal-mobile-day.today { border-left-color: var(--blue); background: rgba(88,166,255,0.08); }
+    .cal-mobile-day-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .cal-mobile-day-num {
+      font-size: 15px; font-weight: 700; color: var(--text);
+    }
+    .cal-mobile-day-weekday { color: var(--muted); font-size: 11px; }
+    .cal-mobile-day-events {
+      display: flex; flex-wrap: wrap; gap: 4px;
+    }
+    .cal-mobile-day .cal-event { font-size: 11px; padding: 2px 6px; }
   }
 </style>
 </head>
@@ -476,6 +529,7 @@
 
   <div id="cal-month-view">
     <div class="cal-grid" id="cal-grid"></div>
+    <div class="cal-mobile-list" id="cal-mobile-list" style="display:none;"></div>
   </div>
 
   <div id="cal-year-view" style="display:none;">
@@ -12511,6 +12565,10 @@ function renderMonthView() {
   const daysInMonth = new Date(y, m + 1, 0).getDate();
   const daysInPrev = new Date(y, m, 0).getDate();
   const todayStr = new Date().toISOString().slice(0, 10);
+  const weekdayNames = ['週日','週一','週二','週三','週四','週五','週六'];
+
+  // mobile list (只顯示有事件 / 今天)
+  const mobileItems = [];
 
   // 前月補
   for (let i = firstDay - 1; i >= 0; i--) {
@@ -12529,6 +12587,22 @@ function renderMonthView() {
     html += `<div class="cal-day ${events.length ? 'has-events' : ''} ${isToday ? 'today' : ''} ${isClosed ? 'market-closed' : ''}" onclick="showDayDetail('${ds}')">
       <span class="cal-day-num">${d}</span>${evHtml}${more}
     </div>`;
+    // mobile list
+    if (events.length || isToday) {
+      const dayOfWeek = new Date(y, m, d).getDay();
+      const evChips = events.map(e =>
+        `<span class="cal-event ${e.cat}">${esc(e.title)}</span>`
+      ).join('');
+      mobileItems.push(
+        `<div class="cal-mobile-day ${isToday ? 'today' : ''}" onclick="showDayDetail('${ds}')">
+          <div class="cal-mobile-day-head">
+            <span class="cal-mobile-day-num">${m + 1}/${d}${isToday ? ' · 今天' : ''}</span>
+            <span class="cal-mobile-day-weekday">${weekdayNames[dayOfWeek]}</span>
+          </div>
+          <div class="cal-mobile-day-events">${evChips || '<span style="color:var(--muted); font-size:12px;">(今天無排定事件)</span>'}</div>
+        </div>`
+      );
+    }
   }
   // 後月補
   const totalCells = firstDay + daysInMonth;
@@ -12537,6 +12611,13 @@ function renderMonthView() {
     html += `<div class="cal-day other-month"><span class="cal-day-num">${i}</span></div>`;
   }
   grid.innerHTML = html;
+  // mobile list 填入
+  const mobileList = document.getElementById('cal-mobile-list');
+  if (mobileList) {
+    mobileList.innerHTML = mobileItems.length
+      ? `<div class="cal-mobile-list-hint">📋 本月有事件的日期 (${mobileItems.length} 天)</div>${mobileItems.join('')}`
+      : '<p style="color:var(--muted); padding:20px; text-align:center;">本月無排定事件</p>';
+  }
 }
 
 function renderYearView() {
@@ -12760,6 +12841,21 @@ function parseNum(s) {
 function initSortable() {
   document.querySelectorAll('table.sortable').forEach(table => {
     const ths = table.querySelectorAll('thead th');
+    // 為每個 td 加 data-label (mobile card layout 用)
+    const headerTexts = Array.from(ths).map(th => {
+      // 去掉 sort arrow 等 inner element 的文字
+      const clone = th.cloneNode(true);
+      const arrow = clone.querySelector('.sort-arrow');
+      if (arrow) arrow.remove();
+      return clone.textContent.trim();
+    });
+    table.querySelectorAll('tbody tr').forEach(tr => {
+      tr.querySelectorAll('td').forEach((td, idx) => {
+        if (headerTexts[idx] && !td.hasAttribute('data-label')) {
+          td.setAttribute('data-label', headerTexts[idx]);
+        }
+      });
+    });
     ths.forEach((th, idx) => {
       const sortType = th.dataset.sort;
       if (!sortType) return;
