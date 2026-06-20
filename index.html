@@ -3087,14 +3087,132 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "vol_30d_avg": 14427393
     },
     {
-      "ticker": "VIX",
+      "ticker": "^N225",
+      "name": "Nikkei 225 日經",
+      "type": "Index",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "~71250.06",
+      "div": "—",
+      "note": "日股大盤指數 (alpha 榜日股 benchmark)",
+      "sparkline_30d": [
+        62417.8789,
+        62742.5703,
+        63272.1094,
+        62654.0508,
+        61409.2891,
+        60815.9492,
+        60550.5898,
+        59804.4102,
+        61684.1406,
+        63339.0703,
+        65158.1914,
+        64996.0898,
+        64999.4102,
+        64693.1211,
+        66329.5,
+        66934.3281,
+        66734.2422,
+        68402.1328,
+        67470.6875,
+        66588.1172,
+        64024.6016,
+        65416.6289,
+        64179.2695,
+        64217.2695,
+        66020.0391,
+        69317.5,
+        69404.5,
+        69902.25,
+        71053.4922,
+        71250.0625
+      ],
+      "change_30d_pct": 14.15
+    },
+    {
+      "ticker": "^KS11",
+      "name": "KOSPI 韓國綜合",
+      "type": "Index",
+      "pe": "—",
+      "fwd_pe": "—",
+      "price": "~9052.42",
+      "div": "—",
+      "note": "韓股大盤指數 (alpha 榜韓股 benchmark)",
+      "sparkline_30d": [
+        7490.0498,
+        7498.0,
+        7822.2402,
+        7643.1499,
+        7844.0098,
+        7981.4102,
+        7493.1802,
+        7516.04,
+        7271.6602,
+        7208.9502,
+        7815.5898,
+        7847.71,
+        8047.5098,
+        8228.7002,
+        8185.29,
+        8476.1504,
+        8788.3799,
+        8801.4902,
+        8639.4102,
+        8160.5898,
+        7484.4102,
+        8096.9302,
+        7730.8198,
+        7763.9502,
+        8123.6201,
+        8545.9805,
+        8726.5996,
+        8864.2402,
+        9063.8398,
+        9052.4199
+      ],
+      "change_30d_pct": 20.86
+    },
+    {
+      "ticker": "^VIX",
       "name": "CBOE Volatility Index",
       "type": "Index",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "~16.8",
+      "price": "~16.40",
       "div": "—",
-      "note": "恐慌指數,>20 注意,>30 警戒"
+      "note": "恐慌指數,>20 注意,>30 警戒",
+      "sparkline_30d": [
+        18.38,
+        17.99,
+        17.87,
+        17.26,
+        18.43,
+        17.82,
+        18.06,
+        17.44,
+        16.76,
+        16.7,
+        16.59,
+        17.01,
+        16.29,
+        15.74,
+        15.32,
+        16.05,
+        15.77,
+        16.06,
+        15.4,
+        21.51,
+        18.92,
+        19.87,
+        22.22,
+        19.44,
+        17.68,
+        16.2,
+        16.41,
+        18.44,
+        16.4
+      ],
+      "change_30d_pct": -10.77
     },
     {
       "ticker": "AAPL",
@@ -5213,7 +5331,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       ],
       "change_30d_pct": -67.12,
       "vol_5d_avg": 4153963,
-      "vol_30d_avg": 2691723
+      "vol_30d_avg": 2691723,
+      "split_suspect": true
     },
     {
       "ticker": "2376.TW",
@@ -13179,7 +13298,7 @@ function renderTickers() {
       <td>${esc(t.name)}</td>
       <td>${esc(t.type)}</td>
       <td><strong>${esc(t.price)}</strong></td>
-      <td>${fmtChange(t.change_30d_pct)}</td>
+      <td>${fmtChangeT(t)}</td>
       <td>${sparklineSvg(t.sparkline_30d, t.change_30d_pct)}</td>
       <td>${esc(t.pe)}</td>
       <td>${esc(t.fwd_pe)}</td>
@@ -13194,7 +13313,7 @@ function renderTickers() {
       <td><span class="ticker" onclick="loadChart('${t.ticker}')">${esc(t.ticker)}</span></td>
       <td>${esc(t.name)}</td>
       <td><strong>${esc(t.price)}</strong></td>
-      <td>${fmtChange(t.change_30d_pct)}</td>
+      <td>${fmtChangeT(t)}</td>
       <td>${sparklineSvg(t.sparkline_30d, t.change_30d_pct)}</td>
       <td>${esc(t.pe)}</td>
       <td>${esc(t.fwd_pe)}</td>
@@ -13257,6 +13376,15 @@ function fmtChange(pct) {
   return `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
 }
 
+// 給 ticker 表用,split_suspect 加 ⚠️ tooltip
+function fmtChangeT(t) {
+  const html = fmtChange(t.change_30d_pct);
+  if (t.split_suspect) {
+    return html + ` <span title="此 ticker 30 天內單日 < -45%,yfinance 可能漏抓 stock split,30D 數值僅參考" style="cursor:help; font-size:11px;">⚠️</span>`;
+  }
+  return html;
+}
+
 // ========== Leaderboard (Top 5 gainers / losers / vs benchmark / 成交量 / 波動) ==========
 
 // 半導體 themes (用來判定美股要 benchmark vs SMH 而非 QQQ)
@@ -13279,26 +13407,30 @@ function deriveSemiTickers() {
 }
 
 function pickBenchmark(ticker) {
-  // 回傳該 ticker 對應的 benchmark ticker (落不到對應時回 QQQ)
+  // 回傳該 ticker 對應的 benchmark ticker (落不到時回 null,不入 alpha 榜)
   const sym = ticker.ticker;
-  if (sym.endsWith('.TW')) return '0050.TW';
-  if (sym.endsWith('.KS')) return '005930.KS';  // 三星當韓股代理
-  // 美股: ETF / Index 都 vs QQQ;個股看是不是半導體
-  if (ticker.type === 'ETF' || ticker.type === 'Index') return 'QQQ';
+  if (sym.endsWith('.TW') || sym.endsWith('.TWO')) return '0050.TW';
+  if (sym.endsWith('.KS')) return '^KS11';   // KOSPI 韓國綜合
+  if (sym.endsWith('.T')) return '^N225';    // 日經 225
+  // 美股: ETF / Index 自己就是大盤,排除 (避免 SOXX vs QQQ 這種自我比較)
+  if (ticker.type === 'ETF' || ticker.type === 'Index') return null;
   if (ticker.type === 'Private') return null;   // 未上市跳過
+  // 美股個股: 半導體 vs SOXX,其他科技 vs QQQ,落不到的 vs VOO
   const semi = deriveSemiTickers();
-  return semi.has(sym) ? 'SMH' : 'QQQ';
+  if (semi.has(sym)) return 'SOXX';
+  return 'QQQ';
 }
 
 function renderLeaderboard() {
   const target = document.getElementById('leaderboard-row');
   if (!target) return;
-  const all = DATA.tickers.filter(t => typeof t.change_30d_pct === 'number');
+  // 排除 split_suspect: 偵測到 30 天內單日 < -45% 的 ticker,通常是 yfinance 漏抓 stock split
+  const all = DATA.tickers.filter(t => typeof t.change_30d_pct === 'number' && !t.split_suspect);
   if (!all.length) { target.innerHTML = ''; return; }
 
-  // benchmark 速查表
+  // benchmark 速查表 (用到的 ticker 都要在 DATA.tickers 內)
   const benchmarks = {};
-  ['QQQ', 'SMH', '0050.TW', '005930.KS'].forEach(sym => {
+  ['QQQ', 'SOXX', 'VOO', '0050.TW', '^N225', '^KS11'].forEach(sym => {
     const t = DATA.tickers.find(x => x.ticker === sym);
     benchmarks[sym] = (t && typeof t.change_30d_pct === 'number') ? t.change_30d_pct : 0;
   });
@@ -13349,7 +13481,7 @@ function renderLeaderboard() {
   const cards = [
     card('📈 30 天漲幅榜 Top 5', '全部 ticker', gainers, t => fmtChange(t.change_30d_pct)),
     card('📉 30 天跌幅榜 Top 5', '全部 ticker', losers, t => fmtChange(t.change_30d_pct)),
-    card('⚡ vs 大盤 alpha 榜 Top 5', '台股 vs 0050 / 韓股 vs 三星 / 美股半導 vs SMH / 其他 vs QQQ',
+    card('⚡ vs 大盤 alpha 榜 Top 5', '美科技 vs QQQ · 半導體 vs SOXX · 其他 vs VOO · 日股 vs 日經 · 韓股 vs KOSPI · 台股 vs 0050',
          vsBench, t => `
            <span class="${t._rel >= 0 ? 'chg-up' : 'chg-down'}">
              ${t._rel > 0 ? '+' : ''}${t._rel.toFixed(1)}%

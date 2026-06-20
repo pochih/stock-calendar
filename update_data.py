@@ -77,6 +77,7 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
         change_pct = None
         vol_5d_avg = None
         vol_30d_avg = None
+        split_suspect = False
         try:
             hist30 = tk.history(period="30d", interval="1d")
             if not hist30.empty:
@@ -84,6 +85,14 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
                 if len(closes) >= 2:
                     sparkline = [round(float(c), 4) for c in closes[-30:]]
                     change_pct = round((closes[-1] - closes[0]) / closes[0] * 100, 2)
+                # 偵測未調整的 split:單日 < -45% (一般跌停 -10%,財報 worst case ~-30%,
+                # 只有 1:2 以上 split 漏抓會出現 -50%~-80% 這種跳變)
+                for i in range(1, len(closes)):
+                    if closes[i - 1] > 0:
+                        daily_drop = (closes[i] - closes[i - 1]) / closes[i - 1]
+                        if daily_drop < -0.45:
+                            split_suspect = True
+                            break
                 # 成交量 (排除 0,有些 ETF/指數會缺)
                 if "Volume" in hist30.columns:
                     vols = [v for v in hist30["Volume"].dropna().tolist() if v and v > 0]
@@ -106,6 +115,8 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
             out["sparkline_30d"] = sparkline
         if change_pct is not None:
             out["change_30d_pct"] = change_pct
+        if split_suspect:
+            out["split_suspect"] = True
         if vol_5d_avg is not None:
             out["vol_5d_avg"] = vol_5d_avg
         if vol_30d_avg is not None:
