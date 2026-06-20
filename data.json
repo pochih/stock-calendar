@@ -6259,7 +6259,13 @@
           "purity": 2,
           "role": "航太精密扣件,SPS 火災後填補三年產能真空,馬來西亞新廠卡位太空藍海 (火箭/衛星高溫超合金扣件),訂單到 2027"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 12,
+        "recent_4w": 5,
+        "recent_8w": 6,
+        "trend": "hot"
+      }
     },
     {
       "name": "蘋果摺疊手機供應鏈",
@@ -6284,7 +6290,13 @@
           "purity": 3,
           "role": "終端品牌,但摺疊機初期出貨量小,對 AAPL 整體營收影響有限 — 主要是長線拉高 ASP 與創新敘事"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 2,
+        "recent_4w": 2,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "HBM / 記憶體",
@@ -6339,7 +6351,13 @@
           "purity": 2,
           "role": "HBM 系統測試 ATE"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 8,
+        "recent_4w": 2,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI 算力租賃 (Neocloud)",
@@ -6400,7 +6418,13 @@
           "purity": 2,
           "role": "Hyperscaler,Trainium 自研"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 12,
+        "recent_4w": 4,
+        "recent_8w": 9,
+        "trend": "hot"
+      }
     },
     {
       "name": "光通訊 (Optical / 800G·1.6T)",
@@ -6437,7 +6461,13 @@
           "purity": 3,
           "role": "矽光子 interposer,早期題材"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 7,
+        "recent_4w": 4,
+        "recent_8w": 4,
+        "trend": "hot"
+      }
     },
     {
       "name": "半導體設備",
@@ -6486,7 +6516,13 @@
           "purity": 3,
           "role": "離子植入機利基 (SiC / Power)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 1,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI ASIC / 客製化晶片",
@@ -6517,7 +6553,13 @@
           "purity": 3,
           "role": "PCIe/CXL/UALink 連接 ASIC (註:本表暫無)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 9,
+        "recent_4w": 0,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI Server ODM (台廠為主)",
@@ -6596,7 +6638,13 @@
           "purity": 3,
           "role": "AI 電源 + 散熱"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 4,
+        "recent_4w": 1,
+        "recent_8w": 1,
+        "trend": "stable"
+      }
     },
     {
       "name": "晶圓代工 / 先進製程",
@@ -6633,7 +6681,13 @@
           "purity": 2,
           "role": "成熟製程 (28nm/14nm)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 13,
+        "recent_4w": 1,
+        "recent_8w": 6,
+        "trend": "rising"
+      }
     },
     {
       "name": "封測 / CoWoS / Advanced Packaging",
@@ -6670,7 +6724,13 @@
           "purity": 3,
           "role": "Advanced Packaging 設備"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 8,
+        "recent_4w": 3,
+        "recent_8w": 5,
+        "trend": "hot"
+      }
     },
     {
       "name": "GaN / SiC 第三類半導體 / 電源",
@@ -6695,7 +6755,13 @@
           "purity": 3,
           "role": "SiC 離子植入設備"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 3,
+        "recent_4w": 1,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "功率半導體 (Power IDM)",
@@ -6738,7 +6804,13 @@
           "purity": 3,
           "role": "高性能類比 + 電源管理"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 3,
+        "recent_4w": 1,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "資安 (Cybersecurity)",
@@ -6793,7 +6865,13 @@
           "purity": 3,
           "role": "邊緣 + 資安 + Workers AI"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI PC / CPU IP",
@@ -6836,7 +6914,13 @@
           "purity": 2,
           "role": "MediaTek 合作 ARM PC 傳聞"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 5,
+        "recent_4w": 2,
+        "recent_8w": 3,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI GPU (主戰場)",
@@ -6861,7 +6945,13 @@
           "purity": 2,
           "role": "Gaudi 系列,市占極低"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 11,
+        "recent_4w": 5,
+        "recent_8w": 6,
+        "trend": "hot"
+      }
     },
     {
       "name": "5G / 網通設備",
@@ -6880,7 +6970,13 @@
           "purity": 3,
           "role": "switch / router ASIC"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "EV / Robotaxi / FSD",
@@ -6911,7 +7007,13 @@
           "purity": 3,
           "role": "GaN 車用電源"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 17,
+        "recent_4w": 3,
+        "recent_8w": 4,
+        "trend": "hot"
+      }
     },
     {
       "name": "BTC 礦商 (+ AI 跨界)",
@@ -6936,7 +7038,13 @@
           "purity": 5,
           "role": "BTC 現貨曝險"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI 軟體 / 平台",
@@ -6973,7 +7081,13 @@
           "purity": 3,
           "role": "Workers AI 邊緣推理"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 34,
+        "recent_4w": 9,
+        "recent_8w": 21,
+        "trend": "hot"
+      }
     },
     {
       "name": "低軌衛星 (LEO Satellite)",
@@ -7028,7 +7142,13 @@
           "purity": 2,
           "role": "Snapdragon Satellite (與 GSAT 合作)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 2,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "被動元件 (MLCC / 電阻)",
@@ -7083,7 +7203,13 @@
           "purity": 1,
           "role": "MLCC ATE 測試 (沾邊)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 4,
+        "recent_4w": 0,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "ABF 載板 / PCB",
@@ -7126,7 +7252,13 @@
           "purity": 1,
           "role": "PCB 採購方,非生產者 (沾邊)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     }
   ],
   "polymarket": [

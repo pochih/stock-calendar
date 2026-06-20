@@ -19,5 +19,10 @@ transcripts/**/*.webm
 # gooaye fetch cache (37MB raw pack,只是 local fast-reload 用)
 transcripts/gooaye/_cache.*
 
+# transcripts/ 根目錄的散檔 (正規檔在 transcripts/gooaye/ 或 transcripts/allin/ 子目錄)
+transcripts/*.txt
+transcripts/*.meta.json
+transcripts/*.md
+
 # weekly briefing drafts (生成的 context 檔,需 Claude 處理後才入 data.json)
 drafts/

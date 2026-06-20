@@ -287,9 +287,17 @@
     background: var(--card); border: 1px solid var(--border); border-radius: 10px;
     padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
   }
-  .theme-head { display: flex; align-items: center; gap: 8px; }
+  .theme-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .theme-icon { font-size: 22px; }
-  .theme-name { color: var(--blue); font-size: 15px; font-weight: 700; flex: 1; }
+  .theme-name { color: var(--blue); font-size: 15px; font-weight: 700; flex: 1; min-width: 120px; }
+  .theme-heat {
+    font-size: 10px; padding: 2px 7px; border-radius: 4px; font-weight: 600;
+    white-space: nowrap; font-family: "SF Mono", Consolas, monospace;
+  }
+  .heat-hot { background: rgba(248,81,73,0.18); color: var(--red); }
+  .heat-rising { background: rgba(63,185,80,0.18); color: var(--green); }
+  .heat-cooling { background: rgba(88,166,255,0.15); color: var(--blue); }
+  .heat-quiet { background: rgba(139,148,158,0.15); color: var(--muted); }
   .theme-count { color: var(--muted); font-size: 11px; font-family: "SF Mono", Consolas, monospace; }
   .theme-desc { color: var(--muted); font-size: 12px; line-height: 1.5; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
   .theme-members { display: flex; flex-direction: column; gap: 4px; }
@@ -7105,7 +7113,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "航太精密扣件,SPS 火災後填補三年產能真空,馬來西亞新廠卡位太空藍海 (火箭/衛星高溫超合金扣件),訂單到 2027"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 12,
+        "recent_4w": 5,
+        "recent_8w": 6,
+        "trend": "hot"
+      }
     },
     {
       "name": "蘋果摺疊手機供應鏈",
@@ -7130,7 +7144,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "終端品牌,但摺疊機初期出貨量小,對 AAPL 整體營收影響有限 — 主要是長線拉高 ASP 與創新敘事"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 2,
+        "recent_4w": 2,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "HBM / 記憶體",
@@ -7185,7 +7205,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "HBM 系統測試 ATE"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 8,
+        "recent_4w": 2,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI 算力租賃 (Neocloud)",
@@ -7246,7 +7272,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "Hyperscaler,Trainium 自研"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 12,
+        "recent_4w": 4,
+        "recent_8w": 9,
+        "trend": "hot"
+      }
     },
     {
       "name": "光通訊 (Optical / 800G·1.6T)",
@@ -7283,7 +7315,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "矽光子 interposer,早期題材"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 7,
+        "recent_4w": 4,
+        "recent_8w": 4,
+        "trend": "hot"
+      }
     },
     {
       "name": "半導體設備",
@@ -7332,7 +7370,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "離子植入機利基 (SiC / Power)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 1,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI ASIC / 客製化晶片",
@@ -7363,7 +7407,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "PCIe/CXL/UALink 連接 ASIC (註:本表暫無)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 9,
+        "recent_4w": 0,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI Server ODM (台廠為主)",
@@ -7442,7 +7492,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "AI 電源 + 散熱"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 4,
+        "recent_4w": 1,
+        "recent_8w": 1,
+        "trend": "stable"
+      }
     },
     {
       "name": "晶圓代工 / 先進製程",
@@ -7479,7 +7535,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "成熟製程 (28nm/14nm)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 13,
+        "recent_4w": 1,
+        "recent_8w": 6,
+        "trend": "rising"
+      }
     },
     {
       "name": "封測 / CoWoS / Advanced Packaging",
@@ -7516,7 +7578,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "Advanced Packaging 設備"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 8,
+        "recent_4w": 3,
+        "recent_8w": 5,
+        "trend": "hot"
+      }
     },
     {
       "name": "GaN / SiC 第三類半導體 / 電源",
@@ -7541,7 +7609,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "SiC 離子植入設備"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 3,
+        "recent_4w": 1,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "功率半導體 (Power IDM)",
@@ -7584,7 +7658,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "高性能類比 + 電源管理"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 3,
+        "recent_4w": 1,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "資安 (Cybersecurity)",
@@ -7639,7 +7719,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "邊緣 + 資安 + Workers AI"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI PC / CPU IP",
@@ -7682,7 +7768,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "MediaTek 合作 ARM PC 傳聞"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 5,
+        "recent_4w": 2,
+        "recent_8w": 3,
+        "trend": "rising"
+      }
     },
     {
       "name": "AI GPU (主戰場)",
@@ -7707,7 +7799,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "Gaudi 系列,市占極低"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 11,
+        "recent_4w": 5,
+        "recent_8w": 6,
+        "trend": "hot"
+      }
     },
     {
       "name": "5G / 網通設備",
@@ -7726,7 +7824,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "switch / router ASIC"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "EV / Robotaxi / FSD",
@@ -7757,7 +7861,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "GaN 車用電源"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 17,
+        "recent_4w": 3,
+        "recent_8w": 4,
+        "trend": "hot"
+      }
     },
     {
       "name": "BTC 礦商 (+ AI 跨界)",
@@ -7782,7 +7892,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 5,
           "role": "BTC 現貨曝險"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "AI 軟體 / 平台",
@@ -7819,7 +7935,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 3,
           "role": "Workers AI 邊緣推理"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 34,
+        "recent_4w": 9,
+        "recent_8w": 21,
+        "trend": "hot"
+      }
     },
     {
       "name": "低軌衛星 (LEO Satellite)",
@@ -7874,7 +7996,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 2,
           "role": "Snapdragon Satellite (與 GSAT 合作)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 2,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     },
     {
       "name": "被動元件 (MLCC / 電阻)",
@@ -7929,7 +8057,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 1,
           "role": "MLCC ATE 測試 (沾邊)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 4,
+        "recent_4w": 0,
+        "recent_8w": 2,
+        "trend": "rising"
+      }
     },
     {
       "name": "ABF 載板 / PCB",
@@ -7972,7 +8106,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
           "purity": 1,
           "role": "PCB 採購方,非生產者 (沾邊)"
         }
-      ]
+      ],
+      "heat": {
+        "total_mentions": 0,
+        "recent_4w": 0,
+        "recent_8w": 0,
+        "trend": "stable"
+      }
     }
   ],
   "polymarket": [
@@ -13277,10 +13417,20 @@ function renderThemes() {
         <span class="theme-role"><strong>${esc(m.co)}</strong> — ${esc(m.role)}</span>
       </div>`).join('');
 
+    const heat = theme.heat || {};
+    const heatBadge = (() => {
+      if (heat.trend === 'hot') return `<span class="theme-heat heat-hot" title="近 4 週被提到 ${heat.recent_4w} 次">🔥 hot · ${heat.recent_4w}</span>`;
+      if (heat.trend === 'rising') return `<span class="theme-heat heat-rising" title="近 8 週 ${heat.recent_8w} 次,上升中">📈 rising</span>`;
+      if (heat.trend === 'cooling') return `<span class="theme-heat heat-cooling" title="近 8 週減少">🔻 cooling</span>`;
+      if (heat.total_mentions === 0) return `<span class="theme-heat heat-quiet" title="weekly_briefing 中尚未提及">💤 quiet</span>`;
+      return '';
+    })();
+
     return `<div class="theme-card">
       <div class="theme-head">
         <span class="theme-icon">${esc(theme.icon || '🏷️')}</span>
         <span class="theme-name">${esc(theme.name)}</span>
+        ${heatBadge}
         <span class="theme-count">${members.length} 檔</span>
       </div>
       <div class="theme-desc">${esc(theme.desc || '')}</div>
