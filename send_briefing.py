@@ -1,6 +1,5 @@
 """
-send_briefing.py — 將 weekly_briefing 某一週轉成 HTML email,
-                   印到 stdout 供 Gmail MCP / 其他 SMTP 工具使用
+send_briefing.py — 將 weekly_briefing 某一週轉成 mobile-friendly HTML email
 
 使用:
   python send_briefing.py                 # 預設輸出最新一週
@@ -11,6 +10,13 @@ send_briefing.py — 將 weekly_briefing 某一週轉成 HTML email,
 輸出:
   stdout 印出 markdown header + 完整 HTML
   --json 模式輸出 {"subject": "...", "html_body": "..."}
+
+設計重點 (mobile-friendly):
+- viewport meta + responsive max-width
+- table-based layout (Gmail 對 flex 支援差)
+- 字體 14-16px (手機可讀)
+- 跟隨系統 dark mode (meta name="color-scheme")
+- inline style only (Gmail clipper 會吃掉 <style>)
 """
 
 from __future__ import annotations
@@ -31,15 +37,30 @@ CAT_COLOR = {
     "併購": "#d29922",
     "宏觀資金": "#f85149", "宏觀政治": "#f85149", "司法": "#ff7b72",
     "市場修正": "#ff7b72",
-    "蘋果": "#c9d1d9",
+    "蘋果": "#8b949e",
     "Tesla": "#ffa657", "Tesla / FSD": "#ffa657", "Tesla / Robotaxi": "#ffa657",
     "馬斯克": "#ffa657", "SpaceX": "#ffa657", "Intel 復活": "#d29922",
     "台股個股": "#58a6ff", "台股深度": "#58a6ff", "股癌觀點": "#58a6ff",
 }
 
+# 統一字體 stack (放大版,手機友善)
+FONT_STACK = (
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', "
+    "'PingFang TC', 'Noto Sans TC', Roboto, sans-serif"
+)
+
 
 def esc(s: str) -> str:
     return html.escape(str(s or ""), quote=True)
+
+
+def render_chip(text: str, bg: str, fg: str, font_size: str = "12px", mono: bool = False) -> str:
+    family = "Consolas, monospace" if mono else FONT_STACK
+    return (
+        f'<span style="display:inline-block; background:{bg}; color:{fg}; '
+        f'padding:3px 9px; margin:2px 4px 2px 0; border-radius:4px; '
+        f'font-size:{font_size}; font-family:{family}; line-height:1.4;">{esc(text)}</span>'
+    )
 
 
 def render_headline(h: dict) -> str:
@@ -48,47 +69,58 @@ def render_headline(h: dict) -> str:
     tickers = h.get("tickers") or []
     themes = h.get("themes_touched") or []
 
+    # category badge + title 用 table 包,避免 flex 在 Gmail 出包
+    title_block = f'''
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="margin-bottom:10px;">
+  <tr>
+    <td style="vertical-align:top; padding-bottom:6px;">
+      {render_chip(cat, color, "#ffffff", "12px")}
+    </td>
+  </tr>
+  <tr>
+    <td style="font-size:17px; font-weight:700; color:#1f2937; line-height:1.4;
+               font-family:{FONT_STACK};">{esc(h.get("title", ""))}</td>
+  </tr>
+</table>
+'''
+
     ticker_html = ""
     if tickers:
-        chips = "".join(
-            f'<span style="display:inline-block; background:#1f3a5f; color:#79c0ff; '
-            f'padding:2px 8px; margin:2px; border-radius:4px; font-size:11px; '
-            f'font-family:monospace;">{esc(t)}</span>'
-            for t in tickers
-        )
+        chips = "".join(render_chip(t, "#dbeafe", "#1e40af", "12px", mono=True) for t in tickers)
         ticker_html = f'<div style="margin:8px 0;">{chips}</div>'
 
     theme_html = ""
     if themes:
-        chips = "".join(
-            f'<span style="display:inline-block; background:#21262d; color:#8b949e; '
-            f'padding:2px 6px; margin:2px; border-radius:3px; font-size:10px;">🏷️ {esc(t)}</span>'
-            for t in themes
-        )
-        theme_html = f'<div style="margin-top:8px;">{chips}</div>'
+        chips = "".join(render_chip(f"🏷️ {t}", "#f3f4f6", "#6b7280", "11px") for t in themes)
+        theme_html = f'<div style="margin-top:10px;">{chips}</div>'
 
     sections = []
     for key, label in [("summary", "摘要"), ("stance", "立場"), ("implication", "含意")]:
         v = h.get(key)
         if v:
             sections.append(
-                f'<div style="margin:6px 0; font-size:13px; line-height:1.65; color:#c9d1d9;">'
-                f'<strong style="color:#58a6ff; margin-right:6px;">{label}</strong>{esc(v)}</div>'
+                f'<div style="margin:8px 0; font-size:14px; line-height:1.7; color:#1f2937; '
+                f'font-family:{FONT_STACK};">'
+                f'<span style="display:inline-block; background:#e0e7ff; color:#3730a3; '
+                f'padding:1px 7px; border-radius:3px; font-size:12px; font-weight:700; '
+                f'margin-right:6px;">{label}</span>{esc(v)}</div>'
             )
     body = "".join(sections)
 
     return f'''
-<div style="background:rgba(13,17,23,0.5); border:1px solid #30363d; border-radius:8px;
-            padding:14px 18px; margin-bottom:12px;">
-  <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px; flex-wrap:wrap;">
-    <span style="font-size:10px; padding:2px 8px; border-radius:4px; font-weight:600;
-                 background:{color}; color:#0d1117; white-space:nowrap;">{esc(cat)}</span>
-    <span style="font-size:14px; font-weight:700; color:#c9d1d9; flex:1;">{esc(h.get('title', ''))}</span>
-  </div>
-  {ticker_html}
-  {body}
-  {theme_html}
-</div>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="background:#ffffff; border:1px solid #e5e7eb; border-radius:8px;
+              margin-bottom:14px; border-left:4px solid {color};">
+  <tr>
+    <td style="padding:14px 16px;">
+      {title_block}
+      {ticker_html}
+      {body}
+      {theme_html}
+    </td>
+  </tr>
+</table>
 '''
 
 
@@ -96,18 +128,32 @@ def render_week(w: dict) -> str:
     sources = " · ".join(esc(s) for s in (w.get("sources") or []))
     headlines_html = "".join(render_headline(h) for h in (w.get("headlines") or []))
     return f'''
-<div style="background:#161b22; border:1px solid #30363d; border-radius:10px;
-            padding:18px; margin-bottom:18px;">
-  <div style="display:flex; justify-content:space-between; align-items:center;
-              padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid #30363d; flex-wrap:wrap;">
-    <div>
-      <div style="font-size:18px; font-weight:700; color:#58a6ff;">📅 {esc(w['week'])}</div>
-      <div style="color:#8b949e; font-size:12px; margin-top:4px;">📚 {sources}</div>
-    </div>
-    <div style="color:#8b949e; font-size:12px; font-family:monospace;">{esc(w['date_range'])}</div>
-  </div>
-  {headlines_html}
-</div>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px;
+              margin-bottom:20px;">
+  <tr>
+    <td style="padding:16px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+             style="border-bottom:1px solid #e5e7eb; margin-bottom:14px;">
+        <tr>
+          <td style="padding-bottom:10px;">
+            <div style="font-size:20px; font-weight:700; color:#1e40af; font-family:{FONT_STACK};">
+              📅 {esc(w["week"])}
+            </div>
+            <div style="color:#6b7280; font-size:13px; margin-top:4px; font-family:{FONT_STACK};">
+              {esc(w["date_range"])}
+            </div>
+            <div style="color:#6b7280; font-size:12px; margin-top:6px;
+                        font-family:{FONT_STACK}; line-height:1.6;">
+              📚 {sources}
+            </div>
+          </td>
+        </tr>
+      </table>
+      {headlines_html}
+    </td>
+  </tr>
+</table>
 '''
 
 
@@ -125,30 +171,76 @@ def build_email(weeks: list[dict]) -> tuple[str, str]:
     total_h = sum(len(w.get("headlines", [])) for w in weeks)
 
     body = f'''<!DOCTYPE html>
-<html><head><meta charset="utf-8"></head>
-<body style="background:#0d1117; color:#c9d1d9; font-family:-apple-system, BlinkMacSystemFont,
-             'Segoe UI', 'Noto Sans TC', sans-serif; margin:0; padding:20px;">
-  <div style="max-width:760px; margin:0 auto;">
-    <div style="text-align:center; padding:20px 0; border-bottom:1px solid #30363d; margin-bottom:20px;">
-      <h1 style="margin:0; color:#58a6ff; font-size:24px;">📰 每週洞察 (Weekly Briefing)</h1>
-      <p style="color:#8b949e; font-size:13px; margin:8px 0;">
-        {total_h} 條 headline · 共 {len(weeks)} 週<br>
-        來源: M報 / 馬斯克帝國觀察 / 富果直送 / 股癌 / All-In Podcast
-      </p>
-      <p style="margin:8px 0;">
-        <a href="https://pochih.github.io/stock-calendar/" target="_blank"
-           style="color:#58a6ff; text-decoration:none; font-size:13px;">
-          → 完整 dashboard
-        </a>
-      </p>
-    </div>
-    {weeks_html}
-    <div style="text-align:center; color:#8b949e; font-size:11px;
-                padding:20px 0; border-top:1px solid #30363d; margin-top:20px;">
-      stock-calendar · auto-generated weekly briefing
-    </div>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>📰 每週洞察 {esc(weeks[0]["week"])}</title>
+</head>
+<body style="margin:0; padding:0; background:#f3f4f6; font-family:{FONT_STACK};
+             -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+  <!-- preheader (gmail inbox 預覽文字,但不顯示在信件內) -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
+    {total_h} 條 headline · 共 {len(weeks)} 週 · 點開看本週 AI / 美股 / 台股重點
   </div>
-</body></html>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+         style="background:#f3f4f6;">
+    <tr>
+      <td align="center" style="padding:16px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+               style="max-width:640px; margin:0 auto;">
+
+          <!-- header -->
+          <tr>
+            <td style="background:#ffffff; border-radius:10px; padding:20px 18px;
+                       text-align:center; margin-bottom:16px;">
+              <h1 style="margin:0 0 8px 0; color:#1e40af; font-size:22px; font-weight:700;
+                         font-family:{FONT_STACK};">
+                📰 每週洞察
+              </h1>
+              <div style="color:#6b7280; font-size:14px; line-height:1.6; font-family:{FONT_STACK};">
+                {total_h} 條 headline · 共 {len(weeks)} 週<br>
+                <span style="font-size:12px;">M報 / 馬斯克帝國觀察 / 富果直送 / 股癌 / All-In</span>
+              </div>
+              <div style="margin-top:12px;">
+                <a href="https://pochih.github.io/stock-calendar/" target="_blank"
+                   style="display:inline-block; background:#1e40af; color:#ffffff;
+                          padding:10px 20px; border-radius:6px; text-decoration:none;
+                          font-size:14px; font-weight:600; font-family:{FONT_STACK};">
+                  → 完整 dashboard
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr><td style="height:16px; line-height:16px;">&nbsp;</td></tr>
+
+          <!-- weeks -->
+          <tr>
+            <td>
+              {weeks_html}
+            </td>
+          </tr>
+
+          <!-- footer -->
+          <tr>
+            <td style="text-align:center; color:#9ca3af; font-size:11px;
+                       padding:20px 16px; font-family:{FONT_STACK};">
+              stock-calendar · auto-generated weekly briefing<br>
+              <a href="https://pochih.github.io/stock-calendar/" target="_blank"
+                 style="color:#6b7280; text-decoration:underline;">pochih.github.io/stock-calendar</a>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
 '''
     return subject, body
 
