@@ -1,0 +1,69 @@
+name: Update IPOs (SEC EDGAR)
+
+on:
+  schedule:
+    # 每週六 08:00 UTC (台北週六 16:00) — 一週一次抓 SEC EDGAR
+    - cron: '0 8 * * 6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-ipos
+  cancel-in-progress: false
+
+jobs:
+  update:
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # update_ipos.py 純 stdlib (urllib + xml.etree)
+      - name: Run update_ipos.py
+        run: python update_ipos.py --limit 200
+
+      - name: Embed data.json into index.html
+        run: |
+          python - <<'PY'
+          import re, pathlib
+          html_path = pathlib.Path('index.html')
+          data_json = pathlib.Path('data.json').read_text(encoding='utf-8')
+          html = html_path.read_text(encoding='utf-8')
+          pattern = re.compile(
+              r'/\*__EMBEDDED_DATA_START__\*/[\s\S]*?/\*__EMBEDDED_DATA_END__\*/'
+          )
+          if not pattern.search(html):
+              raise SystemExit('EMBEDDED_DATA placeholder not found')
+          replacement = f'/*__EMBEDDED_DATA_START__*/{data_json}/*__EMBEDDED_DATA_END__*/'
+          new = pattern.sub(lambda _m: replacement, html)
+          if new != html:
+              html_path.write_text(new, encoding='utf-8')
+              print('embedded data.json into index.html')
+          PY
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data.json index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: auto-fetch IPOs from SEC EDGAR"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - uses: actions/deploy-pages@v4

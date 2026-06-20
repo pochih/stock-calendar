@@ -13,6 +13,11 @@ transcripts/*.m4a
 transcripts/*.wav
 transcripts/*.vtt
 transcripts/*.srt
+transcripts/**/*.vtt
+transcripts/**/*.webm
 
 # gooaye fetch cache (37MB raw pack,只是 local fast-reload 用)
 transcripts/gooaye/_cache.*
+
+# weekly briefing drafts (生成的 context 檔,需 Claude 處理後才入 data.json)
+drafts/
