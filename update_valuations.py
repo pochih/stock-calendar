@@ -40,7 +40,7 @@ TICKER_CONFIG = {
         "valuation_params": {
             "fwd_pe_base": 15, "fwd_pe_bull": 15, "ps_base": 3,
             "ev_ebitda_base": 10, "dcf_disc_rate": 0.10,
-            "dcf_fcf_growth_5y": 0.25, "dcf_terminal_growth": 0.03,
+            "dcf_fcf_growth_5y": 0.12, "dcf_terminal_growth": 0.03,
         },
         "bull_thesis": [
             "HBM3E 訂單能見度到 2027,SK 海力士產能吃緊讓 MU 拿到 NVDA 二供 ~25% 份額",
@@ -344,7 +344,7 @@ TICKER_CONFIG = {
     "005930.KS": {
         "name": "Samsung Electronics 三星電子",
         "category_label": "Memory / NAND / Foundry / Display (Korean cyclical semi)",
-        "valuation_params": {"fwd_pe_base": 8, "fwd_pe_bull": 12, "ps_base": 4, "ev_ebitda_base": 8, "dcf_disc_rate": 0.10, "dcf_fcf_growth_5y": 0.18, "dcf_terminal_growth": 0.03},
+        "valuation_params": {"fwd_pe_base": 8, "fwd_pe_bull": 10, "ps_base": 4, "ev_ebitda_base": 8, "dcf_disc_rate": 0.10, "dcf_fcf_growth_5y": 0.08, "dcf_terminal_growth": 0.03},
         "bull_thesis": [
             "Gavin Baker (W21) 直接點名:『memory (SK Hynix 5x / Samsung 6x / Micron 7x) 被低估』,Samsung 在三家中估值最便宜",
             "Coatue Laffont (W23 All-In Summit) 點名記憶體股:『每用戶記憶體需求隨 AI memory/context 可 5x → 重估邏輯仍未走完』",
@@ -372,7 +372,7 @@ TICKER_CONFIG = {
     "000660.KS": {
         "name": "SK Hynix",
         "category_label": "HBM 龍頭 / DRAM (NVDA 主供應商)",
-        "valuation_params": {"fwd_pe_base": 10, "fwd_pe_bull": 15, "ps_base": 6, "ev_ebitda_base": 10, "dcf_disc_rate": 0.10, "dcf_fcf_growth_5y": 0.20, "dcf_terminal_growth": 0.03},
+        "valuation_params": {"fwd_pe_base": 10, "fwd_pe_bull": 13, "ps_base": 6, "ev_ebitda_base": 10, "dcf_disc_rate": 0.10, "dcf_fcf_growth_5y": 0.10, "dcf_terminal_growth": 0.03},
         "bull_thesis": [
             "Gavin Baker (W21 SpaceX S-1 揭密) 點名:『memory (SK Hynix 5x / Samsung 6x / Micron 7x) 被低估』— SK Hynix 是三家中 fwd PE 最低",
             "Coatue Laffont (W23 All-In Summit, $55B AUM) 點名記憶體股:『每用戶記憶體需求隨 AI memory/context 可 5x → 重估邏輯仍未走完』,SK Hynix 是 HBM 龍頭 (NVDA 主供應 ~70-80% 份額)",
@@ -594,7 +594,14 @@ def build_forecasts(raw: dict) -> list[dict]:
 
 
 def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_target: float) -> list[dict]:
-    """根據既有 forecast + ticker_config 參數計算 6 個估值模型"""
+    """根據既有 forecast + ticker_config 參數計算 6 個估值模型。
+
+    幣值注意:
+    - eps / mean_target 用 stock currency (info["currency"])
+    - fcf / revenue / mcap / EV 用 financial currency (info["financialCurrency"])
+    - 大多時候兩者相同;TSM ADR 例外 (stock=USD, fin=TWD) — 此情況跳過
+      EV/EBITDA + DCF (避免幣值混算),只保留 PE + P/S + Analyst Target
+    """
     info = raw["info"]
     fy0 = next((f for f in forecasts if f["period_key"] == "0y"), {})
     fy1 = next((f for f in forecasts if f["period_key"] == "+1y"), {})
@@ -603,41 +610,45 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
     ev = safe_float(info.get("enterpriseValue"))
     ebitda_margin = safe_float(info.get("ebitdaMargins")) or 0.4  # fallback
 
+    stock_ccy = str(info.get("currency", "") or "")
+    fin_ccy = str(info.get("financialCurrency", "") or "")
+    ccy_mismatch = stock_ccy and fin_ccy and stock_ccy != fin_ccy
+
     models = []
 
-    # 1. Base PE × FY current EPS
+    # 1. Base PE × FY current EPS (EPS 是 stock currency,安全)
     eps0 = fy0.get("eps_avg")
     if eps0:
         p = eps0 * params["fwd_pe_base"]
         models.append({
-            "model": f"PE × FY 當期 EPS (歷史均 P/E {params['fwd_pe_base']}x)",
+            "model": f"PE × FY 當期 EPS ({params['fwd_pe_base']}x)",
             "implied_price": round(p, 2),
-            "rationale": f"Memory cyclical 歷史中段 fwd P/E {params['fwd_pe_base']}x × FY{fy0['period_key']} EPS ${eps0}",
+            "rationale": f"歷史中段 fwd P/E {params['fwd_pe_base']}x × FY 當期 EPS {eps0}",
         })
 
-    # 2. Bull PE × FY +1y EPS (AI premium)
+    # 2. Bull PE × FY +1y EPS
     eps1 = fy1.get("eps_avg")
     if eps1:
         p = eps1 * params["fwd_pe_bull"]
         models.append({
-            "model": f"PE × FY +1y EPS (AI premium 維持 {params['fwd_pe_bull']}x)",
+            "model": f"PE × FY +1y EPS ({params['fwd_pe_bull']}x bull)",
             "implied_price": round(p, 2),
-            "rationale": f"若 HBM 故事兌現,FY+1 EPS ${eps1} 維持中段 P/E",
+            "rationale": f"FY+1 EPS {eps1} 維持 {params['fwd_pe_bull']}x P/E",
         })
 
-    # 3. P/S × FY current Revenue
+    # 3. P/S × FY current Revenue (rev_avg_b 是 financial currency,shares 是股數通用 → rev_per_share 在 fin_ccy)
     rev0 = fy0.get("rev_avg_b")
-    if rev0 and shares:
+    if rev0 and shares and not ccy_mismatch:
         rev_per_share = rev0 * 1e9 / shares
         p = rev_per_share * params["ps_base"]
         models.append({
-            "model": f"P/S × FY 當期 Rev (歷史均 P/S {params['ps_base']}x)",
+            "model": f"P/S × FY 當期 Rev ({params['ps_base']}x)",
             "implied_price": round(p, 2),
-            "rationale": f"Memory 歷史 P/S 2-4x 取中位 {params['ps_base']}x × FY 當期 ${rev0}B 營收",
+            "rationale": f"歷史中段 P/S {params['ps_base']}x × FY 當期 {rev0}B 營收",
         })
 
-    # 4. EV/EBITDA
-    if rev0 and shares and ev and mcap:
+    # 4. EV/EBITDA (純 financial currency → 不能跟 stock price 比較)
+    if rev0 and shares and ev and mcap and not ccy_mismatch:
         ebitda = rev0 * 1e9 * ebitda_margin
         target_ev = ebitda * params["ev_ebitda_base"]
         net_debt = ev - mcap
@@ -646,24 +657,22 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
         models.append({
             "model": f"EV/EBITDA × FY 當期 ({params['ev_ebitda_base']}x)",
             "implied_price": round(p, 2),
-            "rationale": f"Cyclical semi 歷史 EV/EBITDA 8-12x,EBITDA 用 margin {ebitda_margin*100:.0f}% × FY 當期 Rev",
+            "rationale": f"歷史 EV/EBITDA {params['ev_ebitda_base']}x,EBITDA = margin {ebitda_margin*100:.0f}% × FY 當期 Rev",
         })
 
-    # 5. DCF (5y FCF growth → Gordon terminal)
-    # 用 forward FCF 估值 (TTM 對 cyclical 股太失真;用 FY 當期 EPS × shares × 80% conversion)
+    # 5. DCF (純 financial currency)
     fcf_ttm = safe_float(info.get("freeCashflow"))
-    eps0 = fy0.get("eps_avg")
     fcf_base = None
-    if eps0 and shares:
-        # cyclical semi forward FCF ≈ FY current NI × 80%
+    if eps0 and shares and not ccy_mismatch:
+        # FY current NI × 80% FCF conversion
         forward_ni = eps0 * shares
         fcf_base = forward_ni * 0.80
-        fcf_source = f"FY 當期 NI (EPS ${eps0} × {shares/1e9:.2f}B 股) × 80% FCF conversion"
-    elif fcf_ttm:
+        fcf_source = f"FY 當期 NI (EPS {eps0} × {shares/1e9:.2f}B 股) × 80% FCF conversion"
+    elif fcf_ttm and not ccy_mismatch:
         fcf_base = fcf_ttm
-        fcf_source = f"TTM FCF ${fcf_ttm/1e9:.1f}B"
+        fcf_source = f"TTM FCF {fcf_ttm/1e9:.1f}B"
 
-    if fcf_base and shares:
+    if fcf_base and shares and not ccy_mismatch:
         g = params["dcf_fcf_growth_5y"]
         disc = params["dcf_disc_rate"]
         tg = params["dcf_terminal_growth"]
@@ -681,15 +690,23 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
         models.append({
             "model": f"DCF ({int(disc*100)}% disc, 5y FCF {int(g*100)}% → 終值 {int(tg*100)}%)",
             "implied_price": round(p, 2),
-            "rationale": f"基準 FCF ${fcf_base/1e9:.1f}B (= {fcf_source}),5 年 {int(g*100)}% CAGR 後降至 {int(tg*100)}% terminal",
+            "rationale": f"基準 FCF {fcf_base/1e9:.1f}B (= {fcf_source})",
         })
 
-    # 6. Analyst Mean Target
+    # 6. Analyst Mean Target (stock currency,安全)
     if mean_target:
         models.append({
             "model": "Analyst Mean Target",
             "implied_price": round(mean_target, 2),
-            "rationale": f"yfinance 共識:{raw['price_targets'].get('mean')} (n={len(raw['upgrades_downgrades']) or '?'})",
+            "rationale": f"yfinance 共識:{raw['price_targets'].get('mean')}",
+        })
+
+    # 若跨幣值,加說明
+    if ccy_mismatch:
+        models.append({
+            "model": f"⚠️ 跨幣值 ({stock_ccy} stock / {fin_ccy} financials)",
+            "implied_price": 0,
+            "rationale": f"P/S / EV/EBITDA / DCF 因股價 ({stock_ccy}) 與財報 ({fin_ccy}) 幣值不同已跳過。請參考相同基本面的同公司本國股 (如 2330.TW for TSM ADR) 之 P/S/EV/EBITDA/DCF 模型。",
         })
 
     return models
@@ -886,6 +903,8 @@ def build_valuation_entry(symbol: str) -> dict:
         "category_label": cfg["category_label"],
         "updated_at": date.today().isoformat(),
         "current_price": current_price,
+        "currency": str(info.get("currency", "USD")),
+        "financial_currency": str(info.get("financialCurrency", "USD")),
         "key_stats": {
             "trailing_pe": safe_float(info.get("trailingPE")),
             "forward_pe": safe_float(info.get("forwardPE")),
