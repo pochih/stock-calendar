@@ -236,6 +236,9 @@ def update_earnings(data: dict, days: int = 180) -> None:
     until = today + timedelta(days=days)
     june, h2 = [], []
 
+    # name lookup for Stock + Private (ticker → name) — 補進 auto record 避免 company==ticker
+    name_map = {t["ticker"]: t["name"] for t in data.get("tickers", [])}
+
     # 包含所有 Stock,不再 skip .KS / .TW
     symbols = [t["ticker"] for t in data["tickers"]
                if t.get("type") == "Stock"]
@@ -257,15 +260,20 @@ def update_earnings(data: dict, days: int = 180) -> None:
                 tz_note = "JST"
             else:
                 tz_note = "ET"
-            for d in dates:
+            # yfinance.calendar 偶爾給 [start_date, end_date] range,只取最後一個
+            # (= 真實財報日;前一個是預估時段的下界,容易跟真實日相差一天造成重複)
+            seen_for_sym = False
+            for d in dates[-1:]:  # 只取最後一筆,避免 range 兩端 dup
                 if isinstance(d, datetime):
                     d = d.date()
                 if not (today <= d <= until):
                     continue
+                if seen_for_sym:
+                    continue
                 rec = {
                     "date": d.isoformat(),
                     "ticker": sym,
-                    "company": sym,
+                    "company": name_map.get(sym, sym),  # 用真實 name,不再寫 ticker
                     "fiscal": "TBD",
                     "time": tz_note,
                     "note": "(自動抓取)",
@@ -273,6 +281,7 @@ def update_earnings(data: dict, days: int = 180) -> None:
                     "bias": "neutral",
                 }
                 (june if d.month == 6 and d.year == 2026 else h2).append(rec)
+                seen_for_sym = True
                 print(f"  ✓ {sym:10s} {d} [{tz_note}]")
         except Exception as e:
             print(f"  ⚠️  {sym}: {e}", file=sys.stderr)

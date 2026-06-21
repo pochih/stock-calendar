@@ -27,10 +27,10 @@
       }
     },
     {
-      "date": "2026-06-04 (估)",
+      "date": "2026-06-04",
       "ticker": "MRVL",
       "company": "Marvell",
-      "fiscal": "FQ1 27",
+      "fiscal": "FQ1 27 (估)",
       "time": "AMC",
       "note": "客製化 AI 晶片(AWS Trainium)、光通訊 DSP",
       "hist_move": "±9%",
@@ -100,10 +100,10 @@
       }
     },
     {
-      "date": "2026-06-25 (估)",
+      "date": "2026-06-25",
       "ticker": "MKC",
       "company": "McCormick",
-      "fiscal": "FQ2 26",
+      "fiscal": "FQ2 26 (估)",
       "time": "BMO",
       "note": "消費,參考用",
       "hist_move": "±3%",
@@ -140,7 +140,7 @@
       "ticker": "ASML",
       "company": "ASML",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "ET",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -148,7 +148,7 @@
     {
       "date": "2026-07-16",
       "ticker": "TSM",
-      "company": "TSMC",
+      "company": "TSMC ADR",
       "fiscal": "Q2 26",
       "time": "BMO",
       "note": "AI 晶片產能、CoWoS 擴產",
@@ -182,9 +182,9 @@
     {
       "date": "2026-07-16",
       "ticker": "2330.TW",
-      "company": "2330.TW",
+      "company": "台積電 TSMC",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -242,38 +242,38 @@
     },
     {
       "date": "2026-07-23",
-      "ticker": "NOK",
-      "company": "NOK",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-23 (估)",
-      "ticker": "SK Hynix",
+      "ticker": "000660.KS",
       "company": "SK Hynix",
-      "fiscal": "Q2 26",
+      "fiscal": "Q2 26 (估)",
       "time": "韓股",
       "note": "HBM3E 市占率、毛利率;NVDA 最大供應商之一",
       "hist_move": "±5%",
       "bias": "up"
     },
     {
-      "date": "2026-07-27",
-      "ticker": "3189.TW",
-      "company": "3189.TW",
+      "date": "2026-07-23",
+      "ticker": "NOK",
+      "company": "Nokia",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "ET",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
     },
     {
       "date": "2026-07-27",
+      "ticker": "005930.KS",
+      "company": "Samsung Electronics",
+      "fiscal": "Q2 26 (Prelim) (估)",
+      "time": "韓股盤後",
+      "note": "HBM 良率追趕進度、Foundry 業務虧損",
+      "hist_move": "±4%",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-27",
       "ticker": "003670.KS",
-      "company": "003670.KS",
+      "company": "Samsung Electro-Mechanics (SEMCO)",
       "fiscal": "TBD",
       "time": "KST",
       "note": "(自動抓取)",
@@ -281,21 +281,21 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-07-27 (估)",
-      "ticker": "005930.KS",
-      "company": "Samsung Electronics",
-      "fiscal": "Q2 26 (Prelim)",
-      "time": "韓股盤後",
-      "note": "HBM 良率追趕進度、Foundry 業務虧損",
-      "hist_move": "±4%",
+      "date": "2026-07-27",
+      "ticker": "3189.TW",
+      "company": "景碩 Kinsus",
+      "fiscal": "TBD",
+      "time": "TPE",
+      "note": "(自動抓取)",
+      "hist_move": "—",
       "bias": "neutral"
     },
     {
       "date": "2026-07-28",
       "ticker": "3037.TW",
-      "company": "3037.TW",
+      "company": "欣興 Unimicron",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -303,9 +303,9 @@
     {
       "date": "2026-07-28",
       "ticker": "5347.TWO",
-      "company": "5347.TWO",
+      "company": "世界先進 Vanguard Int'l",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -347,9 +347,9 @@
     {
       "date": "2026-07-29",
       "ticker": "2454.TW",
-      "company": "2454.TW",
+      "company": "聯發科 MediaTek",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -357,9 +357,9 @@
     {
       "date": "2026-07-29",
       "ticker": "2308.TW",
-      "company": "2308.TW",
+      "company": "台達電 Delta",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -367,49 +367,9 @@
     {
       "date": "2026-07-29",
       "ticker": "2303.TW",
-      "company": "2303.TW",
+      "company": "聯電 UMC",
       "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "ARM",
-      "company": "ARM",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "FORM",
-      "company": "FORM",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "LRCX",
-      "company": "LRCX",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-29",
-      "ticker": "TER",
-      "company": "TER",
-      "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -417,9 +377,9 @@
     {
       "date": "2026-07-29",
       "ticker": "2492.TW",
-      "company": "2492.TW",
+      "company": "華新科 Walsin",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -478,19 +438,9 @@
     {
       "date": "2026-07-30",
       "ticker": "3711.TW",
-      "company": "3711.TW",
+      "company": "日月光投控 ASE",
       "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-30",
-      "ticker": "KLAC",
-      "company": "KLAC",
-      "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -498,7 +448,7 @@
     {
       "date": "2026-07-30",
       "ticker": "ARM",
-      "company": "ARM",
+      "company": "Arm Holdings",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -508,7 +458,7 @@
     {
       "date": "2026-07-30",
       "ticker": "FORM",
-      "company": "FORM",
+      "company": "FormFactor",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -518,7 +468,7 @@
     {
       "date": "2026-07-30",
       "ticker": "LRCX",
-      "company": "LRCX",
+      "company": "Lam Research",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -528,7 +478,17 @@
     {
       "date": "2026-07-30",
       "ticker": "TER",
-      "company": "TER",
+      "company": "Teradyne",
+      "fiscal": "TBD",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-07-31",
+      "ticker": "KLAC",
+      "company": "KLA Corporation",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -538,9 +498,9 @@
     {
       "date": "2026-07-31",
       "ticker": "6981.T",
-      "company": "6981.T",
+      "company": "Murata 村田製作所",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "JST",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -548,68 +508,18 @@
     {
       "date": "2026-07-31",
       "ticker": "6762.T",
-      "company": "6762.T",
+      "company": "TDK Corporation",
       "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-07-31",
-      "ticker": "KLAC",
-      "company": "KLAC",
-      "fiscal": "TBD",
-      "time": "ET",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-03",
-      "ticker": "NVTS",
-      "company": "NVTS",
-      "fiscal": "TBD",
-      "time": "?",
+      "time": "JST",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
     },
     {
       "date": "2026-08-04",
-      "ticker": "2412.TW",
-      "company": "2412.TW",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-04",
-      "ticker": "ACLS",
-      "company": "ACLS",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-04",
-      "ticker": "NVTS",
-      "company": "NVTS",
-      "fiscal": "TBD",
-      "time": "ET",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-04 (估)",
       "ticker": "PLTR",
       "company": "Palantir",
-      "fiscal": "Q2 26",
+      "fiscal": "Q2 26 (估)",
       "time": "AMC",
       "note": "美國商業 (USCom) 客戶數、AIP 變現;股價最敏感的 AI 純股",
       "hist_move": "±13%",
@@ -621,6 +531,26 @@
         "revenue": "$1.81B",
         "yoy_rev": "+80%"
       }
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "2412.TW",
+      "company": "中華電信",
+      "fiscal": "TBD",
+      "time": "TPE",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "NVTS",
+      "company": "Navitas Semiconductor",
+      "fiscal": "TBD",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
     },
     {
       "date": "2026-08-05",
@@ -658,29 +588,9 @@
     },
     {
       "date": "2026-08-05",
-      "ticker": "6976.T",
-      "company": "6976.T",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-05",
-      "ticker": "ACLS",
-      "company": "ACLS",
-      "fiscal": "TBD",
-      "time": "ET",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-05 (估)",
       "ticker": "LITE",
       "company": "Lumentum",
-      "fiscal": "FQ4 26",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "資料中心光通訊 EML / 800G 出貨;AI 光通訊鏈核心",
       "hist_move": "±12%",
@@ -694,50 +604,30 @@
       }
     },
     {
-      "date": "2026-08-06",
-      "ticker": "NBIS",
-      "company": "NBIS",
+      "date": "2026-08-05",
+      "ticker": "ACLS",
+      "company": "Axcelis Technologies",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-05",
+      "ticker": "6976.T",
+      "company": "Taiyo Yuden 太陽誘電",
+      "fiscal": "TBD",
+      "time": "JST",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
     },
     {
       "date": "2026-08-06",
-      "ticker": "CIFR",
-      "company": "CIFR",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-06",
-      "ticker": "GSAT",
-      "company": "GSAT",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-06",
-      "ticker": "RKLB",
-      "company": "RKLB",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-06 (估)",
       "ticker": "FTNT",
       "company": "Fortinet",
-      "fiscal": "Q2 26",
+      "fiscal": "Q2 26 (估)",
       "time": "AMC",
       "note": "Product 營收 vs Service,Firewall 升級週期",
       "hist_move": "±10%",
@@ -751,9 +641,29 @@
       }
     },
     {
+      "date": "2026-08-06",
+      "ticker": "NBIS",
+      "company": "Nebius Group",
+      "fiscal": "TBD",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-06",
+      "ticker": "CIFR",
+      "company": "Cipher Mining",
+      "fiscal": "TBD",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
       "date": "2026-08-07",
       "ticker": "GSAT",
-      "company": "GSAT",
+      "company": "Globalstar",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -763,7 +673,7 @@
     {
       "date": "2026-08-07",
       "ticker": "RKLB",
-      "company": "RKLB",
+      "company": "Rocket Lab",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -771,59 +681,19 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-08-10",
-      "ticker": "ASTS",
-      "company": "ASTS",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
       "date": "2026-08-11",
-      "ticker": "POET",
-      "company": "POET",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-11",
-      "ticker": "ASTS",
-      "company": "ASTS",
-      "fiscal": "TBD",
-      "time": "ET",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-11 (估)",
       "ticker": "3017.TW",
-      "company": "奇鋐 Auras",
-      "fiscal": "Q2 26 法說",
+      "company": "奇鋐 Auras Technology",
+      "fiscal": "Q2 26 法說 (估)",
       "time": "台股盤後",
       "note": "AI 液冷 + 散熱模組龍頭,GB200/300 直接受惠",
       "hist_move": "±10%",
       "bias": "up"
     },
     {
-      "date": "2026-08-12",
-      "ticker": "4938.TW",
-      "company": "4938.TW",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-12",
-      "ticker": "POET",
-      "company": "POET",
+      "date": "2026-08-11",
+      "ticker": "ASTS",
+      "company": "AST SpaceMobile",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -831,10 +701,10 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-08-12 (估)",
+      "date": "2026-08-12",
       "ticker": "COHR",
       "company": "Coherent",
-      "fiscal": "FQ4 26",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "VCSEL、矽光、800G/1.6T 收發器;與 LITE 同為光通訊核心",
       "hist_move": "±10%",
@@ -848,69 +718,39 @@
       }
     },
     {
-      "date": "2026-08-12 (估)",
+      "date": "2026-08-12",
       "ticker": "CYBR",
       "company": "CyberArk",
-      "fiscal": "Q2 26",
+      "fiscal": "Q2 26 (估)",
       "time": "AMC",
       "note": "PAM 訂閱遷移、Venafi 整合",
       "hist_move": "±12%",
       "bias": "up"
     },
     {
-      "date": "2026-08-12 (估)",
+      "date": "2026-08-12",
       "ticker": "2376.TW",
       "company": "技嘉 Gigabyte",
-      "fiscal": "Q2 26 法說",
+      "fiscal": "Q2 26 法說 (估)",
       "time": "台股盤後",
       "note": "GPU 板卡 + AI server (B100/H200),Tier-2 客戶",
       "hist_move": "±7%",
       "bias": "neutral"
     },
     {
-      "date": "2026-08-13",
-      "ticker": "2317.TW",
-      "company": "2317.TW",
+      "date": "2026-08-12",
+      "ticker": "4938.TW",
+      "company": "和碩 Pegatron",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
     },
     {
-      "date": "2026-08-13",
-      "ticker": "AMAT",
-      "company": "AMAT",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-13 (估)",
-      "ticker": "6669.TW",
-      "company": "緯穎 Wiwynn",
-      "fiscal": "Q2 26 法說",
-      "time": "台股盤後",
-      "note": "Hyperscale ODM 龍頭,Meta/MSFT/AWS 訂單能見度;AI server 純度最高",
-      "hist_move": "±10%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-08-13 (估)",
-      "ticker": "3231.TW",
-      "company": "緯創 Wistron",
-      "fiscal": "Q2 26 法說",
-      "time": "台股盤後",
-      "note": "GB200/300 ODM 主力,毛利率關鍵",
-      "hist_move": "±8%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-08-14",
-      "ticker": "AMAT",
-      "company": "AMAT",
+      "date": "2026-08-12",
+      "ticker": "POET",
+      "company": "POET Technologies",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -918,30 +758,70 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-08-14 (估)",
+      "date": "2026-08-13",
+      "ticker": "6669.TW",
+      "company": "緯穎 Wiwynn",
+      "fiscal": "Q2 26 法說 (估)",
+      "time": "台股盤後",
+      "note": "Hyperscale ODM 龍頭,Meta/MSFT/AWS 訂單能見度;AI server 純度最高",
+      "hist_move": "±10%",
+      "bias": "up"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "3231.TW",
+      "company": "緯創 Wistron",
+      "fiscal": "Q2 26 法說 (估)",
+      "time": "台股盤後",
+      "note": "GB200/300 ODM 主力,毛利率關鍵",
+      "hist_move": "±8%",
+      "bias": "up"
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "2317.TW",
+      "company": "鴻海 Foxconn",
+      "fiscal": "TBD",
+      "time": "TPE",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-14",
       "ticker": "2382.TW",
       "company": "廣達 Quanta",
-      "fiscal": "Q2 26 法說",
+      "fiscal": "Q2 26 法說 (估)",
       "time": "台股盤後",
       "note": "AI server 季增、Meta/Google CSP 訂單",
       "hist_move": "±5%",
       "bias": "up"
     },
     {
-      "date": "2026-08-14 (估)",
+      "date": "2026-08-14",
       "ticker": "2356.TW",
       "company": "英業達 Inventec",
-      "fiscal": "Q2 26 法說",
+      "fiscal": "Q2 26 法說 (估)",
       "time": "台股盤後",
       "note": "Server ODM 第三大,NB 復甦觀察",
       "hist_move": "±5%",
       "bias": "neutral"
     },
     {
-      "date": "2026-08-19 (估)",
+      "date": "2026-08-14",
+      "ticker": "AMAT",
+      "company": "Applied Materials",
+      "fiscal": "TBD",
+      "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-19",
       "ticker": "PANW",
       "company": "Palo Alto Networks",
-      "fiscal": "FQ4 26",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "RPO、Platformization 成績,Next-Gen Security ARR",
       "hist_move": "±10%",
@@ -955,10 +835,10 @@
       }
     },
     {
-      "date": "2026-08-19 (估)",
+      "date": "2026-08-19",
       "ticker": "SMCI",
-      "company": "Super Micro",
-      "fiscal": "FQ4 26",
+      "company": "Super Micro Computer",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "GB200 出貨、毛利率復原;2024 做空陰影持續觀察",
       "hist_move": "±15%",
@@ -974,9 +854,9 @@
     {
       "date": "2026-08-20",
       "ticker": "2881.TW",
-      "company": "2881.TW",
+      "company": "富邦金",
       "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -984,19 +864,9 @@
     {
       "date": "2026-08-21",
       "ticker": "2891.TW",
-      "company": "2891.TW",
+      "company": "中信金",
       "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-24",
-      "ticker": "SNDK",
-      "company": "SNDK",
-      "fiscal": "TBD",
-      "time": "?",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -1004,7 +874,7 @@
     {
       "date": "2026-08-25",
       "ticker": "SNDK",
-      "company": "SNDK",
+      "company": "SanDisk",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -1012,10 +882,10 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-08-26 (估)",
+      "date": "2026-08-26",
       "ticker": "NVDA",
       "company": "NVIDIA ★",
-      "fiscal": "FQ2 27",
+      "fiscal": "FQ2 27 (估)",
       "time": "AMC",
       "note": "全市場最重要單一財報。Data Center >$40B?、Blackwell 出貨、毛利率 >72%",
       "hist_move": "±8~10%",
@@ -1032,10 +902,10 @@
       }
     },
     {
-      "date": "2026-08-26 (估)",
+      "date": "2026-08-26",
       "ticker": "CRWD",
       "company": "CrowdStrike",
-      "fiscal": "FQ2 27",
+      "fiscal": "FQ2 27 (估)",
       "time": "AMC",
       "note": "ARR 成長、NRR、Falcon Flex 採用率;2024/7 大當機後續觀察",
       "hist_move": "±12%",
@@ -1050,29 +920,9 @@
     },
     {
       "date": "2026-08-27",
-      "ticker": "S",
-      "company": "S",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-27",
-      "ticker": "IREN",
-      "company": "IREN",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
-    },
-    {
-      "date": "2026-08-27 (估)",
       "ticker": "OKTA",
       "company": "Okta",
-      "fiscal": "FQ2 27",
+      "fiscal": "FQ2 27 (估)",
       "time": "AMC",
       "note": "RPO 復甦、cRPO、Auth0 整合",
       "hist_move": "±15%",
@@ -1086,10 +936,10 @@
       }
     },
     {
-      "date": "2026-08-27 (估)",
+      "date": "2026-08-27",
       "ticker": "DELL",
       "company": "Dell Technologies",
-      "fiscal": "FQ2 27",
+      "fiscal": "FQ2 27 (估)",
       "time": "AMC",
       "note": "AI server (ISG) 出貨、訂單能見度;NVDA 鏈最直接美系受惠股",
       "hist_move": "±8%",
@@ -1104,8 +954,18 @@
     },
     {
       "date": "2026-08-28",
+      "ticker": "MRVL",
+      "company": "Marvell",
+      "fiscal": "FQ2 27 (估)",
+      "time": "AMC",
+      "note": "AWS Trainium ASIC、光通訊 DSP",
+      "hist_move": "±9%",
+      "bias": "up"
+    },
+    {
+      "date": "2026-08-28",
       "ticker": "S",
-      "company": "S",
+      "company": "SentinelOne",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -1115,7 +975,7 @@
     {
       "date": "2026-08-28",
       "ticker": "IREN",
-      "company": "IREN",
+      "company": "IREN (前 Iris Energy)",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -1123,20 +983,10 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-08-28 (估)",
-      "ticker": "MRVL",
-      "company": "Marvell",
-      "fiscal": "FQ2 27",
-      "time": "AMC",
-      "note": "AWS Trainium ASIC、光通訊 DSP",
-      "hist_move": "±9%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-09-02 (估)",
+      "date": "2026-09-02",
       "ticker": "ZS",
       "company": "Zscaler",
-      "fiscal": "FQ4 26",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "Billings、Large customer adds",
       "hist_move": "±14%",
@@ -1150,10 +1000,10 @@
       }
     },
     {
-      "date": "2026-09-03 (估)",
+      "date": "2026-09-03",
       "ticker": "HPE",
-      "company": "HP Enterprise",
-      "fiscal": "FQ4 26",
+      "company": "Hewlett Packard Enterprise",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "Juniper 整合進度、AI server 訂單追趕 DELL",
       "hist_move": "±6%",
@@ -1167,19 +1017,19 @@
       }
     },
     {
-      "date": "2026-09-09",
-      "ticker": "ORCL",
-      "company": "ORCL",
-      "fiscal": "TBD",
-      "time": "?",
-      "note": "(自動抓取)",
-      "hist_move": "—",
-      "bias": "neutral"
+      "date": "2026-09-10",
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "fiscal": "FQ3 26 (估)",
+      "time": "AMC",
+      "note": "ASIC + VMware 整合",
+      "hist_move": "±6%",
+      "bias": "up"
     },
     {
       "date": "2026-09-10",
       "ticker": "ORCL",
-      "company": "ORCL",
+      "company": "Oracle",
       "fiscal": "TBD",
       "time": "ET",
       "note": "(自動抓取)",
@@ -1187,30 +1037,20 @@
       "bias": "neutral"
     },
     {
-      "date": "2026-09-10 (估)",
-      "ticker": "AVGO",
-      "company": "Broadcom",
-      "fiscal": "FQ3 26",
-      "time": "AMC",
-      "note": "ASIC + VMware 整合",
-      "hist_move": "±6%",
-      "bias": "up"
-    },
-    {
-      "date": "2026-09-24 (估)",
+      "date": "2026-09-24",
       "ticker": "MU",
       "company": "Micron",
-      "fiscal": "FQ4 26",
+      "fiscal": "FQ4 26 (估)",
       "time": "AMC",
       "note": "HBM4 良率、價格",
       "hist_move": "±10%",
       "bias": "neutral"
     },
     {
-      "date": "2026-11-05 (估)",
+      "date": "2026-11-05",
       "ticker": "NET",
       "company": "Cloudflare",
-      "fiscal": "Q3 26",
+      "fiscal": "Q3 26 (估)",
       "time": "AMC",
       "note": "Workers AI 採用、大客戶比重 (>$100K)",
       "hist_move": "±18%",
@@ -12415,22 +12255,10 @@
       "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
-      "date": "2026-06-10",
-      "type": "CPI",
-      "period": "5 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
       "date": "2026-06-11",
       "type": "CPI",
       "period": "5 月",
       "note": "8:30 ET,Core MoM 0.3% 為心理線"
-    },
-    {
-      "date": "2026-06-11",
-      "type": "PPI",
-      "period": "5 月",
-      "note": "8:30 ET (估算)"
     },
     {
       "date": "2026-06-12",
@@ -12445,12 +12273,6 @@
       "note": "8:30 ET"
     },
     {
-      "date": "2026-06-18",
-      "type": "零售銷售",
-      "period": "5 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
       "date": "2026-06-26",
       "type": "PCE",
       "period": "5 月",
@@ -12461,18 +12283,6 @@
       "type": "NFP",
       "period": "6 月",
       "note": "週四(因獨立日提前)"
-    },
-    {
-      "date": "2026-07-03",
-      "type": "NFP",
-      "period": "6 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2026-07-08",
-      "type": "CPI",
-      "period": "6 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
       "date": "2026-07-08",
@@ -12583,12 +12393,6 @@
       "note": "8:30 ET"
     },
     {
-      "date": "2026-09-09",
-      "type": "CPI",
-      "period": "8 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
       "date": "2026-09-10",
       "type": "CPI",
       "period": "8 月",
@@ -12679,12 +12483,6 @@
       "note": "8:30 ET"
     },
     {
-      "date": "2026-11-11",
-      "type": "CPI",
-      "period": "10 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
       "date": "2026-11-12",
       "type": "CPI",
       "period": "10 月",
@@ -12721,22 +12519,10 @@
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
     },
     {
-      "date": "2026-11-27",
-      "type": "PCE",
-      "period": "10 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
       "date": "2026-12-04",
       "type": "NFP",
       "period": "11 月",
       "note": "8:30 ET"
-    },
-    {
-      "date": "2026-12-09",
-      "type": "CPI",
-      "period": "11 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
       "date": "2026-12-10",
@@ -12769,64 +12555,10 @@
       "note": "★ 年底點陣圖會議紀要"
     },
     {
-      "date": "2027-01-01",
-      "type": "NFP",
-      "period": "12 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-01-13",
-      "type": "CPI",
-      "period": "12 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
       "date": "2027-01-13",
       "type": "Beige Book",
       "period": "FOMC 1/27 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
-    },
-    {
-      "date": "2027-01-14",
-      "type": "PPI",
-      "period": "12 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-01-14",
-      "type": "零售銷售",
-      "period": "12 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-01-28",
-      "type": "GDP",
-      "period": "去年 Q4 GDP advance",
-      "note": "8:30 ET (advance estimate, 估算)"
-    },
-    {
-      "date": "2027-01-29",
-      "type": "PCE",
-      "period": "12 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-02-05",
-      "type": "NFP",
-      "period": "1 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-02-10",
-      "type": "CPI",
-      "period": "1 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-02-11",
-      "type": "PPI",
-      "period": "1 月",
-      "note": "8:30 ET (估算)"
     },
     {
       "date": "2027-02-16",
@@ -12841,58 +12573,10 @@
       "note": "FOMC 後 3 週發布"
     },
     {
-      "date": "2027-02-18",
-      "type": "零售銷售",
-      "period": "1 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-02-26",
-      "type": "PCE",
-      "period": "1 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
       "date": "2027-03-03",
       "type": "Beige Book",
       "period": "FOMC 3/17 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
-    },
-    {
-      "date": "2027-03-05",
-      "type": "NFP",
-      "period": "2 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-03-10",
-      "type": "CPI",
-      "period": "2 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-03-11",
-      "type": "PPI",
-      "period": "2 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-03-18",
-      "type": "零售銷售",
-      "period": "2 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-03-26",
-      "type": "PCE",
-      "period": "2 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-04-02",
-      "type": "NFP",
-      "period": "3 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
       "date": "2027-04-07",
@@ -12902,63 +12586,9 @@
     },
     {
       "date": "2027-04-14",
-      "type": "CPI",
-      "period": "3 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-04-14",
       "type": "Beige Book",
       "period": "FOMC 4/28 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
-    },
-    {
-      "date": "2027-04-15",
-      "type": "PPI",
-      "period": "3 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-04-15",
-      "type": "零售銷售",
-      "period": "3 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-04-29",
-      "type": "GDP",
-      "period": "Q1 GDP advance",
-      "note": "8:30 ET (advance estimate, 估算)"
-    },
-    {
-      "date": "2027-04-30",
-      "type": "PCE",
-      "period": "3 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-05-07",
-      "type": "NFP",
-      "period": "4 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-05-12",
-      "type": "CPI",
-      "period": "4 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-05-13",
-      "type": "PPI",
-      "period": "4 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-05-13",
-      "type": "零售銷售",
-      "period": "4 月",
-      "note": "8:30 ET (估算)"
     },
     {
       "date": "2027-05-19",
@@ -12973,58 +12603,10 @@
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
     },
     {
-      "date": "2027-05-28",
-      "type": "PCE",
-      "period": "4 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-06-04",
-      "type": "NFP",
-      "period": "5 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-06-09",
-      "type": "CPI",
-      "period": "5 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-06-10",
-      "type": "PPI",
-      "period": "5 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-06-17",
-      "type": "零售銷售",
-      "period": "5 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-06-25",
-      "type": "PCE",
-      "period": "5 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
       "date": "2027-06-30",
       "type": "FOMC Minutes",
       "period": "6/9 會議",
       "note": "★ 含點陣圖會議的紀要,影響更大"
-    },
-    {
-      "date": "2027-07-02",
-      "type": "NFP",
-      "period": "6 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-07-14",
-      "type": "CPI",
-      "period": "6 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
       "date": "2027-07-14",
@@ -13033,52 +12615,10 @@
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
     },
     {
-      "date": "2027-07-15",
-      "type": "PPI",
-      "period": "6 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-07-15",
-      "type": "零售銷售",
-      "period": "6 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
       "date": "2027-07-20",
       "type": "Humphrey-Hawkins",
       "period": "上半年國會作證",
       "note": "★ Fed 主席半年度貨幣政策報告 (參議院 + 眾議院)。鷹鴿派表態關鍵"
-    },
-    {
-      "date": "2027-07-29",
-      "type": "GDP",
-      "period": "Q2 GDP advance",
-      "note": "8:30 ET (advance estimate, 估算)"
-    },
-    {
-      "date": "2027-07-30",
-      "type": "PCE",
-      "period": "6 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-08-06",
-      "type": "NFP",
-      "period": "7 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-08-11",
-      "type": "CPI",
-      "period": "7 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-08-12",
-      "type": "PPI",
-      "period": "7 月",
-      "note": "8:30 ET (估算)"
     },
     {
       "date": "2027-08-18",
@@ -13087,58 +12627,10 @@
       "note": "FOMC 後 3 週發布"
     },
     {
-      "date": "2027-08-19",
-      "type": "零售銷售",
-      "period": "7 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-08-27",
-      "type": "PCE",
-      "period": "7 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
       "date": "2027-09-01",
       "type": "Beige Book",
       "period": "FOMC 9/15 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
-    },
-    {
-      "date": "2027-09-03",
-      "type": "NFP",
-      "period": "8 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-09-08",
-      "type": "CPI",
-      "period": "8 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-09-09",
-      "type": "PPI",
-      "period": "8 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-09-16",
-      "type": "零售銷售",
-      "period": "8 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-09-24",
-      "type": "PCE",
-      "period": "8 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-10-01",
-      "type": "NFP",
-      "period": "9 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
     },
     {
       "date": "2027-10-06",
@@ -13148,57 +12640,9 @@
     },
     {
       "date": "2027-10-13",
-      "type": "CPI",
-      "period": "9 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-10-13",
       "type": "Beige Book",
       "period": "FOMC 10/27 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
-    },
-    {
-      "date": "2027-10-14",
-      "type": "PPI",
-      "period": "9 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-10-14",
-      "type": "零售銷售",
-      "period": "9 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-10-28",
-      "type": "GDP",
-      "period": "Q3 GDP advance",
-      "note": "8:30 ET (advance estimate, 估算)"
-    },
-    {
-      "date": "2027-10-29",
-      "type": "PCE",
-      "period": "9 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-11-05",
-      "type": "NFP",
-      "period": "10 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-11-10",
-      "type": "CPI",
-      "period": "10 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-11-11",
-      "type": "PPI",
-      "period": "10 月",
-      "note": "8:30 ET (估算)"
     },
     {
       "date": "2027-11-17",
@@ -13207,58 +12651,16 @@
       "note": "FOMC 後 3 週發布"
     },
     {
-      "date": "2027-11-18",
-      "type": "零售銷售",
-      "period": "10 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
       "date": "2027-11-24",
       "type": "Beige Book",
       "period": "FOMC 12/8 前",
       "note": "區域經濟現況描述,FOMC 前 2 週發布"
     },
     {
-      "date": "2027-11-26",
-      "type": "PCE",
-      "period": "10 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
-    },
-    {
-      "date": "2027-12-03",
-      "type": "NFP",
-      "period": "11 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-12-08",
-      "type": "CPI",
-      "period": "11 月",
-      "note": "8:30 ET (估算,實際以 BLS 公告為準)"
-    },
-    {
-      "date": "2027-12-09",
-      "type": "PPI",
-      "period": "11 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
-      "date": "2027-12-16",
-      "type": "零售銷售",
-      "period": "11 月",
-      "note": "8:30 ET (估算)"
-    },
-    {
       "date": "2027-12-29",
       "type": "FOMC Minutes",
       "period": "12/8 會議",
       "note": "★ 含點陣圖會議的紀要,影響更大"
-    },
-    {
-      "date": "2027-12-31",
-      "type": "PCE",
-      "period": "11 月",
-      "note": "8:30 ET,Fed 最愛通膨指標 (估算)"
     }
   ],
   "valuations": [
