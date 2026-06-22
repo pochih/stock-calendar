@@ -1065,10 +1065,12 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
             "rationale": f"yfinance 共識:{raw['price_targets'].get('mean')}",
         })
 
-    # 7. ROE 調整基準值 (PBR-ROE 法,參考 taiquant 釣魚分區邏輯)
-    #    高 ROE 公司:NAV × ROE × 10
-    #    中 ROE:     NAV × 1
-    #    低 ROE:     NAV × (ROE + 0.02) × 10
+    # 7. ROE 調整基準值 (PBR-ROE 法,參考 taiquant 釣魚分區邏輯 + 調整倍數以反映美股 mega-cap 高 P/B)
+    #    taiquant 原始公式 ×10 適合台股穩健公司,但美股 mega-cap (NVDA P/B 26 / AAPL 41)
+    #    需要更高倍數才能反映成長股估值現實:
+    #    高 ROE 公司:NAV × ROE × 20
+    #    中 ROE:     NAV × 2
+    #    低 ROE:     NAV × (ROE + 0.02) × 15
     info = raw["info"]
     book_value_ps = safe_float(info.get("bookValue"))
     roe = safe_float(info.get("returnOnEquity"))
@@ -1076,18 +1078,18 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
     # 跳過 ROE <= 0 (重組期 / 虧損)
     if book_value_ps and roe is not None and roe > 0 and not ccy_mismatch:
         if roe >= 0.10:
-            roe_base = book_value_ps * roe * 10
-            roe_note = f"高 ROE 法:NAV ${book_value_ps:.1f} × ROE {roe*100:.1f}% × 10"
+            roe_base = book_value_ps * roe * 20
+            roe_note = f"高 ROE 法:NAV ${book_value_ps:.1f} × ROE {roe*100:.1f}% × 20"
         elif roe >= 0.08:
-            roe_base = book_value_ps
-            roe_note = f"中 ROE 法:NAV ${book_value_ps:.1f} 等於合理價"
+            roe_base = book_value_ps * 2
+            roe_note = f"中 ROE 法:NAV ${book_value_ps:.1f} × 2"
         else:
-            roe_base = book_value_ps * (roe + 0.02) * 10
-            roe_note = f"低 ROE 法:NAV ${book_value_ps:.1f} × (ROE+2%) × 10"
+            roe_base = book_value_ps * (roe + 0.02) * 15
+            roe_note = f"低 ROE 法:NAV ${book_value_ps:.1f} × (ROE+2%) × 15"
         models.append({
             "model": "ROE 調整基準值 (PBR-ROE)",
             "implied_price": round(roe_base, 2),
-            "rationale": roe_note + " — 高 ROE 才配 10x P/B,低 ROE 給折價",
+            "rationale": roe_note + " — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)",
         })
 
     # 若跨幣值,加說明
@@ -1288,6 +1290,7 @@ def build_valuation_entry(symbol: str) -> dict:
 
     # 魚體區計算 (參考 taiquant): 以 ROE 調整基準值 (PBR-ROE 模型) 為錨點
     # 沒 ROE 模型 fallback 用 analyst median target
+    # 倍數從 ×10 調到 ×20 反映美股 mega-cap P/B (NVDA 26 / AAPL 41 等遠超 taiquant 台股設定)
     book_value_ps = safe_float(info.get("bookValue"))
     roe = safe_float(info.get("returnOnEquity"))
     stock_ccy = str(info.get("currency", "") or "")
@@ -1299,11 +1302,11 @@ def build_valuation_entry(symbol: str) -> dict:
     # 跳過 ROE <= 0 (重組期 / 虧損) — 公式會給負值
     if book_value_ps and roe is not None and roe > 0 and not ccy_mismatch:
         if roe >= 0.10:
-            roe_base = book_value_ps * roe * 10
+            roe_base = book_value_ps * roe * 20
         elif roe >= 0.08:
-            roe_base = book_value_ps
+            roe_base = book_value_ps * 2
         else:
-            roe_base = book_value_ps * (roe + 0.02) * 10
+            roe_base = book_value_ps * (roe + 0.02) * 15
 
     benchmark_base = roe_base if roe_base else base
     # 計算 5 段魚體區邊界

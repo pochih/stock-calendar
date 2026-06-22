@@ -12672,17 +12672,17 @@
       "current_price": 1133.99,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 255.81,
+      "benchmark_base": 511.62,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 343.3,
+      "discount_pct": 121.6,
       "band_thresholds": {
-        "head_low": 217.44,
-        "body_low": 255.81,
-        "tail_low": 294.18,
-        "bone_low": 332.55,
-        "crazy_low": 511.62
+        "head_low": 434.88,
+        "body_low": 511.62,
+        "tail_low": 588.37,
+        "bone_low": 665.11,
+        "crazy_low": 1023.24
       },
       "key_stats": {
         "trailing_pe": 53.464878,
@@ -12788,15 +12788,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 255.81,
-          "rationale": "高 ROE 法:NAV $64.2 × ROE 39.8% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 511.62,
+          "rationale": "高 ROE 法:NAV $64.2 × ROE 39.8% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 256.0,
+        "bear": 301.0,
         "base": 1075.0,
         "bull": 1769.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($256),多頭給 AI 全週期溢價 ($1769)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($301),多頭給 AI 全週期溢價 ($1769)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -13434,17 +13434,17 @@
       "current_price": 210.69,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 92.23,
+      "benchmark_base": 184.46,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 128.4,
+      "price_band": "body",
+      "price_band_label": "魚身區 (合理)",
+      "discount_pct": 14.2,
       "band_thresholds": {
-        "head_low": 78.4,
-        "body_low": 92.23,
-        "tail_low": 106.06,
-        "bone_low": 119.9,
-        "crazy_low": 184.46
+        "head_low": 156.79,
+        "body_low": 184.46,
+        "tail_low": 212.13,
+        "bone_low": 239.8,
+        "crazy_low": 368.92
       },
       "key_stats": {
         "trailing_pe": 32.26493,
@@ -13550,15 +13550,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 92.23,
-          "rationale": "高 ROE 法:NAV $8.1 × ROE 114.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 184.46,
+          "rationale": "高 ROE 法:NAV $8.1 × ROE 114.3% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 92.0,
+        "bear": 184.0,
         "base": 288.0,
         "bull": 382.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($92),多頭給 AI 全週期溢價 ($382)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($184),多頭給 AI 全週期溢價 ($382)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -14189,17 +14189,17 @@
       "current_price": 411.35,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 68.71,
+      "benchmark_base": 137.42,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 498.7,
+      "discount_pct": 199.3,
       "band_thresholds": {
-        "head_low": 58.4,
-        "body_low": 68.71,
-        "tail_low": 79.02,
-        "bone_low": 89.32,
-        "crazy_low": 137.42
+        "head_low": 116.81,
+        "body_low": 137.42,
+        "tail_low": 158.03,
+        "bone_low": 178.64,
+        "crazy_low": 274.84
       },
       "key_stats": {
         "trailing_pe": 68.44426,
@@ -14305,15 +14305,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 68.71,
-          "rationale": "高 ROE 法:NAV $18.4 × ROE 37.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 137.42,
+          "rationale": "高 ROE 法:NAV $18.4 × ROE 37.3% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 69.0,
+        "bear": 137.0,
         "base": 525.0,
         "bull": 543.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($69),多頭給 AI 全週期溢價 ($543)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($137),多頭給 AI 全週期溢價 ($543)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -14884,17 +14884,17 @@
       "current_price": 298.01,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 102.71,
+      "benchmark_base": 205.42,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 190.2,
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 45.1,
       "band_thresholds": {
-        "head_low": 87.3,
-        "body_low": 102.71,
-        "tail_low": 118.11,
-        "bone_low": 133.52,
-        "crazy_low": 205.42
+        "head_low": 174.6,
+        "body_low": 205.42,
+        "tail_low": 236.23,
+        "bone_low": 267.04,
+        "crazy_low": 410.83
       },
       "key_stats": {
         "trailing_pe": 36.122425,
@@ -15000,15 +15000,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 102.71,
-          "rationale": "高 ROE 法:NAV $7.3 × ROE 141.5% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 205.42,
+          "rationale": "高 ROE 法:NAV $7.3 × ROE 141.5% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 103.0,
+        "bear": 151.0,
         "base": 312.0,
         "bull": 314.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($103),多頭給 AI 全週期溢價 ($314)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($151),多頭給 AI 全週期溢價 ($314)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -15608,17 +15608,17 @@
       "current_price": 244.39,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 99.79,
+      "benchmark_base": 199.59,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 144.9,
+      "price_band": "tail",
+      "price_band_label": "魚尾區 (略貴)",
+      "discount_pct": 22.4,
       "band_thresholds": {
-        "head_low": 84.83,
-        "body_low": 99.79,
-        "tail_low": 114.76,
-        "bone_low": 129.73,
-        "crazy_low": 199.59
+        "head_low": 169.65,
+        "body_low": 199.59,
+        "tail_low": 229.53,
+        "bone_low": 259.47,
+        "crazy_low": 399.18
       },
       "key_stats": {
         "trailing_pe": 31.656736,
@@ -15724,15 +15724,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 99.79,
-          "rationale": "高 ROE 法:NAV $41.1 × ROE 24.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 199.59,
+          "rationale": "高 ROE 法:NAV $41.1 × ROE 24.3% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 100.0,
+        "bear": 200.0,
         "base": 315.0,
         "bull": 346.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($100),多頭給 AI 全週期溢價 ($346)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($200),多頭給 AI 全週期溢價 ($346)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -16354,17 +16354,17 @@
       "current_price": 577.22,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 316.17,
+      "benchmark_base": 632.34,
       "benchmark_source": "PBR-ROE",
-      "price_band": "bone",
-      "price_band_label": "魚骨區 (過熱)",
-      "discount_pct": 82.6,
+      "price_band": "head",
+      "price_band_label": "魚頭區 (低估)",
+      "discount_pct": -8.7,
       "band_thresholds": {
-        "head_low": 268.75,
-        "body_low": 316.17,
-        "tail_low": 363.6,
-        "bone_low": 411.02,
-        "crazy_low": 632.34
+        "head_low": 537.49,
+        "body_low": 632.34,
+        "tail_low": 727.19,
+        "bone_low": 822.04,
+        "crazy_low": 1264.68
       },
       "key_stats": {
         "trailing_pe": 21.005095,
@@ -16470,15 +16470,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 316.17,
-          "rationale": "高 ROE 法:NAV $96.0 × ROE 32.9% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 632.34,
+          "rationale": "高 ROE 法:NAV $96.0 × ROE 32.9% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 316.0,
+        "bear": 632.0,
         "base": 825.0,
         "bull": 978.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($316),多頭給 AI 全週期溢價 ($978)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($632),多頭給 AI 全週期溢價 ($978)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -17518,26 +17518,26 @@
       "current_price": 2510.0,
       "currency": "TWD",
       "financial_currency": "TWD",
-      "benchmark_base": 822.57,
+      "benchmark_base": 1645.14,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 205.1,
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 52.6,
       "band_thresholds": {
-        "head_low": 699.18,
-        "body_low": 822.57,
-        "tail_low": 945.95,
-        "bone_low": 1069.34,
-        "crazy_low": 1645.14
+        "head_low": 1398.37,
+        "body_low": 1645.14,
+        "tail_low": 1891.91,
+        "bone_low": 2138.68,
+        "crazy_low": 3290.27
       },
       "key_stats": {
-        "trailing_pe": 34.14501,
-        "forward_pe": 20.363127,
+        "trailing_pe": 34.076996,
+        "forward_pe": 20.322563,
         "ps_ttm": 15.860568,
-        "pb": 11.049189,
+        "pb": 11.027179,
         "ev_ebitda": 21.095,
         "peg": 1.19,
-        "mcap_b": 65090.3,
+        "mcap_b": 64960.6,
         "fcf_ttm_b": 719.16,
         "gross_margin": 61.9,
         "profit_margin": 46.5,
@@ -17564,7 +17564,7 @@
         "avg_rating_score": 1.76,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2510.0,
+          "current": 2505.0,
           "mean": 2647.58,
           "median": 2600.0,
           "high": 3500.0,
@@ -17619,7 +17619,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (14x)",
-          "implied_price": 2130.63,
+          "implied_price": 2125.63,
           "rationale": "歷史 EV/EBITDA 14x,EBITDA = margin 70% × FY 當期 Rev"
         },
         {
@@ -17634,15 +17634,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 822.57,
-          "rationale": "高 ROE 法:NAV $227.2 × ROE 36.2% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 1645.14,
+          "rationale": "高 ROE 法:NAV $227.2 × ROE 36.2% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 823.0,
+        "bear": 1645.0,
         "base": 2600.0,
         "bull": 3082.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($823),多頭給 AI 全週期溢價 ($3082)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($1645),多頭給 AI 全週期溢價 ($3082)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -17750,17 +17750,17 @@
       "current_price": 379.4,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 189.72,
+      "benchmark_base": 379.44,
       "benchmark_source": "PBR-ROE",
-      "price_band": "bone",
-      "price_band_label": "魚骨區 (過熱)",
-      "discount_pct": 100.0,
+      "price_band": "head",
+      "price_band_label": "魚頭區 (低估)",
+      "discount_pct": -0.0,
       "band_thresholds": {
-        "head_low": 161.26,
-        "body_low": 189.72,
-        "tail_low": 218.18,
-        "bone_low": 246.64,
-        "crazy_low": 379.44
+        "head_low": 322.52,
+        "body_low": 379.44,
+        "tail_low": 436.36,
+        "bone_low": 493.27,
+        "crazy_low": 758.88
       },
       "key_stats": {
         "trailing_pe": 22.569899,
@@ -17866,15 +17866,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 189.72,
-          "rationale": "高 ROE 法:NAV $55.8 × ROE 34.0% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 379.44,
+          "rationale": "高 ROE 法:NAV $55.8 × ROE 34.0% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 190.0,
+        "bear": 379.0,
         "base": 555.0,
         "bull": 619.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($190),多頭給 AI 全週期溢價 ($619)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($379),多頭給 AI 全週期溢價 ($619)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -18560,17 +18560,17 @@
       "current_price": 368.03,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 153.65,
+      "benchmark_base": 307.3,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 139.5,
+      "price_band": "tail",
+      "price_band_label": "魚尾區 (略貴)",
+      "discount_pct": 19.8,
       "band_thresholds": {
-        "head_low": 130.6,
-        "body_low": 153.65,
-        "tail_low": 176.7,
-        "bone_low": 199.75,
-        "crazy_low": 307.3
+        "head_low": 261.21,
+        "body_low": 307.3,
+        "tail_low": 353.4,
+        "bone_low": 399.49,
+        "crazy_low": 614.6
       },
       "key_stats": {
         "trailing_pe": 28.093893,
@@ -18676,15 +18676,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 153.65,
-          "rationale": "高 ROE 法:NAV $39.5 × ROE 38.9% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 307.3,
+          "rationale": "高 ROE 法:NAV $39.5 × ROE 38.9% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 154.0,
+        "bear": 307.0,
         "base": 430.0,
         "bull": 831.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($154),多頭給 AI 全週期溢價 ($831)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($307),多頭給 AI 全週期溢價 ($831)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -19363,17 +19363,17 @@
       "current_price": 400.49,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 15.11,
+      "benchmark_base": 22.67,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 2550.3,
+      "discount_pct": 1666.9,
       "band_thresholds": {
-        "head_low": 12.84,
-        "body_low": 15.11,
-        "tail_low": 17.38,
-        "bone_low": 19.64,
-        "crazy_low": 30.22
+        "head_low": 19.27,
+        "body_low": 22.67,
+        "tail_low": 26.07,
+        "bone_low": 29.47,
+        "crazy_low": 45.33
       },
       "key_stats": {
         "trailing_pe": 370.82404,
@@ -19479,15 +19479,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 15.11,
-          "rationale": "低 ROE 法:NAV $21.9 × (ROE+2%) × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 22.67,
+          "rationale": "低 ROE 法:NAV $21.9 × (ROE+2%) × 15 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 15.0,
+        "bear": 23.0,
         "base": 460.0,
         "bull": 421.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($15),多頭給 AI 全週期溢價 ($421)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($23),多頭給 AI 全週期溢價 ($421)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -20016,14 +20016,14 @@
       "name": "Samsung Electronics 三星電子",
       "category_label": "Memory / NAND / Foundry / Display (Korean cyclical semi)",
       "updated_at": "2026-06-22",
-      "current_price": 348500.0,
+      "current_price": 354500.0,
       "currency": "KRW",
       "financial_currency": "KRW",
       "benchmark_base": 431000.0,
       "benchmark_source": "Analyst Median",
       "price_band": "below_head",
       "price_band_label": "魚頭區以下 (深度低估)",
-      "discount_pct": -19.1,
+      "discount_pct": -17.7,
       "band_thresholds": {
         "head_low": 366350.0,
         "body_low": 431000.0,
@@ -20033,12 +20033,12 @@
       },
       "key_stats": {
         "trailing_pe": null,
-        "forward_pe": 6.0049343,
-        "ps_ttm": 5.892914,
+        "forward_pe": 6.1083193,
+        "ps_ttm": 5.99437,
         "pb": null,
         "ev_ebitda": 15.844,
         "peg": 0.41,
-        "mcap_b": 2288447.4,
+        "mcap_b": 2327846.8,
         "fcf_ttm_b": 67568.2,
         "gross_margin": 47.7,
         "profit_margin": 21.5,
@@ -20065,7 +20065,7 @@
         "avg_rating_score": 1.78,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 348500.0,
+          "current": 354500.0,
           "mean": 428075.53,
           "median": 431000.0,
           "high": 850000.0,
@@ -20120,7 +20120,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (8x)",
-          "implied_price": 357222.52,
+          "implied_price": 364057.71,
           "rationale": "歷史 EV/EBITDA 8x,EBITDA = margin 36% × FY 當期 Rev"
         },
         {
@@ -20135,25 +20135,25 @@
         }
       ],
       "fair_value_summary": {
-        "bear": 357223.0,
+        "bear": 363405.0,
         "base": 431000.0,
         "bull": 680564.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($357223),多頭給 AI 全週期溢價 ($680564)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($363405),多頭給 AI 全週期溢價 ($680564)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 348450.0,
-            "type": "整數心理關 $348450",
+            "price": 354450.0,
+            "type": "整數心理關 $354450",
             "strength": "弱"
           },
           {
-            "price": 275680.0,
+            "price": 275800.0,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 164056.85,
+            "price": 164086.85,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -20165,18 +20165,18 @@
         ],
         "resistance_levels": [
           {
-            "price": 348550.0,
-            "type": "整數心理關 $348550",
+            "price": 354550.0,
+            "type": "整數心理關 $354550",
             "strength": "弱"
           },
           {
-            "price": 348600.0,
-            "type": "整數心理關 $348600",
+            "price": 354600.0,
+            "type": "整數心理關 $354600",
             "strength": "弱"
           },
           {
-            "price": 348650.0,
-            "type": "整數心理關 $348650",
+            "price": 354650.0,
+            "type": "整數心理關 $354650",
             "strength": "弱"
           },
           {
@@ -20243,14 +20243,14 @@
       "name": "SK Hynix",
       "category_label": "HBM 龍頭 / DRAM (NVDA 主供應商)",
       "updated_at": "2026-06-22",
-      "current_price": 2871000.0,
+      "current_price": 2898000.0,
       "currency": "KRW",
       "financial_currency": "KRW",
       "benchmark_base": 2857500.0,
       "benchmark_source": "Analyst Median",
       "price_band": "body",
       "price_band_label": "魚身區 (合理)",
-      "discount_pct": 0.5,
+      "discount_pct": 1.4,
       "band_thresholds": {
         "head_low": 2428875.0,
         "body_low": 2857500.0,
@@ -20260,12 +20260,12 @@
       },
       "key_stats": {
         "trailing_pe": null,
-        "forward_pe": 6.941835,
-        "ps_ttm": 15.429546,
+        "forward_pe": 7.0071187,
+        "ps_ttm": 15.574653,
         "pb": null,
         "ev_ebitda": 20.998,
         "peg": 3.78,
-        "mcap_b": 2037283.6,
+        "mcap_b": 2057159.5,
         "fcf_ttm_b": 25809.05,
         "gross_margin": 68.3,
         "profit_margin": 56.9,
@@ -20292,7 +20292,7 @@
         "avg_rating_score": 1.79,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2870000.0,
+          "current": 2898000.0,
           "mean": 2712489.0,
           "median": 2857500.0,
           "high": 4000000.0,
@@ -20347,7 +20347,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (10x)",
-          "implied_price": 3515040.02,
+          "implied_price": 3543039.97,
           "rationale": "歷史 EV/EBITDA 10x,EBITDA = margin 69% × FY 當期 Rev"
         },
         {
@@ -20370,45 +20370,45 @@
       "support_resistance": {
         "support_levels": [
           {
-            "price": 2870950.0,
-            "type": "整數心理關 $2870950",
+            "price": 2897950.0,
+            "type": "整數心理關 $2897950",
             "strength": "弱"
           },
           {
-            "price": 1777295.4,
+            "price": 1777855.4,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 923217.85,
+            "price": 923357.85,
             "type": "200 DMA",
             "strength": "強"
           },
           {
-            "price": 243980.47,
+            "price": 243980.45,
             "type": "52 週低",
             "strength": "強 (深支撐)"
           }
         ],
         "resistance_levels": [
           {
-            "price": 2870000.0,
+            "price": 2898000.0,
             "type": "正測 52 週新高",
             "strength": "強"
           },
           {
-            "price": 2871050.0,
-            "type": "整數心理關 $2871050",
+            "price": 2898050.0,
+            "type": "整數心理關 $2898050",
             "strength": "弱"
           },
           {
-            "price": 2871100.0,
-            "type": "整數心理關 $2871100",
+            "price": 2898100.0,
+            "type": "整數心理關 $2898100",
             "strength": "弱"
           },
           {
-            "price": 2871150.0,
-            "type": "整數心理關 $2871150",
+            "price": 2898150.0,
+            "type": "整數心理關 $2898150",
             "strength": "弱"
           }
         ]
@@ -20473,17 +20473,17 @@
       "current_price": 537.37,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 39.55,
+      "benchmark_base": 79.09,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 1258.8,
+      "discount_pct": 579.4,
       "band_thresholds": {
-        "head_low": 33.61,
-        "body_low": 39.55,
-        "tail_low": 45.48,
-        "bone_low": 51.41,
-        "crazy_low": 79.09
+        "head_low": 67.23,
+        "body_low": 79.09,
+        "tail_low": 90.96,
+        "bone_low": 102.82,
+        "crazy_low": 158.19
       },
       "key_stats": {
         "trailing_pe": 178.52824,
@@ -20589,15 +20589,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 39.55,
-          "rationale": "中 ROE 法:NAV $39.5 等於合理價 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 79.09,
+          "rationale": "中 ROE 法:NAV $39.5 × 2 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 40.0,
+        "bear": 79.0,
         "base": 490.0,
         "bull": 488.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($40),多頭給 AI 全週期溢價 ($488)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($79),多頭給 AI 全週期溢價 ($488)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -21224,17 +21224,17 @@
       "current_price": 184.29,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 62.27,
+      "benchmark_base": 124.54,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 196.0,
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 48.0,
       "band_thresholds": {
-        "head_low": 52.93,
-        "body_low": 62.27,
-        "tail_low": 71.61,
-        "bone_low": 80.95,
-        "crazy_low": 124.54
+        "head_low": 105.86,
+        "body_low": 124.54,
+        "tail_low": 143.22,
+        "bone_low": 161.9,
+        "crazy_low": 249.07
       },
       "key_stats": {
         "trailing_pe": 31.664946,
@@ -21340,15 +21340,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 62.27,
-          "rationale": "高 ROE 法:NAV $11.7 × ROE 53.4% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 124.54,
+          "rationale": "高 ROE 法:NAV $11.7 × ROE 53.4% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 62.0,
+        "bear": 125.0,
         "base": 241.0,
         "bull": 305.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($62),多頭給 AI 全週期溢價 ($305)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($125),多頭給 AI 全週期溢價 ($305)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -22876,17 +22876,17 @@
       "current_price": 77.38,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 35.83,
+      "benchmark_base": 71.67,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 115.9,
+      "price_band": "body",
+      "price_band_label": "魚身區 (合理)",
+      "discount_pct": 8.0,
       "band_thresholds": {
-        "head_low": 30.46,
-        "body_low": 35.83,
-        "tail_low": 41.21,
-        "bone_low": 46.58,
-        "crazy_low": 71.67
+        "head_low": 60.92,
+        "body_low": 71.67,
+        "tail_low": 82.42,
+        "bone_low": 93.17,
+        "crazy_low": 143.33
       },
       "key_stats": {
         "trailing_pe": 24.96129,
@@ -22992,15 +22992,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 35.83,
-          "rationale": "高 ROE 法:NAV $7.4 × ROE 48.5% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 71.67,
+          "rationale": "高 ROE 法:NAV $7.4 × ROE 48.5% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 36.0,
+        "bear": 72.0,
         "base": 115.0,
         "bull": 134.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($36),多頭給 AI 全週期溢價 ($134)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($72),多頭給 AI 全週期溢價 ($134)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -23725,17 +23725,17 @@
       "current_price": 128.47,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 11.49,
+      "benchmark_base": 22.97,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 1018.4,
+      "discount_pct": 459.2,
       "band_thresholds": {
-        "head_low": 9.76,
-        "body_low": 11.49,
-        "tail_low": 13.21,
-        "bone_low": 14.93,
-        "crazy_low": 22.97
+        "head_low": 19.53,
+        "body_low": 22.97,
+        "tail_low": 26.42,
+        "bone_low": 29.87,
+        "crazy_low": 45.95
       },
       "key_stats": {
         "trailing_pe": 144.34831,
@@ -23841,15 +23841,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 11.49,
-          "rationale": "高 ROE 法:NAV $3.5 × ROE 32.6% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 22.97,
+          "rationale": "高 ROE 法:NAV $3.5 × ROE 32.6% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 11.0,
+        "bear": 23.0,
         "base": 200.0,
         "bull": 250.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($11),多頭給 AI 全週期溢價 ($250)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($23),多頭給 AI 全週期溢價 ($250)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -24729,17 +24729,17 @@
       "current_price": 310.58,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 33.34,
+      "benchmark_base": 66.69,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 831.4,
+      "discount_pct": 365.7,
       "band_thresholds": {
-        "head_low": 28.34,
-        "body_low": 33.34,
-        "tail_low": 38.35,
-        "bone_low": 43.35,
-        "crazy_low": 66.69
+        "head_low": 56.69,
+        "body_low": 66.69,
+        "tail_low": 76.69,
+        "bone_low": 86.7,
+        "crazy_low": 133.38
       },
       "key_stats": {
         "trailing_pe": 106.36301,
@@ -24845,15 +24845,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 33.34,
-          "rationale": "高 ROE 法:NAV $20.8 × ROE 16.0% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 66.69,
+          "rationale": "高 ROE 法:NAV $20.8 × ROE 16.0% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 33.0,
+        "bear": 67.0,
         "base": 240.0,
         "bull": 239.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($33),多頭給 AI 全週期溢價 ($239)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($67),多頭給 AI 全週期溢價 ($239)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -25314,17 +25314,17 @@
       "current_price": 226.11,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 92.94,
+      "benchmark_base": 185.89,
       "benchmark_source": "PBR-ROE",
-      "price_band": "crazy",
-      "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 143.3,
+      "price_band": "tail",
+      "price_band_label": "魚尾區 (略貴)",
+      "discount_pct": 21.6,
       "band_thresholds": {
-        "head_low": 79.0,
-        "body_low": 92.94,
-        "tail_low": 106.88,
-        "bone_low": 120.83,
-        "crazy_low": 185.89
+        "head_low": 158.0,
+        "body_low": 185.89,
+        "tail_low": 213.77,
+        "bone_low": 241.65,
+        "crazy_low": 371.77
       },
       "key_stats": {
         "trailing_pe": 24.339075,
@@ -25430,15 +25430,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 92.94,
-          "rationale": "高 ROE 法:NAV $25.8 × ROE 36.1% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 185.89,
+          "rationale": "高 ROE 法:NAV $25.8 × ROE 36.1% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 93.0,
+        "bear": 113.0,
         "base": 170.0,
         "bull": 202.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($93),多頭給 AI 全週期溢價 ($202)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($113),多頭給 AI 全週期溢價 ($202)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -26062,17 +26062,17 @@
       "current_price": 287.78,
       "currency": "USD",
       "financial_currency": "USD",
-      "benchmark_base": 23.25,
+      "benchmark_base": 34.87,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 1137.9,
+      "discount_pct": 725.3,
       "band_thresholds": {
-        "head_low": 19.76,
-        "body_low": 23.25,
-        "tail_low": 26.73,
-        "bone_low": 30.22,
-        "crazy_low": 46.49
+        "head_low": 29.64,
+        "body_low": 34.87,
+        "tail_low": 40.1,
+        "bone_low": 45.33,
+        "crazy_low": 69.74
       },
       "key_stats": {
         "trailing_pe": 250.24348,
@@ -26178,15 +26178,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 23.25,
-          "rationale": "低 ROE 法:NAV $34.0 × (ROE+2%) × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 34.87,
+          "rationale": "低 ROE 法:NAV $34.0 × (ROE+2%) × 15 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 23.0,
+        "bear": 35.0,
         "base": 328.0,
         "bull": 310.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($23),多頭給 AI 全週期溢價 ($310)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($35),多頭給 AI 全週期溢價 ($310)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -27666,17 +27666,17 @@
       "current_price": 4490.0,
       "currency": "TWD",
       "financial_currency": "TWD",
-      "benchmark_base": 621.67,
+      "benchmark_base": 1243.34,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 622.3,
+      "discount_pct": 261.1,
       "band_thresholds": {
-        "head_low": 528.42,
-        "body_low": 621.67,
-        "tail_low": 714.92,
-        "bone_low": 808.17,
-        "crazy_low": 1243.34
+        "head_low": 1056.84,
+        "body_low": 1243.34,
+        "tail_low": 1429.84,
+        "bone_low": 1616.34,
+        "crazy_low": 2486.67
       },
       "key_stats": {
         "trailing_pe": 68.18527,
@@ -27782,15 +27782,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 621.67,
-          "rationale": "高 ROE 法:NAV $244.5 × ROE 25.4% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 1243.34,
+          "rationale": "高 ROE 法:NAV $244.5 × ROE 25.4% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 622.0,
+        "bear": 1196.0,
         "base": 4000.0,
         "bull": 4131.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($622),多頭給 AI 全週期溢價 ($4131)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($1196),多頭給 AI 全週期溢價 ($4131)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -27895,29 +27895,29 @@
       "name": "台達電 Delta Electronics (TWSE)",
       "category_label": "AI 機櫃電源 (PSU + 800V HVDC) + 散熱液冷 + 工業自動化 + 車用充電樁",
       "updated_at": "2026-06-22",
-      "current_price": 2145.0,
+      "current_price": 2155.0,
       "currency": "TWD",
       "financial_currency": "TWD",
-      "benchmark_base": 279.99,
+      "benchmark_base": 559.98,
       "benchmark_source": "PBR-ROE",
       "price_band": "crazy",
       "price_band_label": "瘋狂區 (泡沫)",
-      "discount_pct": 666.1,
+      "discount_pct": 284.8,
       "band_thresholds": {
-        "head_low": 237.99,
-        "body_low": 279.99,
-        "tail_low": 321.99,
-        "bone_low": 363.99,
-        "crazy_low": 559.98
+        "head_low": 475.99,
+        "body_low": 559.98,
+        "tail_low": 643.98,
+        "bone_low": 727.98,
+        "crazy_low": 1119.97
       },
       "key_stats": {
-        "trailing_pe": 93.22034,
-        "forward_pe": 33.020275,
-        "ps_ttm": 9.359245,
-        "pb": 18.600739,
+        "trailing_pe": 93.65493,
+        "forward_pe": 33.174213,
+        "ps_ttm": 9.402878,
+        "pb": 18.687456,
         "ev_ebitda": 43.948,
         "peg": 3.39,
-        "mcap_b": 5571.7,
+        "mcap_b": 5597.7,
         "fcf_ttm_b": 32.52,
         "gross_margin": 35.5,
         "profit_margin": 11.8,
@@ -27944,7 +27944,7 @@
         "avg_rating_score": 1.79,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2145.0,
+          "current": 2155.0,
           "mean": 2670.89,
           "median": 2700.0,
           "high": 4500.0,
@@ -27999,7 +27999,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (18x)",
-          "implied_price": 1144.68,
+          "implied_price": 1154.68,
           "rationale": "歷史 EV/EBITDA 18x,EBITDA = margin 21% × FY 當期 Rev"
         },
         {
@@ -28014,30 +28014,30 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 279.99,
-          "rationale": "高 ROE 法:NAV $115.3 × ROE 24.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 559.98,
+          "rationale": "高 ROE 法:NAV $115.3 × ROE 24.3% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 280.0,
+        "bear": 560.0,
         "base": 2700.0,
         "bull": 2671.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($280),多頭給 AI 全週期溢價 ($2671)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($560),多頭給 AI 全週期溢價 ($2671)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 2132.13,
+            "price": 2150.0,
+            "type": "整數心理關 $2150",
+            "strength": "弱"
+          },
+          {
+            "price": 2132.33,
             "type": "50 DMA",
             "strength": "中"
           },
           {
-            "price": 2100.0,
-            "type": "整數心理關 $2100",
-            "strength": "弱"
-          },
-          {
-            "price": 1323.11,
+            "price": 1323.16,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -28049,11 +28049,6 @@
         ],
         "resistance_levels": [
           {
-            "price": 2150.0,
-            "type": "整數心理關 $2150",
-            "strength": "弱"
-          },
-          {
             "price": 2200.0,
             "type": "整數心理關 $2200",
             "strength": "弱"
@@ -28061,6 +28056,11 @@
           {
             "price": 2250.0,
             "type": "整數心理關 $2250",
+            "strength": "弱"
+          },
+          {
+            "price": 2300.0,
+            "type": "整數心理關 $2300",
             "strength": "弱"
           },
           {
@@ -28130,17 +28130,17 @@
       "current_price": 269.5,
       "currency": "TWD",
       "financial_currency": "TWD",
-      "benchmark_base": 149.94,
+      "benchmark_base": 299.88,
       "benchmark_source": "PBR-ROE",
-      "price_band": "bone",
-      "price_band_label": "魚骨區 (過熱)",
-      "discount_pct": 79.7,
+      "price_band": "head",
+      "price_band_label": "魚頭區 (低估)",
+      "discount_pct": -10.1,
       "band_thresholds": {
-        "head_low": 127.45,
-        "body_low": 149.94,
-        "tail_low": 172.43,
-        "bone_low": 194.92,
-        "crazy_low": 299.88
+        "head_low": 254.9,
+        "body_low": 299.88,
+        "tail_low": 344.86,
+        "bone_low": 389.84,
+        "crazy_low": 599.75
       },
       "key_stats": {
         "trailing_pe": 20.11194,
@@ -28246,15 +28246,15 @@
         },
         {
           "model": "ROE 調整基準值 (PBR-ROE)",
-          "implied_price": 149.94,
-          "rationale": "高 ROE 法:NAV $126.9 × ROE 11.8% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
+          "implied_price": 299.88,
+          "rationale": "高 ROE 法:NAV $126.9 × ROE 11.8% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
         }
       ],
       "fair_value_summary": {
-        "bear": 150.0,
+        "bear": 246.0,
         "base": 312.0,
         "bull": 1476.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($150),多頭給 AI 全週期溢價 ($1476)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($246),多頭給 AI 全週期溢價 ($1476)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -28264,7 +28264,7 @@
             "strength": "弱"
           },
           {
-            "price": 248.1,
+            "price": 248.09,
             "type": "50 DMA",
             "strength": "強"
           },
