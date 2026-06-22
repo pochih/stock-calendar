@@ -32439,15 +32439,17 @@ function initTradingView() {
   document.getElementById('tv-load').addEventListener('click', () => {
     loadChart(document.getElementById('tv-input').value.trim().toUpperCase());
   });
-  loadChart('NVDA');
+  loadChart('NVDA', true);  // 預載 NVDA chart 但不切 tab (避免初始化時搶走 calendar)
 }
 
-function loadChart(symbol) {
-  // 切到 K 線分頁
-  document.querySelectorAll('nav li').forEach(x => x.classList.toggle('active', x.dataset.tab === 'charts'));
-  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.id === 'tab-charts'));
-  _syncCurrentTab(document.querySelector('nav li[data-tab="charts"]'));
-  if (_navEl) _navEl.classList.remove('open');
+function loadChart(symbol, skipTabSwitch) {
+  if (!skipTabSwitch) {
+    // 切到 K 線分頁
+    document.querySelectorAll('nav li').forEach(x => x.classList.toggle('active', x.dataset.tab === 'charts'));
+    document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.id === 'tab-charts'));
+    _syncCurrentTab(document.querySelector('nav li[data-tab="charts"]'));
+    if (_navEl) _navEl.classList.remove('open');
+  }
   document.getElementById('tv-input').value = symbol;
   document.querySelectorAll('.tv-tickers .pill').forEach(p => p.classList.toggle('active', p.textContent === symbol));
   // TradingView 對 prefix 嚴格,錯了 chart 直接 blank
