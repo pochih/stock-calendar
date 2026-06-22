@@ -157,7 +157,78 @@ def render_week(w: dict) -> str:
 '''
 
 
-def build_email(weeks: list[dict]) -> tuple[str, str]:
+def render_valuation_alerts(valuations: list[dict]) -> str:
+    """列出 price_band 為 below_head 或 head 的低估股 (魚頭區以下 + 魚頭區)"""
+    if not valuations:
+        return ""
+    # 取魚頭以下 + 魚頭區的個股,並按 discount_pct 升冪 (最深折價在前)
+    low = [v for v in valuations if v.get("price_band") in ("below_head", "head")]
+    low.sort(key=lambda v: v.get("discount_pct", 0))
+    if not low:
+        return ""
+
+    # 幣值符號 helper
+    CCY_SYM = {"USD": "$", "TWD": "NT$", "KRW": "₩", "JPY": "¥", "HKD": "HK$", "EUR": "€", "GBP": "£", "CNY": "¥"}
+
+    def row_html(v):
+        cur = CCY_SYM.get(v.get("currency", "USD"), "$")
+        cp = v.get("current_price", 0)
+        bb = v.get("benchmark_base", 0)
+        disc = v.get("discount_pct", 0)
+        band = v.get("price_band_label", "?")
+        is_deep = v.get("price_band") == "below_head"
+        bg = "#dcfce7" if is_deep else "#d1fae5"
+        color = "#15803d" if is_deep else "#16a34a"
+        icon = "🐟" if is_deep else "🎣"
+        return f'''
+<tr style="border-bottom:1px solid #e5e7eb;">
+  <td style="padding:8px 6px; vertical-align:middle;">
+    <span style="font-family:Consolas, monospace; font-weight:700; color:#1e40af; font-size:13px;">{esc(v.get("ticker",""))}</span><br>
+    <span style="color:#6b7280; font-size:11px;">{esc(v.get("name","")[:24])}</span>
+  </td>
+  <td style="padding:8px 6px; text-align:right; vertical-align:middle; font-family:Consolas, monospace; font-size:13px; font-weight:700;">{cur}{cp:,.0f}</td>
+  <td style="padding:8px 6px; text-align:right; vertical-align:middle; color:#6b7280; font-family:Consolas, monospace; font-size:12px;">{cur}{bb:,.0f}</td>
+  <td style="padding:8px 6px; text-align:right; vertical-align:middle;">
+    <span style="background:{bg}; color:{color}; padding:3px 9px; border-radius:4px; font-size:11px; font-weight:700;">{icon} {esc(band)}</span>
+  </td>
+  <td style="padding:8px 6px; text-align:right; vertical-align:middle; color:#15803d; font-weight:700; font-size:12px;">{disc:+.1f}%</td>
+</tr>'''
+
+    return f'''
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="background:#f0fdf4; border:1px solid #86efac; border-radius:10px;
+              margin-bottom:20px; padding:14px;">
+  <tr>
+    <td>
+      <div style="font-size:16px; font-weight:700; color:#15803d; font-family:{FONT_STACK}; margin-bottom:4px;">
+        💰 本週價值區出沒 ({len(low)} 檔)
+      </div>
+      <div style="color:#16a34a; font-size:12px; margin-bottom:12px; font-family:{FONT_STACK};">
+        ROE 調整基準值 (PBR-ROE 模型) 推算 → 落在魚頭區或以下的低估個股 · 排序:折價最深者優先
+      </div>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%"
+             style="background:#ffffff; border-radius:6px; font-family:{FONT_STACK}; font-size:13px; color:#1f2937;">
+        <thead>
+          <tr style="background:#f3f4f6; color:#6b7280; font-size:11px;">
+            <th style="padding:8px 6px; text-align:left;">Ticker · 名稱</th>
+            <th style="padding:8px 6px; text-align:right;">當前</th>
+            <th style="padding:8px 6px; text-align:right;">基準值</th>
+            <th style="padding:8px 6px; text-align:right;">區間</th>
+            <th style="padding:8px 6px; text-align:right;">折溢價</th>
+          </tr>
+        </thead>
+        <tbody>{"".join(row_html(v) for v in low)}</tbody>
+      </table>
+      <div style="color:#6b7280; font-size:11px; margin-top:8px; font-family:{FONT_STACK};">
+        ⚠️ 基準值僅供參考。實際買進前需確認個別 ROE 是否為峰值或低點 · cyclical 股 (記憶體/汽車) 需特別小心
+      </div>
+    </td>
+  </tr>
+</table>
+'''
+
+
+def build_email(weeks: list[dict], valuations: list[dict] = None) -> tuple[str, str]:
     """回傳 (subject, html_body)"""
     if not weeks:
         return "📰 每週洞察 (無資料)", "<p>無 weekly_briefing 資料</p>"
@@ -167,6 +238,7 @@ def build_email(weeks: list[dict]) -> tuple[str, str]:
     else:
         subject = f"📰 每週洞察 {weeks[-1]['week']} → {weeks[0]['week']} ({len(weeks)} 週)"
 
+    valuation_alert_html = render_valuation_alerts(valuations or [])
     weeks_html = "".join(render_week(w) for w in weeks)
     total_h = sum(len(w.get("headlines", [])) for w in weeks)
 
@@ -221,6 +293,7 @@ def build_email(weeks: list[dict]) -> tuple[str, str]:
           <!-- weeks -->
           <tr>
             <td>
+              {valuation_alert_html}
               {weeks_html}
             </td>
           </tr>
@@ -268,7 +341,7 @@ def main() -> None:
     else:
         selected = weeks[:args.latest]
 
-    subject, body = build_email(selected)
+    subject, body = build_email(selected, data.get("valuations", []))
 
     if args.json:
         print(json.dumps({"subject": subject, "html_body": body, "to": ["b01902068@gmail.com"]},
