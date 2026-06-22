@@ -12668,10 +12668,22 @@
       "ticker": "MU",
       "name": "Micron Technology",
       "category_label": "Memory / HBM (cyclical semi)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 1133.99,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 255.81,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 343.3,
+      "band_thresholds": {
+        "head_low": 217.44,
+        "body_low": 255.81,
+        "tail_low": 294.18,
+        "bone_low": 332.55,
+        "crazy_low": 511.62
+      },
       "key_stats": {
         "trailing_pe": 53.464878,
         "forward_pe": 9.61384,
@@ -12773,13 +12785,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 945.6,
           "rationale": "yfinance 共識:945.6"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 255.81,
+          "rationale": "高 ROE 法:NAV $64.2 × ROE 39.8% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 301.0,
+        "bear": 256.0,
         "base": 1075.0,
         "bull": 1769.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($301),多頭給 AI 全週期溢價 ($1769)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($256),多頭給 AI 全週期溢價 ($1769)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -13413,13 +13430,25 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "category_label": "AI 算力 GPU 龍頭 (CUDA + Blackwell / Vera Rubin Inference Factory)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 210.69,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 92.23,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 128.4,
+      "band_thresholds": {
+        "head_low": 78.4,
+        "body_low": 92.23,
+        "tail_low": 106.06,
+        "bone_low": 119.9,
+        "crazy_low": 184.46
+      },
       "key_stats": {
         "trailing_pe": 32.26493,
-        "forward_pe": 16.554375,
+        "forward_pe": 16.551956,
         "ps_ttm": 20.131376,
         "pb": 26.107807,
         "ev_ebitda": 30.561,
@@ -13518,13 +13547,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 298.93,
           "rationale": "yfinance 共識:298.9322"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 92.23,
+          "rationale": "高 ROE 法:NAV $8.1 × ROE 114.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 224.0,
+        "bear": 92.0,
         "base": 288.0,
         "bull": 382.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($224),多頭給 AI 全週期溢價 ($382)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($92),多頭給 AI 全週期溢價 ($382)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -14151,10 +14185,22 @@
       "ticker": "AVGO",
       "name": "Broadcom",
       "category_label": "AI ASIC + 半導體 IP + 網通 (Google TPU / Meta MTIA / OpenAI custom silicon)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 411.35,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 68.71,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 498.7,
+      "band_thresholds": {
+        "head_low": 58.4,
+        "body_low": 68.71,
+        "tail_low": 79.02,
+        "bone_low": 89.32,
+        "crazy_low": 137.42
+      },
       "key_stats": {
         "trailing_pe": 68.44426,
         "forward_pe": 21.220005,
@@ -14256,13 +14302,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 523.84,
           "rationale": "yfinance 共識:523.84"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 68.71,
+          "rationale": "高 ROE 法:NAV $18.4 × ROE 37.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 239.0,
+        "bear": 69.0,
         "base": 525.0,
         "bull": 543.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($239),多頭給 AI 全週期溢價 ($543)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($69),多頭給 AI 全週期溢價 ($543)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -14829,10 +14880,22 @@
       "ticker": "AAPL",
       "name": "Apple",
       "category_label": "消費電子 / Services (iPhone + App Store) + AI laggard",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 298.01,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 102.71,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 190.2,
+      "band_thresholds": {
+        "head_low": 87.3,
+        "body_low": 102.71,
+        "tail_low": 118.11,
+        "bone_low": 133.52,
+        "crazy_low": 205.42
+      },
       "key_stats": {
         "trailing_pe": 36.122425,
         "forward_pe": 31.040802,
@@ -14934,13 +14997,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 314.42,
           "rationale": "yfinance 共識:314.4238"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 102.71,
+          "rationale": "高 ROE 法:NAV $7.3 × ROE 141.5% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 151.0,
+        "bear": 103.0,
         "base": 312.0,
         "bull": 314.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($151),多頭給 AI 全週期溢價 ($314)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($103),多頭給 AI 全週期溢價 ($314)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -15536,10 +15604,22 @@
       "ticker": "AMZN",
       "name": "Amazon",
       "category_label": "雲端 (AWS) + 廣告 + Robotics (倉儲機器人)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 244.39,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 99.79,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 144.9,
+      "band_thresholds": {
+        "head_low": 84.83,
+        "body_low": 99.79,
+        "tail_low": 114.76,
+        "bone_low": 129.73,
+        "crazy_low": 199.59
+      },
       "key_stats": {
         "trailing_pe": 31.656736,
         "forward_pe": 24.734953,
@@ -15641,13 +15721,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 312.99,
           "rationale": "yfinance 共識:312.98715"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 99.79,
+          "rationale": "高 ROE 法:NAV $41.1 × ROE 24.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 229.0,
+        "bear": 100.0,
         "base": 315.0,
         "bull": 346.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($229),多頭給 AI 全週期溢價 ($346)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($100),多頭給 AI 全週期溢價 ($346)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -16265,10 +16350,22 @@
       "ticker": "META",
       "name": "Meta Platforms",
       "category_label": "廣告 (FB/IG) + Reality Labs + Llama 開源",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 577.22,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 316.17,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 82.6,
+      "band_thresholds": {
+        "head_low": 268.75,
+        "body_low": 316.17,
+        "tail_low": 363.6,
+        "bone_low": 411.02,
+        "crazy_low": 632.34
+      },
       "key_stats": {
         "trailing_pe": 21.005095,
         "forward_pe": 15.925084,
@@ -16370,13 +16467,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 827.32,
           "rationale": "yfinance 共識:827.3183"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 316.17,
+          "rationale": "高 ROE 法:NAV $96.0 × ROE 32.9% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 670.0,
+        "bear": 316.0,
         "base": 825.0,
         "bull": 978.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($670),多頭給 AI 全週期溢價 ($978)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($316),多頭給 AI 全週期溢價 ($978)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -16959,10 +17061,22 @@
       "ticker": "TSM",
       "name": "TSMC ADR",
       "category_label": "全球先進製程晶圓代工獨佔",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 462.12,
       "currency": "USD",
       "financial_currency": "TWD",
+      "benchmark_base": 472.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "head",
+      "price_band_label": "魚頭區 (低估)",
+      "discount_pct": -2.1,
+      "band_thresholds": {
+        "head_low": 401.2,
+        "body_low": 472.0,
+        "tail_low": 542.8,
+        "bone_low": 613.6,
+        "crazy_low": 944.0
+      },
       "key_stats": {
         "trailing_pe": 39.666954,
         "forward_pe": 23.510199,
@@ -17400,23 +17514,35 @@
       "ticker": "2330.TW",
       "name": "台積電 (TWSE)",
       "category_label": "全球先進製程晶圓代工獨佔 (台股本尊)",
-      "updated_at": "2026-06-21",
-      "current_price": 2410.0,
+      "updated_at": "2026-06-22",
+      "current_price": 2510.0,
       "currency": "TWD",
       "financial_currency": "TWD",
+      "benchmark_base": 822.57,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 205.1,
+      "band_thresholds": {
+        "head_low": 699.18,
+        "body_low": 822.57,
+        "tail_low": 945.95,
+        "bone_low": 1069.34,
+        "crazy_low": 1645.14
+      },
       "key_stats": {
-        "trailing_pe": 32.784653,
-        "forward_pe": 19.551847,
-        "ps_ttm": 15.228673,
-        "pb": 10.608982,
+        "trailing_pe": 34.14501,
+        "forward_pe": 20.363127,
+        "ps_ttm": 15.860568,
+        "pb": 11.049189,
         "ev_ebitda": 21.095,
         "peg": 1.19,
-        "mcap_b": 62497.0,
+        "mcap_b": 65090.3,
         "fcf_ttm_b": 719.16,
         "gross_margin": 61.9,
         "profit_margin": 46.5,
         "beta": 1.25,
-        "w52_high": 2440.0,
+        "w52_high": 2510.0,
         "w52_low": 1015.0
       },
       "analyst_consensus": {
@@ -17438,7 +17564,7 @@
         "avg_rating_score": 1.76,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2410.0,
+          "current": 2510.0,
           "mean": 2647.58,
           "median": 2600.0,
           "high": 3500.0,
@@ -17493,7 +17619,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (14x)",
-          "implied_price": 2030.63,
+          "implied_price": 2130.63,
           "rationale": "歷史 EV/EBITDA 14x,EBITDA = margin 70% × FY 當期 Rev"
         },
         {
@@ -17505,28 +17631,33 @@
           "model": "Analyst Mean Target",
           "implied_price": 2647.58,
           "rationale": "yfinance 共識:2647.5757"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 822.57,
+          "rationale": "高 ROE 法:NAV $227.2 × ROE 36.2% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 1969.0,
+        "bear": 823.0,
         "base": 2600.0,
         "bull": 3082.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($1969),多頭給 AI 全週期溢價 ($3082)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($823),多頭給 AI 全週期溢價 ($3082)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 2400.0,
-            "type": "整數心理關 $2400",
+            "price": 2500.0,
+            "type": "整數心理關 $2500",
             "strength": "弱"
           },
           {
-            "price": 2225.62,
+            "price": 2236.72,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 1711.26,
+            "price": 1718.18,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -17538,23 +17669,23 @@
         ],
         "resistance_levels": [
           {
-            "price": 2418.55,
+            "price": 2505.0,
             "type": "正測 52 週新高",
             "strength": "強"
           },
           {
-            "price": 2450.0,
-            "type": "整數心理關 $2450",
-            "strength": "弱"
-          },
-          {
-            "price": 2500.0,
-            "type": "整數心理關 $2500",
-            "strength": "弱"
-          },
-          {
             "price": 2550.0,
             "type": "整數心理關 $2550",
+            "strength": "弱"
+          },
+          {
+            "price": 2600.0,
+            "type": "整數心理關 $2600",
+            "strength": "弱"
+          },
+          {
+            "price": 2650.0,
+            "type": "整數心理關 $2650",
             "strength": "弱"
           }
         ]
@@ -17615,10 +17746,22 @@
       "ticker": "MSFT",
       "name": "Microsoft",
       "category_label": "雲端 (Azure) + 365/GitHub Copilot + OpenAI 戰略合作",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 379.4,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 189.72,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 100.0,
+      "band_thresholds": {
+        "head_low": 161.26,
+        "body_low": 189.72,
+        "tail_low": 218.18,
+        "bone_low": 246.64,
+        "crazy_low": 379.44
+      },
       "key_stats": {
         "trailing_pe": 22.569899,
         "forward_pe": 19.611391,
@@ -17720,13 +17863,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 561.39,
           "rationale": "yfinance 共識:561.38763"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 189.72,
+          "rationale": "高 ROE 法:NAV $55.8 × ROE 34.0% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 404.0,
+        "bear": 190.0,
         "base": 555.0,
         "bull": 619.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($404),多頭給 AI 全週期溢價 ($619)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($190),多頭給 AI 全週期溢價 ($619)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -18408,13 +18556,25 @@
       "ticker": "GOOGL",
       "name": "Alphabet",
       "category_label": "搜尋 + YouTube + Google Cloud + Waymo + Gemini",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 368.03,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 153.65,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 139.5,
+      "band_thresholds": {
+        "head_low": 130.6,
+        "body_low": 153.65,
+        "tail_low": 176.7,
+        "bone_low": 199.75,
+        "crazy_low": 307.3
+      },
       "key_stats": {
         "trailing_pe": 28.093893,
-        "forward_pe": 25.415365,
+        "forward_pe": 25.387682,
         "ps_ttm": 10.629429,
         "pb": 9.313914,
         "ev_ebitda": 27.45,
@@ -18513,13 +18673,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 432.83,
           "rationale": "yfinance 共識:432.83453"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 153.65,
+          "rationale": "高 ROE 法:NAV $39.5 × ROE 38.9% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 313.0,
+        "bear": 154.0,
         "base": 430.0,
         "bull": 831.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($313),多頭給 AI 全週期溢價 ($831)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($154),多頭給 AI 全週期溢價 ($831)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -19194,10 +19359,22 @@
       "ticker": "TSLA",
       "name": "Tesla",
       "category_label": "EV + Robotaxi + Optimus 機器人 + Energy (馬斯克帝國)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 400.49,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 15.11,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 2550.3,
+      "band_thresholds": {
+        "head_low": 12.84,
+        "body_low": 15.11,
+        "tail_low": 17.38,
+        "bone_low": 19.64,
+        "crazy_low": 30.22
+      },
       "key_stats": {
         "trailing_pe": 370.82404,
         "forward_pe": 160.1992,
@@ -19299,13 +19476,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 420.55,
           "rationale": "yfinance 共識:420.54633"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 15.11,
+          "rationale": "低 ROE 法:NAV $21.9 × (ROE+2%) × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 64.0,
+        "bear": 15.0,
         "base": 460.0,
         "bull": 421.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($64),多頭給 AI 全週期溢價 ($421)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($15),多頭給 AI 全週期溢價 ($421)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -19833,18 +20015,30 @@
       "ticker": "005930.KS",
       "name": "Samsung Electronics 三星電子",
       "category_label": "Memory / NAND / Foundry / Display (Korean cyclical semi)",
-      "updated_at": "2026-06-21",
-      "current_price": 354000.0,
+      "updated_at": "2026-06-22",
+      "current_price": 348500.0,
       "currency": "KRW",
       "financial_currency": "KRW",
+      "benchmark_base": 431000.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "below_head",
+      "price_band_label": "魚頭區以下 (深度低估)",
+      "discount_pct": -19.1,
+      "band_thresholds": {
+        "head_low": 366350.0,
+        "body_low": 431000.0,
+        "tail_low": 495650.0,
+        "bone_low": 560300.0,
+        "crazy_low": 862000.0
+      },
       "key_stats": {
         "trailing_pe": null,
-        "forward_pe": 6.099704,
-        "ps_ttm": 5.985915,
+        "forward_pe": 6.0049343,
+        "ps_ttm": 5.892914,
         "pb": null,
         "ev_ebitda": 15.844,
-        "peg": 0.42,
-        "mcap_b": 2324563.5,
+        "peg": 0.41,
+        "mcap_b": 2288447.4,
         "fcf_ttm_b": 67568.2,
         "gross_margin": 47.7,
         "profit_margin": 21.5,
@@ -19871,7 +20065,7 @@
         "avg_rating_score": 1.78,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 354000.0,
+          "current": 348500.0,
           "mean": 428075.53,
           "median": 431000.0,
           "high": 850000.0,
@@ -19926,7 +20120,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (8x)",
-          "implied_price": 363488.12,
+          "implied_price": 357222.52,
           "rationale": "歷史 EV/EBITDA 8x,EBITDA = margin 36% × FY 當期 Rev"
         },
         {
@@ -19941,25 +20135,25 @@
         }
       ],
       "fair_value_summary": {
-        "bear": 363405.0,
+        "bear": 357223.0,
         "base": 431000.0,
         "bull": 680564.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($363405),多頭給 AI 全週期溢價 ($680564)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($357223),多頭給 AI 全週期溢價 ($680564)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 353950.0,
-            "type": "整數心理關 $353950",
+            "price": 348450.0,
+            "type": "整數心理關 $348450",
             "strength": "弱"
           },
           {
-            "price": 272640.0,
+            "price": 275680.0,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 162663.36,
+            "price": 164056.85,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -19971,18 +20165,18 @@
         ],
         "resistance_levels": [
           {
-            "price": 354050.0,
-            "type": "整數心理關 $354050",
+            "price": 348550.0,
+            "type": "整數心理關 $348550",
             "strength": "弱"
           },
           {
-            "price": 354100.0,
-            "type": "整數心理關 $354100",
+            "price": 348600.0,
+            "type": "整數心理關 $348600",
             "strength": "弱"
           },
           {
-            "price": 354150.0,
-            "type": "整數心理關 $354150",
+            "price": 348650.0,
+            "type": "整數心理關 $348650",
             "strength": "弱"
           },
           {
@@ -20048,23 +20242,35 @@
       "ticker": "000660.KS",
       "name": "SK Hynix",
       "category_label": "HBM 龍頭 / DRAM (NVDA 主供應商)",
-      "updated_at": "2026-06-21",
-      "current_price": 2764000.0,
+      "updated_at": "2026-06-22",
+      "current_price": 2871000.0,
       "currency": "KRW",
       "financial_currency": "KRW",
+      "benchmark_base": 2857500.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "body",
+      "price_band_label": "魚身區 (合理)",
+      "discount_pct": 0.5,
+      "band_thresholds": {
+        "head_low": 2428875.0,
+        "body_low": 2857500.0,
+        "tail_low": 3286125.0,
+        "bone_low": 3714750.0,
+        "crazy_low": 5715000.0
+      },
       "key_stats": {
         "trailing_pe": null,
-        "forward_pe": 6.683118,
-        "ps_ttm": 14.8545,
+        "forward_pe": 6.941835,
+        "ps_ttm": 15.429546,
         "pb": null,
         "ev_ebitda": 20.998,
         "peg": 3.78,
-        "mcap_b": 1962039.0,
+        "mcap_b": 2037283.6,
         "fcf_ttm_b": 25809.05,
         "gross_margin": 68.3,
         "profit_margin": 56.9,
         "beta": 2.027,
-        "w52_high": 2891000.0,
+        "w52_high": 2945000.0,
         "w52_low": 245000.0
       },
       "analyst_consensus": {
@@ -20086,7 +20292,7 @@
         "avg_rating_score": 1.79,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2764000.0,
+          "current": 2870000.0,
           "mean": 2712489.0,
           "median": 2857500.0,
           "high": 4000000.0,
@@ -20141,7 +20347,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (10x)",
-          "implied_price": 3409040.03,
+          "implied_price": 3515040.02,
           "rationale": "歷史 EV/EBITDA 10x,EBITDA = margin 69% × FY 當期 Rev"
         },
         {
@@ -20164,17 +20370,17 @@
       "support_resistance": {
         "support_levels": [
           {
-            "price": 2763950.0,
-            "type": "整數心理關 $2763950",
+            "price": 2870950.0,
+            "type": "整數心理關 $2870950",
             "strength": "弱"
           },
           {
-            "price": 1738212.34,
+            "price": 1777295.4,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 910087.75,
+            "price": 923217.85,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -20186,23 +20392,23 @@
         ],
         "resistance_levels": [
           {
-            "price": 2764000.0,
+            "price": 2870000.0,
             "type": "正測 52 週新高",
             "strength": "強"
           },
           {
-            "price": 2764050.0,
-            "type": "整數心理關 $2764050",
+            "price": 2871050.0,
+            "type": "整數心理關 $2871050",
             "strength": "弱"
           },
           {
-            "price": 2764100.0,
-            "type": "整數心理關 $2764100",
+            "price": 2871100.0,
+            "type": "整數心理關 $2871100",
             "strength": "弱"
           },
           {
-            "price": 2764150.0,
-            "type": "整數心理關 $2764150",
+            "price": 2871150.0,
+            "type": "整數心理關 $2871150",
             "strength": "弱"
           }
         ]
@@ -20263,13 +20469,25 @@
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "category_label": "AI GPU 二供 (Instinct MI400) + 資料中心 CPU (EPYC) + 客戶端 (Ryzen)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 537.37,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 39.55,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 1258.8,
+      "band_thresholds": {
+        "head_low": 33.61,
+        "body_low": 39.55,
+        "tail_low": 45.48,
+        "bone_low": 51.41,
+        "crazy_low": 79.09
+      },
       "key_stats": {
         "trailing_pe": 178.52824,
-        "forward_pe": 41.00965,
+        "forward_pe": 41.008965,
         "ps_ttm": 23.394987,
         "pb": 13.588135,
         "ev_ebitda": 116.791,
@@ -20368,13 +20586,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 487.9,
           "rationale": "yfinance 共識:487.89584"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 39.55,
+          "rationale": "中 ROE 法:NAV $39.5 等於合理價 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 113.0,
+        "bear": 40.0,
         "base": 490.0,
         "bull": 488.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($113),多頭給 AI 全週期溢價 ($488)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($40),多頭給 AI 全週期溢價 ($488)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -20997,10 +21220,22 @@
       "ticker": "ORCL",
       "name": "Oracle",
       "category_label": "雲端 OCI + AI infrastructure (Stargate $500B 主合作方) + 企業資料庫",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 184.29,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 62.27,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 196.0,
+      "band_thresholds": {
+        "head_low": 52.93,
+        "body_low": 62.27,
+        "tail_low": 71.61,
+        "bone_low": 80.95,
+        "crazy_low": 124.54
+      },
       "key_stats": {
         "trailing_pe": 31.664946,
         "forward_pe": 16.888111,
@@ -21102,13 +21337,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 252.64,
           "rationale": "yfinance 共識:252.6405"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 62.27,
+          "rationale": "高 ROE 法:NAV $11.7 × ROE 53.4% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 133.0,
+        "bear": 62.0,
         "base": 241.0,
         "bull": 305.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($133),多頭給 AI 全週期溢價 ($305)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($62),多頭給 AI 全週期溢價 ($305)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -21825,13 +22065,25 @@
       "ticker": "INTC",
       "name": "Intel",
       "category_label": "x86 CPU + Foundry (18A / EMIB 後段封裝) + AI 加速器 (Gaudi)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 133.99,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 90.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 48.9,
+      "band_thresholds": {
+        "head_low": 76.5,
+        "body_low": 90.0,
+        "tail_low": 103.5,
+        "bone_low": 117.0,
+        "crazy_low": 180.0
+      },
       "key_stats": {
         "trailing_pe": null,
-        "forward_pe": 86.69855,
+        "forward_pe": 86.641365,
         "ps_ttm": 12.525971,
         "pb": 6.0418453,
         "ev_ebitda": 49.335,
@@ -22620,10 +22872,22 @@
       "ticker": "NFLX",
       "name": "Netflix",
       "category_label": "全球串流龍頭 + 廣告層 + 直播 / Live Sports (內容 IP 變現)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 77.38,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 35.83,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 115.9,
+      "band_thresholds": {
+        "head_low": 30.46,
+        "body_low": 35.83,
+        "tail_low": 41.21,
+        "bone_low": 46.58,
+        "crazy_low": 71.67
+      },
       "key_stats": {
         "trailing_pe": 24.96129,
         "forward_pe": 20.14076,
@@ -22725,13 +22989,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 114.15,
           "rationale": "yfinance 共識:114.14591"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 35.83,
+          "rationale": "高 ROE 法:NAV $7.4 × ROE 48.5% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 73.0,
+        "bear": 36.0,
         "base": 115.0,
         "bull": 134.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($73),多頭給 AI 全週期溢價 ($134)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($36),多頭給 AI 全週期溢價 ($134)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -23452,13 +23721,25 @@
       "ticker": "PLTR",
       "name": "Palantir Technologies",
       "category_label": "AI 軟體 / 平台 (Foundry + AIP,政府 + 商業雙引擎,純度最高的純 AI 股)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 128.47,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 11.49,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 1018.4,
+      "band_thresholds": {
+        "head_low": 9.76,
+        "body_low": 11.49,
+        "tail_low": 13.21,
+        "bone_low": 14.93,
+        "crazy_low": 22.97
+      },
       "key_stats": {
         "trailing_pe": 144.34831,
-        "forward_pe": 61.754333,
+        "forward_pe": 61.703014,
         "ps_ttm": 58.95337,
         "pb": 36.44539,
         "ev_ebitda": 148.78,
@@ -23557,13 +23838,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 182.75,
           "rationale": "yfinance 共識:182.75407"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 11.49,
+          "rationale": "高 ROE 法:NAV $3.5 × ROE 32.6% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 52.0,
+        "bear": 11.0,
         "base": 200.0,
         "bull": 250.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($52),多頭給 AI 全週期溢價 ($250)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($11),多頭給 AI 全週期溢價 ($250)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -23929,10 +24215,22 @@
       "ticker": "DELL",
       "name": "Dell Technologies",
       "category_label": "AI Server ODM (ISG 含 PowerEdge + Storage) + PC (CSG) 雙引擎美系龍頭",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 409.5,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 500.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "below_head",
+      "price_band_label": "魚頭區以下 (深度低估)",
+      "discount_pct": -18.1,
+      "band_thresholds": {
+        "head_low": 425.0,
+        "body_low": 500.0,
+        "tail_low": 575.0,
+        "bone_low": 650.0,
+        "crazy_low": 1000.0
+      },
       "key_stats": {
         "trailing_pe": 32.681564,
         "forward_pe": 19.180435,
@@ -24427,10 +24725,22 @@
       "ticker": "MRVL",
       "name": "Marvell Technology",
       "category_label": "客製 ASIC (AWS Trainium) + 光通訊 DSP / PAM4 + Networking IP",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 310.58,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 33.34,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 831.4,
+      "band_thresholds": {
+        "head_low": 28.34,
+        "body_low": 33.34,
+        "tail_low": 38.35,
+        "bone_low": 43.35,
+        "crazy_low": 66.69
+      },
       "key_stats": {
         "trailing_pe": 106.36301,
         "forward_pe": 50.305477,
@@ -24532,13 +24842,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 238.75,
           "rationale": "yfinance 共識:238.74557"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 33.34,
+          "rationale": "高 ROE 法:NAV $20.8 × ROE 16.0% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 72.0,
+        "bear": 33.0,
         "base": 240.0,
         "bull": 239.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($72),多頭給 AI 全週期溢價 ($239)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($33),多頭給 AI 全週期溢價 ($239)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -24995,10 +25310,22 @@
       "ticker": "QCOM",
       "name": "Qualcomm",
       "category_label": "手機 modem (Apple 流失中) + AI PC (Snapdragon X) + 汽車 / IoT",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 226.11,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 92.94,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 143.3,
+      "band_thresholds": {
+        "head_low": 79.0,
+        "body_low": 92.94,
+        "tail_low": 106.88,
+        "bone_low": 120.83,
+        "crazy_low": 185.89
+      },
       "key_stats": {
         "trailing_pe": 24.339075,
         "forward_pe": 21.196833,
@@ -25100,13 +25427,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 183.83,
           "rationale": "yfinance 共識:183.83333"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 92.94,
+          "rationale": "高 ROE 法:NAV $25.8 × ROE 36.1% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 113.0,
+        "bear": 93.0,
         "base": 170.0,
         "bull": 202.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($113),多頭給 AI 全週期溢價 ($202)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($93),多頭給 AI 全週期溢價 ($202)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -25726,10 +26058,22 @@
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "category_label": "資安市值最大 / Platformization (Prisma + Cortex + Strata) + Mythos 漏洞掃描",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 287.78,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 23.25,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 1137.9,
+      "band_thresholds": {
+        "head_low": 19.76,
+        "body_low": 23.25,
+        "tail_low": 26.73,
+        "bone_low": 30.22,
+        "crazy_low": 46.49
+      },
       "key_stats": {
         "trailing_pe": 250.24348,
         "forward_pe": 69.908905,
@@ -25831,13 +26175,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 310.32,
           "rationale": "yfinance 共識:310.3208"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 23.25,
+          "rationale": "低 ROE 法:NAV $34.0 × (ROE+2%) × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 60.0,
+        "bear": 23.0,
         "base": 328.0,
         "bull": 310.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($60),多頭給 AI 全週期溢價 ($310)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($23),多頭給 AI 全週期溢價 ($310)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -26554,10 +26903,22 @@
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "category_label": "資安龍頭 (EDR + Falcon platform) / AIDR (Agent Detection & Response)",
-      "updated_at": "2026-06-21",
+      "updated_at": "2026-06-22",
       "current_price": 684.86,
       "currency": "USD",
       "financial_currency": "USD",
+      "benchmark_base": 750.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "head",
+      "price_band_label": "魚頭區 (低估)",
+      "discount_pct": -8.7,
+      "band_thresholds": {
+        "head_low": 637.5,
+        "body_low": 750.0,
+        "tail_low": 862.5,
+        "bone_low": 975.0,
+        "crazy_low": 1500.0
+      },
       "key_stats": {
         "trailing_pe": null,
         "forward_pe": 109.58058,
@@ -27301,18 +27662,30 @@
       "ticker": "2454.TW",
       "name": "聯發科 MediaTek (TWSE)",
       "category_label": "手機 SoC (Dimensity) + AI ASIC 設計 + 邊緣 AI (RTX Spark / N1X)",
-      "updated_at": "2026-06-21",
-      "current_price": 4390.0,
+      "updated_at": "2026-06-22",
+      "current_price": 4490.0,
       "currency": "TWD",
       "financial_currency": "TWD",
+      "benchmark_base": 621.67,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 622.3,
+      "band_thresholds": {
+        "head_low": 528.42,
+        "body_low": 621.67,
+        "tail_low": 714.92,
+        "bone_low": 808.17,
+        "crazy_low": 1243.34
+      },
       "key_stats": {
-        "trailing_pe": 66.66667,
-        "forward_pe": 36.55776,
-        "ps_ttm": 11.839941,
-        "pb": 17.95354,
+        "trailing_pe": 68.18527,
+        "forward_pe": 37.39051,
+        "ps_ttm": 12.109643,
+        "pb": 18.362505,
         "ev_ebitda": 57.999,
         "peg": 2.13,
-        "mcap_b": 7006.9,
+        "mcap_b": 7166.5,
         "fcf_ttm_b": 73.56,
         "gross_margin": 47.0,
         "profit_margin": 16.9,
@@ -27339,7 +27712,7 @@
         "avg_rating_score": 1.83,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 4390.0,
+          "current": 4490.0,
           "mean": 4130.7,
           "median": 4000.0,
           "high": 6150.0,
@@ -27394,7 +27767,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (14x)",
-          "implied_price": 1234.42,
+          "implied_price": 1334.42,
           "rationale": "歷史 EV/EBITDA 14x,EBITDA = margin 20% × FY 當期 Rev"
         },
         {
@@ -27406,28 +27779,33 @@
           "model": "Analyst Mean Target",
           "implied_price": 4130.7,
           "rationale": "yfinance 共識:4130.696"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 621.67,
+          "rationale": "高 ROE 法:NAV $244.5 × ROE 25.4% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 1196.0,
+        "bear": 622.0,
         "base": 4000.0,
         "bull": 4131.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($1196),多頭給 AI 全週期溢價 ($4131)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($622),多頭給 AI 全週期溢價 ($4131)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 4350.0,
-            "type": "整數心理關 $4350",
+            "price": 4450.0,
+            "type": "整數心理關 $4450",
             "strength": "弱"
           },
           {
-            "price": 3355.6,
+            "price": 3413.9,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 1931.88,
+            "price": 1947.69,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -27439,18 +27817,18 @@
         ],
         "resistance_levels": [
           {
-            "price": 4400.0,
-            "type": "整數心理關 $4400",
-            "strength": "弱"
-          },
-          {
-            "price": 4450.0,
-            "type": "整數心理關 $4450",
-            "strength": "弱"
-          },
-          {
             "price": 4500.0,
             "type": "整數心理關 $4500",
+            "strength": "弱"
+          },
+          {
+            "price": 4550.0,
+            "type": "整數心理關 $4550",
+            "strength": "弱"
+          },
+          {
+            "price": 4600.0,
+            "type": "整數心理關 $4600",
             "strength": "弱"
           },
           {
@@ -27516,18 +27894,30 @@
       "ticker": "2308.TW",
       "name": "台達電 Delta Electronics (TWSE)",
       "category_label": "AI 機櫃電源 (PSU + 800V HVDC) + 散熱液冷 + 工業自動化 + 車用充電樁",
-      "updated_at": "2026-06-21",
-      "current_price": 2150.0,
+      "updated_at": "2026-06-22",
+      "current_price": 2145.0,
       "currency": "TWD",
       "financial_currency": "TWD",
+      "benchmark_base": 279.99,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 666.1,
+      "band_thresholds": {
+        "head_low": 237.99,
+        "body_low": 279.99,
+        "tail_low": 321.99,
+        "bone_low": 363.99,
+        "crazy_low": 559.98
+      },
       "key_stats": {
-        "trailing_pe": 93.43764,
-        "forward_pe": 33.097244,
-        "ps_ttm": 9.381062,
-        "pb": 18.644096,
+        "trailing_pe": 93.22034,
+        "forward_pe": 33.020275,
+        "ps_ttm": 9.359245,
+        "pb": 18.600739,
         "ev_ebitda": 43.948,
         "peg": 3.39,
-        "mcap_b": 5584.7,
+        "mcap_b": 5571.7,
         "fcf_ttm_b": 32.52,
         "gross_margin": 35.5,
         "profit_margin": 11.8,
@@ -27554,7 +27944,7 @@
         "avg_rating_score": 1.79,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 2150.0,
+          "current": 2145.0,
           "mean": 2670.89,
           "median": 2700.0,
           "high": 4500.0,
@@ -27609,7 +27999,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (18x)",
-          "implied_price": 1149.68,
+          "implied_price": 1144.68,
           "rationale": "歷史 EV/EBITDA 18x,EBITDA = margin 21% × FY 當期 Rev"
         },
         {
@@ -27621,18 +28011,23 @@
           "model": "Analyst Mean Target",
           "implied_price": 2670.89,
           "rationale": "yfinance 共識:2670.8948"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 279.99,
+          "rationale": "高 ROE 法:NAV $115.3 × ROE 24.3% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 1039.0,
+        "bear": 280.0,
         "base": 2700.0,
         "bull": 2671.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($1039),多頭給 AI 全週期溢價 ($2671)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($280),多頭給 AI 全週期溢價 ($2671)。"
       },
       "support_resistance": {
         "support_levels": [
           {
-            "price": 2121.95,
+            "price": 2132.13,
             "type": "50 DMA",
             "strength": "中"
           },
@@ -27642,7 +28037,7 @@
             "strength": "弱"
           },
           {
-            "price": 1315.49,
+            "price": 1323.11,
             "type": "200 DMA",
             "strength": "強"
           },
@@ -27654,6 +28049,11 @@
         ],
         "resistance_levels": [
           {
+            "price": 2150.0,
+            "type": "整數心理關 $2150",
+            "strength": "弱"
+          },
+          {
             "price": 2200.0,
             "type": "整數心理關 $2200",
             "strength": "弱"
@@ -27661,11 +28061,6 @@
           {
             "price": 2250.0,
             "type": "整數心理關 $2250",
-            "strength": "弱"
-          },
-          {
-            "price": 2300.0,
-            "type": "整數心理關 $2300",
             "strength": "弱"
           },
           {
@@ -27731,18 +28126,30 @@
       "ticker": "2317.TW",
       "name": "鴻海 Hon Hai / Foxconn (TWSE)",
       "category_label": "AI server ODM (GB200/GB300 機架代工) + iPhone 代工 + Foxtron EV",
-      "updated_at": "2026-06-21",
-      "current_price": 268.5,
+      "updated_at": "2026-06-22",
+      "current_price": 269.5,
       "currency": "TWD",
       "financial_currency": "TWD",
+      "benchmark_base": 149.94,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "bone",
+      "price_band_label": "魚骨區 (過熱)",
+      "discount_pct": 79.7,
+      "band_thresholds": {
+        "head_low": 127.45,
+        "body_low": 149.94,
+        "tail_low": 172.43,
+        "bone_low": 194.92,
+        "crazy_low": 299.88
+      },
       "key_stats": {
-        "trailing_pe": 20.037313,
-        "forward_pe": 12.507657,
-        "ps_ttm": 0.43825766,
-        "pb": 2.1157558,
+        "trailing_pe": 20.11194,
+        "forward_pe": 12.55424,
+        "ps_ttm": 0.4398899,
+        "pb": 2.1236358,
         "ev_ebitda": 9.903,
         "peg": 1.19,
-        "mcap_b": 3759.5,
+        "mcap_b": 3773.5,
         "fcf_ttm_b": 37.19,
         "gross_margin": 6.2,
         "profit_margin": 2.3,
@@ -27769,7 +28176,7 @@
         "avg_rating_score": 1.6,
         "consensus_label": "Buy",
         "price_target": {
-          "current": 268.5,
+          "current": 269.5,
           "mean": 312.78,
           "median": 312.5,
           "high": 400.0,
@@ -27824,7 +28231,7 @@
         },
         {
           "model": "EV/EBITDA × FY 當期 (10x)",
-          "implied_price": 325.98,
+          "implied_price": 326.98,
           "rationale": "歷史 EV/EBITDA 10x,EBITDA = margin 4% × FY 當期 Rev"
         },
         {
@@ -27836,13 +28243,18 @@
           "model": "Analyst Mean Target",
           "implied_price": 312.78,
           "rationale": "yfinance 共識:312.77777"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 149.94,
+          "rationale": "高 ROE 法:NAV $126.9 × ROE 11.8% × 10 — 高 ROE 才配 10x P/B,低 ROE 給折價"
         }
       ],
       "fair_value_summary": {
-        "bear": 246.0,
+        "bear": 150.0,
         "base": 312.0,
         "bull": 1476.0,
-        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($246),多頭給 AI 全週期溢價 ($1476)。"
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($150),多頭給 AI 全週期溢價 ($1476)。"
       },
       "support_resistance": {
         "support_levels": [
@@ -27852,17 +28264,17 @@
             "strength": "弱"
           },
           {
-            "price": 246.71,
+            "price": 248.1,
             "type": "50 DMA",
             "strength": "強"
           },
           {
-            "price": 228.52,
+            "price": 228.86,
             "type": "200 DMA",
-            "strength": "中"
+            "strength": "強"
           },
           {
-            "price": 148.6,
+            "price": 150.53,
             "type": "52 週低",
             "strength": "強 (深支撐)"
           }

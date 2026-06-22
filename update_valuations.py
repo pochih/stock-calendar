@@ -1065,6 +1065,31 @@ def build_valuation_models(raw: dict, forecasts: list[dict], params: dict, mean_
             "rationale": f"yfinance 共識:{raw['price_targets'].get('mean')}",
         })
 
+    # 7. ROE 調整基準值 (PBR-ROE 法,參考 taiquant 釣魚分區邏輯)
+    #    高 ROE 公司:NAV × ROE × 10
+    #    中 ROE:     NAV × 1
+    #    低 ROE:     NAV × (ROE + 0.02) × 10
+    info = raw["info"]
+    book_value_ps = safe_float(info.get("bookValue"))
+    roe = safe_float(info.get("returnOnEquity"))
+    # 跳過跨幣值 (TSM ADR) — bookValue 是 financial currency,股價是 stock currency
+    # 跳過 ROE <= 0 (重組期 / 虧損)
+    if book_value_ps and roe is not None and roe > 0 and not ccy_mismatch:
+        if roe >= 0.10:
+            roe_base = book_value_ps * roe * 10
+            roe_note = f"高 ROE 法:NAV ${book_value_ps:.1f} × ROE {roe*100:.1f}% × 10"
+        elif roe >= 0.08:
+            roe_base = book_value_ps
+            roe_note = f"中 ROE 法:NAV ${book_value_ps:.1f} 等於合理價"
+        else:
+            roe_base = book_value_ps * (roe + 0.02) * 10
+            roe_note = f"低 ROE 法:NAV ${book_value_ps:.1f} × (ROE+2%) × 10"
+        models.append({
+            "model": "ROE 調整基準值 (PBR-ROE)",
+            "implied_price": round(roe_base, 2),
+            "rationale": roe_note + " — 高 ROE 才配 10x P/B,低 ROE 給折價",
+        })
+
     # 若跨幣值,加說明
     if ccy_mismatch:
         models.append({
@@ -1261,6 +1286,57 @@ def build_valuation_entry(symbol: str) -> dict:
     else:
         bear = base = bull = current_price
 
+    # 魚體區計算 (參考 taiquant): 以 ROE 調整基準值 (PBR-ROE 模型) 為錨點
+    # 沒 ROE 模型 fallback 用 analyst median target
+    book_value_ps = safe_float(info.get("bookValue"))
+    roe = safe_float(info.get("returnOnEquity"))
+    stock_ccy = str(info.get("currency", "") or "")
+    fin_ccy = str(info.get("financialCurrency", "") or "")
+    ccy_mismatch = stock_ccy and fin_ccy and stock_ccy != fin_ccy
+
+    roe_base = None
+    # 跳過跨幣值 (e.g. TSM ADR) — bookValue 是 financial currency,跟 stock price 比不對等
+    # 跳過 ROE <= 0 (重組期 / 虧損) — 公式會給負值
+    if book_value_ps and roe is not None and roe > 0 and not ccy_mismatch:
+        if roe >= 0.10:
+            roe_base = book_value_ps * roe * 10
+        elif roe >= 0.08:
+            roe_base = book_value_ps
+        else:
+            roe_base = book_value_ps * (roe + 0.02) * 10
+
+    benchmark_base = roe_base if roe_base else base
+    # 計算 5 段魚體區邊界
+    band_thresholds = {
+        "head_low":   benchmark_base * 0.85,   # 魚頭區下緣
+        "body_low":   benchmark_base * 1.00,   # 魚身區下緣
+        "tail_low":   benchmark_base * 1.15,   # 魚尾區下緣
+        "bone_low":   benchmark_base * 1.30,   # 魚骨區下緣
+        "crazy_low":  benchmark_base * 2.00,   # 瘋狂區下緣
+    }
+    # 當前價落哪個區
+    if current_price < band_thresholds["head_low"]:
+        price_band = "below_head"
+        price_band_label = "魚頭區以下 (深度低估)"
+    elif current_price < band_thresholds["body_low"]:
+        price_band = "head"
+        price_band_label = "魚頭區 (低估)"
+    elif current_price < band_thresholds["tail_low"]:
+        price_band = "body"
+        price_band_label = "魚身區 (合理)"
+    elif current_price < band_thresholds["bone_low"]:
+        price_band = "tail"
+        price_band_label = "魚尾區 (略貴)"
+    elif current_price < band_thresholds["crazy_low"]:
+        price_band = "bone"
+        price_band_label = "魚骨區 (過熱)"
+    else:
+        price_band = "crazy"
+        price_band_label = "瘋狂區 (泡沫)"
+
+    # discount %:當前價 vs 基準值
+    discount_pct = round((current_price - benchmark_base) / benchmark_base * 100, 1) if benchmark_base else 0
+
     return {
         "ticker": symbol,
         "name": cfg["name"],
@@ -1269,6 +1345,12 @@ def build_valuation_entry(symbol: str) -> dict:
         "current_price": current_price,
         "currency": str(info.get("currency", "USD")),
         "financial_currency": str(info.get("financialCurrency", "USD")),
+        "benchmark_base": round(benchmark_base, 2),
+        "benchmark_source": "PBR-ROE" if roe_base else "Analyst Median",
+        "price_band": price_band,
+        "price_band_label": price_band_label,
+        "discount_pct": discount_pct,
+        "band_thresholds": {k: round(v, 2) for k, v in band_thresholds.items()},
         "key_stats": {
             "trailing_pe": safe_float(info.get("trailingPE")),
             "forward_pe": safe_float(info.get("forwardPE")),
