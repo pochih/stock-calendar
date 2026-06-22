@@ -715,6 +715,12 @@
     <span style="color:var(--muted); font-size:12px;">點 ticker 旁的 ☆ 加入 watchlist · 點欄位標題排序 (再點切換升降冪)</span>
   </div>
 
+  <!-- 魚體區 quick filter chip (Screener,參考 taiquant) -->
+  <div style="margin-bottom:12px;">
+    <div style="font-size:12px; color:var(--muted); margin-bottom:6px;">🎣 估值區間快篩 (依 ROE 調整基準值):</div>
+    <div id="band-filter-chips" style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;"></div>
+  </div>
+
   <h3>📦 ETF + Index</h3>
   <table class="sortable">
     <thead><tr>
@@ -743,6 +749,7 @@
       <th data-sort="num" data-field="price">價格</th>
       <th data-sort="num" data-field="change_30d_pct">30D</th>
       <th>30D 趨勢</th>
+      <th data-sort="text" data-field="price_band_label">🎣 估值區</th>
       <th data-sort="num" data-field="pe">PE</th>
       <th data-sort="num" data-field="fwd_pe">Fwd PE</th>
       <th data-sort="num" data-field="gross_margin">毛利率</th>
@@ -29999,7 +30006,65 @@ function renderIPO() {
 function renderTickers() {
   const etfs = DATA.tickers.filter(t => t.type === 'ETF' || t.type === 'Index');
   const stocks = DATA.tickers.filter(t => t.type === 'Stock');
-  const filt = arr => WATCHLIST_ONLY ? arr.filter(t => WATCHLIST.has(t.ticker)) : arr;
+
+  // 建 ticker → valuation lookup,讓 ticker 表能查 price_band
+  const valMap = {};
+  (DATA.valuations || []).forEach(v => { valMap[v.ticker] = v; });
+
+  // 把 valuation 資訊塞進 ticker (供排序 + filter)
+  stocks.forEach(t => {
+    const val = valMap[t.ticker];
+    if (val) {
+      t.price_band = val.price_band;
+      t.price_band_label = val.price_band_label;
+      t.benchmark_base = val.benchmark_base;
+      t.discount_pct = val.discount_pct;
+    } else {
+      t.price_band = null;
+    }
+  });
+
+  // BAND_FILTER 設好就用,沒設預設 'all'
+  const bandFilter = BAND_FILTER || 'all';
+  const bandPredicate = t => bandFilter === 'all' || t.price_band === bandFilter;
+
+  const filt = arr => {
+    let result = WATCHLIST_ONLY ? arr.filter(t => WATCHLIST.has(t.ticker)) : arr;
+    return result.filter(bandPredicate);
+  };
+
+  // Render band filter chips (含各區計數)
+  const bandCount = { all: stocks.length };
+  ['below_head','head','body','tail','bone','crazy'].forEach(b => {
+    bandCount[b] = stocks.filter(t => t.price_band === b).length;
+  });
+  const noBand = stocks.filter(t => !t.price_band).length;
+
+  const bandChips = document.getElementById('band-filter-chips');
+  if (bandChips) {
+    const chipDef = [
+      ['all',        '全部',       '#8b949e', bandCount.all],
+      ['below_head', '深度低估',   '#22c55e', bandCount.below_head],
+      ['head',       '🎣 魚頭',    '#3fb950', bandCount.head],
+      ['body',       '魚身',       '#8b949e', bandCount.body],
+      ['tail',       '魚尾',       '#d29922', bandCount.tail],
+      ['bone',       '魚骨',       '#ff7b72', bandCount.bone],
+      ['crazy',      '🔥 瘋狂',    '#f85149', bandCount.crazy],
+    ];
+    bandChips.innerHTML = chipDef.map(([key, label, color, count]) => {
+      const active = bandFilter === key;
+      const bg = active ? color : 'transparent';
+      const fg = active ? '#fff' : color;
+      const border = active ? color : color;
+      return `<button onclick="setBandFilter('${key}')" style="
+        background:${bg}; color:${fg}; border:1px solid ${border};
+        padding:5px 11px; border-radius:6px; cursor:pointer; font-size:12px;
+        font-weight:${active ? '700' : '500'}; transition:0.15s;">
+        ${label} <span style="opacity:0.7; font-family:'SF Mono',Consolas,monospace; margin-left:3px;">${count}</span>
+      </button>`;
+    }).join('') + (noBand > 0 ? `<span style="color:var(--muted); font-size:11px; margin-left:8px;">(${noBand} 個無估值資料,不在篩選範圍)</span>` : '');
+  }
+
   document.getElementById('tick-etf').innerHTML = filt(etfs).map(t => `
     <tr>
       <td>${starBtn(t.ticker)}</td>
@@ -30016,7 +30081,27 @@ function renderTickers() {
       <td><strong>${esc(t.mcap || '—')}</strong></td>
       <td style="color:var(--muted); font-size:12px;">${esc(t.note)}</td>
     </tr>`).join('');
-  document.getElementById('tick-stock').innerHTML = filt(stocks).map(t => `
+  document.getElementById('tick-stock').innerHTML = filt(stocks).map(t => {
+    const bandColor = {
+      "below_head": "#22c55e",
+      "head":       "#3fb950",
+      "body":       "#8b949e",
+      "tail":       "#d29922",
+      "bone":       "#ff7b72",
+      "crazy":      "#f85149",
+    }[t.price_band] || "#374151";
+    const bandShort = {
+      "below_head": "🐟 頭下",
+      "head":       "🎣 魚頭",
+      "body":       "魚身",
+      "tail":       "魚尾",
+      "bone":       "魚骨",
+      "crazy":      "🔥 瘋狂",
+    }[t.price_band] || '—';
+    const bandCell = t.price_band
+      ? `<span style="background:${bandColor}; color:#fff; padding:2px 7px; border-radius:3px; font-size:11px; font-weight:600; white-space:nowrap;" title="基準值 ${t.benchmark_base} · 折溢價 ${(t.discount_pct >= 0 ? '+' : '')}${t.discount_pct}%">${bandShort}</span>`
+      : `<span style="color:var(--muted); font-size:11px;">—</span>`;
+    return `
     <tr>
       <td>${starBtn(t.ticker)}</td>
       <td><span class="ticker" onclick="loadChart('${t.ticker}')">${esc(t.ticker)}</span></td>
@@ -30024,6 +30109,7 @@ function renderTickers() {
       <td><strong>${esc(t.price)}</strong></td>
       <td>${fmtChangeT(t)}</td>
       <td>${sparklineSvg(t.sparkline_30d, t.change_30d_pct)}</td>
+      <td>${bandCell}</td>
       <td>${esc(t.pe)}</td>
       <td>${esc(t.fwd_pe)}</td>
       <td>${esc(t.gross_margin)}</td>
@@ -30032,9 +30118,18 @@ function renderTickers() {
       <td>${esc(t.shares || '—')}</td>
       <td><strong>${esc(t.mcap || '—')}</strong></td>
       <td style="color:var(--muted); font-size:12px;">${esc(t.note)}</td>
-    </tr>`).join('');
+    </tr>`;
+  }).join('');
   renderLeaderboard();
+  applyTableLabels();
 }
+
+let BAND_FILTER = 'all';
+function setBandFilter(band) {
+  BAND_FILTER = band;
+  renderTickers();
+}
+window.setBandFilter = setBandFilter;
 
 // ========== Watchlist ==========
 let WATCHLIST = new Set(JSON.parse(localStorage.getItem('wl') || '[]'));
