@@ -12,6 +12,7 @@ Phase 2 自動化的第一步:
   python prepare_briefing.py            # 預設本週 (上週一到本週日)
   python prepare_briefing.py --week 25  # 指定 ISO week
   python prepare_briefing.py --year 2026 --week 25
+  python prepare_briefing.py --daily    # 每日增量:檢查當週 drafts,append 今天有的新素材
 
 執行流程:
   1. 跑這個 script 產生 context
@@ -25,6 +26,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -171,15 +173,131 @@ def build_context(year: int, week: int, monday: dt.date, sunday: dt.date,
     return "\n".join(lines)
 
 
+def build_daily_increment(year: int, week: int, monday: dt.date, sunday: dt.date,
+                          existing_text: str) -> tuple[str, list[dict], list[dict], dt.date, dt.date]:
+    """檢查當週 drafts 已涵蓋哪些素材,回傳新增區段 + 新 episodes 清單。
+
+    回傳 (markdown_section, new_gooaye, new_allin, gmail_after, gmail_before)。
+    若無新素材,markdown_section 為空字串。
+    """
+    today = dt.date.today()
+    # 抓本週至今的素材 (本週一 ~ today)
+    gooaye_all = find_gooaye_episodes(monday, min(today, sunday))
+    allin_all = find_allin_episodes(monday, min(today, sunday))
+
+    # 解析既有 drafts 中提到的 EP 號與 All-In id
+    mentioned_eps = set(re.findall(r"EP(\d+)", existing_text))
+    # All-In txt_file 名稱含 video id,沿用同樣方式抓出
+    mentioned_allin = set(re.findall(r"EP([A-Za-z0-9_-]{11})_", existing_text))
+
+    new_gooaye = [ep for ep in gooaye_all if str(ep["n"]) not in mentioned_eps]
+    new_allin = [ep for ep in allin_all if ep.get("id") not in mentioned_allin]
+
+    # Gmail 區段:每日都印,Claude 自己依日期判斷 (M報 / 馬斯克 / 富果 都可能多封)
+    # 用 today (含當天) 作為 before,monday 作為 after,讓 Claude 抓本週至今所有信
+    gmail_after = monday
+    gmail_before = today + dt.timedelta(days=1)
+
+    if not new_gooaye and not new_allin:
+        # 仍提供 Gmail 搜尋指令(電子報可能每日都有新信)
+        section = [
+            f"",
+            f"## 增量 {today.isoformat()} (cron 22:33)",
+            f"",
+            f"**本地素材**: 今日無新股癌 / All-In 集數",
+            f"",
+            f"**Gmail 增量**: Claude 用 MCP 抓本週至今所有信,並比對既有 drafts 是否已收錄",
+            f"",
+            f"```",
+            f"mcp__gmail__search_emails(query='from:mviewpoint@substack.com after:{gmail_after} before:{gmail_before}', maxResults=5)",
+            f"mcp__gmail__search_emails(query='from:muskempire0628@substack.com after:{gmail_after} before:{gmail_before}', maxResults=5)",
+            f"mcp__gmail__search_emails(query='from:service@fugle.tw after:{gmail_after} before:{gmail_before}', maxResults=10)",
+            f"```",
+            f"",
+            f"若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。",
+            f"",
+        ]
+        return "\n".join(section), [], [], gmail_after, gmail_before
+
+    section = [
+        f"",
+        f"## 增量 {today.isoformat()} (cron 22:33)",
+        f"",
+    ]
+    if new_gooaye:
+        section.append(f"### 股癌新集數 ({len(new_gooaye)} 集)")
+        for ep in sorted(new_gooaye, key=lambda x: x["d"]):
+            section.append("")
+            section.append(f"**EP{ep['n']} ({ep['d']}) — {ep['t']}**")
+            section.append("")
+            section.append(f"> {ep.get('desc', '')}")
+        section.append("")
+    if new_allin:
+        section.append(f"### All-In 新集數 ({len(new_allin)} 集)")
+        for ep in sorted(new_allin, key=lambda x: x.get("upload_date", "")):
+            section.append("")
+            section.append(f"**{ep.get('upload_date','?')} — {ep.get('title','?')}**")
+            section.append("")
+            section.append(f"全文位於: `transcripts/allin/{ep.get('txt_file','?')}`")
+            section.append("")
+            section.append("Claude Read tool 載入,然後萃取 1-3 個對應到本週事件的觀點。")
+        section.append("")
+
+    section.extend([
+        f"### Gmail 增量",
+        f"",
+        f"Claude 用 MCP 抓本週至今所有信,並比對既有 drafts 是否已收錄:",
+        f"",
+        f"```",
+        f"mcp__gmail__search_emails(query='from:mviewpoint@substack.com after:{gmail_after} before:{gmail_before}', maxResults=5)",
+        f"mcp__gmail__search_emails(query='from:muskempire0628@substack.com after:{gmail_after} before:{gmail_before}', maxResults=5)",
+        f"mcp__gmail__search_emails(query='from:service@fugle.tw after:{gmail_after} before:{gmail_before}', maxResults=10)",
+        f"```",
+        f"",
+        f"若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。",
+        f"",
+    ])
+    return "\n".join(section), new_gooaye, new_allin, gmail_after, gmail_before
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     today = dt.date.today()
     iso = today.isocalendar()
     ap.add_argument("--year", type=int, default=iso[0])
     ap.add_argument("--week", type=int, default=iso[1])
+    ap.add_argument("--daily", action="store_true", help="每日增量模式:檢查當週 drafts,append 今天的新素材")
     args = ap.parse_args()
 
     monday, sunday = iso_week_bounds(args.year, args.week)
+    DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
+    context_path = DRAFTS_DIR / f"W{args.week:02d}_{args.year}_context.md"
+
+    if args.daily:
+        if not context_path.exists():
+            # 該週首次:走完整模式以建立 base context
+            print(f"📅 {args.year}-W{args.week:02d}: drafts 不存在,首次建立完整 context")
+            gooaye = find_gooaye_episodes(monday, sunday)
+            allin = find_allin_episodes(monday, sunday)
+            context_path.write_text(
+                build_context(args.year, args.week, monday, sunday, gooaye, allin),
+                encoding="utf-8",
+            )
+            print(f"📝 context 寫入: {context_path}")
+            return
+
+        existing = context_path.read_text(encoding="utf-8")
+        section, new_gooaye, new_allin, gmail_after, gmail_before = build_daily_increment(
+            args.year, args.week, monday, sunday, existing,
+        )
+        with open(context_path, "a", encoding="utf-8") as f:
+            f.write(section)
+        print(f"📅 {args.year}-W{args.week:02d} daily 增量:股癌 +{len(new_gooaye)} / All-In +{len(new_allin)}")
+        print(f"📝 append 到 {context_path}")
+        print(f"📧 Gmail 範圍: after={gmail_after} before={gmail_before} — 由 Claude session 進一步 fetch")
+        return
+
+    # 預設:整週重寫
     gooaye = find_gooaye_episodes(monday, sunday)
     allin = find_allin_episodes(monday, sunday)
 
@@ -193,8 +311,6 @@ def main() -> None:
         for ep in allin:
             print(f"     {ep['upload_date']} {ep['title'][:60]}")
 
-    DRAFTS_DIR.mkdir(parents=True, exist_ok=True)
-    context_path = DRAFTS_DIR / f"W{args.week:02d}_{args.year}_context.md"
     context_path.write_text(
         build_context(args.year, args.week, monday, sunday, gooaye, allin),
         encoding="utf-8",

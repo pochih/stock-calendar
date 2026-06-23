@@ -24,5 +24,5 @@ transcripts/*.txt
 transcripts/*.meta.json
 transcripts/*.md
 
-# weekly briefing drafts (生成的 context 檔,需 Claude 處理後才入 data.json)
-drafts/
+# weekly briefing drafts:已改為入 git 以支援每日 cron 累積 + 多裝置同步
+# (前置:cron 每日 22:33 append 素材 + push;週三/日 22:33 生成 weekly_briefing entry 後也會 push drafts)
