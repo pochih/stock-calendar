@@ -3055,6 +3055,153 @@
       "vol_30d_avg": 56511080
     },
     {
+      "ticker": "ON",
+      "name": "Onsemi",
+      "type": "Stock",
+      "note": "SiC + IGBT + 離散元件 IDM,AI 機櫃 48V/800V HVDC 受惠",
+      "price": "$131.55",
+      "pe": "~97",
+      "fwd_pe": "~30",
+      "gross_margin": "42.7%",
+      "fcf_ttm": "$1.3B",
+      "div": "0%",
+      "sparkline_30d": [
+        103.2,
+        107.24,
+        104.11,
+        115.71,
+        118.37,
+        113.11,
+        109.43,
+        106.02,
+        110.21,
+        109.61,
+        116.2,
+        127.0,
+        124.89,
+        123.77,
+        120.62,
+        120.92,
+        128.64,
+        133.93,
+        131.82,
+        117.26,
+        120.9,
+        117.0,
+        110.17,
+        115.96,
+        116.79,
+        125.9,
+        118.25,
+        112.92,
+        121.62,
+        131.55
+      ],
+      "change_30d_pct": 27.47,
+      "vol_5d_avg": 12917400,
+      "vol_30d_avg": 12086366,
+      "mcap": "$51.1B",
+      "shares": "389M"
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "type": "Stock",
+      "note": "類比 + 電源管理 IC,DrMOS 受惠 AI server",
+      "price": "$332.28",
+      "pe": "~57",
+      "fwd_pe": "~35",
+      "gross_margin": "57.3%",
+      "fcf_ttm": "$1.1B",
+      "div": "171.0%",
+      "sparkline_30d": [
+        287.8,
+        297.76,
+        295.17,
+        306.34,
+        308.17,
+        302.73,
+        300.6,
+        302.31,
+        304.88,
+        298.39,
+        309.21,
+        324.89,
+        317.45,
+        315.95,
+        305.68,
+        293.2,
+        308.12,
+        308.59,
+        305.37,
+        285.06,
+        290.9,
+        288.63,
+        282.01,
+        297.1,
+        301.12,
+        313.34,
+        305.71,
+        301.88,
+        322.86,
+        332.28
+      ],
+      "change_30d_pct": 15.46,
+      "vol_5d_avg": 10629320,
+      "vol_30d_avg": 8551860,
+      "mcap": "$302.4B",
+      "shares": "910M"
+    },
+    {
+      "ticker": "IFNNY",
+      "name": "Infineon",
+      "type": "Stock",
+      "note": "全球功率半導體龍頭,汽車 + 工業 + AI Server PSU (ADR)",
+      "price": "$99.13",
+      "pe": "~105",
+      "fwd_pe": "~32",
+      "gross_margin": "41.2%",
+      "fcf_ttm": "$1.4B",
+      "div": "42.0%",
+      "sparkline_30d": [
+        73.4,
+        72.6,
+        69.04,
+        76.17,
+        78.33,
+        75.53,
+        77.09,
+        75.16,
+        79.9,
+        80.49,
+        84.8,
+        89.86,
+        89.39,
+        93.28,
+        95.71,
+        93.89,
+        102.41,
+        101.73,
+        99.09,
+        85.02,
+        89.65,
+        90.0,
+        86.22,
+        92.15,
+        92.3,
+        94.01,
+        90.32,
+        87.59,
+        95.23,
+        99.13
+      ],
+      "change_30d_pct": 35.05,
+      "vol_5d_avg": 534120,
+      "vol_30d_avg": 698310,
+      "mcap": "$128.8B",
+      "shares": "1.30B"
+    },
+    {
       "ticker": "PLTR",
       "name": "Palantir",
       "type": "Stock",
@@ -28502,6 +28649,1567 @@
           "week": "2026-W18",
           "category": "股癌觀點",
           "snippet": "股癌 EP657:OpenAI 與立訊 AI 裝置難取代 iPhone — 反向確認鴻海 iPhone 代工不會被立訊搶但成長已遇瓶頸"
+        }
+      ]
+    },
+    {
+      "ticker": "ON",
+      "name": "Onsemi",
+      "category_label": "功率半導體 IDM (SiC + IGBT + 離散元件全線) — EV / 工業 / AI 電源三引擎",
+      "updated_at": "2026-06-23",
+      "current_price": 117.89,
+      "currency": "USD",
+      "financial_currency": "USD",
+      "benchmark_base": 26.54,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 344.3,
+      "band_thresholds": {
+        "head_low": 22.55,
+        "body_low": 26.54,
+        "tail_low": 30.52,
+        "bone_low": 34.5,
+        "crazy_low": 53.07
+      },
+      "key_stats": {
+        "trailing_pe": 87.32593,
+        "forward_pe": 27.319962,
+        "ps_ttm": 7.559955,
+        "pb": 6.326947,
+        "ev_ebitda": 25.596,
+        "peg": 0.44,
+        "mcap_b": 45.8,
+        "fcf_ttm_b": 1.28,
+        "gross_margin": 42.7,
+        "profit_margin": 9.5,
+        "beta": 1.977,
+        "w52_high": 134.92,
+        "w52_low": 44.56
+      },
+      "analyst_consensus": {
+        "count": 31,
+        "rating_dist": {
+          "strongBuy": 1,
+          "buy": 12,
+          "hold": 18,
+          "sell": 0,
+          "strongSell": 0
+        },
+        "rating_dist_1m_ago": {
+          "strongBuy": 1,
+          "buy": 13,
+          "hold": 19,
+          "sell": 0,
+          "strongSell": 0
+        },
+        "avg_rating_score": 2.55,
+        "consensus_label": "Hold",
+        "price_target": {
+          "current": 117.89,
+          "mean": 107.15,
+          "median": 105.0,
+          "high": 150.0,
+          "low": 68.0
+        }
+      },
+      "forecasts": [
+        {
+          "period": "FY 當期",
+          "period_key": "0y",
+          "eps_avg": 3.1,
+          "eps_low": 2.9,
+          "eps_high": 3.3,
+          "eps_90d_ago": 2.91,
+          "eps_revision_pct": 6.4,
+          "rev_avg_b": 6.48,
+          "rev_low_b": 6.3,
+          "rev_high_b": 6.65,
+          "n_analysts": 29,
+          "growth_pct": 31.9
+        },
+        {
+          "period": "FY +1年",
+          "period_key": "+1y",
+          "eps_avg": 4.32,
+          "eps_low": 3.62,
+          "eps_high": 5.4,
+          "eps_90d_ago": 4.03,
+          "eps_revision_pct": 7.2,
+          "rev_avg_b": 7.19,
+          "rev_low_b": 6.84,
+          "rev_high_b": 7.55,
+          "n_analysts": 28,
+          "growth_pct": 39.21
+        }
+      ],
+      "valuation_models": [
+        {
+          "model": "PE × FY 當期 EPS (18x)",
+          "implied_price": 55.8,
+          "rationale": "歷史中段 fwd P/E 18x × FY 當期 EPS 3.1"
+        },
+        {
+          "model": "PE × FY +1y EPS (25x bull)",
+          "implied_price": 108.0,
+          "rationale": "FY+1 EPS 4.32 維持 25x P/E"
+        },
+        {
+          "model": "P/S × FY 當期 Rev (4x)",
+          "implied_price": 66.67,
+          "rationale": "歷史中段 P/S 4x × FY 當期 6.48B 營收"
+        },
+        {
+          "model": "EV/EBITDA × FY 當期 (12x)",
+          "implied_price": 50.63,
+          "rationale": "歷史 EV/EBITDA 12x,EBITDA = margin 34% × FY 當期 Rev"
+        },
+        {
+          "model": "DCF (10% disc, 5y FCF 10% → 終值 2%)",
+          "implied_price": 44.13,
+          "rationale": "基準 FCF 1.0B (= FY 當期 NI (EPS 3.1 × 0.39B 股) × 80% FCF conversion)"
+        },
+        {
+          "model": "Analyst Mean Target",
+          "implied_price": 107.15,
+          "rationale": "yfinance 共識:107.14815"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 26.54,
+          "rationale": "低 ROE 法:NAV $18.6 × (ROE+2%) × 15 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
+        }
+      ],
+      "fair_value_summary": {
+        "bear": 27.0,
+        "base": 105.0,
+        "bull": 108.0,
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($27),多頭給 AI 全週期溢價 ($108)。"
+      },
+      "support_resistance": {
+        "support_levels": [
+          {
+            "price": 107.84,
+            "type": "50 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 100.0,
+            "type": "整數心理關 $100",
+            "strength": "弱"
+          },
+          {
+            "price": 69.28,
+            "type": "200 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 44.9,
+            "type": "52 週低",
+            "strength": "強 (深支撐)"
+          }
+        ],
+        "resistance_levels": [
+          {
+            "price": 133.93,
+            "type": "52 週新高",
+            "strength": "強"
+          }
+        ]
+      },
+      "recent_actions": [
+        {
+          "date": "2026-06-15",
+          "firm": "Citigroup",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Neutral",
+          "to_grade": "Neutral",
+          "old_target": 100.0,
+          "new_target": 120.0
+        },
+        {
+          "date": "2026-06-09",
+          "firm": "Wells Fargo",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Overweight",
+          "to_grade": "Overweight",
+          "old_target": 115.0,
+          "new_target": 140.0
+        },
+        {
+          "date": "2026-05-28",
+          "firm": "Mizuho",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Outperform",
+          "to_grade": "Outperform",
+          "old_target": 130.0,
+          "new_target": 150.0
+        },
+        {
+          "date": "2026-05-26",
+          "firm": "B of A Securities",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 115.0,
+          "new_target": 138.0
+        },
+        {
+          "date": "2026-05-19",
+          "firm": "Mizuho",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Outperform",
+          "to_grade": "Outperform",
+          "old_target": 120.0,
+          "new_target": 130.0
+        },
+        {
+          "date": "2026-05-13",
+          "firm": "Cantor Fitzgerald",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Neutral",
+          "to_grade": "Neutral",
+          "old_target": 95.0,
+          "new_target": 100.0
+        },
+        {
+          "date": "2026-05-06",
+          "firm": "Citigroup",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Neutral",
+          "to_grade": "Neutral",
+          "old_target": 68.0,
+          "new_target": 100.0
+        },
+        {
+          "date": "2026-05-06",
+          "firm": "Barclays",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Equal-Weight",
+          "to_grade": "Equal-Weight",
+          "old_target": 75.0,
+          "new_target": 100.0
+        }
+      ],
+      "analysts_by_grade": {
+        "strongBuy": [],
+        "buy": [
+          {
+            "firm": "Mizuho",
+            "date": "2026-05-28",
+            "grade": "Outperform",
+            "pt": 150.0,
+            "stale": false
+          },
+          {
+            "firm": "Wells Fargo",
+            "date": "2026-06-09",
+            "grade": "Overweight",
+            "pt": 140.0,
+            "stale": false
+          },
+          {
+            "firm": "B of A Securities",
+            "date": "2026-05-26",
+            "grade": "Buy",
+            "pt": 138.0,
+            "stale": false
+          },
+          {
+            "firm": "Keybanc",
+            "date": "2026-05-05",
+            "grade": "Overweight",
+            "pt": 125.0,
+            "stale": false
+          },
+          {
+            "firm": "Susquehanna",
+            "date": "2026-05-05",
+            "grade": "Positive",
+            "pt": 120.0,
+            "stale": false
+          },
+          {
+            "firm": "Jefferies",
+            "date": "2026-05-05",
+            "grade": "Buy",
+            "pt": 115.0,
+            "stale": false
+          },
+          {
+            "firm": "TD Cowen",
+            "date": "2026-05-05",
+            "grade": "Buy",
+            "pt": 115.0,
+            "stale": false
+          },
+          {
+            "firm": "Needham",
+            "date": "2026-05-05",
+            "grade": "Buy",
+            "pt": 110.0,
+            "stale": false
+          },
+          {
+            "firm": "Evercore ISI Group",
+            "date": "2024-04-16",
+            "grade": "Outperform",
+            "pt": 104.0,
+            "stale": false
+          },
+          {
+            "firm": "Cowen & Co.",
+            "date": "2023-02-07",
+            "grade": "Outperform",
+            "pt": 95.0,
+            "stale": false
+          },
+          {
+            "firm": "Deutsche Bank",
+            "date": "2024-07-30",
+            "grade": "Buy",
+            "pt": 90.0,
+            "stale": false
+          },
+          {
+            "firm": "Piper Sandler",
+            "date": "2026-02-10",
+            "grade": "Overweight",
+            "pt": 75.0,
+            "stale": false
+          },
+          {
+            "firm": "Roth Capital",
+            "date": "2025-06-17",
+            "grade": "Buy",
+            "pt": 70.0,
+            "stale": false
+          },
+          {
+            "firm": "Roth MKM",
+            "date": "2025-02-11",
+            "grade": "Buy",
+            "pt": 60.0,
+            "stale": false
+          },
+          {
+            "firm": "Loop Capital",
+            "date": "2025-05-06",
+            "grade": "Buy",
+            "pt": 55.0,
+            "stale": false
+          },
+          {
+            "firm": "KeyBanc",
+            "date": "2021-01-06",
+            "grade": "Overweight",
+            "pt": 40.0,
+            "stale": false
+          },
+          {
+            "firm": "Stephens & Co.",
+            "date": "2016-10-03",
+            "grade": "Overweight",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Nomura",
+            "date": "2018-10-30",
+            "grade": "Buy",
+            "pt": 23.0,
+            "stale": true
+          },
+          {
+            "firm": "CFRA",
+            "date": "2020-05-12",
+            "grade": "Buy",
+            "pt": 18.0,
+            "stale": true
+          },
+          {
+            "firm": "Wedbush",
+            "date": "2016-01-07",
+            "grade": "Outperform",
+            "pt": 13.0,
+            "stale": true
+          }
+        ],
+        "hold": [
+          {
+            "firm": "Citigroup",
+            "date": "2026-06-15",
+            "grade": "Neutral",
+            "pt": 120.0,
+            "stale": false
+          },
+          {
+            "firm": "BMO Capital",
+            "date": "2023-08-01",
+            "grade": "Market Perform",
+            "pt": 110.0,
+            "stale": false
+          },
+          {
+            "firm": "Truist Securities",
+            "date": "2026-05-05",
+            "grade": "Hold",
+            "pt": 101.0,
+            "stale": false
+          },
+          {
+            "firm": "Cantor Fitzgerald",
+            "date": "2026-05-13",
+            "grade": "Neutral",
+            "pt": 100.0,
+            "stale": false
+          },
+          {
+            "firm": "Barclays",
+            "date": "2026-05-06",
+            "grade": "Equal-Weight",
+            "pt": 100.0,
+            "stale": false
+          },
+          {
+            "firm": "JP Morgan",
+            "date": "2026-05-05",
+            "grade": "Neutral",
+            "pt": 100.0,
+            "stale": false
+          },
+          {
+            "firm": "Baird",
+            "date": "2026-05-05",
+            "grade": "Neutral",
+            "pt": 100.0,
+            "stale": false
+          },
+          {
+            "firm": "Morgan Stanley",
+            "date": "2026-05-05",
+            "grade": "Equal-Weight",
+            "pt": 87.0,
+            "stale": false
+          },
+          {
+            "firm": "Rosenblatt",
+            "date": "2026-05-05",
+            "grade": "Neutral",
+            "pt": 85.0,
+            "stale": false
+          },
+          {
+            "firm": "Credit Suisse",
+            "date": "2022-11-16",
+            "grade": "Neutral",
+            "pt": 83.0,
+            "stale": false
+          },
+          {
+            "firm": "Stifel",
+            "date": "2026-01-16",
+            "grade": "Hold",
+            "pt": 60.0,
+            "stale": false
+          },
+          {
+            "firm": "Goldman Sachs",
+            "date": "2025-07-10",
+            "grade": "Neutral",
+            "pt": 60.0,
+            "stale": false
+          },
+          {
+            "firm": "B. Riley Securities",
+            "date": "2026-01-20",
+            "grade": "Neutral",
+            "pt": 58.0,
+            "stale": false
+          },
+          {
+            "firm": "UBS",
+            "date": "2025-10-27",
+            "grade": "Neutral",
+            "pt": 55.0,
+            "stale": false
+          },
+          {
+            "firm": "Craig-Hallum",
+            "date": "2025-02-11",
+            "grade": "Hold",
+            "pt": 50.0,
+            "stale": false
+          },
+          {
+            "firm": "Benchmark",
+            "date": "2026-02-10",
+            "grade": "Hold",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Summit Insights Group",
+            "date": "2023-10-30",
+            "grade": "Hold",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Wolfe Research",
+            "date": "2023-07-20",
+            "grade": "Peer Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Raymond James",
+            "date": "2023-03-02",
+            "grade": "Market Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "William Blair",
+            "date": "2023-01-10",
+            "grade": "Market Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Longbow Research",
+            "date": "2019-04-17",
+            "grade": "Neutral",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Pacific Crest",
+            "date": "2017-06-20",
+            "grade": "Sector Weight",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "CLSA",
+            "date": "2016-09-20",
+            "grade": "Perform",
+            "pt": 13.0,
+            "stale": true
+          }
+        ],
+        "sell": [
+          {
+            "firm": "Exane BNP Paribas",
+            "date": "2024-04-19",
+            "grade": "Underperform",
+            "pt": 55.0,
+            "stale": false
+          }
+        ],
+        "strongSell": []
+      },
+      "bull_thesis": [
+        "themes/功率半導體 purity 5 純度最高:SiC + IGBT + 離散元件全線,EV / 工業 / AI 電源三引擎結構性受惠",
+        "AI 機櫃 12V → 48V/800V HVDC 換代:Onsemi SiC MOSFET 在 PSU / DrMOS / Super Junction 上含金量提升",
+        "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體,Onsemi 是純度最高的標的之一",
+        "Nexperia 制裁事件推動車用 Tier-1 做非中國佈局,Onsemi 美國 + 韓國 + 馬來西亞產能受惠 supply chain re-route",
+        "EV 終端雖然短期 demand 疲弱,但 SiC 滲透率長線從 ICE 切換成不可逆,Onsemi 4-8 吋 SiC 線在 2026 進入量產爬坡"
+      ],
+      "bear_thesis": [
+        "PE ~97 / fwd PE ~30 在功率半導體同業中偏高 (vs TXN fwd 35 / MCHP / ADI),已部分 priced in AI 電源故事",
+        "EV 終端需求疲弱:Tesla / 大眾 / Stellantis EV 銷量 2026 H1 indicators 偏弱,SiC 訂單能見度被質疑",
+        "中國本土 SiC (基本半導體 / 三安光電 / 比亞迪自研) 政策性扶植,Onsemi 中國份額面臨擠壓",
+        "FCF $1.3B 在 mcap $51B 對比下偏弱 (FCF yield ~2.5%),若 capex 不縮減則股息 / 回購受限",
+        "毛利率 42.7% vs TXN 57.3% / ADI 60%+ — 離散元件比重高拖累 mix,需要 SiC mix shift 才能撐住估值"
+      ],
+      "briefing_mentions": [
+        {
+          "week": "2026-W25",
+          "category": "AI 硬體",
+          "snippet": "股癌 EP671:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。Onsemi 是 SiC + IGBT + 離散全線純度最高"
+        },
+        {
+          "week": "2026-W25",
+          "category": "宏觀政治",
+          "snippet": "Nexperia 制裁事件推動車用 Tier-1 做非中國佈局,Onsemi 美 / 韓 / 馬來西亞產能在 supply chain re-route 中受惠"
+        }
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "category_label": "類比 IC + 電源管理龍頭 (analog/embedded IDM) — DrMOS / AI server 電源受惠",
+      "updated_at": "2026-06-23",
+      "current_price": 303.99,
+      "currency": "USD",
+      "financial_currency": "USD",
+      "benchmark_base": 119.28,
+      "benchmark_source": "PBR-ROE",
+      "price_band": "crazy",
+      "price_band_label": "瘋狂區 (泡沫)",
+      "discount_pct": 154.9,
+      "band_thresholds": {
+        "head_low": 101.38,
+        "body_low": 119.28,
+        "tail_low": 137.17,
+        "bone_low": 155.06,
+        "crazy_low": 238.55
+      },
+      "key_stats": {
+        "trailing_pe": 51.963245,
+        "forward_pe": 31.753252,
+        "ps_ttm": 15.004585,
+        "pb": 16.487768,
+        "ev_ebitda": 35.932,
+        "peg": 1.59,
+        "mcap_b": 276.7,
+        "fcf_ttm_b": 1.07,
+        "gross_margin": 57.3,
+        "profit_margin": 29.1,
+        "beta": 1.309,
+        "w52_high": 334.03,
+        "w52_low": 152.73
+      },
+      "analyst_consensus": {
+        "count": 36,
+        "rating_dist": {
+          "strongBuy": 2,
+          "buy": 15,
+          "hold": 17,
+          "sell": 2,
+          "strongSell": 0
+        },
+        "rating_dist_1m_ago": {
+          "strongBuy": 2,
+          "buy": 15,
+          "hold": 18,
+          "sell": 2,
+          "strongSell": 0
+        },
+        "avg_rating_score": 2.53,
+        "consensus_label": "Hold",
+        "price_target": {
+          "current": 303.99,
+          "mean": 294.41,
+          "median": 300.0,
+          "high": 400.0,
+          "low": 200.0
+        }
+      },
+      "forecasts": [
+        {
+          "period": "FY 當期",
+          "period_key": "0y",
+          "eps_avg": 7.68,
+          "eps_low": 6.54,
+          "eps_high": 8.29,
+          "eps_90d_ago": 6.41,
+          "eps_revision_pct": 19.8,
+          "rev_avg_b": 21.01,
+          "rev_low_b": 19.7,
+          "rev_high_b": 21.71,
+          "n_analysts": 29,
+          "growth_pct": 40.94
+        },
+        {
+          "period": "FY +1年",
+          "period_key": "+1y",
+          "eps_avg": 8.95,
+          "eps_low": 7.13,
+          "eps_high": 12.0,
+          "eps_90d_ago": 7.68,
+          "eps_revision_pct": 16.5,
+          "rev_avg_b": 23.33,
+          "rev_low_b": 21.19,
+          "rev_high_b": 27.96,
+          "n_analysts": 28,
+          "growth_pct": 16.49
+        }
+      ],
+      "valuation_models": [
+        {
+          "model": "PE × FY 當期 EPS (22x)",
+          "implied_price": 168.96,
+          "rationale": "歷史中段 fwd P/E 22x × FY 當期 EPS 7.68"
+        },
+        {
+          "model": "PE × FY +1y EPS (28x bull)",
+          "implied_price": 250.6,
+          "rationale": "FY+1 EPS 8.95 維持 28x P/E"
+        },
+        {
+          "model": "P/S × FY 當期 Rev (7x)",
+          "implied_price": 161.6,
+          "rationale": "歷史中段 P/S 7x × FY 當期 21.01B 營收"
+        },
+        {
+          "model": "EV/EBITDA × FY 當期 (16x)",
+          "implied_price": 135.46,
+          "rationale": "歷史 EV/EBITDA 16x,EBITDA = margin 47% × FY 當期 Rev"
+        },
+        {
+          "model": "DCF (9% disc, 5y FCF 8% → 終值 2%)",
+          "implied_price": 112.58,
+          "rationale": "基準 FCF 5.6B (= FY 當期 NI (EPS 7.68 × 0.91B 股) × 80% FCF conversion)"
+        },
+        {
+          "model": "Analyst Mean Target",
+          "implied_price": 294.41,
+          "rationale": "yfinance 共識:294.40625"
+        },
+        {
+          "model": "ROE 調整基準值 (PBR-ROE)",
+          "implied_price": 119.28,
+          "rationale": "高 ROE 法:NAV $18.4 × ROE 32.3% × 20 — 高 ROE 才配高 P/B,低 ROE 給折價 (反映美股 mega-cap 估值)"
+        }
+      ],
+      "fair_value_summary": {
+        "bear": 113.0,
+        "base": 300.0,
+        "bull": 294.0,
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($113),多頭給 AI 全週期溢價 ($294)。"
+      },
+      "support_resistance": {
+        "support_levels": [
+          {
+            "price": 300.0,
+            "type": "整數心理關 $300",
+            "strength": "弱"
+          },
+          {
+            "price": 285.34,
+            "type": "50 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 209.87,
+            "type": "200 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 151.57,
+            "type": "52 週低",
+            "strength": "強 (深支撐)"
+          }
+        ],
+        "resistance_levels": [
+          {
+            "price": 332.28,
+            "type": "52 週新高",
+            "strength": "強"
+          },
+          {
+            "price": 350.0,
+            "type": "整數心理關 $350",
+            "strength": "弱"
+          }
+        ]
+      },
+      "recent_actions": [
+        {
+          "date": "2026-06-15",
+          "firm": "Citigroup",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 280.0,
+          "new_target": 345.0
+        },
+        {
+          "date": "2026-06-09",
+          "firm": "Wells Fargo",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Equal-Weight",
+          "to_grade": "Equal-Weight",
+          "old_target": 260.0,
+          "new_target": 300.0
+        },
+        {
+          "date": "2026-05-26",
+          "firm": "B of A Securities",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 320.0,
+          "new_target": 370.0
+        },
+        {
+          "date": "2026-05-22",
+          "firm": "Seaport Global",
+          "action": "Announces",
+          "pt_action": "Announces",
+          "from_grade": "Neutral",
+          "to_grade": "Buy",
+          "old_target": 0.0,
+          "new_target": 400.0
+        },
+        {
+          "date": "2026-05-19",
+          "firm": "Mizuho",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Neutral",
+          "to_grade": "Neutral",
+          "old_target": 255.0,
+          "new_target": 300.0
+        },
+        {
+          "date": "2026-05-13",
+          "firm": "Cantor Fitzgerald",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Neutral",
+          "to_grade": "Neutral",
+          "old_target": 280.0,
+          "new_target": 300.0
+        },
+        {
+          "date": "2026-04-23",
+          "firm": "UBS",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 260.0,
+          "new_target": 295.0
+        },
+        {
+          "date": "2026-04-23",
+          "firm": "Citigroup",
+          "action": "Raises",
+          "pt_action": "Raises",
+          "from_grade": "Buy",
+          "to_grade": "Buy",
+          "old_target": 235.0,
+          "new_target": 280.0
+        }
+      ],
+      "analysts_by_grade": {
+        "strongBuy": [],
+        "buy": [
+          {
+            "firm": "Seaport Global",
+            "date": "2026-05-22",
+            "grade": "Buy",
+            "pt": 400.0,
+            "stale": false
+          },
+          {
+            "firm": "B of A Securities",
+            "date": "2026-05-26",
+            "grade": "Buy",
+            "pt": 370.0,
+            "stale": false
+          },
+          {
+            "firm": "Citigroup",
+            "date": "2026-06-15",
+            "grade": "Buy",
+            "pt": 345.0,
+            "stale": false
+          },
+          {
+            "firm": "Rosenblatt",
+            "date": "2026-04-23",
+            "grade": "Buy",
+            "pt": 330.0,
+            "stale": false
+          },
+          {
+            "firm": "Keybanc",
+            "date": "2026-04-23",
+            "grade": "Overweight",
+            "pt": 325.0,
+            "stale": false
+          },
+          {
+            "firm": "Evercore ISI Group",
+            "date": "2026-04-23",
+            "grade": "Outperform",
+            "pt": 316.0,
+            "stale": false
+          },
+          {
+            "firm": "Benchmark",
+            "date": "2026-04-23",
+            "grade": "Buy",
+            "pt": 315.0,
+            "stale": false
+          },
+          {
+            "firm": "TD Cowen",
+            "date": "2026-04-23",
+            "grade": "Buy",
+            "pt": 300.0,
+            "stale": false
+          },
+          {
+            "firm": "Baird",
+            "date": "2026-04-23",
+            "grade": "Outperform",
+            "pt": 300.0,
+            "stale": false
+          },
+          {
+            "firm": "UBS",
+            "date": "2026-04-23",
+            "grade": "Buy",
+            "pt": 295.0,
+            "stale": false
+          },
+          {
+            "firm": "Stifel",
+            "date": "2026-04-23",
+            "grade": "Buy",
+            "pt": 290.0,
+            "stale": false
+          },
+          {
+            "firm": "JP Morgan",
+            "date": "2026-04-23",
+            "grade": "Overweight",
+            "pt": 280.0,
+            "stale": false
+          },
+          {
+            "firm": "Wolfe Research",
+            "date": "2025-07-28",
+            "grade": "Outperform",
+            "pt": 230.0,
+            "stale": false
+          },
+          {
+            "firm": "Susquehanna",
+            "date": "2026-01-22",
+            "grade": "Positive",
+            "pt": 225.0,
+            "stale": false
+          },
+          {
+            "firm": "Cascend",
+            "date": "2021-04-27",
+            "grade": "Buy",
+            "pt": 210.0,
+            "stale": false
+          },
+          {
+            "firm": "BMO Capital",
+            "date": "2023-10-25",
+            "grade": "Outperform",
+            "pt": 195.0,
+            "stale": false
+          },
+          {
+            "firm": "Credit Suisse",
+            "date": "2022-10-26",
+            "grade": "Outperform",
+            "pt": 185.0,
+            "stale": false
+          },
+          {
+            "firm": "DZ Bank",
+            "date": "2020-07-23",
+            "grade": "Buy",
+            "pt": 158.0,
+            "stale": false
+          },
+          {
+            "firm": "Loop Capital",
+            "date": "2018-06-22",
+            "grade": "Buy",
+            "pt": 135.0,
+            "stale": false
+          },
+          {
+            "firm": "Atlantic Equities",
+            "date": "2018-07-10",
+            "grade": "Overweight",
+            "pt": 130.0,
+            "stale": false
+          },
+          {
+            "firm": "Tigress Financial",
+            "date": "2015-01-28",
+            "grade": "Buy",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Argus Research",
+            "date": "2014-06-25",
+            "grade": "Buy",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Drexel Hamilton",
+            "date": "2016-03-01",
+            "grade": "Buy",
+            "pt": 64.0,
+            "stale": true
+          },
+          {
+            "firm": "Ascendiant Capital",
+            "date": "2014-03-11",
+            "grade": "Buy",
+            "pt": 53.75,
+            "stale": true
+          },
+          {
+            "firm": "Williams Capital",
+            "date": "2013-03-08",
+            "grade": "Buy",
+            "pt": 41.0,
+            "stale": true
+          },
+          {
+            "firm": "Wedbush",
+            "date": "2013-02-25",
+            "grade": "Outperform",
+            "pt": 39.0,
+            "stale": true
+          }
+        ],
+        "hold": [
+          {
+            "firm": "Wells Fargo",
+            "date": "2026-06-09",
+            "grade": "Equal-Weight",
+            "pt": 300.0,
+            "stale": false
+          },
+          {
+            "firm": "Mizuho",
+            "date": "2026-05-19",
+            "grade": "Neutral",
+            "pt": 300.0,
+            "stale": false
+          },
+          {
+            "firm": "Cantor Fitzgerald",
+            "date": "2026-05-13",
+            "grade": "Neutral",
+            "pt": 300.0,
+            "stale": false
+          },
+          {
+            "firm": "Truist Securities",
+            "date": "2026-04-23",
+            "grade": "Hold",
+            "pt": 278.0,
+            "stale": false
+          },
+          {
+            "firm": "Jefferies",
+            "date": "2026-04-23",
+            "grade": "Hold",
+            "pt": 260.0,
+            "stale": false
+          },
+          {
+            "firm": "Barclays",
+            "date": "2026-04-23",
+            "grade": "Equal-Weight",
+            "pt": 250.0,
+            "stale": false
+          },
+          {
+            "firm": "Deutsche Bank",
+            "date": "2026-01-28",
+            "grade": "Hold",
+            "pt": 205.0,
+            "stale": false
+          },
+          {
+            "firm": "Cowen & Co.",
+            "date": "2023-01-25",
+            "grade": "Market Perform",
+            "pt": 175.0,
+            "stale": false
+          },
+          {
+            "firm": "SunTrust Robinson Humphrey",
+            "date": "2020-10-21",
+            "grade": "Hold",
+            "pt": 162.0,
+            "stale": false
+          },
+          {
+            "firm": "TD Securities",
+            "date": "2025-04-24",
+            "grade": "Hold",
+            "pt": 160.0,
+            "stale": false
+          },
+          {
+            "firm": "RBC Capital",
+            "date": "2020-04-22",
+            "grade": "Sector Perform",
+            "pt": 125.0,
+            "stale": false
+          },
+          {
+            "firm": "Nomura",
+            "date": "2020-01-23",
+            "grade": "Neutral",
+            "pt": 120.0,
+            "stale": false
+          },
+          {
+            "firm": "B. Riley Securities",
+            "date": "2018-10-24",
+            "grade": "Neutral",
+            "pt": 96.0,
+            "stale": false
+          },
+          {
+            "firm": "Oppenheimer",
+            "date": "2024-04-24",
+            "grade": "Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Raymond James",
+            "date": "2022-02-14",
+            "grade": "Market Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Edward Jones",
+            "date": "2022-02-11",
+            "grade": "Hold",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Longbow Research",
+            "date": "2021-09-20",
+            "grade": "Neutral",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Summit Insights Group",
+            "date": "2021-07-22",
+            "grade": "Hold",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Charter Equity",
+            "date": "2020-07-22",
+            "grade": "Market Outperform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Macquarie",
+            "date": "2017-03-31",
+            "grade": "Neutral",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Pacific Crest",
+            "date": "2012-10-03",
+            "grade": "Sector Perform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "ISI Group",
+            "date": "2014-04-10",
+            "grade": "Neutral",
+            "pt": 50.0,
+            "stale": true
+          },
+          {
+            "firm": "FBR Capital",
+            "date": "2014-07-23",
+            "grade": "Market Perform",
+            "pt": 49.0,
+            "stale": true
+          },
+          {
+            "firm": "Canaccord Genuity",
+            "date": "2012-10-23",
+            "grade": "Hold",
+            "pt": 25.0,
+            "stale": true
+          }
+        ],
+        "sell": [
+          {
+            "firm": "Goldman Sachs",
+            "date": "2026-04-23",
+            "grade": "Sell",
+            "pt": 200.0,
+            "stale": false
+          },
+          {
+            "firm": "Morgan Stanley",
+            "date": "2025-09-12",
+            "grade": "Underweight",
+            "pt": 192.0,
+            "stale": false
+          },
+          {
+            "firm": "Bernstein",
+            "date": "2023-08-30",
+            "grade": "Underperform",
+            "pt": 145.0,
+            "stale": false
+          },
+          {
+            "firm": "Exane BNP Paribas",
+            "date": "2020-07-09",
+            "grade": "Underperform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "CLSA",
+            "date": "2016-07-26",
+            "grade": "Underperform",
+            "pt": 70.0,
+            "stale": true
+          },
+          {
+            "firm": "Sterne Agee",
+            "date": "2013-06-11",
+            "grade": "Underperform",
+            "pt": 31.0,
+            "stale": true
+          },
+          {
+            "firm": "Maxim Group",
+            "date": "2013-01-23",
+            "grade": "Underperform",
+            "pt": 25.0,
+            "stale": true
+          }
+        ],
+        "strongSell": []
+      },
+      "bull_thesis": [
+        "類比 IC 庫存週期領先指標:Q2 26 earnings (2026-07-21) sell-side 預期 yoy_rev +18%、EPS $1.92,若指引轉正等於替全行業 (ADI/MCHP/NXPI/STM) 喊回升",
+        "AI server 電源 DrMOS / 多相 VRM 用量結構性放大:NVDA GB200/GB300 機櫃 48V 架構增加 TXN power IC 含金量",
+        "美國 in-sourcing 政策受惠:Sherman/Lehi 12 吋廠 capex 高峰已過,2026-2027 折舊壓力轉為毛利率回升槓桿",
+        "股息 cash cow:殖利率高 + 23 年連續增配,在 risk-off 期間屬於半導體中防禦角色",
+        "分析師目標價中位數 $290 (n=33) 區間 $200-$400,反映 cyclical 上行共識仍有空間"
+      ],
+      "bear_thesis": [
+        "Capex 週期未結束:LFAB/RFAB2/SM1-SM2 多廠同步推進,Free Cash Flow 短期受壓 (FCF TTM 已從歷史 $6B+ 跌到 $1B 級別)",
+        "中國本土替代壓力:聖邦/思瑞浦/納芯微等類比 IC 國產替代政策性扶植,TXN 中國敏感度高",
+        "PE ~57 / fwd PE ~35 在歷史區間中偏貴 (過去 5 年 fwd PE 中位 ~22),已 priced in 庫存週期回升",
+        "汽車 / 工業終端需求若延遲復甦,2026 EPS 共識可能下修 — 領先指標反向也成立",
+        "earnings hist_move ±5% 但分析師 PT 區間 [$200-$400] 暗示市場分歧大,財報後波動風險"
+      ],
+      "briefing_mentions": [
+        {
+          "week": "2026-W25",
+          "category": "AI 硬體",
+          "snippet": "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。AI 機櫃 12V → 48V/800V HVDC 換代受惠"
+        },
+        {
+          "week": "2026-W30",
+          "category": "財報",
+          "snippet": "TXN Q2 26 earnings 2026-07-21 AMC:類比 IC 庫存週期領先指標。sell-side 預期 EPS $1.92 / Rev $5.23B / yoy +18%"
+        }
+      ]
+    },
+    {
+      "ticker": "IFNNY",
+      "name": "Infineon Technologies (ADR)",
+      "category_label": "全球功率半導體龍頭 — 汽車 + 工業 + AI Server PSU",
+      "updated_at": "2026-06-23",
+      "current_price": 92.17,
+      "currency": "USD",
+      "financial_currency": "EUR",
+      "benchmark_base": 82.0,
+      "benchmark_source": "Analyst Median",
+      "price_band": "body",
+      "price_band_label": "魚身區 (合理)",
+      "discount_pct": 12.4,
+      "band_thresholds": {
+        "head_low": 69.7,
+        "body_low": 82.0,
+        "tail_low": 94.3,
+        "bone_low": 106.6,
+        "crazy_low": 164.0
+      },
+      "key_stats": {
+        "trailing_pe": 98.05319,
+        "forward_pe": 29.913574,
+        "ps_ttm": 7.9200473,
+        "pb": 6.1533155,
+        "ev_ebitda": 33.597,
+        "peg": 0.83,
+        "mcap_b": 119.8,
+        "fcf_ttm_b": 1.36,
+        "gross_margin": 41.2,
+        "profit_margin": 7.2,
+        "beta": 1.978,
+        "w52_high": 103.28,
+        "w52_low": 35.89
+      },
+      "analyst_consensus": {
+        "count": 4,
+        "rating_dist": {
+          "strongBuy": 1,
+          "buy": 2,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        },
+        "rating_dist_1m_ago": {
+          "strongBuy": 1,
+          "buy": 2,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        },
+        "avg_rating_score": 2.0,
+        "consensus_label": "Buy",
+        "price_target": {
+          "current": 92.17,
+          "mean": 88.5,
+          "median": 82.0,
+          "high": 125.0,
+          "low": 65.0
+        }
+      },
+      "forecasts": [
+        {
+          "period": "FY 當期",
+          "period_key": "0y",
+          "eps_avg": 2.05,
+          "eps_low": 1.88,
+          "eps_high": 2.23,
+          "eps_90d_ago": 1.9,
+          "eps_revision_pct": 7.8,
+          "rev_avg_b": 16.18,
+          "rev_low_b": 15.73,
+          "rev_high_b": 16.34,
+          "n_analysts": 3,
+          "growth_pct": 27.21
+        },
+        {
+          "period": "FY +1年",
+          "period_key": "+1y",
+          "eps_avg": 3.08,
+          "eps_low": 2.94,
+          "eps_high": 3.29,
+          "eps_90d_ago": 2.44,
+          "eps_revision_pct": 26.5,
+          "rev_avg_b": 18.85,
+          "rev_low_b": 17.61,
+          "rev_high_b": 19.88,
+          "n_analysts": 3,
+          "growth_pct": 50.32
+        }
+      ],
+      "valuation_models": [
+        {
+          "model": "PE × FY 當期 EPS (18x)",
+          "implied_price": 36.9,
+          "rationale": "歷史中段 fwd P/E 18x × FY 當期 EPS 2.05"
+        },
+        {
+          "model": "PE × FY +1y EPS (25x bull)",
+          "implied_price": 77.0,
+          "rationale": "FY+1 EPS 3.08 維持 25x P/E"
+        },
+        {
+          "model": "Analyst Mean Target",
+          "implied_price": 88.5,
+          "rationale": "yfinance 共識:88.5"
+        },
+        {
+          "model": "⚠️ 跨幣值 (USD stock / EUR financials)",
+          "implied_price": 0,
+          "rationale": "P/S / EV/EBITDA / DCF 因股價 (USD) 與財報 (EUR) 幣值不同已跳過。請參考相同基本面的同公司本國股 (如 2330.TW for TSM ADR) 之 P/S/EV/EBITDA/DCF 模型。"
+        }
+      ],
+      "fair_value_summary": {
+        "bear": 37.0,
+        "base": 82.0,
+        "bull": 88.0,
+        "comment": "區間反映 cyclical 風險:空頭以保守模型算 ($37),多頭給 AI 全週期溢價 ($88)。"
+      },
+      "support_resistance": {
+        "support_levels": [
+          {
+            "price": 77.39,
+            "type": "50 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 52.1,
+            "type": "200 DMA",
+            "strength": "強"
+          },
+          {
+            "price": 36.33,
+            "type": "52 週低",
+            "strength": "強 (深支撐)"
+          }
+        ],
+        "resistance_levels": [
+          {
+            "price": 100.0,
+            "type": "整數心理關 $100",
+            "strength": "弱"
+          },
+          {
+            "price": 102.41,
+            "type": "52 週新高",
+            "strength": "強"
+          }
+        ]
+      },
+      "recent_actions": [
+        {
+          "date": "2021-08-04",
+          "firm": "Liberum",
+          "action": "down",
+          "pt_action": "",
+          "from_grade": "Buy",
+          "to_grade": "Hold",
+          "old_target": 0.0,
+          "new_target": null
+        },
+        {
+          "date": "2019-03-07",
+          "firm": "Exane BNP Paribas",
+          "action": "up",
+          "pt_action": "",
+          "from_grade": "Neutral",
+          "to_grade": "Outperform",
+          "old_target": 0.0,
+          "new_target": null
+        },
+        {
+          "date": "2019-02-22",
+          "firm": "Cowen & Co.",
+          "action": "init",
+          "pt_action": "",
+          "from_grade": "",
+          "to_grade": "Outperform",
+          "old_target": 0.0,
+          "new_target": null
+        },
+        {
+          "date": "2017-09-14",
+          "firm": "Goldman Sachs",
+          "action": "down",
+          "pt_action": "",
+          "from_grade": "Buy",
+          "to_grade": "Neutral",
+          "old_target": 0.0,
+          "new_target": null
+        },
+        {
+          "date": "2012-09-26",
+          "firm": "Jefferies",
+          "action": "down",
+          "pt_action": "",
+          "from_grade": "Hold",
+          "to_grade": "Underperform",
+          "old_target": 0.0,
+          "new_target": null
+        }
+      ],
+      "analysts_by_grade": {
+        "strongBuy": [],
+        "buy": [
+          {
+            "firm": "Exane BNP Paribas",
+            "date": "2019-03-07",
+            "grade": "Outperform",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Cowen & Co.",
+            "date": "2019-02-22",
+            "grade": "Outperform",
+            "pt": 0.0,
+            "stale": false
+          }
+        ],
+        "hold": [
+          {
+            "firm": "Liberum",
+            "date": "2021-08-04",
+            "grade": "Hold",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "Goldman Sachs",
+            "date": "2017-09-14",
+            "grade": "Neutral",
+            "pt": 0.0,
+            "stale": false
+          },
+          {
+            "firm": "B of A Securities",
+            "date": "2012-09-25",
+            "grade": "Neutral",
+            "pt": 5.5,
+            "stale": true
+          }
+        ],
+        "sell": [
+          {
+            "firm": "Jefferies",
+            "date": "2012-09-26",
+            "grade": "Underperform",
+            "pt": 0.0,
+            "stale": false
+          }
+        ],
+        "strongSell": []
+      },
+      "bull_thesis": [
+        "themes/功率半導體 purity 5 與 Onsemi 並列最高:全球功率半導體龍頭地位穩固,汽車 + 工業 + AI Server PSU 三大引擎",
+        "AI Server PSU 直接受惠 48V/800V HVDC 換代:Infineon 在 datacenter power conversion 是 NVDA / hyperscaler 主要供應商",
+        "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體,Infineon 是歐洲 SiC + IGBT 唯一全棧玩家",
+        "Dresden 智慧電網 12 吋廠 2026 量產:歐洲在地供應鏈受惠 EU Chips Act 補貼,降低地緣風險溢價",
+        "汽車 microcontroller (Aurix) 在 ADAS / SDV 滲透率持續提升:現代汽車 / 福斯 / BMW 都是核心客戶"
+      ],
+      "bear_thesis": [
+        "PE ~105 / fwd PE ~32 在 ADR 估值偏高 (本地股 IFX.DE 估值相對合理),ADR premium 反映流動性折價",
+        "歐洲汽車終端 (Tier-1) 庫存 2026 H1 仍在去化:Bosch / Continental / Magna 訂單能見度有限,工業終端也未明確復甦",
+        "中國本土功率半導體 (士蘭微 / 揚杰科技 / 華潤微) 政策性扶植 + 比亞迪自研 IGBT,Infineon 在中國 EV 市場份額面臨壓縮",
+        "FCF $1.4B 在 mcap $129B 對比下偏弱 (FCF yield ~1.1%),Dresden / Kulim capex 高峰未過",
+        "ADR (IFNNY) vs 本地股 (IFX.DE) 雙重風險:歐元 / 美元匯率 + ADR 折溢價波動加大"
+      ],
+      "briefing_mentions": [
+        {
+          "week": "2026-W25",
+          "category": "AI 硬體",
+          "snippet": "股癌 EP671:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。Infineon 是歐洲 SiC + IGBT 唯一全棧"
+        },
+        {
+          "week": "2026-W25",
+          "category": "AI 算力",
+          "snippet": "AI 機櫃 12V → 48V/800V HVDC 架構升級,Infineon 在 datacenter PSU 是 NVDA / hyperscaler 主要供應商"
         }
       ]
     }

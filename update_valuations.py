@@ -761,6 +761,75 @@ TICKER_CONFIG = {
             {"week": "2026-W18", "category": "股癌觀點", "snippet": "股癌 EP657:OpenAI 與立訊 AI 裝置難取代 iPhone — 反向確認鴻海 iPhone 代工不會被立訊搶但成長已遇瓶頸"},
         ],
     },
+    "TXN": {
+        "name": "Texas Instruments",
+        "category_label": "類比 IC + 電源管理龍頭 (analog/embedded IDM) — DrMOS / AI server 電源受惠",
+        "valuation_params": {"fwd_pe_base": 22, "fwd_pe_bull": 28, "ps_base": 7, "ev_ebitda_base": 16, "dcf_disc_rate": 0.09, "dcf_fcf_growth_5y": 0.08, "dcf_terminal_growth": 0.025},
+        "bull_thesis": [
+            "類比 IC 庫存週期領先指標:Q2 26 earnings (2026-07-21) sell-side 預期 yoy_rev +18%、EPS $1.92,若指引轉正等於替全行業 (ADI/MCHP/NXPI/STM) 喊回升",
+            "AI server 電源 DrMOS / 多相 VRM 用量結構性放大:NVDA GB200/GB300 機櫃 48V 架構增加 TXN power IC 含金量",
+            "美國 in-sourcing 政策受惠:Sherman/Lehi 12 吋廠 capex 高峰已過,2026-2027 折舊壓力轉為毛利率回升槓桿",
+            "股息 cash cow:殖利率高 + 23 年連續增配,在 risk-off 期間屬於半導體中防禦角色",
+            "分析師目標價中位數 $290 (n=33) 區間 $200-$400,反映 cyclical 上行共識仍有空間",
+        ],
+        "bear_thesis": [
+            "Capex 週期未結束:LFAB/RFAB2/SM1-SM2 多廠同步推進,Free Cash Flow 短期受壓 (FCF TTM 已從歷史 $6B+ 跌到 $1B 級別)",
+            "中國本土替代壓力:聖邦/思瑞浦/納芯微等類比 IC 國產替代政策性扶植,TXN 中國敏感度高",
+            "PE ~57 / fwd PE ~35 在歷史區間中偏貴 (過去 5 年 fwd PE 中位 ~22),已 priced in 庫存週期回升",
+            "汽車 / 工業終端需求若延遲復甦,2026 EPS 共識可能下修 — 領先指標反向也成立",
+            "earnings hist_move ±5% 但分析師 PT 區間 [$200-$400] 暗示市場分歧大,財報後波動風險",
+        ],
+        "briefing_mentions": [
+            {"week": "2026-W25", "category": "AI 硬體", "snippet": "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。AI 機櫃 12V → 48V/800V HVDC 換代受惠"},
+            {"week": "2026-W30", "category": "財報", "snippet": "TXN Q2 26 earnings 2026-07-21 AMC:類比 IC 庫存週期領先指標。sell-side 預期 EPS $1.92 / Rev $5.23B / yoy +18%"},
+        ],
+    },
+    "ON": {
+        "name": "Onsemi",
+        "category_label": "功率半導體 IDM (SiC + IGBT + 離散元件全線) — EV / 工業 / AI 電源三引擎",
+        "valuation_params": {"fwd_pe_base": 18, "fwd_pe_bull": 25, "ps_base": 4, "ev_ebitda_base": 12, "dcf_disc_rate": 0.10, "dcf_fcf_growth_5y": 0.10, "dcf_terminal_growth": 0.025},
+        "bull_thesis": [
+            "themes/功率半導體 purity 5 純度最高:SiC + IGBT + 離散元件全線,EV / 工業 / AI 電源三引擎結構性受惠",
+            "AI 機櫃 12V → 48V/800V HVDC 換代:Onsemi SiC MOSFET 在 PSU / DrMOS / Super Junction 上含金量提升",
+            "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體,Onsemi 是純度最高的標的之一",
+            "Nexperia 制裁事件推動車用 Tier-1 做非中國佈局,Onsemi 美國 + 韓國 + 馬來西亞產能受惠 supply chain re-route",
+            "EV 終端雖然短期 demand 疲弱,但 SiC 滲透率長線從 ICE 切換成不可逆,Onsemi 4-8 吋 SiC 線在 2026 進入量產爬坡",
+        ],
+        "bear_thesis": [
+            "PE ~97 / fwd PE ~30 在功率半導體同業中偏高 (vs TXN fwd 35 / MCHP / ADI),已部分 priced in AI 電源故事",
+            "EV 終端需求疲弱:Tesla / 大眾 / Stellantis EV 銷量 2026 H1 indicators 偏弱,SiC 訂單能見度被質疑",
+            "中國本土 SiC (基本半導體 / 三安光電 / 比亞迪自研) 政策性扶植,Onsemi 中國份額面臨擠壓",
+            "FCF $1.3B 在 mcap $51B 對比下偏弱 (FCF yield ~2.5%),若 capex 不縮減則股息 / 回購受限",
+            "毛利率 42.7% vs TXN 57.3% / ADI 60%+ — 離散元件比重高拖累 mix,需要 SiC mix shift 才能撐住估值",
+        ],
+        "briefing_mentions": [
+            {"week": "2026-W25", "category": "AI 硬體", "snippet": "股癌 EP671:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。Onsemi 是 SiC + IGBT + 離散全線純度最高"},
+            {"week": "2026-W25", "category": "宏觀政治", "snippet": "Nexperia 制裁事件推動車用 Tier-1 做非中國佈局,Onsemi 美 / 韓 / 馬來西亞產能在 supply chain re-route 中受惠"},
+        ],
+    },
+    "IFNNY": {
+        "name": "Infineon Technologies (ADR)",
+        "category_label": "全球功率半導體龍頭 — 汽車 + 工業 + AI Server PSU",
+        "valuation_params": {"fwd_pe_base": 18, "fwd_pe_bull": 25, "ps_base": 3, "ev_ebitda_base": 11, "dcf_disc_rate": 0.09, "dcf_fcf_growth_5y": 0.10, "dcf_terminal_growth": 0.025},
+        "bull_thesis": [
+            "themes/功率半導體 purity 5 與 Onsemi 並列最高:全球功率半導體龍頭地位穩固,汽車 + 工業 + AI Server PSU 三大引擎",
+            "AI Server PSU 直接受惠 48V/800V HVDC 換代:Infineon 在 datacenter power conversion 是 NVDA / hyperscaler 主要供應商",
+            "股癌 EP671 觀察:被動元件炒作後資金可能輪動到功率半導體,Infineon 是歐洲 SiC + IGBT 唯一全棧玩家",
+            "Dresden 智慧電網 12 吋廠 2026 量產:歐洲在地供應鏈受惠 EU Chips Act 補貼,降低地緣風險溢價",
+            "汽車 microcontroller (Aurix) 在 ADAS / SDV 滲透率持續提升:現代汽車 / 福斯 / BMW 都是核心客戶",
+        ],
+        "bear_thesis": [
+            "PE ~105 / fwd PE ~32 在 ADR 估值偏高 (本地股 IFX.DE 估值相對合理),ADR premium 反映流動性折價",
+            "歐洲汽車終端 (Tier-1) 庫存 2026 H1 仍在去化:Bosch / Continental / Magna 訂單能見度有限,工業終端也未明確復甦",
+            "中國本土功率半導體 (士蘭微 / 揚杰科技 / 華潤微) 政策性扶植 + 比亞迪自研 IGBT,Infineon 在中國 EV 市場份額面臨壓縮",
+            "FCF $1.4B 在 mcap $129B 對比下偏弱 (FCF yield ~1.1%),Dresden / Kulim capex 高峰未過",
+            "ADR (IFNNY) vs 本地股 (IFX.DE) 雙重風險:歐元 / 美元匯率 + ADR 折溢價波動加大",
+        ],
+        "briefing_mentions": [
+            {"week": "2026-W25", "category": "AI 硬體", "snippet": "股癌 EP671:被動元件炒作後資金可能輪動到功率半導體 (Onsemi / Infineon / 瑞薩 / TXN)。Infineon 是歐洲 SiC + IGBT 唯一全棧"},
+            {"week": "2026-W25", "category": "AI 算力", "snippet": "AI 機櫃 12V → 48V/800V HVDC 架構升級,Infineon 在 datacenter PSU 是 NVDA / hyperscaler 主要供應商"},
+        ],
+    },
 }
 
 
