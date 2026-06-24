@@ -253,6 +253,49 @@
   .tv-tickers .pill:hover { border-color: var(--blue); }
   .tv-tickers .pill.active { background: var(--blue); color: var(--bg); border-color: var(--blue); }
 
+  /* 多檔比較績效 */
+  .compare-section { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .compare-section h3 { margin: 0; color: var(--text); }
+  .compare-controls {
+    display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin: 12px 0;
+  }
+  .compare-label { color: var(--muted); font-size: 12px; }
+  .compare-windows { display: flex; gap: 4px; }
+  .cwin {
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+    padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer;
+    font-family: inherit;
+  }
+  .cwin:hover { border-color: var(--blue); }
+  .cwin.active { background: var(--blue); color: var(--bg); border-color: var(--blue); font-weight: 700; }
+  .compare-chips { display: flex; gap: 4px; flex-wrap: wrap; }
+  .compare-chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 6px 3px 10px; border-radius: 12px; font-size: 12px;
+    font-family: "SF Mono", Consolas, monospace; font-weight: 700;
+    color: var(--bg);
+  }
+  .compare-chip-x {
+    background: rgba(0,0,0,0.3); color: #fff; width: 16px; height: 16px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%; cursor: pointer; font-size: 11px; line-height: 1;
+  }
+  .compare-chip-x:hover { background: rgba(0,0,0,0.55); }
+  .compare-picker {
+    display: flex; gap: 6px; align-items: center;
+  }
+  .compare-picker input {
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+    padding: 6px 10px; border-radius: 6px; font-size: 13px; font-family: inherit;
+    flex: 1; max-width: 360px;
+  }
+  .compare-legend {
+    display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; font-size: 12px;
+  }
+  .compare-legend-item { display: inline-flex; align-items: center; gap: 5px; color: var(--text); }
+  .compare-legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .compare-legend-val { color: var(--muted); font-family: "SF Mono", Consolas, monospace; }
+
   /* Sparkline + Watchlist + Leaderboard */
   .spark { display: block; }
   .star-btn {
@@ -818,6 +861,33 @@
   <p style="color:var(--muted); font-size:12px; margin-top:10px;">
     已預設 4 條 SMA:<span style="color:#f85149; font-weight:600;">MA5 紅</span> / <span style="color:#ffa657; font-weight:600;">MA10 橘</span> / <span style="color:#3fb950; font-weight:600;">MA20 綠</span> / <span style="color:#58a6ff; font-weight:600;">MA60 藍</span>(可在右下角 Indicators 自行加更多)。日線 MA5≈週、MA20≈月、MA60≈季。
   </p>
+
+  <!-- ============ 多檔比較績效 (借鑑 xiaoyu-etf) ============ -->
+  <div class="compare-section">
+    <h3>📊 多檔比較績效 (含起點正規化)</h3>
+    <p style="color:var(--muted); font-size:12px; margin: 4px 0 12px;">
+      最多 6 檔同框比較,Y 軸為 % 報酬率 (起點 = 0%)。直接點下方藥丸切換,或在 K 線上方點 ticker chip 也會自動加入比較。
+    </p>
+    <div class="compare-controls">
+      <span class="compare-label">時段:</span>
+      <div class="compare-windows" id="compare-windows">
+        <button class="cwin" data-w="5">5 日</button>
+        <button class="cwin" data-w="20">20 日</button>
+        <button class="cwin active" data-w="30">30 日</button>
+        <button class="cwin" data-w="60">60 日</button>
+        <button class="cwin" data-w="90">90 日</button>
+      </div>
+      <span class="compare-label" style="margin-left: 14px;">已選 (<span id="compare-count">0</span>/6):</span>
+      <div class="compare-chips" id="compare-chips"></div>
+      <button id="compare-clear" class="cwin" style="margin-left:auto; color:#f85149;">清空</button>
+    </div>
+    <div class="compare-picker">
+      <input type="text" id="compare-input" placeholder="搜尋 ticker 加入 (例:NVDA, TSM, MU)" />
+      <button id="compare-add" class="cwin" style="background:var(--blue);color:var(--bg);">加入</button>
+    </div>
+    <svg id="compare-chart" viewBox="0 0 800 320" preserveAspectRatio="none" style="width:100%; height:340px; background:var(--card); border-radius:8px; display:block; margin-top:10px;"></svg>
+    <div id="compare-legend" class="compare-legend"></div>
+  </div>
 </section>
 
 <!-- ============ PolyMarket ============ -->
@@ -51329,6 +51399,7 @@ function initApp() {
   buildEventIndex();
   initCalendar();
   initTradingView();
+  initCompareChart();
   initThemes();
   initWatchlist();
   initSortable();
@@ -52942,6 +53013,159 @@ function initTradingView() {
     loadChart(document.getElementById('tv-input').value.trim().toUpperCase());
   });
   loadChart('NVDA', true);  // 預載 NVDA chart 但不切 tab (避免初始化時搶走 calendar)
+}
+
+// ========== 多檔比較績效 (借鑑 xiaoyu-etf) ==========
+const COMPARE_COLORS = ['#58a6ff', '#f85149', '#3fb950', '#ffa657', '#bc8cff', '#79c0ff'];
+const COMPARE_MAX = 6;
+let COMPARE_TICKERS = ['NVDA', 'TSM', 'MU']; // 預設 3 檔
+let COMPARE_WINDOW = 30;
+
+function _getSparklineFor(sym) {
+  // tickers 陣列裡找 ticker,優先取 sparkline_90d,否則 sparkline_30d
+  if (!DATA || !DATA.tickers) return null;
+  const row = DATA.tickers.find(t => t.ticker === sym);
+  if (!row) return null;
+  return row.sparkline_90d || row.sparkline_30d || null;
+}
+
+function initCompareChart() {
+  // 時段切換
+  document.querySelectorAll('#compare-windows .cwin').forEach(b => {
+    b.addEventListener('click', () => {
+      COMPARE_WINDOW = parseInt(b.dataset.w, 10);
+      document.querySelectorAll('#compare-windows .cwin').forEach(x => x.classList.toggle('active', x === b));
+      renderCompareChart();
+    });
+  });
+  // 加入 ticker
+  const addFromInput = () => {
+    const raw = document.getElementById('compare-input').value.trim().toUpperCase();
+    if (!raw) return;
+    raw.split(/[\s,;]+/).forEach(sym => addCompareTicker(sym));
+    document.getElementById('compare-input').value = '';
+  };
+  document.getElementById('compare-add').addEventListener('click', addFromInput);
+  document.getElementById('compare-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); addFromInput(); }
+  });
+  document.getElementById('compare-clear').addEventListener('click', () => {
+    COMPARE_TICKERS = [];
+    renderCompareChart();
+  });
+  renderCompareChart();
+}
+
+function addCompareTicker(sym) {
+  if (!sym) return;
+  if (COMPARE_TICKERS.includes(sym)) return; // dedup
+  if (COMPARE_TICKERS.length >= COMPARE_MAX) {
+    alert(`最多只能比較 ${COMPARE_MAX} 檔,請先移除一檔`);
+    return;
+  }
+  if (!_getSparklineFor(sym)) {
+    alert(`找不到 ${sym} 的歷史資料 (請確認在 tickers 清單中)`);
+    return;
+  }
+  COMPARE_TICKERS.push(sym);
+  renderCompareChart();
+}
+
+function removeCompareTicker(sym) {
+  COMPARE_TICKERS = COMPARE_TICKERS.filter(t => t !== sym);
+  renderCompareChart();
+}
+window.removeCompareTicker = removeCompareTicker; // for onclick
+
+function renderCompareChart() {
+  // chips
+  const chipsEl = document.getElementById('compare-chips');
+  const countEl = document.getElementById('compare-count');
+  if (!chipsEl) return;
+  countEl.textContent = COMPARE_TICKERS.length;
+  chipsEl.innerHTML = COMPARE_TICKERS.map((sym, i) => {
+    const color = COMPARE_COLORS[i % COMPARE_COLORS.length];
+    return `<span class="compare-chip" style="background:${color}">${sym}<span class="compare-chip-x" onclick="removeCompareTicker('${sym}')" title="移除">×</span></span>`;
+  }).join('');
+
+  // chart
+  const svg = document.getElementById('compare-chart');
+  const W = 800, H = 320, padL = 50, padR = 14, padT = 14, padB = 28;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const N = COMPARE_WINDOW;
+
+  // collect normalized % return series
+  const series = [];
+  for (let i = 0; i < COMPARE_TICKERS.length; i++) {
+    const sym = COMPARE_TICKERS[i];
+    const sl = _getSparklineFor(sym);
+    if (!sl || sl.length < 2) continue;
+    const slice = sl.slice(-N);
+    if (slice.length < 2) continue;
+    const start = slice[0];
+    if (!start) continue;
+    const pct = slice.map(p => ((p - start) / start) * 100);
+    series.push({ sym, color: COMPARE_COLORS[i % COMPARE_COLORS.length], pct, raw: slice });
+  }
+
+  if (!series.length) {
+    svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="#97a3cf" font-size="14">尚無資料 — 加入 ticker 或選別的時段</text>`;
+    document.getElementById('compare-legend').innerHTML = '';
+    return;
+  }
+
+  // y range
+  let minY = Infinity, maxY = -Infinity;
+  series.forEach(s => s.pct.forEach(v => { if (v < minY) minY = v; if (v > maxY) maxY = v; }));
+  // pad ±5% so lines don't kiss the edges
+  const span = Math.max(0.5, maxY - minY);
+  minY -= span * 0.1; maxY += span * 0.1;
+  // x range: assume all series share same length (use longest)
+  const longest = Math.max(...series.map(s => s.pct.length));
+
+  const xAt = (i, len) => padL + (i / (len - 1)) * plotW;
+  const yAt = v => padT + plotH - ((v - minY) / (maxY - minY)) * plotH;
+
+  // grid: 5 horizontal lines + y labels
+  const yTicks = 5;
+  let grid = '';
+  for (let k = 0; k <= yTicks; k++) {
+    const v = minY + (maxY - minY) * (k / yTicks);
+    const y = yAt(v);
+    grid += `<line x1="${padL}" y1="${y}" x2="${padL + plotW}" y2="${y}" stroke="#262e4f" stroke-width="0.5"/>`;
+    grid += `<text x="${padL - 6}" y="${y + 3}" text-anchor="end" font-size="10" fill="#97a3cf">${v >= 0 ? '+' : ''}${v.toFixed(1)}%</text>`;
+  }
+  // zero baseline if visible
+  if (minY < 0 && maxY > 0) {
+    const y0 = yAt(0);
+    grid += `<line x1="${padL}" y1="${y0}" x2="${padL + plotW}" y2="${y0}" stroke="#97a3cf" stroke-width="1" stroke-dasharray="3,3"/>`;
+  }
+  // x labels
+  const xTicks = Math.min(5, longest - 1);
+  for (let k = 0; k <= xTicks; k++) {
+    const i = Math.round((longest - 1) * (k / xTicks));
+    const x = xAt(i, longest);
+    const label = i === longest - 1 ? '今' : `-${longest - 1 - i}d`;
+    grid += `<text x="${x}" y="${H - 10}" text-anchor="middle" font-size="10" fill="#97a3cf">${label}</text>`;
+  }
+
+  // lines
+  const paths = series.map(s => {
+    const d = s.pct.map((v, i) => `${i === 0 ? 'M' : 'L'} ${xAt(i, s.pct.length).toFixed(1)} ${yAt(v).toFixed(1)}`).join(' ');
+    return `<path d="${d}" stroke="${s.color}" stroke-width="2" fill="none" stroke-linejoin="round"/>`;
+  }).join('');
+
+  svg.innerHTML = grid + paths;
+
+  // legend with current % return
+  document.getElementById('compare-legend').innerHTML = series.map(s => {
+    const last = s.pct[s.pct.length - 1];
+    return `<span class="compare-legend-item">
+      <span class="compare-legend-dot" style="background:${s.color}"></span>
+      <strong>${s.sym}</strong>
+      <span class="compare-legend-val">${last >= 0 ? '+' : ''}${last.toFixed(2)}%</span>
+    </span>`;
+  }).join('');
 }
 
 function loadChart(symbol, skipTabSwitch) {

@@ -72,19 +72,21 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
         fcf = info.get("freeCashflow")
         div_yield = info.get("dividendYield")  # yfinance 直接返回比例
 
-        # 30 天 sparkline (限 30 個點,round 至 4 位) + 成交量爆量比 (5d avg / 30d avg)
+        # 90 天 sparkline (上限,前端從中 slice 5/20/60/90 切片) + 成交量爆量比 (5d avg / 30d avg)
         sparkline = []
         change_pct = None
         vol_5d_avg = None
         vol_30d_avg = None
         split_suspect = False
         try:
-            hist30 = tk.history(period="30d", interval="1d")
-            if not hist30.empty:
-                closes = hist30["Close"].dropna().tolist()
+            hist90 = tk.history(period="3mo", interval="1d")
+            if not hist90.empty:
+                closes = hist90["Close"].dropna().tolist()
                 if len(closes) >= 2:
-                    sparkline = [round(float(c), 4) for c in closes[-30:]]
-                    change_pct = round((closes[-1] - closes[0]) / closes[0] * 100, 2)
+                    sparkline = [round(float(c), 4) for c in closes[-90:]]
+                    # change_30d_pct 維持原語意 (最近 30 個交易日的 % 漲跌)
+                    recent30 = closes[-30:] if len(closes) >= 30 else closes
+                    change_pct = round((recent30[-1] - recent30[0]) / recent30[0] * 100, 2)
                 # 偵測未調整的 split:單日 < -45% (一般跌停 -10%,財報 worst case ~-30%,
                 # 只有 1:2 以上 split 漏抓會出現 -50%~-80% 這種跳變)
                 for i in range(1, len(closes)):
@@ -94,12 +96,14 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
                             split_suspect = True
                             break
                 # 成交量 (排除 0,有些 ETF/指數會缺)
-                if "Volume" in hist30.columns:
-                    vols = [v for v in hist30["Volume"].dropna().tolist() if v and v > 0]
+                if "Volume" in hist90.columns:
+                    vols = [v for v in hist90["Volume"].dropna().tolist() if v and v > 0]
                     if len(vols) >= 5:
                         vol_5d_avg = int(sum(vols[-5:]) / 5)
                     if len(vols) >= 10:
-                        vol_30d_avg = int(sum(vols) / len(vols))
+                        # vol_30d_avg 維持原語意 (近 30 日均量)
+                        recent30v = vols[-30:] if len(vols) >= 30 else vols
+                        vol_30d_avg = int(sum(recent30v) / len(recent30v))
         except Exception:
             pass
 
@@ -112,7 +116,9 @@ def fetch_ticker(symbol: str, is_korean: bool = False) -> dict:
             "div": fmt_pct(div_yield) if div_yield else "0%",
         }
         if sparkline:
-            out["sparkline_30d"] = sparkline
+            # 寫兩個欄位:sparkline_90d (新) + sparkline_30d (向後相容,前端逐步遷移)
+            out["sparkline_90d"] = sparkline
+            out["sparkline_30d"] = sparkline[-30:]
         if change_pct is not None:
             out["change_30d_pct"] = change_pct
         if split_suspect:
