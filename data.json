@@ -8306,6 +8306,105 @@
   ],
   "weekly_briefing": [
     {
+      "week": "2026-W26",
+      "date_range": "2026-06-22 ~ 2026-06-28",
+      "sources": [
+        "M報 #532",
+        "馬斯克帝國觀察 #76",
+        "富果直送 (被動+功率元件 / CCL 銅箔基板 / 先進封裝 / 大甲)"
+      ],
+      "headlines": [
+        {
+          "category": "AI 軟體",
+          "title": "SPCX 600 億美元收購 Cursor — xAI 重返前沿模型競賽",
+          "tickers": [
+            "TSLA",
+            "NVDA"
+          ],
+          "summary": "SPCX 上市後立即執行買權,以全換股方式以 $60B 併購 Anysphere (Cursor 母公司)。Cursor ARR 從 2025 年初 $1B → 2025 底 $10B → 2026 中 $40B,Composer 2.5 以 Kimi K2.5 為基底重訓 85%,效果達 Claude Opus 4.8 / GPT-5.5 的 98-99% 但成本只 1/10。xAI 手中有 1.5T pretrained model 將給 Cursor 調教,馬斯克透露兩個 1T、兩個 1.5T、6T、10T 多模型並行訓練。",
+          "stance": "M觀點:600 億是合理價,Cursor 補上 2-3 月 xAI 創始團隊全部離職的人才缺口,讓 SPCX 的 AI 估值有具體支撐 — 從只能做與中國開源模型相近的水準,有望追上 GPT-5.5 / Claude Opus 4.8。",
+          "implication": "印證 W23 Coatue Laffont 在 All-In Summit 喊『AI 算力 TAM 2030 達 $4T』邏輯 — SPCX 算力 + 模型雙軌走完整供應商路徑。後續 W27-28 觀察 Cursor x xAI 1.5T 新模型發表時間,可能催化 SPCX / xAI 估值重估;同步壓力轉向 Anthropic (Fable 5 仍禁) + OpenAI (尚未公開 GPT-6 系列)。",
+          "themes_touched": [
+            "AI 軟體 / 平台",
+            "AI 模型"
+          ]
+        },
+        {
+          "category": "AI 鬼故事",
+          "title": "Token Maxxing 退燒 — AI 預算最佳化取代盲目燒錢,前沿模型壓力大",
+          "tickers": [
+            "NVDA",
+            "MSFT"
+          ],
+          "summary": "Uber 4 月就花完全年 AI 預算但 6 月仍無明確營收效果,黃仁勳『Token 用越多越好』論述受挑戰。Citadel Securities『Token 經濟學』報告:Frontier Model 成本太高,AI 將兩極化 — 困難工作用 Claude Opus / GPT-5.5,日常工作用便宜模型 (小型商業 / 開源 / 中國模型)。微軟 Copilot Cowork 走 usage-based + Model Router,自動分流。OpenRouter Fusion 用 Gemini 3 Flash + Kimi K2.6 + DeepSeek V4 Pro 組隊擊敗單一 GPT-5.5 / Claude Opus,甚至小贏 Fable 5。",
+          "stance": "M觀點:這是『正常經濟邏輯回歸』,1% 重度 Token Maxxing 企業會從成長 300% 改為 100-200% (短期 narrative 利空),但 99% 一般企業 AI 採用率仍上升。短期 AI 類股逆風,長期需求不變。前沿模型 (OpenAI/Anthropic) 壓力大,中階模型受惠。",
+          "implication": "印證 W47 2025 Burry 放空陣營『hyperscaler EPS 線性外推』邏輯。後續 W27-28 觀察 NVDA Vera Rubin 訂單能見度是否真的減速,以及 hyperscaler 是否開始砍 GPU 預算。中階 / 開源模型廠商 (Reflection AI、DeepSeek、Kimi) 受惠;前沿 Frontier 廠面臨第一道 demand-side 阻力。",
+          "themes_touched": [
+            "AI 模型",
+            "AI 算力",
+            "市場修正"
+          ]
+        },
+        {
+          "category": "AI 鬼故事",
+          "title": "Fable 5 仍禁,Anthropic 高層赴華盛頓未獲解禁 — 信任崩壞",
+          "tickers": [],
+          "summary": "Anthropic 派高階主管赴華盛頓但 Fable 5 仍未獲放行。Mythos 白名單放入疑與中國關係密切的韓國電信公司動搖政府信任。jailbreak 案例:guardrails 可被『改善安全性』包裝問法繞過,等於提供漏洞清單。Ben Thompson:Anthropic 防蒸餾時會偷改 prompt 降低品質,反而證明它是國防供應鏈風險。市場已有『Dario Amodei 該轉 Chief Scientist 找懂政府的人當 CEO』聲音。",
+          "stance": "M觀點:Anthropic 一直用自己標準判斷世界,認為自己最了解 AI 風險、最有資格決定哪些用途可被允許。但 Mythos 白名單前後不一、防蒸餾偷改 prompt、防禦型包裝繞過 guardrails — 政府很難給予國防 / 軍方系統信任。",
+          "implication": "印證 W18-W24 系列伏筆 (Sacks W19『Anthropic Colossus 1 整廠 $45B 三年單 = Rockefeller 級壟斷』、Nikesh @ PANW W24『AI Found 5 Years of Bugs in 6 Weeks』)。後續 W27 觀察 Anthropic 是否真讓步調整,以及 Fable 5 解禁時點 — 解禁延後越久,xAI / OpenAI 越能爭取替代位置。",
+          "themes_touched": [
+            "AI 模型",
+            "宏觀政治"
+          ]
+        },
+        {
+          "category": "SpaceX",
+          "title": "SpaceX 算力商業化加速 — 月收 $2.3B 年化 $278 億,並發 200 億債券",
+          "tickers": [
+            "TSLA"
+          ],
+          "summary": "Reflection AI 簽 63 億美元 3 年算力合約 (每月 $150M,2026-07-01 起,Colossus 2 + NVDA GB300)。加上 Google ($920M/月) + Anthropic ($1.25B/月) + Reflection ($150M/月),目前已揭露月收 $2.32B = 年化 $278 億。同時 SpaceX 首發 200 億美元優先無擔保債券,截至 6/19 現金 + 約當現金已達 $1,008 億。Colossus 從 Grok 內部設施 → 商業算力平台確立。",
+          "stance": "馬斯克帝國觀察:這標誌 SpaceX 從太空公司 → AI 基礎設施供應商的根本性轉型。Reflection 估值 $25B,目標『美國開放智慧』對抗封閉模型,顯示企業 / 政府都在 hedging 對 OpenAI/Anthropic 的依賴。",
+          "implication": "印證 W19 Brad Gerstner 『Anthropic ARR 10x/年』+ W23 Coatue Laffont 『AI 算力 TAM 2030 $4T』。後續 W27-W30 觀察 SpaceX IPO 估值是否從外溢效應上修,以及 Reflection 模型發表後是否真的能進 Frontier 第二集團。CRWV / NBIS 競爭壓力加大 (SpaceX 才是真正規模玩家)。",
+          "themes_touched": [
+            "AI 算力",
+            "Tesla",
+            "SpaceX"
+          ]
+        },
+        {
+          "category": "AI 硬體",
+          "title": "富果三連發 — CCL 銅箔基板 + 被動 / 功率元件 + SoIC 先進封裝主題深化",
+          "tickers": [
+            "TSM",
+            "ON",
+            "IFNNY",
+            "TXN"
+          ],
+          "summary": "富果 6/22「AI 伺服器破千瓦 → 被動 + 功率元件升級紅利」、6/24「CCL 銅箔基板產業鏈追蹤」、6/24「台積電 SoIC 引領 3D 先進封裝」三篇連發。CCL 上游:雙鍵 (4764) 樹脂材料卡位 AI 高毛利;中游龍頭台燿 (6274) 高頻高速 CCL;後勤亞泰金屬 (6179) 含浸設備 70%+ 市佔在手訂單到 2028。被動元件 — 村田/TDK 加速轉高階車用,標準品市場板塊外溢至國巨 (2327) / 華新科 (2492)。",
+          "stance": "富果:不是『雨露均霑行情』,看哪些台廠真能承接外溢效應 + 是否進得了 AI 高階供應鏈。",
+          "implication": "印證 W25 股癌 EP671『被動元件炒作後資金可能輪動到功率半導體』+ 我們已加的 ON/TXN/IFNNY 三檔功率半導體估值卡位邏輯。後續 W27+ 觀察台積電 SoIC 量產時程帶動 CCL / ABF / 銅箔三鏈動能。雙鍵 (4764) / 台燿 (6274) / 亞泰金屬 (6179) 為下一波研究標的。",
+          "themes_touched": [
+            "AI 算力",
+            "AI 硬體",
+            "功率半導體 (Power IDM)"
+          ]
+        },
+        {
+          "category": "宏觀政治",
+          "title": "Trump 政府考慮主權財富基金持股 AI 公司 — 馬斯克反提『直接發錢給人民』",
+          "tickers": [],
+          "summary": "副總統 JD Vance 透露 Trump 支持以主權財富基金形式讓政府持有 OpenAI / Anthropic 等 AI 公司部分股權,『預先分配』未來 AI 財富避免重蹈工業革命貧富差距。以 Intel CHIPS Act 為例 (10% 股權,潛在 650% 報酬)。馬斯克回應:政府持股不如直接發錢給人民,AI + 機器人會帶來通縮、不是通脹。Ro Khanna (D-CA) 提議對馬斯克課 5% 一次性財富稅 — 馬斯克怒嗆『邪惡騙子』、『該被關的是你』。",
+          "stance": "馬斯克帝國觀察:政治對立加劇,馬斯克 vs 民主黨進入白熱化,這影響後續 AI / Tesla / SpaceX 在民主黨主政州 (加州) 的監管風險。",
+          "implication": "印證 W20 Mark Benioff『Trump 把 Jensen 賣晶片變國家戰略』邏輯延伸。後續 W27-30 觀察『AI 公司部分國有化』議題是否在 election year 中被進一步政治化 — 對 NVDA / Microsoft / Alphabet 估值是雙刃 (政府背書 vs 監管擴張)。",
+          "themes_touched": [
+            "宏觀政治",
+            "AI 模型"
+          ]
+        }
+      ]
+    },
+    {
       "week": "2026-W25",
       "date_range": "2026-06-15 ~ 2026-06-21",
       "sources": [
