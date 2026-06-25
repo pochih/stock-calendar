@@ -143,3 +143,17 @@ python send_briefing.py --week 2026-W26 --json  # 寄信
 - **CCL + 被動 + 功率元件** 主題形成完整鏈條:股癌 EP671 (W25) → 富果 6/22 + 6/24 (W26) → 後續週可能看到台積電 SoIC 帶動 ABF / CCL / 銅箔大漲
 - **SpaceX 千億現金 + 算力月收 $2.3B**:估值結構性上修,可能催化 IPO 重估
 
+
+## 增量 2026-06-25 (cron 22:33)
+
+**本地素材**: 今日無新股癌 / All-In 集數
+
+**Gmail 增量**: 已 cross-check 本週至今 6 封信 (M報 #532 / 馬斯克 #76 / 富果 4 篇),全部在 2026-06-24 段已收錄完畢 → 今日無增量素材。下次 EP672 / All-In 新片或週四 (6/26+) 新信再追加。
+
+```
+mcp__gmail__search_emails(query='from:mviewpoint@substack.com after:2026-06-22 before:2026-06-26', maxResults=5)
+mcp__gmail__search_emails(query='from:muskempire0628@substack.com after:2026-06-22 before:2026-06-26', maxResults=5)
+mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2026-06-26', maxResults=10)
+```
+
+若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。
