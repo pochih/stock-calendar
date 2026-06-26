@@ -178,6 +178,22 @@
   .cal-controls button:hover { border-color: var(--blue); }
   .cal-controls button.active { background: var(--blue); color: var(--bg); border-color: var(--blue); }
   .cal-controls .nav-btn { padding: 6px 12px; font-weight: 600; }
+
+  /* Calendar 類別 filter chips */
+  .cal-cat-filter {
+    display: flex; gap: 6px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .cal-cat-label { color: var(--muted); font-size: 12px; margin-right: 4px; }
+  .cal-cat-chip {
+    background: var(--card); border: 1px solid var(--border); color: var(--muted);
+    padding: 4px 12px; border-radius: 14px; cursor: pointer; font-size: 12px;
+    font-family: inherit; transition: opacity 0.12s, background 0.12s;
+    opacity: 0.55;
+  }
+  .cal-cat-chip:hover { border-color: var(--blue); opacity: 1; }
+  .cal-cat-chip.active { opacity: 1; color: var(--text); border-color: var(--blue); background: rgba(88,166,255,0.12); }
+  .cal-cat-chip.cal-cat-all.active { background: var(--blue); color: var(--bg); border-color: var(--blue); font-weight: 700; }
+
   .cal-title { font-size: 18px; font-weight: 600; padding: 0 16px; min-width: 180px; text-align: center; }
   .cal-grid {
     display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px;
@@ -791,6 +807,18 @@
     <button class="nav-btn" id="cal-next">›</button>
     <button id="cal-today">今天</button>
     <span style="color:var(--muted); font-size:12px; margin-left:auto;">點擊日期看當天大事</span>
+  </div>
+
+  <div class="cal-cat-filter" id="cal-cat-filter">
+    <span class="cal-cat-label">類別:</span>
+    <button class="cal-cat-chip cal-cat-all active" data-cat="__all">全部</button>
+    <button class="cal-cat-chip" data-cat="b-earnings" data-color="#3fb950">📈 財報</button>
+    <button class="cal-cat-chip" data-cat="b-event" data-color="#bc8cff">🎤 發表會</button>
+    <button class="cal-cat-chip" data-cat="b-fomc" data-color="#f85149">🏛️ FOMC</button>
+    <button class="cal-cat-chip" data-cat="b-econ" data-color="#d29922">📊 經濟數據</button>
+    <button class="cal-cat-chip" data-cat="b-politics" data-color="#58a6ff">🗳️ 政治</button>
+    <button class="cal-cat-chip" data-cat="b-closed" data-color="#ffb4b4">🔴 休市</button>
+    <button class="cal-cat-chip" data-cat="b-early" data-color="#ffa657">🟡 早收</button>
   </div>
 
   <div id="cal-month-view">
@@ -59811,6 +59839,16 @@ function buildEventIndex() {
 // ========== 行事曆 ==========
 let calDate = new Date(2026, 5, 1);  // 2026-06
 let calView = 'month';
+let CAL_CAT_FILTER = new Set(['__all']);  // 預設全部
+
+function _evMatches(e) {
+  if (CAL_CAT_FILTER.has('__all')) return true;
+  return CAL_CAT_FILTER.has(e.cat);
+}
+
+function _filterEvents(events) {
+  return events.filter(_evMatches);
+}
 
 function initCalendar() {
   document.querySelectorAll('.cal-controls [data-view]').forEach(b => {
@@ -59837,6 +59875,43 @@ function initCalendar() {
     calDate = new Date();
     renderCal();
   });
+
+  // 類別 filter chips
+  document.querySelectorAll('#cal-cat-filter .cal-cat-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const cat = chip.dataset.cat;
+      if (cat === '__all') {
+        // 點「全部」→ 重置成全部
+        CAL_CAT_FILTER = new Set(['__all']);
+      } else {
+        // 點個別 chip
+        if (CAL_CAT_FILTER.has('__all')) {
+          // 從「全部」狀態 → 只選這個
+          CAL_CAT_FILTER = new Set([cat]);
+        } else if (CAL_CAT_FILTER.has(cat)) {
+          // toggle off
+          CAL_CAT_FILTER.delete(cat);
+          // 全部 unselect 時自動回「全部」
+          if (CAL_CAT_FILTER.size === 0) CAL_CAT_FILTER.add('__all');
+        } else {
+          // toggle on
+          CAL_CAT_FILTER.add(cat);
+        }
+      }
+      // 更新 chip active 狀態
+      document.querySelectorAll('#cal-cat-filter .cal-cat-chip').forEach(c => {
+        c.classList.toggle('active',
+          c.dataset.cat === '__all'
+            ? CAL_CAT_FILTER.has('__all')
+            : !CAL_CAT_FILTER.has('__all') && CAL_CAT_FILTER.has(c.dataset.cat)
+        );
+      });
+      renderCal();
+      // 若 day-detail 開著,也重新渲染
+      if (window._lastShownDay) showDayDetail(window._lastShownDay);
+    });
+  });
+
   renderCal();
 }
 
@@ -59869,7 +59944,7 @@ function renderMonthView() {
   // 當月
   for (let d = 1; d <= daysInMonth; d++) {
     const ds = `${y}-${pad(m + 1)}-${pad(d)}`;
-    const events = EVENT_INDEX[ds] || [];
+    const events = _filterEvents(EVENT_INDEX[ds] || []);
     const isToday = ds === todayStr;
     const isClosed = events.some(e => e.cat === 'b-closed');
     const evHtml = events.slice(0, 3).map(e =>
@@ -59925,8 +60000,9 @@ function renderYearView() {
     for (let i = 0; i < firstDay; i++) mini += `<div class="y-mini-d"></div>`;
     for (let d = 1; d <= daysInMonth; d++) {
       const ds = `${y}-${pad(m + 1)}-${pad(d)}`;
-      const has = (EVENT_INDEX[ds] || []).length > 0;
-      if (has) count += EVENT_INDEX[ds].length;
+      const filtered = _filterEvents(EVENT_INDEX[ds] || []);
+      const has = filtered.length > 0;
+      if (has) count += filtered.length;
       const isToday = ds === todayStr;
       mini += `<div class="y-mini-d ${has ? 'has' : ''} ${isToday ? 'today' : ''}">${d}</div>`;
     }
@@ -59949,10 +60025,11 @@ function goToMonth(y, m) {
 }
 
 function showDayDetail(ds) {
-  const events = EVENT_INDEX[ds] || [];
+  window._lastShownDay = ds;
+  const events = _filterEvents(EVENT_INDEX[ds] || []);
   const panel = document.getElementById('day-detail');
   if (!events.length) {
-    panel.innerHTML = `<h3>${ds}</h3><p style="color:var(--muted)">當天無排定事件。</p>`;
+    panel.innerHTML = `<h3>${ds}</h3><p style="color:var(--muted)">當天無排定事件 (符合目前類別篩選)。</p>`;
   } else {
     panel.innerHTML = `<h3>${ds} — ${events.length} 件大事</h3>` +
       events.map(e => `
