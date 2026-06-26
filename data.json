@@ -1328,6 +1328,12 @@
       "status": "傳聞 2026-2027 分拆",
       "valuation": "~$15-25B (預估)",
       "note": "SK Hynix 2021 年以 $9B 收購 Intel NAND 業務,改名 Solidigm,第二期交割 2025 完成。AI/Data Center 企業 SSD 需求暴增,Solidigm 重回獲利。SK Hynix 集中資源在 HBM,分拆 Solidigm 是合理選項。母公司 SK Hynix 已上市 KOSPI 000660"
+    },
+    {
+      "company": "SK Hynix (母公司赴美 ADR)",
+      "status": "傳聞 2026 下半",
+      "valuation": "KOSPI 市值 ~$170B (KRX: 000660)",
+      "note": "韓國記憶體龍頭,NVDA HBM3E 主供 (~50%+ 市佔)。傳聞研議赴美 NYSE 二次上市 (Secondary Listing) 或 ADR 形式,以提升海外機構持股與估值倍數 (KOSPI 折價 vs MU/WDC 在美國)。HBM 熱潮 + AI capex 結構性受惠,Coatue Laffont W23『記憶體需求隨 AI 5x』直接利多。配合本週 Tim Cook + Elon 雙人警告記憶體短缺 narrative,赴美上市時機可能加速。資料未經 SK Hynix 官方確認,需追蹤後續公告"
     }
   ],
   "tickers": [

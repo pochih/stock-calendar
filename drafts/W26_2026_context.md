@@ -221,11 +221,27 @@ mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2
 - Neuralink 計劃年底首次嘗試**腦對腦直接通訊** (跳過語言中介,latent space 直傳)
 - Dell 股東 97% 通過遷總部到德州 (DExit 趨勢)
 
-## 走勢預測 — W26 末段補充
+## 增量 2026-06-26 (cron 22:33) — 後補:股癌 EP672 + EP673
+
+抓 fetch_gooaye.py --refresh 才發現本地 cache 沒更新,實際 EP672 (6/20) 與 EP673 (6/24) 已釋出。EP672 屬 W25 末端,EP673 屬 W26 — 都跟本週 narrative 高度相關。
+
+### 股癌 EP672 (2026-06-20) — 功率元件缺貨論與軟體職涯重整
+- 台股創新高 + **功率半導體 IDM 缺貨** — 歐美廠商 lead time 拉超長
+- 台灣**二線廠受惠** (需注意產能能否真的開出來)
+- 後半:軟體工程師面對 AI 衝擊 → 認為是過去科技大廠 over hiring 的修正,要思考用 AI 工具產生更大價值
+- 印證 W25 EP671 + W26 富果 6/22 + 我們已加的 ON/IFNNY/TXN — narrative 三方共振
+
+### 股癌 EP673 (2026-06-24) — 全聯淘酒記與電阻漲浪論
+- 盤面:最近回檔只是創新高後正常休息,**被動元件持續看好,尤其是電阻即將漲價**
+- **聯發科 (2454.TW) 拿到 Google TriggerFish 晶片案** → 競爭力提升
+- 短期市場沒特別變化,**持續做多為主**
+- 印證 W26 富果 CCL/被動元件 + Tim Cook/Elon 記憶體短缺 → **MLCC + 電阻雙線** narrative
+
+## 走勢預測 — W26 末段補充 (含 EP672/673)
 
 - **Google 雙人才離職** → 印證 W25 「AI 三巨頭差距」narrative,但 M觀點認為 Google 仍是第一線玩家,別輕信「Google 完蛋」論
 - **Fable 5 12 萬字系統提示詞**(Agent Harness 顯學) → 強化 NVDA / hyperscaler 算力需求 (Sub-agent 多步驟 = token 消耗倍增,**反 Token Maxxing 退燒**論)
-- **記憶體短缺 (Tim Cook + Elon 同調)** → 印證 W25 ON/IFNNY/TXN + 國巨/華新科 narrative,**MU 估值上修 catalyst 強化**
+- **記憶體短缺 (Tim Cook + Elon 同調) + 股癌 EP673 電阻漲價** → 印證 W25 ON/IFNNY/TXN + 國巨/華新科 narrative,**MU + MLCC + 電阻三線估值上修 catalyst**
 - **FSD 入台 Q3** → 2026 H2 TSLA 銷量數據可期,搭配 NHTSA 法規鬆綁 → Robotaxi/Cybercab 雙催化
 - **Starmind 100 萬顆 AI 衛星**:SpaceX 從 Colossus → 軌道資料中心,長線重估邏輯延伸
 
