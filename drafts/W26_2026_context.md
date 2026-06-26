@@ -157,3 +157,75 @@ mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2
 ```
 
 若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。
+
+## 增量 2026-06-26 (cron 22:33)
+
+**本地素材**: 今日無新股癌 / All-In 集數
+
+**Gmail 增量**: 抓到 2 封新信 (M報 #533 + 馬斯克 #77) — 富果今日無新信。
+
+### M報 #533 (2026-06-26) — Google 痛失 AI 大將 / Fable 5 配方解密 / Meta 士氣低落 / FSD 入台
+
+**Google 痛失兩名 AI 大將**
+- Noam Shazeer (Transformer 共同作者、Gemini 共同負責人) 2024 年 Google 花 $27B 找回,2 年後再離開 → **加入 OpenAI** 任 AI Architecture Research Lead
+- John Jumper (AlphaFold 核心、2024 諾貝爾化學獎得主) **加入 Anthropic**,可能負責 AI 科學/生物化學
+- 一天內兩人離開 → 對 Google 心理層面與組織士氣形成明顯打擊
+- 同時市場流傳 Gemini 3.5 Pro 可能不如預期 (預定 6 月底登場)
+- Sensor Tower:ChatGPT 市占率首次跌破 50%,但 Gemini 從 22% → 27.7% 持續成長
+- M觀點:Google 不至於被打趴 (TPU/算力/資料/人才庫仍強),但 Agentic Workflow / 企業 API 是真正落後 OpenAI/Anthropic 的戰場
+
+**Fable 5 配方解密 + 解禁可能性升高**
+- G7 川普與 Dario 談得好,「上週可能還這麼認為,但現在已不再把 Anthropic 視為國家安全威脅」
+- 但 NSA 議員 Mark Warner 引述:Mythos 能在數小時內找出 NSA 高度機密系統弱點
+- Pliny the Liberator 在 X 公開 ~12 萬字元的 Fable 5 系統提示詞 — 證明 Anthropic 把 Claude Code 級的 Agent Harness 大量搬進 Claude.ai
+- Fable 5 在背後可能啟動 sub-agent 沙盒,搜尋/寫程式/分析/檢查多步驟流程
+- 2026 AI 顯學:**Agent Harness** — 評估模型已不能只比底層,要看 model + harness 整合
+- M觀點預估 Fable 5 可能在 2-4 週內重新上線 (取決於 Anthropic 願不願意修 jailbreak)
+
+**Meta 士氣低落 (預演 AI 時代 Data Creation Job)**
+- 技術長 Bosworth 親口承認「20 年來最差的幾次之一」
+- 裁員 8,000 → 7,000 人調入 Applied AI 部門 (替模型出題/評分/改答案)
+- 預演「高熵值資料創作」工作 — AI 時代可能大量出現,但成就感是大問號
+- M觀點推測 Applied AI 是 placeholder,暫時安置人力,半年後人才會自然汰換
+
+**FSD 入台 (Q3 可能通過)**
+- Tesla 台灣已正式向車輛安全審驗中心送件,**Q3 可能通過**
+- 一次性買斷 NT$22.2 萬期限 6/30,期限後改月費
+- 荷蘭 4 月先核准,愛沙尼亞/比利時跟進;歐盟統一表決 2026-10
+- 影響:**TSLA 全球銷量今年有機會重新成長** (FSD 對購車意願影響去年底才開始明顯)
+
+### 馬斯克帝國觀察 #77 (2026-06-26) — 特斯拉能源歐洲爆發 / 自駕車法規鬆綁 / SpaceX Starmind
+
+**Tesla 能源業務歐洲大爆發 (數十億美元級訂單)**
+- **NatPower 義英 $5B 合約**:25+ GWh 儲能 (第一階段,總目標 100+ GWh),已超過加州 Megapack 工廠年產能一半
+- **GIGA Storage 比利時 $700M 合約**:2.8 GWh「Green Turtle」儲能設施,2027 投產,歐洲規模最大之一
+- **柏林工廠 10 月起每週 6,250 → 7,500 輛 (+20%)**,新增 3,500 個職位
+- TSLA 能源業務本季營收結構性放大 (能源 + 汽車雙引擎更明確)
+
+**美自駕車法規大鬆綁**
+- NHTSA 啟動 FMVSS 修訂:全自駕車**可取消手動煞車踏板**強制規定
+- 川普政府 5 項 AV 法規更新之一,目的:移除「以人類駕駛為基礎」的過時規範
+- **直接利多 Tesla Cybercab** (無方向盤/踏板設計) — 認證障礙降低
+- Lemonade 推 FSD 里程 50% 折扣保險 (第 4 州科羅拉多;Tesla 數據:FSD 安全是人駕 2x)
+- 芬蘭可能在歐盟 10 月統一表決前提前核准 FSD
+- Cybertruck 獲 IIHS Top Safety Pick+ (皮卡車唯一)
+
+**SpaceX 重大進展**
+- **Starmind**:Elon 確認下代 AI 衛星星座定名,計畫 100 萬顆 (軌道資料中心,AI1 衛星 120kW + 150kW 太陽能)
+- **Starfall** 首飛成功:小型無人貨運返回艙 (2,100 kg, 1,000 kg payload),Falcon 9 發射 + 太平洋濺落,鎖定太空製造市場 (特殊藥物/單晶光纖/生物列印)
+- **$25B 債券發行完成**:5 期 (2031-2056 到期, 5.35%~6.65%),總認購超 $89B (3.5x 超額),IPO 後資本結構 ✓
+
+**xAI / Neuralink / 其他**
+- **記憶體短缺警告 (Elon + Tim Cook 同調)**:Tim Cook 稱「40 年職涯前所未見」,AI HBM 排擠消費電子 DRAM 供應 → **直接利多 MU / 海力士 / 三星 + 國巨/華新科 MLCC**
+- Elon「Deflation is inevitable」回應 Cathie Wood — AI/機器人/自動化 → 豐裕型通縮
+- Neuralink 計劃年底首次嘗試**腦對腦直接通訊** (跳過語言中介,latent space 直傳)
+- Dell 股東 97% 通過遷總部到德州 (DExit 趨勢)
+
+## 走勢預測 — W26 末段補充
+
+- **Google 雙人才離職** → 印證 W25 「AI 三巨頭差距」narrative,但 M觀點認為 Google 仍是第一線玩家,別輕信「Google 完蛋」論
+- **Fable 5 12 萬字系統提示詞**(Agent Harness 顯學) → 強化 NVDA / hyperscaler 算力需求 (Sub-agent 多步驟 = token 消耗倍增,**反 Token Maxxing 退燒**論)
+- **記憶體短缺 (Tim Cook + Elon 同調)** → 印證 W25 ON/IFNNY/TXN + 國巨/華新科 narrative,**MU 估值上修 catalyst 強化**
+- **FSD 入台 Q3** → 2026 H2 TSLA 銷量數據可期,搭配 NHTSA 法規鬆綁 → Robotaxi/Cybercab 雙催化
+- **Starmind 100 萬顆 AI 衛星**:SpaceX 從 Colossus → 軌道資料中心,長線重估邏輯延伸
+
