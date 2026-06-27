@@ -245,3 +245,10 @@ mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2
 - **FSD 入台 Q3** → 2026 H2 TSLA 銷量數據可期,搭配 NHTSA 法規鬆綁 → Robotaxi/Cybercab 雙催化
 - **Starmind 100 萬顆 AI 衛星**:SpaceX 從 Colossus → 軌道資料中心,長線重估邏輯延伸
 
+
+## 增量 2026-06-27 (cron 22:33)
+
+**本地素材**: 今日無新股癌 (EP673 仍最新, EP674 預計週日/週一發) / All-In 無新片
+
+**Gmail 增量**: 已 cross-check 三家本週至今 — M報 / 馬斯克 / 富果 6/27 均 0 新信。本週已抓的 8 封 (M報 #532 + #533 / 馬斯克 #76 + #77 / 富果 4 篇) 全部在 6/24 + 6/26 段已收錄。**今日真實無增量,週日 cron 將以整週素材生成 final entry**。
+
