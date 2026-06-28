@@ -252,3 +252,17 @@ mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2
 
 **Gmail 增量**: 已 cross-check 三家本週至今 — M報 / 馬斯克 / 富果 6/27 均 0 新信。本週已抓的 8 封 (M報 #532 + #533 / 馬斯克 #76 + #77 / 富果 4 篇) 全部在 6/24 + 6/26 段已收錄。**今日真實無增量,週日 cron 將以整週素材生成 final entry**。
 
+
+## 增量 2026-06-28 (cron 22:33)
+
+**本地素材**: 今日無新股癌 / All-In 集數
+
+**Gmail 增量**: Claude 用 MCP 抓本週至今所有信,並比對既有 drafts 是否已收錄
+
+```
+mcp__gmail__search_emails(query='from:mviewpoint@substack.com after:2026-06-22 before:2026-06-29', maxResults=5)
+mcp__gmail__search_emails(query='from:muskempire0628@substack.com after:2026-06-22 before:2026-06-29', maxResults=5)
+mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2026-06-29', maxResults=10)
+```
+
+若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。
