@@ -266,3 +266,17 @@ mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2
 ```
 
 若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。
+
+## 增量 2026-06-28 (cron 22:33)
+
+**本地素材**: 今日無新股癌 / All-In 集數
+
+**Gmail 增量**: Claude 用 MCP 抓本週至今所有信,並比對既有 drafts 是否已收錄
+
+```
+mcp__gmail__search_emails(query='from:mviewpoint@substack.com after:2026-06-22 before:2026-06-29', maxResults=5)
+mcp__gmail__search_emails(query='from:muskempire0628@substack.com after:2026-06-22 before:2026-06-29', maxResults=5)
+mcp__gmail__search_emails(query='from:service@fugle.tw after:2026-06-22 before:2026-06-29', maxResults=10)
+```
+
+若 Gmail 抓到的 subject 已存在於上方 drafts,跳過;否則 mcp__gmail__read_email 抓正文後在此 append 摘要 (2-4 行/封)。
