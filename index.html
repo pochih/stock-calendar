@@ -1236,7 +1236,7 @@ let DATA = null;
 // 內嵌靜態快照 (run.py 啟動時會替換 __EMBEDDED_DATA__ 區段為 data.json 內容)
 const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
   "_meta": {
-    "generated_at": "2026-07-17",
+    "generated_at": "2026-07-20",
     "note": "從 index.html EMBEDDED_DATA 同步。執行 update_data.py 重新抓取最新數據。",
     "generated_iso": "2026-06-13T06:04:28.088Z",
     "version": "0.1.14",
@@ -1904,6 +1904,16 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "company": "Axcelis Technologies",
       "fiscal": "TBD",
       "time": "ET",
+      "note": "(自動抓取)",
+      "hist_move": "—",
+      "bias": "neutral"
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "5347.TWO",
+      "company": "世界先進 Vanguard Int'l",
+      "fiscal": "TBD",
+      "time": "TPE",
       "note": "(自動抓取)",
       "hist_move": "—",
       "bias": "neutral"
@@ -2659,7 +2669,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~31",
       "fwd_pe": "—",
-      "price": "$695.33",
+      "price": "$701.59",
       "div": "41.0%",
       "note": "追蹤 Nasdaq-100",
       "shares": "393M",
@@ -2667,7 +2677,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        739.797,
         704.286,
         715.2839,
         707.053,
@@ -2696,11 +2705,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         719.69,
         717.74,
         705.94,
-        695.33
+        695.33,
+        701.59
       ],
-      "change_30d_pct": -6.01,
-      "vol_5d_avg": 38344193,
-      "vol_30d_avg": 48231102,
+      "change_30d_pct": -0.38,
+      "vol_5d_avg": 33507004,
+      "vol_30d_avg": 47283897,
       "sparkline_90d": [
         646.08,
         643.6227,
@@ -2763,16 +2773,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         719.69,
         717.74,
         705.94,
-        695.33
+        695.33,
+        701.59
       ]
     },
     {
       "ticker": "SMH",
       "name": "VanEck Semiconductor",
       "type": "ETF",
-      "pe": "~36",
+      "pe": "—",
       "fwd_pe": "—",
-      "price": "$556.53",
+      "price": "$565.91",
       "div": "17.0%",
       "note": "費城半導體 ETF,NVDA 權重高",
       "shares": "12M",
@@ -2780,7 +2791,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        627.53,
         569.69,
         598.16,
         591.01,
@@ -2809,11 +2819,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         600.31,
         590.77,
         568.92,
-        556.53
+        556.53,
+        565.925
       ],
-      "change_30d_pct": -11.31,
-      "vol_5d_avg": 12308563,
-      "vol_30d_avg": 12513550,
+      "change_30d_pct": -0.66,
+      "vol_5d_avg": 11114580,
+      "vol_30d_avg": 12257006,
       "sparkline_90d": [
         463.96,
         464.66,
@@ -2876,16 +2887,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         600.31,
         590.77,
         568.92,
-        556.53
+        556.53,
+        565.925
       ]
     },
     {
       "ticker": "SOXX",
       "name": "iShares Semiconductor",
       "type": "ETF",
-      "pe": "~37",
+      "pe": "~38",
       "fwd_pe": "—",
-      "price": "$521.81",
+      "price": "$532.67",
       "div": "23.0%",
       "note": "ICE Semi Index",
       "shares": "8M",
@@ -2893,7 +2905,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        602.4339,
         539.5139,
         571.1788,
         561.8732,
@@ -2922,11 +2933,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         567.92,
         555.27,
         530.5,
-        521.81
+        521.81,
+        532.675
       ],
-      "change_30d_pct": -13.38,
-      "vol_5d_avg": 10309471,
-      "vol_30d_avg": 11470531,
+      "change_30d_pct": -1.27,
+      "vol_5d_avg": 9275762,
+      "vol_30d_avg": 11193637,
       "sparkline_90d": [
         417.3518,
         420.5003,
@@ -2989,7 +3001,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         567.92,
         555.27,
         530.5,
-        521.81
+        521.81,
+        532.675
       ]
     },
     {
@@ -2998,7 +3011,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~24",
       "fwd_pe": "—",
-      "price": "$52.72",
+      "price": "$54.08",
       "div": "0%",
       "note": "全球純記憶體 ETF (2026/4 上市,史上最成功 ETF 之一);Hynix 18% + Samsung 13% + Micron ~24% + Kioxia 8% + SanDisk 6%。費用率 0.65%。HBM/AI 主題最直接 ETF",
       "shares": "—",
@@ -3006,7 +3019,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        65.7,
         55.79,
         60.52,
         59.86,
@@ -3035,11 +3047,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         61.23,
         57.4,
         52.34,
-        52.72
+        52.72,
+        54.075
       ],
-      "change_30d_pct": -19.76,
-      "vol_5d_avg": 98552421,
-      "vol_30d_avg": 67131603,
+      "change_30d_pct": -3.07,
+      "vol_5d_avg": 89119939,
+      "vol_30d_avg": 66580813,
       "sparkline_90d": [
         35.07,
         34.93,
@@ -3102,16 +3115,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         61.23,
         57.4,
         52.34,
-        52.72
+        52.72,
+        54.075
       ]
     },
     {
       "ticker": "EWY",
       "name": "iShares MSCI South Korea",
       "type": "ETF",
-      "pe": "~16",
+      "pe": "—",
       "fwd_pe": "—",
-      "price": "$162.54",
+      "price": "$164.86",
       "div": "101.0%",
       "note": "三星/海力士 50% 權重,HBM 故事代理",
       "shares": "76M",
@@ -3119,7 +3133,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        203.97,
         175.19,
         185.64,
         184.05,
@@ -3148,11 +3161,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         176.98,
         171.64,
         163.36,
-        162.54
+        162.54,
+        164.86
       ],
-      "change_30d_pct": -20.31,
-      "vol_5d_avg": 31176918,
-      "vol_30d_avg": 24479093,
+      "change_30d_pct": -5.9,
+      "vol_5d_avg": 25592049,
+      "vol_30d_avg": 24148588,
       "sparkline_90d": [
         150.09,
         146.79,
@@ -3215,7 +3229,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         176.98,
         171.64,
         163.36,
-        162.54
+        162.54,
+        164.86
       ]
     },
     {
@@ -3224,14 +3239,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$40.00",
+      "price": "$40.01",
       "div": "0%",
       "note": "黃金 ETF (低費率)",
       "mcap": "$7.2B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        44.64,
         43.02,
         43.11,
         42.43,
@@ -3260,11 +3274,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         40.4,
         40.41,
         39.64,
-        40.0
+        40.0,
+        40.0101
       ],
-      "change_30d_pct": -10.39,
-      "vol_5d_avg": 1676266,
-      "vol_30d_avg": 2345744,
+      "change_30d_pct": -7.0,
+      "vol_5d_avg": 1471091,
+      "vol_30d_avg": 2323721,
       "sparkline_90d": [
         47.98,
         46.62,
@@ -3327,7 +3342,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         40.4,
         40.41,
         39.64,
-        40.0
+        40.0,
+        40.0101
       ]
     },
     {
@@ -3336,14 +3352,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$36.35",
+      "price": "$36.78",
       "div": "0%",
       "note": "BTC 現貨 ETF",
       "mcap": "$58.1B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        36.02,
         34.14,
         35.89,
         35.14,
@@ -3372,11 +3387,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         36.58,
         36.81,
         36.39,
-        36.35
+        36.35,
+        36.78
       ],
-      "change_30d_pct": 0.92,
-      "vol_5d_avg": 36663001,
-      "vol_30d_avg": 48002496,
+      "change_30d_pct": 7.73,
+      "vol_5d_avg": 34404509,
+      "vol_30d_avg": 46445914,
       "sparkline_90d": [
         43.25,
         42.51,
@@ -3439,7 +3455,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         36.58,
         36.81,
         36.39,
-        36.35
+        36.35,
+        36.78
       ]
     },
     {
@@ -3448,14 +3465,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$113.10",
+      "price": "$113.97",
       "div": "36.0%",
       "note": "AAPL+MSFT+NVDA 集中度高",
       "mcap": "$170.1B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        122.674,
         115.1429,
         117.1106,
         114.8533,
@@ -3484,11 +3500,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         117.11,
         116.5,
         114.24,
-        113.1
+        113.1,
+        113.97
       ],
-      "change_30d_pct": -7.8,
-      "vol_5d_avg": 5545644,
-      "vol_30d_avg": 5282217,
+      "change_30d_pct": -1.02,
+      "vol_5d_avg": 4521310,
+      "vol_30d_avg": 5116905,
       "sparkline_90d": [
         101.021,
         100.8999,
@@ -3551,7 +3568,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         117.11,
         116.5,
         114.24,
-        113.1
+        113.1,
+        113.97
       ]
     },
     {
@@ -3560,7 +3578,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~32",
       "fwd_pe": "—",
-      "price": "$92.80",
+      "price": "$93.00",
       "div": "2.0%",
       "note": "純軟體股 ETF",
       "shares": "12M",
@@ -3568,7 +3586,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        100.0412,
         95.832,
         95.6321,
         92.9326,
@@ -3597,11 +3614,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         93.63,
         93.94,
         93.7,
-        92.8
+        92.8,
+        93.0
       ],
-      "change_30d_pct": -7.24,
-      "vol_5d_avg": 10204925,
-      "vol_30d_avg": 16316807,
+      "change_30d_pct": -2.96,
+      "vol_5d_avg": 9533497,
+      "vol_30d_avg": 15859926,
       "sparkline_90d": [
         86.2838,
         86.6637,
@@ -3664,7 +3682,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         93.63,
         93.94,
         93.7,
-        92.8
+        92.8,
+        93.0
       ]
     },
     {
@@ -3673,14 +3692,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~31",
       "fwd_pe": "—",
-      "price": "$92.36",
+      "price": "$92.71",
       "div": "44.0%",
       "note": "資安 ETF 最大 (~$8B AUM),CRWD/PANW/ZS 三大權重",
       "mcap": "$13.7B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        90.6221,
         86.6255,
         86.056,
         84.2675,
@@ -3709,11 +3727,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         94.73,
         93.09,
         91.89,
-        92.36
+        92.36,
+        92.71
       ],
-      "change_30d_pct": 1.92,
-      "vol_5d_avg": 1300868,
-      "vol_30d_avg": 1627888,
+      "change_30d_pct": 7.02,
+      "vol_5d_avg": 1221138,
+      "vol_30d_avg": 1549069,
       "sparkline_90d": [
         66.9924,
         67.9815,
@@ -3776,7 +3795,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         94.73,
         93.09,
         91.89,
-        92.36
+        92.36,
+        92.71
       ]
     },
     {
@@ -3785,14 +3805,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~32",
       "fwd_pe": "—",
-      "price": "$111.04",
+      "price": "$111.20",
       "div": "6.0%",
       "note": "資安 ETF 第二大,權重較分散",
       "mcap": "$2.5B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        101.14,
         97.3,
         96.78,
         95.09,
@@ -3821,11 +3840,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         114.29,
         111.24,
         110.1,
-        111.04
+        111.04,
+        111.2
       ],
-      "change_30d_pct": 9.79,
-      "vol_5d_avg": 270922,
-      "vol_30d_avg": 190147,
+      "change_30d_pct": 14.29,
+      "vol_5d_avg": 239520,
+      "vol_30d_avg": 188146,
       "sparkline_90d": [
         79.0,
         80.26,
@@ -3888,7 +3908,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         114.29,
         111.24,
         110.1,
-        111.04
+        111.04,
+        111.2
       ]
     },
     {
@@ -3897,14 +3918,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~34",
       "fwd_pe": "—",
-      "price": "$40.88",
+      "price": "$40.77",
       "div": "3.0%",
       "note": "資安純度高,小型化",
       "mcap": "$1.2B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        36.47,
         35.22,
         34.73,
         33.91,
@@ -3933,11 +3953,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         41.99,
         40.86,
         40.72,
-        40.88
+        40.88,
+        40.77
       ],
-      "change_30d_pct": 12.09,
-      "vol_5d_avg": 1682504,
-      "vol_30d_avg": 1176130,
+      "change_30d_pct": 15.76,
+      "vol_5d_avg": 1484080,
+      "vol_30d_avg": 1126880,
       "sparkline_90d": [
         26.57,
         27.07,
@@ -4000,7 +4021,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         41.99,
         40.86,
         40.72,
-        40.88
+        40.88,
+        40.77
       ]
     },
     {
@@ -4009,7 +4031,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~27",
       "fwd_pe": "—",
-      "price": "$743.29",
+      "price": "$745.79",
       "div": "101.0%",
       "note": "S&P 500,流動性最高 (期權選擇豐富)",
       "shares": "918M",
@@ -4017,7 +4039,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        755.1446,
         735.6548,
         737.3204,
         735.1561,
@@ -4046,11 +4067,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         751.83,
         754.81,
         750.72,
-        743.29
+        743.29,
+        745.7802
       ],
-      "change_30d_pct": -1.57,
-      "vol_5d_avg": 46150885,
-      "vol_30d_avg": 58179967,
+      "change_30d_pct": 1.38,
+      "vol_5d_avg": 40187028,
+      "vol_30d_avg": 56989011,
       "sparkline_90d": [
         706.8988,
         702.2708,
@@ -4113,7 +4135,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         751.83,
         754.81,
         750.72,
-        743.29
+        743.29,
+        745.7802
       ]
     },
     {
@@ -4122,14 +4145,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$683.17",
+      "price": "$685.47",
       "div": "107.0%",
       "note": "S&P 500",
       "mcap": "$1.70T",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        694.0389,
         676.0313,
         677.7064,
         675.7322,
@@ -4158,11 +4180,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         691.1,
         693.8,
         690.14,
-        683.17
+        683.17,
+        685.515
       ],
-      "change_30d_pct": -1.57,
-      "vol_5d_avg": 5098117,
-      "vol_30d_avg": 10072486,
+      "change_30d_pct": 1.4,
+      "vol_5d_avg": 4274485,
+      "vol_30d_avg": 9935467,
       "sparkline_90d": [
         649.6481,
         645.3706,
@@ -4225,16 +4248,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         691.1,
         693.8,
         690.14,
-        683.17
+        683.17,
+        685.515
       ]
     },
     {
       "ticker": "VTI",
       "name": "Vanguard Total Stock Market",
       "type": "ETF",
-      "pe": "~26",
+      "pe": "—",
       "fwd_pe": "—",
-      "price": "$367.01",
+      "price": "$368.19",
       "div": "105.0%",
       "note": "全美股市",
       "shares": "743M",
@@ -4242,7 +4266,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        372.3091,
         362.3377,
         363.4246,
         362.6269,
@@ -4271,11 +4294,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         371.16,
         372.42,
         370.58,
-        367.01
+        367.01,
+        368.195
       ],
-      "change_30d_pct": -1.42,
-      "vol_5d_avg": 3116936,
-      "vol_30d_avg": 3548576,
+      "change_30d_pct": 1.62,
+      "vol_5d_avg": 2758173,
+      "vol_30d_avg": 3482295,
       "sparkline_90d": [
         349.2055,
         346.8423,
@@ -4338,7 +4362,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         371.16,
         372.42,
         370.58,
-        367.01
+        367.01,
+        368.195
       ]
     },
     {
@@ -4347,14 +4372,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$154.78",
+      "price": "$155.09",
       "div": "158.0%",
       "note": "全球股市 (美 ~60% + 國際 ~40%)",
       "mcap": "$95.3B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        157.9693,
         153.1268,
         153.9239,
         153.7446,
@@ -4383,11 +4407,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         156.78,
         157.29,
         156.13,
-        154.78
+        154.78,
+        155.09
       ],
-      "change_30d_pct": -2.02,
-      "vol_5d_avg": 2055185,
-      "vol_30d_avg": 3447950,
+      "change_30d_pct": 1.28,
+      "vol_5d_avg": 1743361,
+      "vol_30d_avg": 3401723,
       "sparkline_90d": [
         149.9383,
         148.2245,
@@ -4450,7 +4475,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         156.78,
         157.29,
         156.13,
-        154.78
+        154.78,
+        155.09
       ]
     },
     {
@@ -4459,15 +4485,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~29",
       "fwd_pe": "—",
-      "price": "$100.05",
+      "price": "$99.20",
       "div": "127.0%",
       "note": "台股市值前 50 大,台積電權重 ~57%",
       "mcap": "$62.5B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        106.1,
-        104.15,
         100.95,
         103.5,
         100.25,
@@ -4495,13 +4519,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         106.0,
         104.4,
         106.3,
-        106.4
+        106.4,
+        100.15,
+        99.2
       ],
-      "change_30d_pct": 0.28,
-      "vol_5d_avg": 196261835,
-      "vol_30d_avg": 132954891,
+      "change_30d_pct": -1.73,
+      "vol_5d_avg": 243067168,
+      "vol_30d_avg": 139324691,
       "sparkline_90d": [
-        84.15,
         84.55,
         86.0,
         86.35,
@@ -4563,7 +4588,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         106.0,
         104.4,
         106.3,
-        106.4
+        106.4,
+        100.15,
+        99.2
       ]
     },
     {
@@ -4572,15 +4599,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "~20",
       "fwd_pe": "—",
-      "price": "$50.50",
+      "price": "$49.95",
       "div": "682.0%",
       "note": "台股高股息 ETF,散戶最愛",
       "mcap": "$21.6B",
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        52.65,
-        51.8,
         49.45,
         51.25,
         49.62,
@@ -4608,13 +4633,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         52.4,
         51.75,
         53.0,
-        52.65
+        52.65,
+        50.75,
+        49.95
       ],
-      "change_30d_pct": 0.0,
-      "vol_5d_avg": 85801236,
-      "vol_30d_avg": 57192784,
+      "change_30d_pct": 1.01,
+      "vol_5d_avg": 107502683,
+      "vol_30d_avg": 60246649,
       "sparkline_90d": [
-        40.0183,
         40.4968,
         40.985,
         41.61,
@@ -4676,7 +4702,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         52.4,
         51.75,
         53.0,
-        52.65
+        52.65,
+        50.75,
+        49.95
       ]
     },
     {
@@ -4685,7 +4713,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "ETF",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$175.59",
+      "price": "$177.07",
       "div": "42.0%",
       "note": "S&P 500 科技類股",
       "shares": "272M",
@@ -4693,7 +4721,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_30d": [
-        192.9399,
         180.0853,
         183.9606,
         180.5547,
@@ -4722,11 +4749,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         183.62,
         181.58,
         177.52,
-        175.59
+        175.59,
+        177.075
       ],
-      "change_30d_pct": -8.99,
-      "vol_5d_avg": 8894226,
-      "vol_30d_avg": 12975064,
+      "change_30d_pct": -1.67,
+      "vol_5d_avg": 7781038,
+      "vol_30d_avg": 12637949,
       "sparkline_90d": [
         154.3759,
         154.5058,
@@ -4789,7 +4817,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         183.62,
         181.58,
         177.52,
-        175.59
+        175.59,
+        177.075
       ]
     },
     {
@@ -4802,7 +4831,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "div": "0%",
       "note": "日股大盤指數 (alpha 榜日股 benchmark)",
       "sparkline_30d": [
-        66588.1172,
         64024.6016,
         65416.6289,
         64179.2695,
@@ -4831,13 +4859,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         67242.7266,
         67743.5,
         68751.5078,
-        66835.5391
+        66835.5391,
+        64141.1211
       ],
-      "change_30d_pct": 0.37,
+      "change_30d_pct": 0.18,
       "gross_margin": "—",
       "fcf_ttm": "—",
-      "vol_5d_avg": 151260000,
-      "vol_30d_avg": 161366666,
+      "vol_5d_avg": 159220000,
+      "vol_30d_avg": 162903333,
       "sparkline_90d": [
         58475.8984,
         58824.8906,
@@ -4899,7 +4928,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         67242.7266,
         67743.5,
         68751.5078,
-        66835.5391
+        66835.5391,
+        64141.1211
       ]
     },
     {
@@ -4908,7 +4938,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Index",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$6,821",
+      "price": "$6,516",
       "div": "0%",
       "note": "韓股大盤指數 (alpha 榜韓股 benchmark)",
       "sparkline_30d": [
@@ -4946,11 +4976,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "change_30d_pct": -16.42,
       "gross_margin": "—",
       "fcf_ttm": "—",
-      "vol_5d_avg": 448220,
-      "vol_30d_avg": 479316,
+      "vol_5d_avg": 426745,
+      "vol_30d_avg": 476247,
       "sparkline_90d": [
-        6226.0498,
-        6191.9199,
         6219.0898,
         6388.4702,
         6417.9302,
@@ -5019,11 +5047,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Index",
       "pe": "—",
       "fwd_pe": "—",
-      "price": "$18.77",
+      "price": "$18.15",
       "div": "0%",
       "note": "恐慌指數,>20 注意,>30 警戒",
       "sparkline_30d": [
-        15.4,
         21.51,
         18.92,
         19.87,
@@ -5052,13 +5079,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         16.5,
         15.67,
         16.73,
-        18.77
+        18.77,
+        18.15
       ],
-      "change_30d_pct": 21.88,
+      "change_30d_pct": -15.62,
       "gross_margin": "—",
       "fcf_ttm": "—",
       "sparkline_90d": [
-        17.48,
         18.87,
         19.5,
         18.92,
@@ -5121,16 +5148,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         16.5,
         15.67,
         16.73,
-        18.77
+        18.77,
+        18.15
       ]
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "type": "Stock",
-      "pe": "~40",
-      "fwd_pe": "~35",
-      "price": "$332.97",
+      "pe": "~39",
+      "fwd_pe": "~34",
+      "price": "$325.03",
       "div": "32.0%",
       "gross_margin": "47.9%",
       "fcf_ttm": "$101.1B",
@@ -5138,7 +5166,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "14.69B",
       "mcap": "$4.26T",
       "sparkline_30d": [
-        311.23,
         307.34,
         301.54,
         290.55,
@@ -5167,13 +5194,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         314.86,
         327.5,
         333.26,
-        332.98
+        333.74,
+        325.03
       ],
-      "change_30d_pct": 6.99,
-      "vol_5d_avg": 44711460,
-      "vol_30d_avg": 60856113,
+      "change_30d_pct": 5.76,
+      "vol_5d_avg": 48433676,
+      "vol_30d_avg": 61422772,
       "sparkline_90d": [
-        269.9813,
         272.7986,
         265.925,
         272.9186,
@@ -5235,24 +5262,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         314.86,
         327.5,
         333.26,
-        332.98
+        333.74,
+        325.03
       ]
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "type": "Stock",
-      "pe": "~23",
-      "fwd_pe": "~20",
-      "price": "$393.82",
-      "div": "91.0%",
+      "pe": "~24",
+      "fwd_pe": "~21",
+      "price": "$397.49",
+      "div": "92.0%",
       "gross_margin": "68.3%",
       "fcf_ttm": "$37.0B",
       "note": "Azure + Copilot 雙引擎",
       "shares": "7.43B",
       "mcap": "$2.98T",
       "sparkline_30d": [
-        428.05,
         416.67,
         411.74,
         403.41,
@@ -5281,11 +5308,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         384.93,
         395.63,
         401.1,
-        393.82
+        393.82,
+        397.5
       ],
-      "change_30d_pct": -8.0,
-      "vol_5d_avg": 32613517,
-      "vol_30d_avg": 42884399,
+      "change_30d_pct": -4.6,
+      "vol_5d_avg": 28592230,
+      "vol_30d_avg": 42281365,
       "sparkline_90d": [
         417.1665,
         423.2433,
@@ -5348,24 +5376,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         384.93,
         395.63,
         401.1,
-        393.82
+        393.82,
+        397.5
       ]
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA ★",
       "type": "Stock",
-      "pe": "~31",
+      "pe": "~32",
       "fwd_pe": "~16",
-      "price": "$202.81",
-      "div": "48.0%",
+      "price": "$206.27",
+      "div": "49.0%",
       "gross_margin": "74.1%",
       "fcf_ttm": "$46.3B",
       "note": "Blackwell 出貨高峰,FCF 爆發",
       "shares": "24.22B",
       "mcap": "$4.92T",
       "sparkline_30d": [
-        218.66,
         205.1,
         208.64,
         208.19,
@@ -5394,11 +5422,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         211.8,
         212.5,
         207.4,
-        202.81
+        202.81,
+        206.27
       ],
-      "change_30d_pct": -7.25,
-      "vol_5d_avg": 126357512,
-      "vol_30d_avg": 147940688,
+      "change_30d_pct": 0.57,
+      "vol_5d_avg": 109565201,
+      "vol_30d_avg": 143554930,
       "sparkline_90d": [
         201.8248,
         199.6473,
@@ -5461,7 +5490,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         211.8,
         212.5,
         207.4,
-        202.81
+        202.81,
+        206.27
       ]
     },
     {
@@ -5470,7 +5500,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~30",
       "fwd_pe": "~25",
-      "price": "$247.23",
+      "price": "$251.38",
       "div": "0%",
       "gross_margin": "50.6%",
       "fcf_ttm": "$9.8B",
@@ -5478,7 +5508,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "10.76B",
       "mcap": "$2.60T",
       "sparkline_30d": [
-        253.79,
         246.03,
         245.22,
         244.19,
@@ -5507,11 +5536,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         247.49,
         254.96,
         249.89,
-        247.23
+        247.23,
+        251.375
       ],
-      "change_30d_pct": -2.58,
-      "vol_5d_avg": 39080643,
-      "vol_30d_avg": 54817270,
+      "change_30d_pct": 2.17,
+      "vol_5d_avg": 34695313,
+      "vol_30d_avg": 54053925,
       "sparkline_90d": [
         248.28,
         249.91,
@@ -5574,24 +5604,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         247.49,
         254.96,
         249.89,
-        247.23
+        247.23,
+        251.375
       ]
     },
     {
       "ticker": "META",
       "name": "Meta",
       "type": "Stock",
-      "pe": "~23",
+      "pe": "~24",
       "fwd_pe": "~18",
-      "price": "$646.01",
-      "div": "32.0%",
+      "price": "$648.09",
+      "div": "33.0%",
       "gross_margin": "81.9%",
       "fcf_ttm": "$25.6B",
       "note": "Reality Labs 虧但廣告現金流穩",
       "shares": "2.20B",
       "mcap": "$1.48T",
       "sparkline_30d": [
-        626.9889,
         592.4509,
         584.848,
         584.0487,
@@ -5620,11 +5650,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         661.04,
         681.31,
         664.54,
-        646.01
+        646.01,
+        648.105
       ],
-      "change_30d_pct": 3.03,
-      "vol_5d_avg": 18474937,
-      "vol_30d_avg": 20114922,
+      "change_30d_pct": 9.39,
+      "vol_5d_avg": 15424461,
+      "vol_30d_avg": 19552226,
       "sparkline_90d": [
         670.2888,
         668.2207,
@@ -5687,16 +5718,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         661.04,
         681.31,
         664.54,
-        646.01
+        646.01,
+        648.105
       ]
     },
     {
       "ticker": "GOOGL",
       "name": "Alphabet",
       "type": "Stock",
-      "pe": "~26",
+      "pe": "~27",
       "fwd_pe": "~24",
-      "price": "$346.77",
+      "price": "$356.76",
       "div": "25.0%",
       "gross_margin": "60.4%",
       "fcf_ttm": "$27.9B",
@@ -5704,7 +5736,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "5.86B",
       "mcap": "$4.41T",
       "sparkline_30d": [
-        371.9678,
         368.31,
         363.31,
         364.26,
@@ -5733,11 +5764,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         359.51,
         370.92,
         354.46,
-        346.77
+        346.77,
+        356.84
       ],
-      "change_30d_pct": -6.77,
-      "vol_5d_avg": 26691613,
-      "vol_30d_avg": 33859692,
+      "change_30d_pct": -3.11,
+      "vol_5d_avg": 25187160,
+      "vol_30d_avg": 32670490,
       "sparkline_90d": [
         337.2186,
         332.0916,
@@ -5800,16 +5832,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         359.51,
         370.92,
         354.46,
-        346.77
+        346.77,
+        356.84
       ]
     },
     {
       "ticker": "TSLA",
       "name": "Tesla",
       "type": "Stock",
-      "pe": "~349",
-      "fwd_pe": "~149",
-      "price": "$380.84",
+      "pe": "~340",
+      "fwd_pe": "~146",
+      "price": "$373.82",
       "div": "0%",
       "gross_margin": "19.1%",
       "fcf_ttm": "$5.3B",
@@ -5817,7 +5850,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "3.76B",
       "mcap": "$1.47T",
       "sparkline_30d": [
-        418.45,
         391.0,
         408.95,
         396.68,
@@ -5846,11 +5878,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         396.18,
         394.46,
         391.06,
-        380.84
+        380.84,
+        373.82
       ],
-      "change_30d_pct": -8.99,
-      "vol_5d_avg": 29394248,
-      "vol_30d_avg": 44468394,
+      "change_30d_pct": -4.39,
+      "vol_5d_avg": 25661240,
+      "vol_30d_avg": 43762423,
       "sparkline_90d": [
         392.5,
         386.42,
@@ -5913,24 +5946,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         396.18,
         394.46,
         391.06,
-        380.84
+        380.84,
+        373.82
       ]
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "type": "Stock",
-      "pe": "~61",
-      "fwd_pe": "~19",
-      "price": "$370.82",
-      "div": "69.0%",
+      "pe": "~63",
+      "fwd_pe": "~20",
+      "price": "$381.37",
+      "div": "70.0%",
       "gross_margin": "76.3%",
       "fcf_ttm": "$27.2B",
       "note": "AI ASIC 第二大故事",
       "shares": "4.73B",
       "mcap": "$1.79T",
       "sparkline_30d": [
-        418.248,
         385.1205,
         395.9733,
         391.5403,
@@ -5959,11 +5992,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         389.11,
         394.28,
         374.45,
-        370.825
+        370.83,
+        381.37
       ],
-      "change_30d_pct": -11.34,
-      "vol_5d_avg": 20791766,
-      "vol_30d_avg": 31137291,
+      "change_30d_pct": -0.97,
+      "vol_5d_avg": 17515453,
+      "vol_30d_avg": 28601742,
       "sparkline_90d": [
         398.9985,
         401.5345,
@@ -6026,7 +6060,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         389.11,
         394.28,
         374.45,
-        370.825
+        370.83,
+        381.37
       ]
     },
     {
@@ -6035,15 +6070,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~30",
       "fwd_pe": "~19",
-      "price": "$398.37",
-      "div": "92.0%",
-      "gross_margin": "61.9%",
-      "fcf_ttm": "$719.2B",
+      "price": "$404.35",
+      "div": "95.0%",
+      "gross_margin": "64.2%",
+      "fcf_ttm": "$739.1B",
       "note": "全球先進製程獨佔",
       "shares": "5.19B",
       "mcap": "$2.15T",
       "sparkline_30d": [
-        443.8805,
         414.2,
         425.8028,
         426.9202,
@@ -6072,11 +6106,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         420.39,
         419.48,
         409.74,
-        398.37
+        398.37,
+        404.345
       ],
-      "change_30d_pct": -10.25,
-      "vol_5d_avg": 18275788,
-      "vol_30d_avg": 15148341,
+      "change_30d_pct": -2.38,
+      "vol_5d_avg": 16351913,
+      "vol_30d_avg": 14939552,
       "sparkline_90d": [
         365.3843,
         367.22,
@@ -6139,16 +6174,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         420.39,
         419.48,
         409.74,
-        398.37
+        398.37,
+        404.345
       ]
     },
     {
       "ticker": "AMD",
       "name": "AMD",
       "type": "Stock",
-      "pe": "~165",
-      "fwd_pe": "~37",
-      "price": "$495.76",
+      "pe": "~170",
+      "fwd_pe": "~38",
+      "price": "$513.04",
       "div": "0%",
       "gross_margin": "53.1%",
       "fcf_ttm": "$7.2B",
@@ -6156,7 +6192,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "1.63B",
       "mcap": "$738.7B",
       "sparkline_30d": [
-        523.2,
         466.38,
         490.33,
         475.51,
@@ -6185,11 +6220,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         548.13,
         529.14,
         500.94,
-        495.76
+        495.76,
+        513.04
       ],
-      "change_30d_pct": -5.24,
-      "vol_5d_avg": 25846946,
-      "vol_30d_avg": 30070027,
+      "change_30d_pct": 10.0,
+      "vol_5d_avg": 23883458,
+      "vol_30d_avg": 29537693,
       "sparkline_90d": [
         274.95,
         284.49,
@@ -6252,7 +6288,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         548.13,
         529.14,
         500.94,
-        495.76
+        495.76,
+        513.04
       ]
     },
     {
@@ -6260,8 +6297,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Intel",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~59",
-      "price": "$95.04",
+      "fwd_pe": "~61",
+      "price": "$98.61",
       "div": "0%",
       "gross_margin": "37.2%",
       "fcf_ttm": "$-8.3B",
@@ -6269,7 +6306,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "5.03B",
       "mcap": "$516.8B",
       "sparkline_30d": [
-        111.78,
         99.17,
         110.27,
         107.92,
@@ -6298,11 +6334,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         107.76,
         102.99,
         96.98,
-        95.04
+        95.04,
+        98.61
       ],
-      "change_30d_pct": -14.98,
-      "vol_5d_avg": 108118884,
-      "vol_30d_avg": 122667824,
+      "change_30d_pct": -0.56,
+      "vol_5d_avg": 97331721,
+      "vol_30d_avg": 121658730,
       "sparkline_90d": [
         65.7,
         66.26,
@@ -6365,24 +6402,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         107.76,
         102.99,
         96.98,
-        95.04
+        95.04,
+        98.61
       ]
     },
     {
       "ticker": "QCOM",
       "name": "Qualcomm",
       "type": "Stock",
-      "pe": "~18",
+      "pe": "~19",
       "fwd_pe": "~16",
-      "price": "$171.78",
-      "div": "216.0%",
+      "price": "$172.74",
+      "div": "214.0%",
       "gross_margin": "54.8%",
       "fcf_ttm": "$9.6B",
       "note": "估值便宜但成長題材弱",
       "shares": "1.05B",
       "mcap": "$209.3B",
       "sparkline_30d": [
-        242.57,
         215.94,
         217.77,
         205.42,
@@ -6411,11 +6448,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         178.1,
         177.98,
         170.61,
-        171.78
+        171.78,
+        172.7397
       ],
-      "change_30d_pct": -29.18,
-      "vol_5d_avg": 13379478,
-      "vol_30d_avg": 19453009,
+      "change_30d_pct": -20.01,
+      "vol_5d_avg": 11455753,
+      "vol_30d_avg": 19093112,
       "sparkline_90d": [
         137.0139,
         135.0612,
@@ -6478,16 +6516,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         178.1,
         177.98,
         170.61,
-        171.78
+        171.78,
+        172.7397
       ]
     },
     {
       "ticker": "MU",
       "name": "Micron",
       "type": "Stock",
-      "pe": "~19",
+      "pe": "~20",
       "fwd_pe": "~6",
-      "price": "$848.95",
+      "price": "$886.23",
       "div": "6.0%",
       "gross_margin": "72.6%",
       "fcf_ttm": "$7.6B",
@@ -6495,7 +6534,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "1.13B",
       "mcap": "$1000.0B",
       "sparkline_30d": [
-        995.8469,
         863.8771,
         949.134,
         935.7461,
@@ -6524,11 +6562,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         983.12,
         904.28,
         853.2,
-        848.95
+        848.95,
+        886.34
       ],
-      "change_30d_pct": -14.75,
-      "vol_5d_avg": 46134714,
-      "vol_30d_avg": 53976409,
+      "change_30d_pct": 2.6,
+      "vol_5d_avg": 42225134,
+      "vol_30d_avg": 52678779,
       "sparkline_90d": [
         448.351,
         449.3109,
@@ -6591,16 +6630,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         983.12,
         904.28,
         853.2,
-        848.95
+        848.95,
+        886.34
       ]
     },
     {
       "ticker": "MRVL",
       "name": "Marvell",
       "type": "Stock",
-      "pe": "~65",
-      "fwd_pe": "~30",
-      "price": "$188.68",
+      "pe": "~69",
+      "fwd_pe": "~32",
+      "price": "$200.42",
       "div": "13.0%",
       "gross_margin": "51.5%",
       "fcf_ttm": "$2.3B",
@@ -6608,7 +6648,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "875M",
       "mcap": "$221.5B",
       "sparkline_30d": [
-        316.352,
         263.405,
         288.7788,
         266.8142,
@@ -6637,11 +6676,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         222.44,
         206.26,
         188.3,
-        188.68
+        188.68,
+        200.42
       ],
-      "change_30d_pct": -40.36,
-      "vol_5d_avg": 27516862,
-      "vol_30d_avg": 51492400,
+      "change_30d_pct": -23.91,
+      "vol_5d_avg": 24670848,
+      "vol_30d_avg": 48975124,
       "sparkline_90d": [
         147.8035,
         151.2727,
@@ -6704,7 +6744,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         222.44,
         206.26,
         188.3,
-        188.68
+        188.68,
+        200.42
       ]
     },
     {
@@ -6712,14 +6753,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Onsemi",
       "type": "Stock",
       "note": "SiC + IGBT + 離散元件 IDM,AI 機櫃 48V/800V HVDC 受惠",
-      "price": "$86.50",
-      "pe": "~64",
+      "price": "$88.22",
+      "pe": "~65",
       "fwd_pe": "~20",
       "gross_margin": "42.7%",
       "fcf_ttm": "$1.3B",
       "div": "0%",
       "sparkline_30d": [
-        131.82,
         117.26,
         120.9,
         117.0,
@@ -6748,15 +6788,15 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         93.73,
         92.54,
         88.12,
-        86.505
+        87.37,
+        88.22
       ],
-      "change_30d_pct": -34.38,
-      "vol_5d_avg": 8184772,
-      "vol_30d_avg": 13307842,
+      "change_30d_pct": -24.77,
+      "vol_5d_avg": 7980871,
+      "vol_30d_avg": 13256488,
       "mcap": "$51.1B",
       "shares": "389M",
       "sparkline_90d": [
-        83.01,
         85.56,
         86.91,
         88.99,
@@ -6818,7 +6858,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         93.73,
         92.54,
         88.12,
-        86.505
+        87.37,
+        88.22
       ]
     },
     {
@@ -6826,14 +6867,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Texas Instruments",
       "type": "Stock",
       "note": "類比 + 電源管理 IC,DrMOS 受惠 AI server",
-      "price": "$284.02",
+      "price": "$288.84",
       "pe": "~49",
       "fwd_pe": "~30",
       "gross_margin": "57.3%",
       "fcf_ttm": "$1.1B",
-      "div": "195.0%",
+      "div": "200.0%",
       "sparkline_30d": [
-        305.37,
         285.06,
         290.9,
         288.63,
@@ -6862,11 +6902,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         305.55,
         301.19,
         291.22,
-        284.02
+        284.02,
+        288.84
       ],
-      "change_30d_pct": -6.99,
-      "vol_5d_avg": 6918890,
-      "vol_30d_avg": 9313448,
+      "change_30d_pct": 1.33,
+      "vol_5d_avg": 5672868,
+      "vol_30d_avg": 9093614,
       "mcap": "$302.4B",
       "shares": "910M",
       "sparkline_90d": [
@@ -6931,7 +6972,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         305.55,
         301.19,
         291.22,
-        284.02
+        284.02,
+        288.84
       ]
     },
     {
@@ -6939,14 +6981,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Infineon",
       "type": "Stock",
       "note": "全球功率半導體龍頭,汽車 + 工業 + AI Server PSU (ADR)",
-      "price": "$73.27",
-      "pe": "~78",
-      "fwd_pe": "~23",
+      "price": "$72.83",
+      "pe": "~77",
+      "fwd_pe": "~22",
       "gross_margin": "41.2%",
       "fcf_ttm": "$1.4B",
       "div": "56.0%",
       "sparkline_30d": [
-        99.09,
         85.02,
         89.65,
         90.0,
@@ -6975,11 +7016,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         80.96,
         77.46,
         73.24,
-        73.27
+        73.1,
+        72.83
       ],
-      "change_30d_pct": -26.06,
-      "vol_5d_avg": 393800,
-      "vol_30d_avg": 575143,
+      "change_30d_pct": -14.34,
+      "vol_5d_avg": 379006,
+      "vol_30d_avg": 563967,
       "mcap": "$128.8B",
       "shares": "1.30B",
       "sparkline_90d": [
@@ -7044,16 +7086,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         80.96,
         77.46,
         73.24,
-        73.27
+        73.1,
+        72.83
       ]
     },
     {
       "ticker": "PLTR",
       "name": "Palantir",
       "type": "Stock",
-      "pe": "~149",
-      "fwd_pe": "~63",
-      "price": "$132.38",
+      "pe": "~150",
+      "fwd_pe": "~64",
+      "price": "$133.71",
       "div": "0%",
       "gross_margin": "84.1%",
       "fcf_ttm": "$1.8B",
@@ -7061,7 +7104,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "2.30B",
       "mcap": "$310.2B",
       "sparkline_30d": [
-        141.7,
         135.53,
         136.47,
         132.07,
@@ -7090,11 +7132,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         133.72,
         133.76,
         134.44,
-        132.38
+        132.38,
+        133.71
       ],
-      "change_30d_pct": -6.58,
-      "vol_5d_avg": 35266345,
-      "vol_30d_avg": 41500154,
+      "change_30d_pct": -1.34,
+      "vol_5d_avg": 29369851,
+      "vol_30d_avg": 40482488,
       "sparkline_90d": [
         145.89,
         145.97,
@@ -7157,24 +7200,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         133.72,
         133.76,
         134.44,
-        132.38
+        132.38,
+        133.71
       ]
     },
     {
       "ticker": "NFLX",
       "name": "Netflix",
       "type": "Stock",
-      "pe": "~22",
+      "pe": "~21",
       "fwd_pe": "~18",
-      "price": "$68.95",
+      "price": "$67.89",
       "div": "0%",
       "gross_margin": "49.1%",
-      "fcf_ttm": "$25.7B",
+      "fcf_ttm": "$25.4B",
       "note": "廣告層 + 直播驅動",
       "shares": "4.21B",
       "mcap": "$343.5B",
       "sparkline_30d": [
-        81.56,
         82.18,
         82.64,
         81.41,
@@ -7203,11 +7246,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         73.53,
         73.68,
         74.35,
-        68.95
+        68.95,
+        67.89
       ],
-      "change_30d_pct": -15.46,
-      "vol_5d_avg": 64000895,
-      "vol_30d_avg": 50218725,
+      "change_30d_pct": -17.39,
+      "vol_5d_avg": 62141934,
+      "vol_30d_avg": 49767665,
       "sparkline_90d": [
         94.83,
         92.58,
@@ -7270,24 +7314,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         73.53,
         73.68,
         74.35,
-        68.95
+        68.95,
+        67.89
       ]
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "type": "Stock",
-      "pe": "~22",
-      "fwd_pe": "~12",
-      "price": "$126.41",
-      "div": "161.0%",
+      "pe": "~21",
+      "fwd_pe": "~11",
+      "price": "$122.39",
+      "div": "158.0%",
       "gross_margin": "65.8%",
       "fcf_ttm": "$-24.5B",
       "note": "OCI 雲端 + AI infra,Stargate 受惠股",
       "shares": "2.88B",
       "mcap": "$580.6B",
       "sparkline_30d": [
-        235.5206,
         212.9392,
         211.0856,
         205.0965,
@@ -7316,11 +7360,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         127.94,
         132.49,
         124.21,
-        126.41
+        126.41,
+        122.39
       ],
-      "change_30d_pct": -46.33,
-      "vol_5d_avg": 49250808,
-      "vol_30d_avg": 35834034,
+      "change_30d_pct": -42.52,
+      "vol_5d_avg": 42264969,
+      "vol_30d_avg": 35892944,
       "sparkline_90d": [
         176.9644,
         180.5419,
@@ -7383,16 +7428,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         127.94,
         132.49,
         124.21,
-        126.41
+        126.41,
+        122.39
       ]
     },
     {
       "ticker": "COHR",
       "name": "Coherent",
       "type": "Stock",
-      "pe": "~132",
-      "fwd_pe": "~34",
-      "price": "$277.60",
+      "pe": "~139",
+      "fwd_pe": "~36",
+      "price": "$293.66",
       "div": "0%",
       "gross_margin": "37.0%",
       "fcf_ttm": "$-198M",
@@ -7400,7 +7446,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "196M",
       "mcap": "$68.3B",
       "sparkline_30d": [
-        421.9,
         376.99,
         401.93,
         355.94,
@@ -7429,11 +7474,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         310.77,
         299.38,
         276.96,
-        277.6
+        277.6,
+        293.66
       ],
-      "change_30d_pct": -34.2,
-      "vol_5d_avg": 4482779,
-      "vol_30d_avg": 5530086,
+      "change_30d_pct": -22.1,
+      "vol_5d_avg": 4148809,
+      "vol_30d_avg": 5380631,
       "sparkline_90d": [
         347.51,
         343.79,
@@ -7496,16 +7542,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         310.77,
         299.38,
         276.96,
-        277.6
+        277.6,
+        293.66
       ]
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "type": "Stock",
-      "pe": "~130",
-      "fwd_pe": "~40",
-      "price": "$732.82",
+      "pe": "~138",
+      "fwd_pe": "~43",
+      "price": "$790.61",
       "div": "0%",
       "gross_margin": "40.8%",
       "fcf_ttm": "$93M",
@@ -7513,7 +7560,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "78M",
       "mcap": "$62.5B",
       "sparkline_30d": [
-        945.08,
         863.66,
         895.4,
         821.76,
@@ -7542,11 +7588,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         814.8,
         752.0,
         706.23,
-        732.82
+        732.82,
+        790.61
       ],
-      "change_30d_pct": -22.46,
-      "vol_5d_avg": 4115785,
-      "vol_30d_avg": 5186394,
+      "change_30d_pct": -8.46,
+      "vol_5d_avg": 3831934,
+      "vol_30d_avg": 5060202,
       "sparkline_90d": [
         895.11,
         836.92,
@@ -7609,7 +7656,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         814.8,
         752.0,
         706.23,
-        732.82
+        732.82,
+        790.61
       ]
     },
     {
@@ -7618,7 +7666,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~4",
-      "price": "₩255,000",
+      "price": "₩244,000",
       "div": "58.0%",
       "gross_margin": "47.7%",
       "fcf_ttm": "$67568.2B",
@@ -7658,11 +7706,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         255000.0
       ],
       "change_30d_pct": -22.49,
-      "vol_5d_avg": 28786570,
-      "vol_30d_avg": 30375425,
+      "vol_5d_avg": 30596736,
+      "vol_30d_avg": 30222579,
       "sparkline_90d": [
-        217500.0,
-        216000.0,
         214500.0,
         219000.0,
         217500.0,
@@ -7731,7 +7777,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~4",
-      "price": "₩1,842,000",
+      "price": "₩1,764,000",
       "div": "16.0%",
       "gross_margin": "68.3%",
       "fcf_ttm": "$25809.1B",
@@ -7771,11 +7817,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1842000.0
       ],
       "change_30d_pct": -11.01,
-      "vol_5d_avg": 6994011,
-      "vol_30d_avg": 5966985,
+      "vol_5d_avg": 7289083,
+      "vol_30d_avg": 5984446,
       "sparkline_90d": [
-        1154806.875,
-        1127811.375,
         1165805.0,
         1223795.375,
         1222795.5,
@@ -7844,15 +7888,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~27",
       "fwd_pe": "~17",
-      "price": "$2,315",
-      "div": "97.0%",
-      "gross_margin": "61.9%",
-      "fcf_ttm": "$719.2B",
+      "price": "$2,320",
+      "div": "105.0%",
+      "gross_margin": "64.2%",
+      "fcf_ttm": "$739.1B",
       "note": "權重 #1 (~57%),先進製程獨佔。0050 與大盤主引擎",
       "shares": "25.93B",
       "mcap": "$1.89T",
       "sparkline_30d": [
-        2358.7073,
         2288.8936,
         2298.8669,
         2249.0,
@@ -7881,13 +7924,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         2420.0,
         2440.0,
         2470.0,
-        2290.0
+        2290.0,
+        2320.0
       ],
-      "change_30d_pct": -2.91,
-      "vol_5d_avg": 40036046,
-      "vol_30d_avg": 34118991,
+      "change_30d_pct": 1.36,
+      "vol_5d_avg": 43128901,
+      "vol_30d_avg": 34897263,
       "sparkline_90d": [
-        2024.5986,
         2019.6119,
         2044.5454,
         2044.5454,
@@ -7950,7 +7993,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         2420.0,
         2440.0,
         2470.0,
-        2290.0
+        2290.0,
+        2320.0
       ]
     },
     {
@@ -7959,15 +8003,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~17",
       "fwd_pe": "~11",
-      "price": "$233.50",
-      "div": "296.0%",
+      "price": "$234.50",
+      "div": "306.0%",
       "gross_margin": "6.2%",
       "fcf_ttm": "$37.2B",
       "note": "權重 #2,AI 伺服器代工 (NVDA GB200) 受惠",
       "shares": "14.00B",
       "mcap": "$123.0B",
       "sparkline_30d": [
-        276.2727,
         261.7065,
         269.4751,
         255.3944,
@@ -7996,13 +8039,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         235.5,
         239.0,
         242.5,
-        234.0
+        234.0,
+        234.5
       ],
-      "change_30d_pct": -15.3,
-      "vol_5d_avg": 44586824,
-      "vol_30d_avg": 60639195,
+      "change_30d_pct": -10.4,
+      "vol_5d_avg": 46911506,
+      "vol_30d_avg": 58742535,
       "sparkline_90d": [
-        200.0428,
         201.4994,
         204.8982,
         214.609,
@@ -8065,24 +8108,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         235.5,
         239.0,
         242.5,
-        234.0
+        234.0,
+        234.5
       ]
     },
     {
       "ticker": "2454.TW",
       "name": "聯發科 MediaTek",
       "type": "Stock",
-      "pe": "~52",
-      "fwd_pe": "~27",
-      "price": "$3,400",
-      "div": "145.0%",
+      "pe": "~51",
+      "fwd_pe": "~26",
+      "price": "$3,340",
+      "div": "159.0%",
       "gross_margin": "47.0%",
       "fcf_ttm": "$73.6B",
       "note": "權重 #3,手機晶片 + AI ASIC 客製化",
       "shares": "1.60B",
       "mcap": "$226.0B",
       "sparkline_30d": [
-        4274.4604,
         4045.8267,
         4448.4209,
         4130.3218,
@@ -8111,13 +8154,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         3660.0,
         3740.0,
         3700.0,
-        3370.0
+        3370.0,
+        3340.0
       ],
-      "change_30d_pct": -21.16,
-      "vol_5d_avg": 7702338,
-      "vol_30d_avg": 10437057,
+      "change_30d_pct": -17.45,
+      "vol_5d_avg": 8322556,
+      "vol_30d_avg": 10444713,
       "sparkline_90d": [
-        1913.5667,
         1888.7151,
         2077.5867,
         2281.3691,
@@ -8180,7 +8223,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         3660.0,
         3740.0,
         3700.0,
-        3370.0
+        3370.0,
+        3340.0
       ]
     },
     {
@@ -8189,15 +8233,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~17",
       "fwd_pe": "~11",
-      "price": "$325.00",
-      "div": "443.0%",
+      "price": "$316.00",
+      "div": "479.0%",
       "gross_margin": "6.1%",
       "fcf_ttm": "$-98.2B",
       "note": "權重 #4,AI 伺服器 ODM 龍頭,Meta/Google 客戶",
       "shares": "3.85B",
       "mcap": "$45.7B",
       "sparkline_30d": [
-        374.511,
         361.0843,
         359.6457,
         364.9205,
@@ -8226,13 +8269,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         364.4409,
         365.4,
         352.0,
-        325.5
+        325.5,
+        316.0
       ],
-      "change_30d_pct": -13.09,
-      "vol_5d_avg": 24642125,
-      "vol_30d_avg": 25976995,
+      "change_30d_pct": -12.49,
+      "vol_5d_avg": 28850798,
+      "vol_30d_avg": 24764807,
       "sparkline_90d": [
-        309.7748,
         315.5291,
         326.0787,
         321.2835,
@@ -8295,24 +8338,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         364.4409,
         365.4,
         352.0,
-        325.5
+        325.5,
+        316.0
       ]
     },
     {
       "ticker": "2308.TW",
       "name": "台達電 Delta",
       "type": "Stock",
-      "pe": "~65",
-      "fwd_pe": "~27",
-      "price": "$1,760",
-      "div": "61.0%",
+      "pe": "~63",
+      "fwd_pe": "~26",
+      "price": "$1,705",
+      "div": "67.0%",
       "gross_margin": "35.5%",
       "fcf_ttm": "$32.5B",
       "note": "權重 #5,電源管理 + AI 散熱 + 液冷",
       "shares": "2.60B",
       "mcap": "$198.5B",
       "sparkline_30d": [
-        2288.0359,
         2243.27,
         2402.4375,
         2188.5559,
@@ -8341,13 +8384,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1855.0,
         1890.0,
         1905.0,
-        1740.0
+        1740.0,
+        1705.0
       ],
-      "change_30d_pct": -23.95,
-      "vol_5d_avg": 9372574,
-      "vol_30d_avg": 11412970,
+      "change_30d_pct": -23.99,
+      "vol_5d_avg": 9918996,
+      "vol_30d_avg": 11548645,
       "sparkline_90d": [
-        1830.4287,
         1890.1166,
         2004.5183,
         2004.5183,
@@ -8410,7 +8453,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1855.0,
         1890.0,
         1905.0,
-        1740.0
+        1740.0,
+        1705.0
       ]
     },
     {
@@ -8419,15 +8463,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~15",
       "fwd_pe": "~13",
-      "price": "$62.10",
-      "div": "397.0%",
-      "gross_margin": "69.2%",
-      "fcf_ttm": "$213.4B",
+      "price": "$61.50",
+      "div": "403.0%",
+      "gross_margin": "—",
+      "fcf_ttm": "—",
       "note": "權重 #6,金融類 No.1",
       "shares": "19.68B",
       "mcap": "$43.1B",
       "sparkline_30d": [
-        64.2178,
         63.0607,
         66.7248,
         65.7606,
@@ -8456,13 +8499,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         65.0,
         63.5,
         63.0,
-        62.1
+        62.1,
+        61.5
       ],
-      "change_30d_pct": -3.3,
-      "vol_5d_avg": 79806340,
-      "vol_30d_avg": 56987080,
+      "change_30d_pct": -2.47,
+      "vol_5d_avg": 72228386,
+      "vol_30d_avg": 56094307,
       "sparkline_90d": [
-        51.2007,
         51.2007,
         51.1043,
         51.5864,
@@ -8525,24 +8568,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         65.0,
         63.5,
         63.0,
-        62.1
+        62.1,
+        61.5
       ]
     },
     {
       "ticker": "2412.TW",
       "name": "中華電信",
       "type": "Stock",
-      "pe": "~27",
+      "pe": "~28",
       "fwd_pe": "~26",
-      "price": "$138.00",
-      "div": "382.0%",
+      "price": "$139.00",
+      "div": "377.0%",
       "gross_margin": "36.7%",
       "fcf_ttm": "$42.7B",
       "note": "權重 #7,定存替代,股價最穩",
       "shares": "7.76B",
       "mcap": "$34.9B",
       "sparkline_30d": [
-        135.7441,
         133.3373,
         136.7068,
         138.6323,
@@ -8571,13 +8614,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         133.0,
         133.0,
         136.0,
-        138.0
+        138.0,
+        139.0
       ],
-      "change_30d_pct": 1.66,
-      "vol_5d_avg": 23469320,
-      "vol_30d_avg": 17816444,
+      "change_30d_pct": 4.25,
+      "vol_5d_avg": 24744844,
+      "vol_30d_avg": 18228370,
       "sparkline_90d": [
-        132.3746,
         131.8932,
         131.8932,
         131.4118,
@@ -8640,7 +8683,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         133.0,
         133.0,
         136.0,
-        138.0
+        138.0,
+        139.0
       ]
     },
     {
@@ -8649,15 +8693,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~15",
       "fwd_pe": "~12",
-      "price": "$124.50",
-      "div": "340.0%",
+      "price": "$123.50",
+      "div": "341.0%",
       "gross_margin": "49.5%",
       "fcf_ttm": "$1164.4B",
       "note": "權重 #8,壽險為主",
       "shares": "13.67B",
       "mcap": "$54.1B",
       "sparkline_30d": [
-        114.1274,
         112.193,
         120.8977,
         118.4797,
@@ -8686,13 +8729,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         125.0,
         128.5,
         125.0,
-        124.5
+        124.5,
+        123.5
       ],
-      "change_30d_pct": 9.09,
-      "vol_5d_avg": 27508144,
-      "vol_30d_avg": 41424532,
+      "change_30d_pct": 10.08,
+      "vol_5d_avg": 27992320,
+      "vol_30d_avg": 40472129,
       "sparkline_90d": [
-        85.112,
         84.3382,
         84.8218,
         85.4021,
@@ -8755,24 +8798,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         125.0,
         128.5,
         125.0,
-        124.5
+        124.5,
+        123.5
       ]
     },
     {
       "ticker": "3711.TW",
       "name": "日月光投控 ASE",
       "type": "Stock",
-      "pe": "~60",
-      "fwd_pe": "~24",
-      "price": "$614.00",
-      "div": "97.0%",
+      "pe": "~59",
+      "fwd_pe": "~23",
+      "price": "$597.00",
+      "div": "107.0%",
       "gross_margin": "18.5%",
       "fcf_ttm": "$-66.1B",
       "note": "權重 #9,封測龍頭,CoWoS 受惠股",
       "shares": "4.39B",
       "mcap": "$79.0B",
       "sparkline_30d": [
-        571.7738,
         535.1089,
         563.8463,
         534.118,
@@ -8801,13 +8844,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         641.0,
         683.0,
         682.0,
-        614.0
+        614.0,
+        597.0
       ],
-      "change_30d_pct": 7.39,
-      "vol_5d_avg": 24215445,
-      "vol_30d_avg": 25141456,
+      "change_30d_pct": 11.57,
+      "vol_5d_avg": 24909289,
+      "vol_30d_avg": 25499721,
       "sparkline_90d": [
-        437.9966,
         457.3199,
         467.7249,
         460.7882,
@@ -8870,24 +8913,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         641.0,
         683.0,
         682.0,
-        614.0
+        614.0,
+        597.0
       ]
     },
     {
       "ticker": "2303.TW",
       "name": "聯電 UMC",
       "type": "Stock",
-      "pe": "~37",
-      "fwd_pe": "~25",
-      "price": "$144.00",
-      "div": "163.0%",
+      "pe": "~33",
+      "fwd_pe": "~22",
+      "price": "$130.00",
+      "div": "181.0%",
       "gross_margin": "29.6%",
       "fcf_ttm": "$34.4B",
       "note": "權重 #10,成熟製程 (28nm/14nm)",
       "shares": "12.55B",
       "mcap": "$50.6B",
       "sparkline_30d": [
-        129.2873,
         118.964,
         125.3546,
         116.5061,
@@ -8916,13 +8959,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         151.0,
         166.0,
         160.0,
-        144.0
+        144.0,
+        130.0
       ],
-      "change_30d_pct": 11.38,
-      "vol_5d_avg": 118913979,
-      "vol_30d_avg": 241968961,
+      "change_30d_pct": 9.28,
+      "vol_5d_avg": 165075497,
+      "vol_30d_avg": 239403960,
       "sparkline_90d": [
-        71.7717,
         75.6061,
         74.9178,
         77.2775,
@@ -8985,7 +9028,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         151.0,
         166.0,
         160.0,
-        144.0
+        144.0,
+        130.0
       ]
     },
     {
@@ -8994,7 +9038,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~130",
-      "price": "$203.08",
+      "price": "$202.52",
       "div": "0%",
       "gross_margin": "75.1%",
       "fcf_ttm": "$1.9B",
@@ -9002,7 +9046,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "255M",
       "mcap": "$160.2B",
       "sparkline_30d": [
-        179.7725,
         167.755,
         164.6975,
         161.2325,
@@ -9031,11 +9074,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         210.73,
         206.77,
         203.76,
-        203.08
+        203.08,
+        202.52
       ],
-      "change_30d_pct": 12.96,
-      "vol_5d_avg": 9502392,
-      "vol_30d_avg": 12109872,
+      "change_30d_pct": 20.72,
+      "vol_5d_avg": 8660487,
+      "vol_30d_avg": 11192091,
       "sparkline_90d": [
         108.2875,
         112.4025,
@@ -9098,16 +9142,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         210.73,
         206.77,
         203.76,
-        203.08
+        203.08,
+        202.52
       ]
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "type": "Stock",
-      "pe": "~317",
+      "pe": "~312",
       "fwd_pe": "~87",
-      "price": "$358.68",
+      "price": "$358.39",
       "div": "0%",
       "gross_margin": "72.0%",
       "fcf_ttm": "$3.6B",
@@ -9115,7 +9160,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "815M",
       "mcap": "$207.7B",
       "sparkline_30d": [
-        279.25,
         272.05,
         266.33,
         260.52,
@@ -9144,11 +9188,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         352.89,
         354.02,
         353.99,
-        358.68
+        358.68,
+        358.39
       ],
-      "change_30d_pct": 28.44,
-      "vol_5d_avg": 6327181,
-      "vol_30d_avg": 7524350,
+      "change_30d_pct": 31.74,
+      "vol_5d_avg": 5588679,
+      "vol_30d_avg": 7252683,
       "sparkline_90d": [
         169.56,
         174.96,
@@ -9211,7 +9256,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         352.89,
         354.02,
         353.99,
-        358.68
+        358.68,
+        358.39
       ]
     },
     {
@@ -9228,7 +9274,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "162M",
       "mcap": "$19.8B",
       "sparkline_30d": [
-        135.26,
         130.78,
         129.25,
         125.84,
@@ -9257,11 +9302,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         152.09,
         148.19,
         146.43,
-        149.94
+        149.94,
+        149.945
       ],
-      "change_30d_pct": 10.85,
-      "vol_5d_avg": 2444012,
-      "vol_30d_avg": 3670525,
+      "change_30d_pct": 14.65,
+      "vol_5d_avg": 2212412,
+      "vol_30d_avg": 3541162,
       "sparkline_90d": [
         134.8,
         139.61,
@@ -9324,7 +9370,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         152.09,
         148.19,
         146.43,
-        149.94
+        149.94,
+        149.945
       ]
     },
     {
@@ -9333,7 +9380,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~176",
-      "price": "$277.66",
+      "price": "$278.17",
       "div": "0%",
       "gross_margin": "73.3%",
       "fcf_ttm": "$755M",
@@ -9341,7 +9388,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "320M",
       "mcap": "$82.8B",
       "sparkline_30d": [
-        268.64,
         250.11,
         247.79,
         236.13,
@@ -9370,11 +9416,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         281.75,
         273.04,
         272.46,
-        277.66
+        277.66,
+        278.17
       ],
-      "change_30d_pct": 3.36,
-      "vol_5d_avg": 2943189,
-      "vol_30d_avg": 3422538,
+      "change_30d_pct": 11.22,
+      "vol_5d_avg": 2770087,
+      "vol_30d_avg": 3317057,
       "sparkline_90d": [
         204.81,
         207.67,
@@ -9437,7 +9484,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         281.75,
         273.04,
         272.46,
-        277.66
+        277.66,
+        278.17
       ]
     },
     {
@@ -9446,7 +9494,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~40",
-      "price": "$19.57",
+      "price": "$19.71",
       "div": "0%",
       "gross_margin": "73.2%",
       "fcf_ttm": "$268M",
@@ -9454,7 +9502,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "337M",
       "mcap": "$5.1B",
       "sparkline_30d": [
-        16.53,
         15.95,
         15.75,
         15.24,
@@ -9483,11 +9530,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         19.92,
         19.58,
         19.63,
-        19.57
+        19.57,
+        19.71
       ],
-      "change_30d_pct": 18.39,
-      "vol_5d_avg": 8924454,
-      "vol_30d_avg": 7002402,
+      "change_30d_pct": 23.57,
+      "vol_5d_avg": 8161551,
+      "vol_30d_avg": 6872185,
       "sparkline_90d": [
         14.32,
         14.46,
@@ -9550,7 +9598,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         19.92,
         19.58,
         19.63,
-        19.57
+        19.57,
+        19.71
       ]
     },
     {
@@ -9559,7 +9608,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~63",
       "fwd_pe": "~47",
-      "price": "$161.61",
+      "price": "$162.50",
       "div": "0%",
       "gross_margin": "80.3%",
       "fcf_ttm": "$1.8B",
@@ -9567,7 +9616,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "733M",
       "mcap": "$98.8B",
       "sparkline_30d": [
-        149.67,
         144.68,
         143.04,
         138.39,
@@ -9596,11 +9644,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         166.83,
         164.51,
         160.78,
-        161.61
+        161.61,
+        162.505
       ],
-      "change_30d_pct": 7.98,
-      "vol_5d_avg": 4512939,
-      "vol_30d_avg": 6069763,
+      "change_30d_pct": 12.32,
+      "vol_5d_avg": 4067697,
+      "vol_30d_avg": 5952422,
       "sparkline_90d": [
         82.6,
         85.26,
@@ -9663,16 +9712,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         166.83,
         164.51,
         160.78,
-        161.61
+        161.61,
+        162.505
       ]
     },
     {
       "ticker": "OKTA",
       "name": "Okta",
       "type": "Stock",
-      "pe": "~109",
-      "fwd_pe": "~35",
-      "price": "$149.35",
+      "pe": "~111",
+      "fwd_pe": "~36",
+      "price": "$152.02",
       "div": "0%",
       "gross_margin": "77.4%",
       "fcf_ttm": "$978M",
@@ -9680,7 +9730,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "166M",
       "mcap": "$20.5B",
       "sparkline_30d": [
-        123.48,
         118.72,
         116.85,
         119.96,
@@ -9709,11 +9758,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         154.62,
         150.86,
         147.74,
-        149.35
+        149.35,
+        152.02
       ],
-      "change_30d_pct": 20.95,
-      "vol_5d_avg": 3046894,
-      "vol_30d_avg": 3406539,
+      "change_30d_pct": 28.05,
+      "vol_5d_avg": 2745765,
+      "vol_30d_avg": 3304390,
       "sparkline_90d": [
         75.76,
         77.64,
@@ -9776,16 +9826,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         154.62,
         150.86,
         147.74,
-        149.35
+        149.35,
+        152.02
       ]
     },
     {
       "ticker": "DELL",
       "name": "Dell Technologies",
       "type": "Stock",
-      "pe": "~32",
+      "pe": "~31",
       "fwd_pe": "~18",
-      "price": "$396.34",
+      "price": "$391.18",
       "div": "64.0%",
       "gross_margin": "19.2%",
       "fcf_ttm": "$5.4B",
@@ -9793,7 +9844,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "325M",
       "mcap": "$237.2B",
       "sparkline_30d": [
-        422.05,
         394.39,
         400.77,
         381.78,
@@ -9822,11 +9872,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         457.54,
         412.68,
         391.38,
-        396.34
+        396.34,
+        391.175
       ],
-      "change_30d_pct": -6.09,
-      "vol_5d_avg": 7532033,
-      "vol_30d_avg": 8283615,
+      "change_30d_pct": -0.82,
+      "vol_5d_avg": 7191321,
+      "vol_30d_avg": 7972306,
       "sparkline_90d": [
         203.61,
         212.36,
@@ -9889,7 +9940,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         457.54,
         412.68,
         391.38,
-        396.34
+        396.34,
+        391.175
       ]
     },
     {
@@ -9898,15 +9950,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~43",
       "fwd_pe": "~11",
-      "price": "$45.82",
-      "div": "126.0%",
+      "price": "$45.96",
+      "div": "124.0%",
       "gross_margin": "33.8%",
       "fcf_ttm": "$3.8B",
       "note": "企業 server + Juniper 整合後資料中心方案,AI server 落後 DELL",
       "shares": "1.32B",
       "mcap": "$61.6B",
       "sparkline_30d": [
-        53.5334,
         49.0565,
         49.7245,
         48.1292,
@@ -9935,11 +9986,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         49.56,
         47.39,
         45.13,
-        45.82
+        45.82,
+        45.96
       ],
-      "change_30d_pct": -14.41,
-      "vol_5d_avg": 18770010,
-      "vol_30d_avg": 24961018,
+      "change_30d_pct": -6.31,
+      "vol_5d_avg": 16549127,
+      "vol_30d_avg": 23977641,
       "sparkline_90d": [
         27.7289,
         28.6761,
@@ -10002,7 +10054,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         49.56,
         47.39,
         45.13,
-        45.82
+        45.82,
+        45.96
       ]
     },
     {
@@ -10011,7 +10064,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~13",
       "fwd_pe": "~8",
-      "price": "$24.18",
+      "price": "$24.20",
       "div": "0%",
       "gross_margin": "8.4%",
       "fcf_ttm": "$-7.4B",
@@ -10019,7 +10072,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "601M",
       "mcap": "$23.6B",
       "sparkline_30d": [
-        46.9,
         41.64,
         43.99,
         40.64,
@@ -10048,11 +10100,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         27.65,
         26.89,
         24.68,
-        24.18
+        24.18,
+        24.195
       ],
-      "change_30d_pct": -48.44,
-      "vol_5d_avg": 27715356,
-      "vol_30d_avg": 60422002,
+      "change_30d_pct": -41.89,
+      "vol_5d_avg": 25264115,
+      "vol_30d_avg": 59682059,
       "sparkline_90d": [
         28.81,
         28.43,
@@ -10115,24 +10168,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         27.65,
         26.89,
         24.68,
-        24.18
+        24.18,
+        24.195
       ]
     },
     {
       "ticker": "3231.TW",
       "name": "緯創 Wistron",
       "type": "Stock",
-      "pe": "~17",
+      "pe": "~15",
       "fwd_pe": "~8",
-      "price": "$140.50",
-      "div": "375.0%",
+      "price": "$143.50",
+      "div": "396.0%",
       "gross_margin": "5.6%",
       "fcf_ttm": "$-281.9B",
       "note": "AI server 純度高,GB200/Blackwell ODM 主力。子公司緯穎 (6669) 為 Hyperscale 王",
       "shares": "3.18B",
       "mcap": "$16.7B",
       "sparkline_30d": [
-        164.9511,
         157.7164,
         159.6456,
         152.4109,
@@ -10161,13 +10214,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         142.5,
         145.5,
         146.5,
-        139.0
+        139.0,
+        143.5
       ],
-      "change_30d_pct": -15.73,
-      "vol_5d_avg": 29629438,
-      "vol_30d_avg": 42198251,
+      "change_30d_pct": -9.01,
+      "vol_5d_avg": 34655660,
+      "vol_30d_avg": 39754775,
       "sparkline_90d": [
-        131.6715,
         135.53,
         139.3885,
         138.9062,
@@ -10230,7 +10283,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         142.5,
         145.5,
         146.5,
-        139.0
+        139.0,
+        143.5
       ]
     },
     {
@@ -10239,15 +10293,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~18",
       "fwd_pe": "~10",
-      "price": "$4,650",
-      "div": "282.0%",
+      "price": "$4,685",
+      "div": "313.0%",
       "gross_margin": "8.0%",
       "fcf_ttm": "$-22.1B",
       "note": "Hyperscale ODM 龍頭 (Meta/Microsoft/AWS),AI server 純度最高的台廠",
       "shares": "186M",
       "mcap": "$31.2B",
       "sparkline_30d": [
-        5500.6909,
         5126.5273,
         5150.8237,
         4922.438,
@@ -10276,14 +10329,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         4905.0,
         5095.0,
         5115.0,
-        4620.0
+        4620.0,
+        4685.0
       ],
-      "change_30d_pct": -16.01,
-      "vol_5d_avg": 981256,
-      "vol_30d_avg": 1533295,
+      "change_30d_pct": -8.61,
+      "vol_5d_avg": 1056153,
+      "vol_30d_avg": 1528511,
       "split_suspect": true,
       "sparkline_90d": [
-        3697.9026,
         3867.9768,
         4101.2217,
         4227.5625,
@@ -10346,7 +10399,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         4905.0,
         5095.0,
         5115.0,
-        4620.0
+        4620.0,
+        4685.0
       ]
     },
     {
@@ -10355,15 +10409,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~19",
       "fwd_pe": "~10",
-      "price": "$324.00",
-      "div": "356.0%",
+      "price": "$331.00",
+      "div": "369.0%",
       "gross_margin": "10.4%",
       "fcf_ttm": "$-22.4B",
       "note": "GPU 板卡 + AI server (B100/H200),CSP 與 Tier-2 客戶平衡",
       "shares": "670M",
       "mcap": "$7.6B",
       "sparkline_30d": [
-        369.0,
         345.0,
         359.0,
         344.5,
@@ -10392,13 +10445,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         334.0,
         344.0,
         337.0,
-        325.0
+        325.0,
+        331.0
       ],
-      "change_30d_pct": -11.92,
-      "vol_5d_avg": 5506769,
-      "vol_30d_avg": 8212177,
+      "change_30d_pct": -4.06,
+      "vol_5d_avg": 6144903,
+      "vol_30d_avg": 7724889,
       "sparkline_90d": [
-        281.5,
         279.0,
         288.5,
         285.0,
@@ -10461,7 +10514,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         334.0,
         344.0,
         337.0,
-        325.0
+        325.0,
+        331.0
       ]
     },
     {
@@ -10469,16 +10523,15 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "英業達 Inventec",
       "type": "Stock",
       "pe": "~24",
-      "fwd_pe": "~16",
-      "price": "$58.50",
-      "div": "329.0%",
+      "fwd_pe": "~15",
+      "price": "$57.20",
+      "div": "342.0%",
       "gross_margin": "5.1%",
       "fcf_ttm": "$5.5B",
       "note": "Server ODM 第三大,NVDA HGX/MGX 出貨;NB ODM (HP/Lenovo) 為傳統業務",
       "shares": "3.59B",
       "mcap": "$8.0B",
       "sparkline_30d": [
-        74.3887,
         67.0273,
         68.3834,
         64.1215,
@@ -10507,13 +10560,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         61.7,
         61.1,
         60.7,
-        58.5
+        58.5,
+        57.2
       ],
-      "change_30d_pct": -21.36,
-      "vol_5d_avg": 43932148,
-      "vol_30d_avg": 46301793,
+      "change_30d_pct": -14.66,
+      "vol_5d_avg": 37992150,
+      "vol_30d_avg": 42903360,
       "sparkline_90d": [
-        44.3136,
         45.1369,
         45.8633,
         46.2508,
@@ -10576,7 +10629,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         61.7,
         61.1,
         60.7,
-        58.5
+        58.5,
+        57.2
       ]
     },
     {
@@ -10585,15 +10639,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~15",
       "fwd_pe": "~12",
-      "price": "$82.20",
-      "div": "482.0%",
+      "price": "$80.00",
+      "div": "488.0%",
       "gross_margin": "4.0%",
       "fcf_ttm": "$17.6B",
       "note": "iPhone 二供 (僅次鴻海),AI server 切入中,汽車電子佈局",
       "shares": "2.68B",
       "mcap": "$8.1B",
       "sparkline_30d": [
-        92.7269,
         88.1336,
         91.0044,
         90.7174,
@@ -10622,13 +10675,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         82.1,
         82.7,
         83.2,
-        82.2
+        82.2,
+        80.0
       ],
-      "change_30d_pct": -11.35,
-      "vol_5d_avg": 9524373,
-      "vol_30d_avg": 22264349,
+      "change_30d_pct": -9.23,
+      "vol_5d_avg": 10314843,
+      "vol_30d_avg": 21155185,
       "sparkline_90d": [
-        79.4255,
         79.1384,
         80.3825,
         81.0523,
@@ -10691,16 +10744,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         82.1,
         82.7,
         83.2,
-        82.2
+        82.2,
+        80.0
       ]
     },
     {
       "ticker": "3017.TW",
       "name": "奇鋐 Auras Technology",
       "type": "Stock",
-      "pe": "~37",
+      "pe": "~36",
       "fwd_pe": "~16",
-      "price": "$2,225",
+      "price": "$2,135",
       "div": "45.0%",
       "gross_margin": "27.0%",
       "fcf_ttm": "$37.7B",
@@ -10708,7 +10762,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "393M",
       "mcap": "$31.6B",
       "sparkline_30d": [
-        2600.0,
         2570.0,
         2545.0,
         2360.0,
@@ -10737,13 +10790,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         2120.0,
         2165.0,
         2225.0,
-        2200.0
+        2200.0,
+        2135.0
       ],
-      "change_30d_pct": -15.38,
-      "vol_5d_avg": 3536350,
-      "vol_30d_avg": 3837721,
+      "change_30d_pct": -16.93,
+      "vol_5d_avg": 3939574,
+      "vol_30d_avg": 3848944,
       "sparkline_90d": [
-        2400.0,
         2490.0,
         2565.0,
         2695.0,
@@ -10806,16 +10859,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         2120.0,
         2165.0,
         2225.0,
-        2200.0
+        2200.0,
+        2135.0
       ]
     },
     {
       "ticker": "ARM",
       "name": "Arm Holdings",
       "type": "Stock",
-      "pe": "~318",
-      "fwd_pe": "~87",
-      "price": "$267.19",
+      "pe": "~317",
+      "fwd_pe": "~88",
+      "price": "$272.43",
       "div": "0%",
       "gross_margin": "97.5%",
       "fcf_ttm": "$750M",
@@ -10823,7 +10877,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "1.05B",
       "mcap": "$163B (估)",
       "sparkline_30d": [
-        393.44,
         342.93,
         346.39,
         324.86,
@@ -10852,11 +10905,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         281.17,
         277.01,
         262.01,
-        267.19
+        267.19,
+        272.43
       ],
-      "change_30d_pct": -32.09,
-      "vol_5d_avg": 7436944,
-      "vol_30d_avg": 9741654,
+      "change_30d_pct": -20.56,
+      "vol_5d_avg": 6732895,
+      "vol_30d_avg": 9437152,
       "sparkline_90d": [
         175.1,
         175.49,
@@ -10919,7 +10973,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         281.17,
         277.01,
         262.01,
-        267.19
+        267.19,
+        272.43
       ]
     },
     {
@@ -10927,8 +10982,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "CoreWeave",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~-50",
-      "price": "$73.21",
+      "fwd_pe": "~-52",
+      "price": "$75.87",
       "div": "0%",
       "gross_margin": "69.4%",
       "fcf_ttm": "$-8.6B",
@@ -10936,7 +10991,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "480M",
       "mcap": "$43B (估)",
       "sparkline_30d": [
-        108.03,
         100.39,
         102.37,
         98.45,
@@ -10965,11 +11019,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         79.94,
         77.12,
         72.91,
-        73.21
+        73.21,
+        75.87
       ],
-      "change_30d_pct": -32.23,
-      "vol_5d_avg": 25822994,
-      "vol_30d_avg": 28672305,
+      "change_30d_pct": -24.42,
+      "vol_5d_avg": 24315048,
+      "vol_30d_avg": 28150251,
       "sparkline_90d": [
         117.43,
         115.16,
@@ -11032,16 +11087,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         79.94,
         77.12,
         72.91,
-        73.21
+        73.21,
+        75.87
       ]
     },
     {
       "ticker": "NBIS",
       "name": "Nebius Group",
       "type": "Stock",
-      "pe": "~69",
-      "fwd_pe": "~492",
-      "price": "$177.71",
+      "pe": "~73",
+      "fwd_pe": "~-2514",
+      "price": "$188.01",
       "div": "0%",
       "gross_margin": "72.1%",
       "fcf_ttm": "$-6.1B",
@@ -11049,7 +11105,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "240M",
       "mcap": "$26B (估)",
       "sparkline_30d": [
-        259.67,
         227.81,
         218.0,
         220.12,
@@ -11078,11 +11133,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         194.09,
         199.51,
         171.77,
-        177.71
+        177.71,
+        188.01
       ],
-      "change_30d_pct": -31.56,
-      "vol_5d_avg": 20167762,
-      "vol_30d_avg": 18147420,
+      "change_30d_pct": -17.47,
+      "vol_5d_avg": 19662901,
+      "vol_30d_avg": 18014526,
       "sparkline_90d": [
         159.16,
         156.55,
@@ -11145,16 +11201,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         194.09,
         199.51,
         171.77,
-        177.71
+        177.71,
+        188.01
       ]
     },
     {
       "ticker": "FORM",
       "name": "FormFactor",
       "type": "Stock",
-      "pe": "~121",
-      "fwd_pe": "~38",
-      "price": "$105.57",
+      "pe": "~122",
+      "fwd_pe": "~39",
+      "price": "$107.57",
       "div": "0%",
       "gross_margin": "42.2%",
       "fcf_ttm": "$-566,875",
@@ -11162,7 +11219,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "77M",
       "mcap": "$3.7B (估)",
       "sparkline_30d": [
-        126.61,
         116.7,
         124.25,
         120.62,
@@ -11191,11 +11247,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         116.33,
         115.81,
         107.11,
-        105.57
+        105.57,
+        107.57
       ],
-      "change_30d_pct": -16.62,
-      "vol_5d_avg": 1249545,
-      "vol_30d_avg": 1873357,
+      "change_30d_pct": -7.82,
+      "vol_5d_avg": 1086430,
+      "vol_30d_avg": 1838621,
       "sparkline_90d": [
         144.03,
         142.04,
@@ -11258,16 +11315,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         116.33,
         115.81,
         107.11,
-        105.57
+        105.57,
+        107.57
       ]
     },
     {
       "ticker": "SNDK",
       "name": "SanDisk",
       "type": "Stock",
-      "pe": "~46",
-      "fwd_pe": "~6",
-      "price": "$1,355",
+      "pe": "~49",
+      "fwd_pe": "~7",
+      "price": "$1,435",
       "div": "0%",
       "gross_margin": "56.0%",
       "fcf_ttm": "$2.3B",
@@ -11275,7 +11333,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "145M",
       "mcap": "$19.5B (估)",
       "sparkline_30d": [
-        1759.6801,
         1559.3199,
         1642.0,
         1646.54,
@@ -11304,11 +11361,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1757.8199,
         1615.0,
         1411.08,
-        1354.8199
+        1354.8199,
+        1434.55
       ],
-      "change_30d_pct": -23.01,
-      "vol_5d_avg": 15938093,
-      "vol_30d_avg": 12679108,
+      "change_30d_pct": -8.0,
+      "vol_5d_avg": 14325197,
+      "vol_30d_avg": 12523032,
       "sparkline_90d": [
         913.02,
         903.49,
@@ -11371,7 +11429,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1757.8199,
         1615.0,
         1411.08,
-        1354.8199
+        1354.8199,
+        1434.55
       ]
     },
     {
@@ -11379,8 +11438,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Navitas Semiconductor",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~-83",
-      "price": "$11.46",
+      "fwd_pe": "~-85",
+      "price": "$11.79",
       "div": "0%",
       "gross_margin": "30.1%",
       "fcf_ttm": "$44M",
@@ -11388,7 +11447,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "200M",
       "mcap": "$1.7B (估)",
       "sparkline_30d": [
-        30.67,
         25.08,
         24.48,
         22.85,
@@ -11417,11 +11475,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         13.09,
         13.27,
         11.755,
-        11.46
+        11.46,
+        11.785
       ],
-      "change_30d_pct": -62.63,
-      "vol_5d_avg": 12897263,
-      "vol_30d_avg": 22675803,
+      "change_30d_pct": -53.01,
+      "vol_5d_avg": 11441046,
+      "vol_30d_avg": 21462911,
       "sparkline_90d": [
         13.2,
         15.33,
@@ -11484,7 +11543,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         13.09,
         13.27,
         11.755,
-        11.46
+        11.46,
+        11.785
       ]
     },
     {
@@ -11492,8 +11552,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "POET Technologies",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~-43",
-      "price": "$7.39",
+      "fwd_pe": "~-45",
+      "price": "$7.60",
       "div": "0%",
       "gross_margin": "100.0%",
       "fcf_ttm": "$-42M",
@@ -11501,7 +11561,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "75M",
       "mcap": "$640M (估)",
       "sparkline_30d": [
-        15.48,
         11.86,
         12.28,
         10.77,
@@ -11530,11 +11589,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         8.81,
         8.27,
         7.67,
-        7.39
+        7.39,
+        7.5999
       ],
-      "change_30d_pct": -52.26,
-      "vol_5d_avg": 14297401,
-      "vol_30d_avg": 21622290,
+      "change_30d_pct": -35.92,
+      "vol_5d_avg": 12680873,
+      "vol_30d_avg": 20680065,
       "sparkline_90d": [
         8.59,
         10.25,
@@ -11597,7 +11657,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         8.81,
         8.27,
         7.67,
-        7.39
+        7.39,
+        7.5999
       ],
       "split_suspect": true
     },
@@ -11606,8 +11667,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Cipher Mining",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~37",
-      "price": "$17.56",
+      "fwd_pe": "~42",
+      "price": "$20.21",
       "div": "0%",
       "gross_margin": "12.4%",
       "fcf_ttm": "$-2.9B",
@@ -11615,7 +11676,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "390M",
       "mcap": "$5.9B (估)",
       "sparkline_30d": [
-        25.55,
         22.45,
         24.29,
         23.035,
@@ -11644,11 +11704,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         19.87,
         19.87,
         17.72,
-        17.56
+        17.56,
+        20.21
       ],
-      "change_30d_pct": -31.27,
-      "vol_5d_avg": 20246371,
-      "vol_30d_avg": 23751641,
+      "change_30d_pct": -9.98,
+      "vol_5d_avg": 19980251,
+      "vol_30d_avg": 23469675,
       "sparkline_90d": [
         19.29,
         18.04,
@@ -11711,16 +11772,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         19.87,
         19.87,
         17.72,
-        17.56
+        17.56,
+        20.21
       ]
     },
     {
       "ticker": "IREN",
       "name": "IREN (前 Iris Energy)",
       "type": "Stock",
-      "pe": "~44",
-      "fwd_pe": "~-36",
-      "price": "$33.62",
+      "pe": "~51",
+      "fwd_pe": "~-42",
+      "price": "$39.32",
       "div": "0%",
       "gross_margin": "68.4%",
       "fcf_ttm": "$-2.3B",
@@ -11728,7 +11790,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "260M",
       "mcap": "$15.6B (估)",
       "sparkline_30d": [
-        61.86,
         54.35,
         59.19,
         54.02,
@@ -11757,11 +11818,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         38.59,
         38.28,
         34.83,
-        33.62
+        33.62,
+        39.32
       ],
-      "change_30d_pct": -45.65,
-      "vol_5d_avg": 37767146,
-      "vol_30d_avg": 41072011,
+      "change_30d_pct": -27.65,
+      "vol_5d_avg": 39792263,
+      "vol_30d_avg": 41044093,
       "sparkline_90d": [
         48.72,
         45.17,
@@ -11824,7 +11886,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         38.59,
         38.28,
         34.83,
-        33.62
+        33.62,
+        39.32
       ]
     },
     {
@@ -11833,15 +11896,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~63",
       "fwd_pe": "~21",
-      "price": "$10.12",
-      "div": "158.0%",
+      "price": "$10.15",
+      "div": "162.0%",
       "gross_margin": "45.4%",
       "fcf_ttm": "$1.6B",
       "note": "5G 網通設備,2025/11 NVDA 投資 $1B 切入 AI-RAN;成長有限但題材改善",
       "shares": "5.40B",
       "mcap": "$33.5B (估)",
       "sparkline_30d": [
-        16.62,
         14.38,
         14.59,
         13.85,
@@ -11870,11 +11932,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         11.7,
         11.25,
         10.38,
-        10.12
+        10.12,
+        10.155
       ],
-      "change_30d_pct": -39.11,
-      "vol_5d_avg": 113259495,
-      "vol_30d_avg": 102973282,
+      "change_30d_pct": -29.38,
+      "vol_5d_avg": 99653153,
+      "vol_30d_avg": 99869208,
       "sparkline_90d": [
         10.6,
         10.4,
@@ -11937,24 +12000,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         11.7,
         11.25,
         10.38,
-        10.12
+        10.12,
+        10.155
       ]
     },
     {
       "ticker": "ASML",
       "name": "ASML",
       "type": "Stock",
-      "pe": "~56",
+      "pe": "~60",
       "fwd_pe": "~30",
-      "price": "$1,748",
-      "div": "51.0%",
+      "price": "$1,742",
+      "div": "52.0%",
       "gross_margin": "52.7%",
       "fcf_ttm": "$8.4B",
       "note": "EUV / High-NA EUV 光刻機壟斷;2nm 以下節點唯一供應商,中國禁令為主要風險",
       "shares": "388M",
       "mcap": "$372B (估)",
       "sparkline_30d": [
-        1757.47,
         1641.74,
         1749.04,
         1777.77,
@@ -11983,11 +12046,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1775.64,
         1815.27,
         1784.87,
-        1747.58
+        1747.58,
+        1741.62
       ],
-      "change_30d_pct": -0.56,
-      "vol_5d_avg": 2584989,
-      "vol_30d_avg": 2303628,
+      "change_30d_pct": 6.08,
+      "vol_5d_avg": 2480675,
+      "vol_30d_avg": 2258629,
       "sparkline_90d": [
         1473.2821,
         1455.7903,
@@ -12050,7 +12114,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1775.64,
         1815.27,
         1784.87,
-        1747.58
+        1747.58,
+        1741.62
       ]
     },
     {
@@ -12059,15 +12124,14 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~50",
       "fwd_pe": "~32",
-      "price": "$529.66",
-      "div": "38.0%",
+      "price": "$533.10",
+      "div": "40.0%",
       "gross_margin": "49.0%",
       "fcf_ttm": "$3.0B",
       "note": "綜合半導體設備龍頭 (沉積 + CMP + 檢測 + 封裝);客戶分散、現金流穩定,中國占比偏高",
       "shares": "810M",
       "mcap": "$186B (估)",
       "sparkline_30d": [
-        501.7,
         453.01,
         492.17,
         499.21,
@@ -12096,11 +12160,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         595.7,
         579.43,
         560.93,
-        529.66
+        529.66,
+        532.945
       ],
-      "change_30d_pct": 5.57,
-      "vol_5d_avg": 8134152,
-      "vol_30d_avg": 11745112,
+      "change_30d_pct": 17.65,
+      "vol_5d_avg": 7100770,
+      "vol_30d_avg": 11600638,
       "sparkline_90d": [
         391.1338,
         393.8404,
@@ -12163,7 +12228,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         595.7,
         579.43,
         560.93,
-        529.66
+        529.66,
+        532.945
       ]
     },
     {
@@ -12171,16 +12237,15 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Lam Research",
       "type": "Stock",
       "pe": "~59",
-      "fwd_pe": "~39",
-      "price": "$313.30",
-      "div": "32.0%",
+      "fwd_pe": "~38",
+      "price": "$310.89",
+      "div": "33.0%",
       "gross_margin": "50.0%",
       "fcf_ttm": "$4.4B",
       "note": "蝕刻 + 沉積龍頭,HBM 擴產直接受惠股 (3D NAND / DRAM 設備);AI 設備鏈彈性最大",
       "shares": "1.26B",
       "mcap": "$121B (估)",
       "sparkline_30d": [
-        336.1732,
         303.0665,
         324.2216,
         326.9297,
@@ -12209,11 +12274,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         346.1,
         335.43,
         320.96,
-        313.3
+        313.3,
+        310.89
       ],
-      "change_30d_pct": -6.8,
-      "vol_5d_avg": 10830031,
-      "vol_30d_avg": 13437171,
+      "change_30d_pct": 2.58,
+      "vol_5d_avg": 9443877,
+      "vol_30d_avg": 13255929,
       "sparkline_90d": [
         262.9748,
         258.1881,
@@ -12276,7 +12342,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         346.1,
         335.43,
         320.96,
-        313.3
+        313.3,
+        310.89
       ]
     },
     {
@@ -12284,16 +12351,15 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "KLA Corporation",
       "type": "Stock",
       "pe": "~60",
-      "fwd_pe": "~42",
-      "price": "$212.75",
-      "div": "42.0%",
+      "fwd_pe": "~41",
+      "price": "$211.25",
+      "div": "43.0%",
       "gross_margin": "61.4%",
       "fcf_ttm": "$2.9B",
       "note": "晶圓量測 + 缺陷檢測寡占,先進製程節點越微縮越受惠;設備毛利率最高",
       "shares": "132M",
       "mcap": "$115B (估)",
       "sparkline_30d": [
-        213.11,
         192.92,
         210.806,
         213.937,
@@ -12322,11 +12388,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         230.37,
         224.5,
         219.37,
-        212.75
+        212.75,
+        211.2
       ],
-      "change_30d_pct": -0.17,
-      "vol_5d_avg": 11523091,
-      "vol_30d_avg": 14971508,
+      "change_30d_pct": 9.48,
+      "vol_5d_avg": 9944724,
+      "vol_30d_avg": 14764930,
       "sparkline_90d": [
         180.3019,
         178.3094,
@@ -12389,16 +12456,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         230.37,
         224.5,
         219.37,
-        212.75
+        212.75,
+        211.2
       ]
     },
     {
       "ticker": "TER",
       "name": "Teradyne",
       "type": "Stock",
-      "pe": "~60",
-      "fwd_pe": "—",
-      "price": "$322.36",
+      "pe": "~63",
+      "fwd_pe": "~35",
+      "price": "$340.79",
       "div": "16.0%",
       "gross_margin": "58.7%",
       "fcf_ttm": "$298M",
@@ -12406,7 +12474,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "159M",
       "mcap": "$24.6B (估)",
       "sparkline_30d": [
-        406.86,
         357.93,
         374.69,
         369.21,
@@ -12435,11 +12502,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         353.23,
         342.12,
         322.3,
-        322.355
+        322.36,
+        340.79
       ],
-      "change_30d_pct": -20.77,
-      "vol_5d_avg": 3107876,
-      "vol_30d_avg": 4938662,
+      "change_30d_pct": -4.79,
+      "vol_5d_avg": 2688997,
+      "vol_30d_avg": 4831882,
       "sparkline_90d": [
         375.0683,
         379.7866,
@@ -12502,16 +12570,17 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         353.23,
         342.12,
         322.3,
-        322.355
+        322.36,
+        340.79
       ]
     },
     {
       "ticker": "ACLS",
       "name": "Axcelis Technologies",
       "type": "Stock",
-      "pe": "~42",
-      "fwd_pe": "~28",
-      "price": "$136.42",
+      "pe": "~41",
+      "fwd_pe": "~27",
+      "price": "$132.32",
       "div": "0%",
       "gross_margin": "43.6%",
       "fcf_ttm": "$49M",
@@ -12519,7 +12588,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "32M",
       "mcap": "$3.0B (估)",
       "sparkline_30d": [
-        161.87,
         147.16,
         154.76,
         164.57,
@@ -12548,11 +12616,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         142.24,
         145.01,
         139.34,
-        136.42
+        136.42,
+        132.44
       ],
-      "change_30d_pct": -15.72,
-      "vol_5d_avg": 456172,
-      "vol_30d_avg": 669465,
+      "change_30d_pct": -10.0,
+      "vol_5d_avg": 427622,
+      "vol_30d_avg": 650523,
       "sparkline_90d": [
         131.02,
         133.19,
@@ -12615,7 +12684,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         142.24,
         145.01,
         139.34,
-        136.42
+        136.42,
+        132.44
       ]
     },
     {
@@ -12624,7 +12694,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "~47",
       "fwd_pe": "~39",
-      "price": "$46.68",
+      "price": "$46.74",
       "div": "129.0%",
       "gross_margin": "71.6%",
       "fcf_ttm": "$253M",
@@ -12632,7 +12702,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "108M",
       "mcap": "$2.8B (估)",
       "sparkline_30d": [
-        51.9049,
         47.2099,
         47.3295,
         44.957,
@@ -12661,11 +12730,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         48.86,
         48.67,
         46.61,
-        46.68
+        46.68,
+        46.74
       ],
-      "change_30d_pct": -10.07,
-      "vol_5d_avg": 1538737,
-      "vol_30d_avg": 3071556,
+      "change_30d_pct": -1.0,
+      "vol_5d_avg": 1309798,
+      "vol_30d_avg": 2992599,
       "sparkline_90d": [
         41.6077,
         42.7939,
@@ -12728,7 +12798,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         48.86,
         48.67,
         46.61,
-        46.68
+        46.68,
+        46.74
       ]
     },
     {
@@ -12737,7 +12808,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "type": "Stock",
       "pe": "—",
       "fwd_pe": "~259",
-      "price": "$79.18",
+      "price": "$79.45",
       "div": "0%",
       "gross_margin": "63.7%",
       "fcf_ttm": "$-284M",
@@ -12745,7 +12816,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "180M",
       "mcap": "$5.4B (估)",
       "sparkline_30d": [
-        82.65,
         81.49,
         81.19,
         81.01,
@@ -12774,11 +12844,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         80.15,
         80.53,
         79.53,
-        79.18
+        79.18,
+        79.455
       ],
-      "change_30d_pct": -4.2,
-      "vol_5d_avg": 1045239,
-      "vol_30d_avg": 1422496,
+      "change_30d_pct": -2.5,
+      "vol_5d_avg": 950586,
+      "vol_30d_avg": 1397137,
       "sparkline_90d": [
         80.36,
         80.35,
@@ -12841,7 +12912,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         80.15,
         80.53,
         79.53,
-        79.18
+        79.18,
+        79.455
       ]
     },
     {
@@ -12849,8 +12921,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "AST SpaceMobile",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~-222",
-      "price": "$57.80",
+      "fwd_pe": "~-220",
+      "price": "$57.13",
       "div": "0%",
       "gross_margin": "44.8%",
       "fcf_ttm": "$-1.4B",
@@ -12858,7 +12930,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "315M",
       "mcap": "$11.3B (估)",
       "sparkline_30d": [
-        107.29,
         93.6,
         92.06,
         88.71,
@@ -12887,11 +12958,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         68.82,
         66.31,
         55.01,
-        57.8
+        57.8,
+        57.128
       ],
-      "change_30d_pct": -46.13,
-      "vol_5d_avg": 24274566,
-      "vol_30d_avg": 22177551,
+      "change_30d_pct": -38.97,
+      "vol_5d_avg": 22927272,
+      "vol_30d_avg": 21826292,
       "sparkline_90d": [
         81.0,
         80.01,
@@ -12954,7 +13026,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         68.82,
         66.31,
         55.01,
-        57.8
+        57.8,
+        57.128
       ]
     },
     {
@@ -12962,8 +13035,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Rocket Lab",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~2254",
-      "price": "$67.62",
+      "fwd_pe": "~2215",
+      "price": "$66.46",
       "div": "0%",
       "gross_margin": "36.6%",
       "fcf_ttm": "$-215M",
@@ -12971,7 +13044,6 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "shares": "525M",
       "mcap": "$23.6B (估)",
       "sparkline_30d": [
-        119.95,
         110.08,
         113.65,
         108.23,
@@ -13000,11 +13072,12 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         78.81,
         76.2,
         67.35,
-        67.62
+        67.62,
+        66.46
       ],
-      "change_30d_pct": -43.63,
-      "vol_5d_avg": 20671359,
-      "vol_30d_avg": 26695076,
+      "change_30d_pct": -39.63,
+      "vol_5d_avg": 18430879,
+      "vol_30d_avg": 26122943,
       "sparkline_90d": [
         89.46,
         86.64,
@@ -13067,24 +13140,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         78.81,
         76.2,
         67.35,
-        67.62
+        67.62,
+        66.46
       ]
     },
     {
       "ticker": "6285.TW",
       "name": "啟碁 Wistron NeWeb",
       "type": "Stock",
-      "pe": "~37",
+      "pe": "~38",
       "fwd_pe": "~17",
       "price": "$235.00",
-      "div": "167.0%",
+      "div": "183.0%",
       "gross_margin": "12.9%",
       "fcf_ttm": "$-834M",
       "note": "緯創旗下,Starlink 用戶終端 (UT) ODM 主供;LEO 純度最高台廠",
       "shares": "270M",
       "mcap": "$1.7B (估)",
       "sparkline_30d": [
-        287.1595,
         268.9662,
         281.7506,
         265.5242,
@@ -13113,13 +13186,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         247.5,
         267.0,
         257.0,
-        234.5
+        234.5,
+        235.0
       ],
-      "change_30d_pct": -18.34,
-      "vol_5d_avg": 10691976,
-      "vol_30d_avg": 12471976,
+      "change_30d_pct": -12.63,
+      "vol_5d_avg": 9485532,
+      "vol_30d_avg": 12402098,
       "sparkline_90d": [
-        260.1154,
         247.3309,
         245.364,
         237.4966,
@@ -13182,7 +13255,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         247.5,
         267.0,
         257.0,
-        234.5
+        234.5,
+        235.0
       ]
     },
     {
@@ -13203,17 +13277,16 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "2327.TW",
       "name": "國巨 Yageo",
       "type": "Stock",
-      "pe": "~55",
-      "fwd_pe": "~23",
-      "price": "$699.00",
-      "div": "77.0%",
+      "pe": "~50",
+      "fwd_pe": "~21",
+      "price": "$630.00",
+      "div": "86.0%",
       "gross_margin": "36.8%",
       "fcf_ttm": "$21.5B",
       "note": "全球被動元件第三大 (MLCC + 電阻),併購 Murata 部分產線後規模再擴張;AI server 用 MLCC 滲透中",
       "shares": "478M",
       "mcap": "$11.2B (估)",
       "sparkline_30d": [
-        763.5215,
         745.6498,
         820.1155,
         813.1653,
@@ -13242,13 +13315,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         778.0,
         798.0,
         776.0,
-        699.0
+        699.0,
+        630.0
       ],
-      "change_30d_pct": -8.45,
-      "vol_5d_avg": 53931976,
-      "vol_30d_avg": 55653469,
+      "change_30d_pct": -15.51,
+      "vol_5d_avg": 46825729,
+      "vol_30d_avg": 56037122,
       "sparkline_90d": [
-        314.2452,
         317.2238,
         320.6989,
         313.2523,
@@ -13311,24 +13384,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         778.0,
         798.0,
         776.0,
-        699.0
+        699.0,
+        630.0
       ]
     },
     {
       "ticker": "2492.TW",
       "name": "華新科 Walsin",
       "type": "Stock",
-      "pe": "~65",
-      "fwd_pe": "~18",
-      "price": "$307.50",
-      "div": "73.0%",
+      "pe": "~58",
+      "fwd_pe": "~16",
+      "price": "$277.00",
+      "div": "81.0%",
       "gross_margin": "17.6%",
       "fcf_ttm": "$3.9B",
       "note": "MLCC 第二大台廠,AI server / EV 高容值產品比重提升",
       "shares": "780M",
       "mcap": "$6.0B (估)",
       "sparkline_30d": [
-        413.8032,
         397.8877,
         437.6765,
         405.3481,
@@ -13357,13 +13430,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         390.0,
         379.0,
         341.5,
-        307.5
+        307.5,
+        277.0
       ],
-      "change_30d_pct": -25.69,
-      "vol_5d_avg": 13887638,
-      "vol_30d_avg": 9942874,
+      "change_30d_pct": -30.38,
+      "vol_5d_avg": 10863282,
+      "vol_30d_avg": 9887579,
       "sparkline_90d": [
-        146.2237,
         148.7105,
         148.2132,
         141.7475,
@@ -13426,7 +13499,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         390.0,
         379.0,
         341.5,
-        307.5
+        307.5,
+        277.0
       ]
     },
     {
@@ -13436,7 +13510,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "pe": "~60",
       "fwd_pe": "~32",
       "price": "$7,632",
-      "div": "83.0%",
+      "div": "92.0%",
       "gross_margin": "42.3%",
       "fcf_ttm": "$110.9B",
       "note": "全球 MLCC 龍頭 (市占 ~40%),高階品 AI server / EV 不可替代;iPhone 主供",
@@ -13549,7 +13623,7 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "pe": "~29",
       "fwd_pe": "~28",
       "price": "$2,968",
-      "div": "130.0%",
+      "div": "135.0%",
       "gross_margin": "31.3%",
       "fcf_ttm": "$41.1B",
       "note": "MLCC + 高頻電感 + 二次電池;iPhone 電池主供 (ATL 母公司)",
@@ -13659,10 +13733,10 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6976.T",
       "name": "Taiyo Yuden 太陽誘電",
       "type": "Stock",
-      "pe": "~102",
+      "pe": "~103",
       "fwd_pe": "~59",
       "price": "$11,035",
-      "div": "72.0%",
+      "div": "82.0%",
       "gross_margin": "23.1%",
       "fcf_ttm": "$600M",
       "note": "MLCC 第三大廠 (僅次村田/SEMCO),車用 + 高頻產品利基",
@@ -13773,8 +13847,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "name": "Samsung Electro-Mechanics (SEMCO)",
       "type": "Stock",
       "pe": "—",
-      "fwd_pe": "~128",
-      "price": "₩147,600",
+      "fwd_pe": "~122",
+      "price": "₩136,800",
       "div": "17.0%",
       "gross_margin": "8.8%",
       "fcf_ttm": "$-1490.1B",
@@ -13814,11 +13888,9 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         147600.0
       ],
       "change_30d_pct": -29.38,
-      "vol_5d_avg": 291578,
-      "vol_30d_avg": 299548,
+      "vol_5d_avg": 281798,
+      "vol_30d_avg": 301329,
       "sparkline_90d": [
-        223500.0,
-        234500.0,
         236500.0,
         256500.0,
         257500.0,
@@ -13885,17 +13957,16 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
       "ticker": "6781.TW",
       "name": "AEM-KY 富世達",
       "type": "Stock",
-      "pe": "~25",
-      "fwd_pe": "~16",
-      "price": "$949.00",
-      "div": "183.0%",
+      "pe": "~24",
+      "fwd_pe": "~15",
+      "price": "$926.00",
+      "div": "199.0%",
       "gross_margin": "35.3%",
       "fcf_ttm": "$2.9B",
       "note": "AI server 連接器/銅纜 + 摺疊機軸承,GB200/300 連接料受惠",
       "shares": "75M",
       "mcap": "$1.6B (估)",
       "sparkline_30d": [
-        1116.3918,
         1042.6215,
         1126.2279,
         1062.2936,
@@ -13924,13 +13995,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1060.0,
         1040.0,
         1045.0,
-        960.0
+        960.0,
+        926.0
       ],
-      "change_30d_pct": -14.01,
-      "vol_5d_avg": 839937,
-      "vol_30d_avg": 1191723,
+      "change_30d_pct": -11.19,
+      "vol_5d_avg": 936090,
+      "vol_30d_avg": 1164137,
       "sparkline_90d": [
-        1022.9493,
         993.4412,
         1003.2772,
         1101.6378,
@@ -13993,24 +14064,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1060.0,
         1040.0,
         1045.0,
-        960.0
+        960.0,
+        926.0
       ]
     },
     {
       "ticker": "3037.TW",
       "name": "欣興 Unimicron",
       "type": "Stock",
-      "pe": "~114",
-      "fwd_pe": "~24",
-      "price": "$794.00",
-      "div": "22.0%",
+      "pe": "~107",
+      "fwd_pe": "~23",
+      "price": "$750.00",
+      "div": "25.0%",
       "gross_margin": "15.1%",
       "fcf_ttm": "$-337M",
       "note": "ABF 載板全球前三 (Ibiden / SEMCO / 欣興),NVDA/AMD GPU 載板主供",
       "shares": "1.52B",
       "mcap": "$9.0B (估)",
       "sparkline_30d": [
-        931.0934,
         909.1384,
         967.0198,
         882.1935,
@@ -14039,13 +14110,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         874.0,
         936.0,
         882.0,
-        794.0
+        794.0,
+        750.0
       ],
-      "change_30d_pct": -14.72,
-      "vol_5d_avg": 29782958,
-      "vol_30d_avg": 27111939,
+      "change_30d_pct": -17.5,
+      "vol_5d_avg": 29279254,
+      "vol_30d_avg": 27694691,
       "sparkline_90d": [
-        641.686,
         676.6145,
         708.5491,
         714.5369,
@@ -14108,24 +14179,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         874.0,
         936.0,
         882.0,
-        794.0
+        794.0,
+        750.0
       ]
     },
     {
       "ticker": "8046.TW",
       "name": "南電 Nan Ya PCB",
       "type": "Stock",
-      "pe": "~376",
-      "fwd_pe": "~30",
-      "price": "$1,150",
-      "div": "16.0%",
+      "pe": "~234",
+      "fwd_pe": "~29",
+      "price": "$1,105",
+      "div": "17.0%",
       "gross_margin": "11.6%",
       "fcf_ttm": "$4.0B",
       "note": "ABF 載板高階產品 (Intel/NVDA),2024 衝擊後 2025-26 訂單回溫",
       "shares": "645M",
       "mcap": "$4.7B (估)",
       "sparkline_30d": [
-        843.2303,
         829.2596,
         912.0858,
         845.2261,
@@ -14154,13 +14225,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1290.0,
         1415.0,
         1275.0,
-        1150.0
+        1150.0,
+        1105.0
       ],
-      "change_30d_pct": 36.38,
-      "vol_5d_avg": 20285186,
-      "vol_30d_avg": 18144517,
+      "change_30d_pct": 33.25,
+      "vol_5d_avg": 18895753,
+      "vol_30d_avg": 18464512,
       "sparkline_90d": [
-        722.4838,
         794.3329,
         787.3476,
         801.3183,
@@ -14223,24 +14294,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         1290.0,
         1415.0,
         1275.0,
-        1150.0
+        1150.0,
+        1105.0
       ]
     },
     {
       "ticker": "3189.TW",
       "name": "景碩 Kinsus",
       "type": "Stock",
-      "pe": "~204",
-      "fwd_pe": "~28",
-      "price": "$693.00",
-      "div": "20.0%",
+      "pe": "~200",
+      "fwd_pe": "~27",
+      "price": "$679.00",
+      "div": "22.0%",
       "gross_margin": "20.8%",
       "fcf_ttm": "$6.0B",
       "note": "ABF 第三大台廠,iPhone SiP + 高階 IC 載板",
       "shares": "445M",
       "mcap": "$2.2B (估)",
       "sparkline_30d": [
-        710.7832,
         696.8071,
         712.7798,
         658.8721,
@@ -14269,13 +14340,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         805.0,
         845.0,
         770.0,
-        693.0
+        693.0,
+        679.0
       ],
-      "change_30d_pct": -2.5,
-      "vol_5d_avg": 3288520,
-      "vol_30d_avg": 17981053,
+      "change_30d_pct": -2.56,
+      "vol_5d_avg": 7371326,
+      "vol_30d_avg": 18590342,
       "sparkline_90d": [
-        390.8309,
         429.7643,
         472.6908,
         490.66,
@@ -14338,24 +14409,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         805.0,
         845.0,
         770.0,
-        693.0
+        693.0,
+        679.0
       ]
     },
     {
       "ticker": "5347.TWO",
       "name": "世界先進 Vanguard Int'l",
       "type": "Stock",
-      "pe": "~40",
-      "fwd_pe": "~27",
-      "price": "$169.00",
-      "div": "239.0%",
+      "pe": "~36",
+      "fwd_pe": "~24",
+      "price": "$152.50",
+      "div": "265.0%",
       "gross_margin": "27.9%",
       "fcf_ttm": "$-64.6B",
       "note": "8 吋成熟製程,PMIC / DDIC 為主;與 NXP 合資新加坡 12 吋廠 (VSMC)",
       "shares": "1.63B",
       "mcap": "$7.2B (估)",
       "sparkline_30d": [
-        157.7661,
         152.8817,
         157.2776,
         148.9742,
@@ -14384,13 +14455,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         174.0,
         186.5,
         187.5,
-        169.0
+        169.0,
+        152.5
       ],
-      "change_30d_pct": 7.12,
-      "vol_5d_avg": 31365761,
-      "vol_30d_avg": 32169422,
+      "change_30d_pct": -0.25,
+      "vol_5d_avg": 32921450,
+      "vol_30d_avg": 32435971,
       "sparkline_90d": [
-        128.9481,
         135.7863,
         135.2978,
         141.6476,
@@ -14453,24 +14524,24 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         174.0,
         186.5,
         187.5,
-        169.0
+        169.0,
+        152.5
       ]
     },
     {
       "ticker": "3661.TW",
       "name": "世芯-KY Alchip",
       "type": "Stock",
-      "pe": "~52",
-      "fwd_pe": "~20",
-      "price": "$3,495",
-      "div": "97.0%",
+      "pe": "~50",
+      "fwd_pe": "~19",
+      "price": "$3,365",
+      "div": "106.0%",
       "gross_margin": "31.8%",
       "fcf_ttm": "$-800M",
       "note": "AI ASIC 設計服務,AWS Trainium 2/3 主要設計夥伴,純度極高",
       "shares": "75M",
       "mcap": "$8.5B (估)",
       "sparkline_30d": [
-        4285.0,
         4170.0,
         4250.0,
         4040.0,
@@ -14499,13 +14570,13 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         3725.0,
         3735.0,
         3770.0,
-        3480.0
+        3480.0,
+        3365.0
       ],
-      "change_30d_pct": -18.79,
-      "vol_5d_avg": 2055988,
-      "vol_30d_avg": 1750422,
+      "change_30d_pct": -19.3,
+      "vol_5d_avg": 2184588,
+      "vol_30d_avg": 1777351,
       "sparkline_90d": [
-        3515.0,
         3625.0,
         3985.0,
         4065.0,
@@ -14568,7 +14639,8 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
         3725.0,
         3735.0,
         3770.0,
-        3480.0
+        3480.0,
+        3365.0
       ]
     },
     {
@@ -15646,109 +15718,109 @@ const EMBEDDED_DATA = /*__EMBEDDED_DATA_START__*/{
   ],
   "polymarket": [
     {
-      "title": "Exact Score: Spain 2 - 3 Argentina?",
-      "prob": "Yes 3%, No 97%",
-      "vol": "$1.7M",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-exact-score-2-3",
-      "tag": "AI"
-    },
-    {
-      "title": "Will Spain win the 2026 FIFA World Cup?",
-      "prob": "Yes 59%, No 41%",
-      "vol": "$1.4M",
-      "url": "https://polymarket.com/event/will-spain-win-the-2026-fifa-world-cup-963",
-      "tag": "AI"
-    },
-    {
-      "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
-      "prob": "Yes 0%, No 100%",
-      "vol": "$880K",
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
-      "tag": "Fed"
-    },
-    {
-      "title": "Spain vs. Argentina: Team to Advance",
-      "prob": "Spain 60%, Argentina 40%",
-      "vol": "$839K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-team-to-advance",
+      "title": "Strait of Hormuz traffic returns to normal by July 31?",
+      "prob": "Yes 2%, No 98%",
+      "vol": "$913K",
+      "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-july-31",
       "tag": "AI"
     },
     {
       "title": "Will there be no change in Fed interest rates after the July 2026 meeting?",
       "prob": "Yes 94%, No 6%",
-      "vol": "$679K",
+      "vol": "$867K",
       "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
-      "tag": "Fed"
-    },
-    {
-      "title": "Exact Score: Spain 3 - 0 Argentina?",
-      "prob": "Yes 3%, No 97%",
-      "vol": "$595K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-exact-score-3-0",
-      "tag": "AI"
-    },
-    {
-      "title": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
-      "prob": "Yes 5%, No 95%",
-      "vol": "$529K",
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
       "tag": "Fed"
     },
     {
       "title": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$528K",
+      "vol": "$852K",
       "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
       "tag": "Fed"
     },
     {
-      "title": "Spain vs. Argentina: O/U 2.5",
-      "prob": "Over 42%, Under 57%",
-      "vol": "$477K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-total-2pt5",
+      "title": "Will Tim Walz win the 2028 US Presidential Election?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$651K",
+      "url": "https://polymarket.com/event/will-tim-walz-win-the-2028-us-presidential-election",
+      "tag": "Politics"
+    },
+    {
+      "title": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+      "prob": "Yes 6%, No 94%",
+      "vol": "$618K",
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+      "tag": "Fed"
+    },
+    {
+      "title": "Generali Open: Facundo Acosta vs Federico Cina",
+      "prob": "Facundo Acosta 100%, Federico Cina 0%",
+      "vol": "$615K",
+      "url": "https://polymarket.com/event/atp-acosta-cina-2026-07-20",
+      "tag": "Fed"
+    },
+    {
+      "title": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$387K",
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
+      "tag": "Fed"
+    },
+    {
+      "title": "Will the price of Bitcoin be above $68,000 on July 20?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$290K",
+      "url": "https://polymarket.com/event/bitcoin-above-68k-on-july-20-2026",
+      "tag": "Crypto"
+    },
+    {
+      "title": "Strait of Hormuz traffic returns to normal by August 31?",
+      "prob": "Yes 14%, No 86%",
+      "vol": "$290K",
+      "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
       "tag": "AI"
     },
     {
-      "title": "Exact Score: Spain 2 - 1 Argentina?",
-      "prob": "Yes 10%, No 90%",
-      "vol": "$468K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-exact-score-2-1",
+      "title": "Will the price of Bitcoin be above $62,000 on July 20?",
+      "prob": "Yes 100%, No 0%",
+      "vol": "$273K",
+      "url": "https://polymarket.com/event/bitcoin-above-62k-on-july-20-2026",
+      "tag": "Crypto"
+    },
+    {
+      "title": "Will the price of Bitcoin be above $66,000 on July 20?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$213K",
+      "url": "https://polymarket.com/event/bitcoin-above-66k-on-july-20-2026",
+      "tag": "Crypto"
+    },
+    {
+      "title": "Will 8 Fed rate cuts happen in 2026?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$207K",
+      "url": "https://polymarket.com/event/will-8-fed-rate-cuts-happen-in-2026",
+      "tag": "Fed"
+    },
+    {
+      "title": "Israel closes its airspace by July 31?",
+      "prob": "Yes 16%, No 84%",
+      "vol": "$195K",
+      "url": "https://polymarket.com/event/israel-closes-its-airspace-by-july-31-287",
       "tag": "AI"
     },
     {
-      "title": "Exact Score: Spain 3 - 3 Argentina?",
-      "prob": "Yes 1%, No 99%",
-      "vol": "$431K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-exact-score-3-3",
-      "tag": "AI"
+      "title": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+      "prob": "Yes 0%, No 100%",
+      "vol": "$177K",
+      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-july-2026-meeting",
+      "tag": "Fed"
     },
     {
-      "title": "Exact Score: Spain 3 - 2 Argentina?",
-      "prob": "Yes 2%, No 98%",
-      "vol": "$425K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-exact-score-3-2",
-      "tag": "AI"
-    },
-    {
-      "title": "Will Ukraine recapture Crimean territory by December 31, 2026?",
-      "prob": "Yes 8%, No 92%",
-      "vol": "$362K",
-      "url": "https://polymarket.com/event/will-ukraine-recapture-crimean-territory-by-december-31-2026",
-      "tag": "AI"
-    },
-    {
-      "title": "Strait of Hormuz traffic returns to normal by July 31?",
-      "prob": "Yes 1%, No 99%",
-      "vol": "$352K",
-      "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-july-31",
-      "tag": "AI"
-    },
-    {
-      "title": "Spread: Spain (-1.5)",
-      "prob": "Spain 20%, Argentina 80%",
-      "vol": "$303K",
-      "url": "https://polymarket.com/event/fifwc-esp-arg-2026-07-19-spread-home-1pt5",
-      "tag": "AI"
+      "title": "Will the price of Bitcoin be above $60,000 on July 20?",
+      "prob": "Yes 100%, No 0%",
+      "vol": "$175K",
+      "url": "https://polymarket.com/event/bitcoin-above-60k-on-july-20-2026",
+      "tag": "Crypto"
     }
   ],
   "wisdom_classics": [
