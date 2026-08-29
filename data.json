@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_at": "2026-08-28",
+    "generated_at": "2026-08-29",
     "note": "從 index.html EMBEDDED_DATA 同步。執行 update_data.py 重新抓取最新數據。",
     "generated_iso": "2026-06-13T06:04:28.088Z",
     "version": "0.1.14",
@@ -7718,7 +7718,7 @@
       "pe": "~58",
       "fwd_pe": "~29",
       "price": "$1,830",
-      "div": "66.0%",
+      "div": "63.0%",
       "gross_margin": "35.5%",
       "fcf_ttm": "$50.8B",
       "note": "權重 #5,電源管理 + AI 散熱 + 液冷",
@@ -8066,7 +8066,7 @@
       "pe": "~17",
       "fwd_pe": "~14",
       "price": "$144.00",
-      "div": "300.0%",
+      "div": "295.0%",
       "gross_margin": "49.5%",
       "fcf_ttm": "$1164.4B",
       "note": "權重 #8,壽險為主",
@@ -8182,7 +8182,7 @@
       "pe": "~48",
       "fwd_pe": "~22",
       "price": "$621.00",
-      "div": "109.0%",
+      "div": "106.0%",
       "gross_margin": "19.5%",
       "fcf_ttm": "$-104.7B",
       "note": "權重 #9,封測龍頭,CoWoS 受惠股",
@@ -8298,7 +8298,7 @@
       "pe": "~20",
       "fwd_pe": "~18",
       "price": "$130.00",
-      "div": "220.0%",
+      "div": "201.0%",
       "gross_margin": "30.6%",
       "fcf_ttm": "$36.9B",
       "note": "權重 #10,成熟製程 (28nm/14nm)",
@@ -9913,7 +9913,7 @@
       "pe": "~21",
       "fwd_pe": "~15",
       "price": "$64.90",
-      "div": "305.0%",
+      "div": "308.0%",
       "gross_margin": "4.8%",
       "fcf_ttm": "$-26.2B",
       "note": "Server ODM 第三大,NVDA HGX/MGX 出貨;NB ODM (HP/Lenovo) 為傳統業務",
@@ -15148,15 +15148,15 @@
   "polymarket": [
     {
       "title": "Will there be no change in Fed interest rates after the September 2026 meeting?",
-      "prob": "Yes 50%, No 50%",
-      "vol": "$2.2M",
+      "prob": "Yes 54%, No 46%",
+      "vol": "$2.4M",
       "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
       "tag": "Fed"
     },
     {
       "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
-      "prob": "Yes 50%, No 50%",
-      "vol": "$2.1M",
+      "prob": "Yes 46%, No 55%",
+      "vol": "$2.2M",
       "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
       "tag": "Fed"
     },
@@ -15168,87 +15168,87 @@
       "tag": "Fed"
     },
     {
-      "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
-      "prob": "Yes 0%, No 100%",
-      "vol": "$1.2M",
-      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664",
-      "tag": "Fed"
-    },
-    {
       "title": "Will Pete Hegseth win the 2028 US Presidential Election?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$917K",
+      "vol": "$1.4M",
       "url": "https://polymarket.com/event/will-pete-hegseth-win-the-2028-us-presidential-election",
       "tag": "Crypto"
     },
     {
+      "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+      "prob": "Yes 1%, No 99%",
+      "vol": "$1.3M",
+      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664",
+      "tag": "Fed"
+    },
+    {
       "title": "Strait of Hormuz traffic returns to normal by August 31?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$552K",
+      "vol": "$531K",
       "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
       "tag": "AI"
     },
     {
       "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$384K",
+      "vol": "$389K",
       "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-september-2026-meeting-863",
       "tag": "Fed"
     },
     {
-      "title": "Pittsburgh Pirates vs. St. Louis Cardinals: O/U 8.5",
-      "prob": "Over 38%, Under 62%",
-      "vol": "$378K",
-      "url": "https://polymarket.com/event/mlb-pit-stl-2026-08-28-total-8pt5",
-      "tag": "Fed"
-    },
-    {
       "title": "Pittsburgh Pirates vs. St. Louis Cardinals: O/U 7.5",
-      "prob": "Over 50%, Under 50%",
-      "vol": "$332K",
+      "prob": "Over 0%, Under 100%",
+      "vol": "$374K",
       "url": "https://polymarket.com/event/mlb-pit-stl-2026-08-28-total-7pt5",
       "tag": "Fed"
     },
     {
+      "title": "Pittsburgh Pirates vs. St. Louis Cardinals: O/U 8.5",
+      "prob": "Over 0%, Under 100%",
+      "vol": "$333K",
+      "url": "https://polymarket.com/event/mlb-pit-stl-2026-08-28-total-8pt5",
+      "tag": "Fed"
+    },
+    {
+      "title": "Saints vs. Cowboys",
+      "prob": "Saints 100%, Cowboys 0%",
+      "vol": "$327K",
+      "url": "https://polymarket.com/event/nfl-no-dal-2026-08-29",
+      "tag": "AI"
+    },
+    {
       "title": "Will Augusto Cury win the 2026 Brazilian presidential election?",
-      "prob": "Yes 3%, No 97%",
-      "vol": "$314K",
+      "prob": "Yes 4%, No 96%",
+      "vol": "$277K",
       "url": "https://polymarket.com/event/will-augusto-cury-win-the-2026-brazilian-presidential-election",
       "tag": "Politics"
     },
     {
       "title": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
       "prob": "Yes 74%, No 26%",
-      "vol": "$256K",
+      "vol": "$252K",
       "url": "https://polymarket.com/event/will-united-russia-er-gain-the-most-seats-in-the-next-russian-parliamentary-election",
-      "tag": "AI"
-    },
-    {
-      "title": "Will Bitcoin reach $82,500 in August?",
-      "prob": "Yes 6%, No 94%",
-      "vol": "$184K",
-      "url": "https://polymarket.com/event/will-bitcoin-reach-82pt5k-in-august-2026",
-      "tag": "Crypto"
-    },
-    {
-      "title": "US ceasefire against Iran continues through August 31?",
-      "prob": "Yes 97%, No 3%",
-      "vol": "$176K",
-      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-august-31",
       "tag": "AI"
     },
     {
       "title": "UFC Fight Night: Song Yadong vs. Umar Nurmagomedov (Bantamweight, Main Card)",
       "prob": "Song Yadong 16%, Umar Nurmagomedov 84%",
-      "vol": "$166K",
+      "vol": "$207K",
       "url": "https://polymarket.com/event/ufc-son-uma-2026-08-29",
       "tag": "AI"
     },
     {
-      "title": "Will Bitcoin reach $85,000 in August?",
-      "prob": "Yes 2%, No 98%",
-      "vol": "$164K",
-      "url": "https://polymarket.com/event/will-bitcoin-reach-85k-in-august-2026",
+      "title": "US ceasefire against Iran continues through August 31?",
+      "prob": "Yes 97%, No 3%",
+      "vol": "$159K",
+      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-august-31",
+      "tag": "AI"
+    },
+    {
+      "title": "Will Bitcoin dip to $75,000 in August?",
+      "prob": "Yes 21%, No 79%",
+      "vol": "$153K",
+      "url": "https://polymarket.com/event/will-bitcoin-dip-to-75k-in-august-2026",
       "tag": "Crypto"
     }
   ],
