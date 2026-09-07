@@ -7025,14 +7025,13 @@
       "pe": "—",
       "fwd_pe": "~4",
       "price": "₩270,000",
-      "div": "59.0%",
+      "div": "55.0%",
       "gross_margin": "57.5%",
       "fcf_ttm": "$69550.8B",
       "note": "HBM 追趕,Foundry 虧損",
       "shares": "5.76B",
       "mcap": "$1.38T",
       "sparkline_30d": [
-        249500.0,
         254000.0,
         220000.0,
         208500.0,
@@ -7061,11 +7060,12 @@
         261000.0,
         250500.0,
         250000.0,
-        255500.0
+        255500.0,
+        270000.0
       ],
-      "change_30d_pct": 2.4,
-      "vol_5d_avg": 15311061,
-      "vol_30d_avg": 26515153,
+      "change_30d_pct": 6.3,
+      "vol_5d_avg": 15319671,
+      "vol_30d_avg": 26253100,
       "sparkline_90d": [
         295174.4688,
         321645.2812,
@@ -7129,7 +7129,8 @@
         261000.0,
         250500.0,
         250000.0,
-        255500.0
+        255500.0,
+        270000.0
       ]
     },
     {
@@ -7139,14 +7140,13 @@
       "pe": "—",
       "fwd_pe": "~4",
       "price": "₩1,783,000",
-      "div": "9.0%",
+      "div": "8.0%",
       "gross_margin": "76.3%",
       "fcf_ttm": "$55768.1B",
       "note": "HBM3E 領導者,NVDA 主供",
       "shares": "710M",
       "mcap": "$1.03T",
       "sparkline_30d": [
-        1758618.625,
         1815606.375,
         1549664.0,
         1400696.25,
@@ -7175,11 +7175,12 @@
         1693000.0,
         1613000.0,
         1596000.0,
-        1647000.0
+        1647000.0,
+        1783000.0
       ],
-      "change_30d_pct": -6.35,
-      "vol_5d_avg": 2947502,
-      "vol_30d_avg": 4909372,
+      "change_30d_pct": -1.8,
+      "vol_5d_avg": 2847389,
+      "vol_30d_avg": 4860855,
       "sparkline_90d": [
         1910585.75,
         2214519.75,
@@ -7243,7 +7244,8 @@
         1693000.0,
         1613000.0,
         1596000.0,
-        1647000.0
+        1647000.0,
+        1783000.0
       ]
     },
     {
@@ -7253,14 +7255,13 @@
       "pe": "~29",
       "fwd_pe": "~17",
       "price": "$2,460",
-      "div": "116.0%",
+      "div": "114.0%",
       "gross_margin": "64.2%",
       "fcf_ttm": "$730.8B",
       "note": "權重 #1 (~57%),先進製程獨佔。0050 與大盤主引擎",
       "shares": "25.93B",
       "mcap": "$1.89T",
       "sparkline_30d": [
-        2350.0,
         2280.0,
         2200.0,
         2205.0,
@@ -7289,11 +7290,12 @@
         2440.0,
         2385.0,
         2390.0,
-        2410.0
+        2410.0,
+        2460.0
       ],
-      "change_30d_pct": 2.55,
-      "vol_5d_avg": 17894010,
-      "vol_30d_avg": 23251144,
+      "change_30d_pct": 7.89,
+      "vol_5d_avg": 17060762,
+      "vol_30d_avg": 23112270,
       "sparkline_90d": [
         2288.8936,
         2298.8669,
@@ -7358,7 +7360,8 @@
         2440.0,
         2385.0,
         2390.0,
-        2410.0
+        2410.0,
+        2460.0
       ]
     },
     {
@@ -7375,7 +7378,6 @@
       "shares": "14.00B",
       "mcap": "$123.0B",
       "sparkline_30d": [
-        253.0,
         238.0,
         237.0,
         229.5,
@@ -7404,11 +7406,12 @@
         256.0,
         251.0,
         247.5,
+        256.0,
         256.0
       ],
-      "change_30d_pct": 1.19,
-      "vol_5d_avg": 33434338,
-      "vol_30d_avg": 45435318,
+      "change_30d_pct": 7.56,
+      "vol_5d_avg": 33273419,
+      "vol_30d_avg": 45408498,
       "sparkline_90d": [
         261.7065,
         269.4751,
@@ -7473,6 +7476,7 @@
         256.0,
         251.0,
         247.5,
+        256.0,
         256.0
       ]
     },
@@ -7490,7 +7494,6 @@
       "shares": "1.60B",
       "mcap": "$226.0B",
       "sparkline_30d": [
-        3680.0,
         3315.0,
         3150.0,
         3235.0,
@@ -7519,11 +7522,12 @@
         4315.0,
         4275.0,
         4340.0,
-        4415.0
+        4415.0,
+        4760.0
       ],
-      "change_30d_pct": 19.97,
-      "vol_5d_avg": 11585109,
-      "vol_30d_avg": 8560830,
+      "change_30d_pct": 43.59,
+      "vol_5d_avg": 11085631,
+      "vol_30d_avg": 8477584,
       "sparkline_90d": [
         4045.8267,
         4448.4209,
@@ -7588,7 +7592,8 @@
         4315.0,
         4275.0,
         4340.0,
-        4415.0
+        4415.0,
+        4760.0
       ]
     },
     {
@@ -7598,14 +7603,13 @@
       "pe": "~15",
       "fwd_pe": "~11",
       "price": "$347.50",
-      "div": "452.0%",
+      "div": "449.0%",
       "gross_margin": "5.5%",
       "fcf_ttm": "$-59.0B",
       "note": "權重 #4,AI 伺服器 ODM 龍頭,Meta/Google 客戶",
       "shares": "3.85B",
       "mcap": "$45.7B",
       "sparkline_30d": [
-        322.0,
         313.5,
         309.5,
         279.0,
@@ -7634,11 +7638,12 @@
         342.0,
         337.0,
         335.0,
-        345.0
+        345.0,
+        347.5
       ],
-      "change_30d_pct": 7.14,
-      "vol_5d_avg": 13619350,
-      "vol_30d_avg": 19449296,
+      "change_30d_pct": 10.85,
+      "vol_5d_avg": 13571133,
+      "vol_30d_avg": 19441260,
       "sparkline_90d": [
         361.0843,
         359.6457,
@@ -7703,7 +7708,8 @@
         342.0,
         337.0,
         335.0,
-        345.0
+        345.0,
+        347.5
       ]
     },
     {
@@ -7720,7 +7726,6 @@
       "shares": "2.60B",
       "mcap": "$198.5B",
       "sparkline_30d": [
-        1755.0,
         1580.0,
         1495.0,
         1530.0,
@@ -7749,11 +7754,12 @@
         1865.0,
         1730.0,
         1760.0,
-        1825.0
+        1825.0,
+        1850.0
       ],
-      "change_30d_pct": 3.99,
-      "vol_5d_avg": 9177800,
-      "vol_30d_avg": 12030146,
+      "change_30d_pct": 17.09,
+      "vol_5d_avg": 9061988,
+      "vol_30d_avg": 12010844,
       "sparkline_90d": [
         2243.27,
         2402.4375,
@@ -7818,7 +7824,8 @@
         1865.0,
         1730.0,
         1760.0,
-        1825.0
+        1825.0,
+        1850.0
       ]
     },
     {
@@ -7828,14 +7835,13 @@
       "pe": "~17",
       "fwd_pe": "~15",
       "price": "$67.40",
-      "div": "366.0%",
+      "div": "371.0%",
       "gross_margin": "67.8%",
       "fcf_ttm": "$1060.2B",
       "note": "權重 #6,金融類 No.1",
       "shares": "19.68B",
       "mcap": "$43.1B",
       "sparkline_30d": [
-        63.0,
         62.4,
         62.0,
         63.1,
@@ -7864,11 +7870,12 @@
         66.5,
         66.6,
         67.5,
-        68.4
+        68.4,
+        67.4
       ],
-      "change_30d_pct": 8.57,
-      "vol_5d_avg": 33601991,
-      "vol_30d_avg": 33245377,
+      "change_30d_pct": 8.01,
+      "vol_5d_avg": 33540354,
+      "vol_30d_avg": 33235104,
       "sparkline_90d": [
         63.0607,
         66.7248,
@@ -7933,7 +7940,8 @@
         66.5,
         66.6,
         67.5,
-        68.4
+        68.4,
+        67.4
       ]
     },
     {
@@ -7950,7 +7958,6 @@
       "shares": "7.76B",
       "mcap": "$34.9B",
       "sparkline_30d": [
-        140.5,
         141.0,
         140.5,
         140.5,
@@ -7979,11 +7986,12 @@
         136.0,
         137.5,
         138.0,
-        137.5
+        137.5,
+        138.0
       ],
-      "change_30d_pct": -2.14,
-      "vol_5d_avg": 9398555,
-      "vol_30d_avg": 11095221,
+      "change_30d_pct": -2.13,
+      "vol_5d_avg": 9387650,
+      "vol_30d_avg": 11093404,
       "sparkline_90d": [
         133.3373,
         136.7068,
@@ -8048,7 +8056,8 @@
         136.0,
         137.5,
         138.0,
-        137.5
+        137.5,
+        138.0
       ]
     },
     {
@@ -8065,7 +8074,6 @@
       "shares": "13.67B",
       "mcap": "$54.1B",
       "sparkline_30d": [
-        130.0,
         125.5,
         123.0,
         124.0,
@@ -8094,11 +8102,12 @@
         145.0,
         143.5,
         147.0,
-        150.5
+        150.5,
+        149.5
       ],
-      "change_30d_pct": 15.77,
-      "vol_5d_avg": 18154682,
-      "vol_30d_avg": 20649587,
+      "change_30d_pct": 19.12,
+      "vol_5d_avg": 18121410,
+      "vol_30d_avg": 20644041,
       "sparkline_90d": [
         112.193,
         120.8977,
@@ -8163,7 +8172,8 @@
         145.0,
         143.5,
         147.0,
-        150.5
+        150.5,
+        149.5
       ]
     },
     {
@@ -8180,7 +8190,6 @@
       "shares": "4.39B",
       "mcap": "$79.0B",
       "sparkline_30d": [
-        608.0,
         554.0,
         499.0,
         505.0,
@@ -8209,11 +8218,12 @@
         610.0,
         589.0,
         589.0,
-        588.0
+        588.0,
+        621.0
       ],
-      "change_30d_pct": -3.29,
-      "vol_5d_avg": 18820036,
-      "vol_30d_avg": 19674691,
+      "change_30d_pct": 12.09,
+      "vol_5d_avg": 18433862,
+      "vol_30d_avg": 19610329,
       "sparkline_90d": [
         535.1089,
         563.8463,
@@ -8278,7 +8288,8 @@
         610.0,
         589.0,
         589.0,
-        588.0
+        588.0,
+        621.0
       ]
     },
     {
@@ -8295,7 +8306,6 @@
       "shares": "12.55B",
       "mcap": "$50.6B",
       "sparkline_30d": [
-        126.0,
         113.5,
         102.5,
         110.0,
@@ -8324,11 +8334,12 @@
         132.5,
         126.0,
         125.0,
-        130.0
+        130.0,
+        143.0
       ],
-      "change_30d_pct": 3.17,
-      "vol_5d_avg": 193749506,
-      "vol_30d_avg": 171164034,
+      "change_30d_pct": 25.99,
+      "vol_5d_avg": 192662001,
+      "vol_30d_avg": 170982783,
       "sparkline_90d": [
         118.964,
         125.3546,
@@ -8393,7 +8404,8 @@
         132.5,
         126.0,
         125.0,
-        130.0
+        130.0,
+        143.0
       ]
     },
     {
@@ -9553,14 +9565,13 @@
       "pe": "~16",
       "fwd_pe": "~8",
       "price": "$197.00",
-      "div": "278.0%",
+      "div": "279.0%",
       "gross_margin": "5.8%",
       "fcf_ttm": "$-276.9B",
       "note": "AI server 純度高,GB200/Blackwell ODM 主力。子公司緯穎 (6669) 為 Hyperscale 王",
       "shares": "3.18B",
       "mcap": "$16.7B",
       "sparkline_30d": [
-        177.0,
         170.0,
         169.5,
         160.0,
@@ -9589,11 +9600,12 @@
         182.0,
         185.5,
         188.5,
-        198.0
+        198.0,
+        197.0
       ],
-      "change_30d_pct": 11.86,
-      "vol_5d_avg": 70825696,
-      "vol_30d_avg": 72034517,
+      "change_30d_pct": 15.88,
+      "vol_5d_avg": 70712962,
+      "vol_30d_avg": 72015728,
       "sparkline_90d": [
         157.7164,
         159.6456,
@@ -9658,14 +9670,15 @@
         182.0,
         185.5,
         188.5,
-        198.0
+        198.0,
+        197.0
       ]
     },
     {
       "ticker": "6669.TW",
       "name": "緯穎 Wiwynn",
       "type": "Stock",
-      "pe": "~25",
+      "pe": "~26",
       "fwd_pe": "~14",
       "price": "$2,490",
       "div": "189.0%",
@@ -9675,7 +9688,6 @@
       "shares": "186M",
       "mcap": "$31.2B",
       "sparkline_30d": [
-        1926.0461,
         1781.886,
         1721.5399,
         1642.7548,
@@ -9704,11 +9716,12 @@
         2614.9973,
         2610.0,
         2475.0,
-        2565.0
+        2565.0,
+        2490.0
       ],
-      "change_30d_pct": 33.17,
-      "vol_5d_avg": 5979973,
-      "vol_30d_avg": 4994832,
+      "change_30d_pct": 39.74,
+      "vol_5d_avg": 5801002,
+      "vol_30d_avg": 4965003,
       "split_suspect": true,
       "sparkline_90d": [
         1718.6995,
@@ -9774,7 +9787,8 @@
         2614.9973,
         2610.0,
         2475.0,
-        2565.0
+        2565.0,
+        2490.0
       ]
     },
     {
@@ -9791,7 +9805,6 @@
       "shares": "670M",
       "mcap": "$7.6B",
       "sparkline_30d": [
-        337.0364,
         315.3388,
         310.0349,
         307.1419,
@@ -9820,11 +9833,12 @@
         359.0,
         361.5,
         350.5,
-        361.0
+        361.0,
+        364.5
       ],
-      "change_30d_pct": 7.11,
-      "vol_5d_avg": 6190941,
-      "vol_30d_avg": 7984855,
+      "change_30d_pct": 15.59,
+      "vol_5d_avg": 6167013,
+      "vol_30d_avg": 7980867,
       "sparkline_90d": [
         332.6969,
         346.1976,
@@ -9889,7 +9903,8 @@
         359.0,
         361.5,
         350.5,
-        361.0
+        361.0,
+        364.5
       ]
     },
     {
@@ -9906,7 +9921,6 @@
       "shares": "3.59B",
       "mcap": "$8.0B",
       "sparkline_30d": [
-        63.8,
         58.8,
         60.3,
         57.5,
@@ -9935,11 +9949,12 @@
         66.6,
         66.6,
         65.0,
-        67.5
+        67.5,
+        66.1
       ],
-      "change_30d_pct": 5.8,
-      "vol_5d_avg": 20599443,
-      "vol_30d_avg": 27031481,
+      "change_30d_pct": 12.41,
+      "vol_5d_avg": 20560239,
+      "vol_30d_avg": 27024947,
       "sparkline_90d": [
         67.0273,
         68.3834,
@@ -10004,7 +10019,8 @@
         66.6,
         66.6,
         65.0,
-        67.5
+        67.5,
+        66.1
       ]
     },
     {
@@ -10021,7 +10037,6 @@
       "shares": "2.68B",
       "mcap": "$8.1B",
       "sparkline_30d": [
-        87.4,
         83.2,
         82.0,
         80.5,
@@ -10050,11 +10065,12 @@
         91.0,
         91.7,
         90.4,
-        95.4
+        95.4,
+        93.6
       ],
-      "change_30d_pct": 9.15,
-      "vol_5d_avg": 10927185,
-      "vol_30d_avg": 12800927,
+      "change_30d_pct": 12.5,
+      "vol_5d_avg": 10908822,
+      "vol_30d_avg": 12797866,
       "sparkline_90d": [
         88.1336,
         91.0044,
@@ -10119,14 +10135,15 @@
         91.0,
         91.7,
         90.4,
-        95.4
+        95.4,
+        93.6
       ]
     },
     {
       "ticker": "3017.TW",
       "name": "奇鋐 Auras Technology",
       "type": "Stock",
-      "pe": "~46",
+      "pe": "~48",
       "fwd_pe": "~22",
       "price": "$3,420",
       "div": "50.0%",
@@ -10136,7 +10153,6 @@
       "shares": "393M",
       "mcap": "$31.6B",
       "sparkline_30d": [
-        2385.8464,
         2226.79,
         2082.645,
         2097.5566,
@@ -10165,11 +10181,12 @@
         3410.0,
         3310.0,
         3300.0,
-        3570.0
+        3570.0,
+        3420.0
       ],
-      "change_30d_pct": 49.63,
-      "vol_5d_avg": 3478854,
-      "vol_30d_avg": 4178337,
+      "change_30d_pct": 53.58,
+      "vol_5d_avg": 3441740,
+      "vol_30d_avg": 4172151,
       "sparkline_90d": [
         2554.8438,
         2529.9912,
@@ -10234,7 +10251,8 @@
         3410.0,
         3310.0,
         3300.0,
-        3570.0
+        3570.0,
+        3420.0
       ]
     },
     {
@@ -12545,14 +12563,13 @@
       "pe": "~27",
       "fwd_pe": "~16",
       "price": "$239.50",
-      "div": "177.0%",
+      "div": "180.0%",
       "gross_margin": "13.2%",
       "fcf_ttm": "$-12.8B",
       "note": "緯創旗下,Starlink 用戶終端 (UT) ODM 主供;LEO 純度最高台廠",
       "shares": "270M",
       "mcap": "$1.7B (估)",
       "sparkline_30d": [
-        249.5,
         230.0,
         216.0,
         204.0,
@@ -12581,11 +12598,12 @@
         249.0,
         245.5,
         233.5,
-        243.5
+        243.5,
+        239.5
       ],
-      "change_30d_pct": -2.4,
-      "vol_5d_avg": 3267159,
-      "vol_30d_avg": 5814423,
+      "change_30d_pct": 4.13,
+      "vol_5d_avg": 3254618,
+      "vol_30d_avg": 5812333,
       "sparkline_90d": [
         268.9662,
         281.7506,
@@ -12650,7 +12668,8 @@
         249.0,
         245.5,
         233.5,
-        243.5
+        243.5,
+        239.5
       ]
     },
     {
@@ -12671,17 +12690,16 @@
       "ticker": "2327.TW",
       "name": "國巨 Yageo",
       "type": "Stock",
-      "pe": "~40",
+      "pe": "~38",
       "fwd_pe": "~19",
       "price": "$589.00",
-      "div": "107.0%",
+      "div": "102.0%",
       "gross_margin": "37.6%",
       "fcf_ttm": "$18.4B",
       "note": "全球被動元件第三大 (MLCC + 電阻),併購 Murata 部分產線後規模再擴張;AI server 用 MLCC 滲透中",
       "shares": "478M",
       "mcap": "$11.2B (估)",
       "sparkline_30d": [
-        625.0,
         563.0,
         507.0,
         456.5,
@@ -12710,11 +12728,12 @@
         568.0,
         540.0,
         511.0,
-        562.0
+        562.0,
+        589.0
       ],
-      "change_30d_pct": -10.08,
-      "vol_5d_avg": 46667542,
-      "vol_30d_avg": 47576552,
+      "change_30d_pct": 4.62,
+      "vol_5d_avg": 46123019,
+      "vol_30d_avg": 47485799,
       "sparkline_90d": [
         745.6498,
         820.1155,
@@ -12779,7 +12798,8 @@
         568.0,
         540.0,
         511.0,
-        562.0
+        562.0,
+        589.0
       ]
     },
     {
@@ -12789,14 +12809,13 @@
       "pe": "~36",
       "fwd_pe": "~19",
       "price": "$323.00",
-      "div": "84.0%",
+      "div": "77.0%",
       "gross_margin": "18.5%",
       "fcf_ttm": "$2.4B",
       "note": "MLCC 第二大台廠,AI server / EV 高容值產品比重提升",
       "shares": "780M",
       "mcap": "$6.0B (估)",
       "sparkline_30d": [
-        272.0,
         245.0,
         220.5,
         198.5,
@@ -12825,11 +12844,12 @@
         302.5,
         293.0,
         271.5,
-        298.5
+        298.5,
+        323.0
       ],
-      "change_30d_pct": 9.74,
-      "vol_5d_avg": 29544891,
-      "vol_30d_avg": 27659436,
+      "change_30d_pct": 31.84,
+      "vol_5d_avg": 29357863,
+      "vol_30d_avg": 27628264,
       "sparkline_90d": [
         397.8877,
         437.6765,
@@ -12894,7 +12914,8 @@
         302.5,
         293.0,
         271.5,
-        298.5
+        298.5,
+        323.0
       ]
     },
     {
@@ -12904,14 +12925,13 @@
       "pe": "~60",
       "fwd_pe": "~32",
       "price": "$7,620",
-      "div": "97.0%",
+      "div": "92.0%",
       "gross_margin": "43.4%",
       "fcf_ttm": "$69.8B",
       "note": "全球 MLCC 龍頭 (市占 ~40%),高階品 AI server / EV 不可替代;iPhone 主供",
       "shares": "2.02B",
       "mcap": "$36B (估)",
       "sparkline_30d": [
-        8311.0,
         8102.0,
         7153.0,
         6231.0,
@@ -12940,9 +12960,10 @@
         7290.0,
         6920.0,
         6901.0,
-        7191.0
+        7191.0,
+        7620.0
       ],
-      "change_30d_pct": -13.48,
+      "change_30d_pct": -5.95,
       "vol_5d_avg": 19526720,
       "vol_30d_avg": 25646300,
       "sparkline_90d": [
@@ -13008,7 +13029,8 @@
         7290.0,
         6920.0,
         6901.0,
-        7191.0
+        7191.0,
+        7620.0
       ]
     },
     {
@@ -13018,14 +13040,13 @@
       "pe": "~29",
       "fwd_pe": "~28",
       "price": "$2,980",
-      "div": "138.0%",
+      "div": "134.0%",
       "gross_margin": "31.1%",
       "fcf_ttm": "$-33.7B",
       "note": "MLCC + 高頻電感 + 二次電池;iPhone 電池主供 (ATL 母公司)",
       "shares": "1.94B",
       "mcap": "$27B (估)",
       "sparkline_30d": [
-        3021.0,
         3012.0,
         2927.5,
         2746.0,
@@ -13054,9 +13075,10 @@
         3079.0,
         2884.0,
         2832.5,
-        2907.5
+        2907.5,
+        2980.5
       ],
-      "change_30d_pct": -3.76,
+      "change_30d_pct": -1.05,
       "vol_5d_avg": 8944840,
       "vol_30d_avg": 10439830,
       "sparkline_90d": [
@@ -13122,24 +13144,24 @@
         3079.0,
         2884.0,
         2832.5,
-        2907.5
+        2907.5,
+        2980.5
       ]
     },
     {
       "ticker": "6976.T",
       "name": "Taiyo Yuden 太陽誘電",
       "type": "Stock",
-      "pe": "~91",
+      "pe": "~92",
       "fwd_pe": "~52",
       "price": "$9,824",
-      "div": "95.0%",
+      "div": "92.0%",
       "gross_margin": "23.4%",
       "fcf_ttm": "—",
       "note": "MLCC 第三大廠 (僅次村田/SEMCO),車用 + 高頻產品利基",
       "shares": "127M",
       "mcap": "$3.1B (估)",
       "sparkline_30d": [
-        11415.0,
         11545.0,
         10275.0,
         9005.0,
@@ -13168,9 +13190,10 @@
         9283.0,
         8858.0,
         8857.0,
-        9426.0
+        9426.0,
+        9824.0
       ],
-      "change_30d_pct": -17.42,
+      "change_30d_pct": -14.91,
       "vol_5d_avg": 25413100,
       "vol_30d_avg": 24318166,
       "sparkline_90d": [
@@ -13236,7 +13259,8 @@
         9283.0,
         8858.0,
         8857.0,
-        9426.0
+        9426.0,
+        9824.0
       ]
     },
     {
@@ -13253,7 +13277,6 @@
       "shares": "75M",
       "mcap": "$7.3B (估)",
       "sparkline_30d": [
-        141600.0,
         143600.0,
         132900.0,
         122100.0,
@@ -13282,11 +13305,12 @@
         191300.0,
         176000.0,
         183800.0,
-        183600.0
+        183600.0,
+        182600.0
       ],
-      "change_30d_pct": 29.66,
-      "vol_5d_avg": 442055,
-      "vol_30d_avg": 349482,
+      "change_30d_pct": 27.16,
+      "vol_5d_avg": 314645,
+      "vol_30d_avg": 349125,
       "sparkline_90d": [
         187700.0,
         193000.0,
@@ -13350,7 +13374,8 @@
         191300.0,
         176000.0,
         183800.0,
-        183600.0
+        183600.0,
+        182600.0
       ]
     },
     {
@@ -13367,7 +13392,6 @@
       "shares": "75M",
       "mcap": "$1.6B (估)",
       "sparkline_30d": [
-        990.0,
         915.0,
         870.0,
         842.0,
@@ -13396,11 +13420,12 @@
         1155.0,
         1115.0,
         1060.0,
-        1115.0
+        1115.0,
+        1080.0
       ],
-      "change_30d_pct": 12.63,
-      "vol_5d_avg": 538764,
-      "vol_30d_avg": 740755,
+      "change_30d_pct": 18.03,
+      "vol_5d_avg": 530705,
+      "vol_30d_avg": 739412,
       "sparkline_90d": [
         1042.6215,
         1126.2279,
@@ -13465,7 +13490,8 @@
         1155.0,
         1115.0,
         1060.0,
-        1115.0
+        1115.0,
+        1080.0
       ]
     },
     {
@@ -13475,14 +13501,13 @@
       "pe": "~63",
       "fwd_pe": "~25",
       "price": "$949.00",
-      "div": "22.0%",
+      "div": "21.0%",
       "gross_margin": "18.4%",
       "fcf_ttm": "$662M",
       "note": "ABF 載板全球前三 (Ibiden / SEMCO / 欣興),NVDA/AMD GPU 載板主供",
       "shares": "1.52B",
       "mcap": "$9.0B (估)",
       "sparkline_30d": [
-        848.0,
         764.0,
         688.0,
         716.0,
@@ -13511,11 +13536,12 @@
         971.0,
         973.0,
         923.0,
-        902.0
+        902.0,
+        949.0
       ],
-      "change_30d_pct": 6.37,
-      "vol_5d_avg": 41297830,
-      "vol_30d_avg": 24980630,
+      "change_30d_pct": 24.21,
+      "vol_5d_avg": 41132454,
+      "vol_30d_avg": 24953067,
       "sparkline_90d": [
         909.1384,
         967.0198,
@@ -13580,14 +13606,15 @@
         971.0,
         973.0,
         923.0,
-        902.0
+        902.0,
+        949.0
       ]
     },
     {
       "ticker": "8046.TW",
       "name": "南電 Nan Ya PCB",
       "type": "Stock",
-      "pe": "~123",
+      "pe": "~124",
       "fwd_pe": "~24",
       "price": "$1,050",
       "div": "19.0%",
@@ -13597,7 +13624,6 @@
       "shares": "645M",
       "mcap": "$4.7B (估)",
       "sparkline_30d": [
-        1075.0,
         976.0,
         879.0,
         837.0,
@@ -13626,11 +13652,12 @@
         1225.0,
         1200.0,
         1080.0,
-        1055.0
+        1055.0,
+        1050.0
       ],
-      "change_30d_pct": -1.86,
-      "vol_5d_avg": 14337230,
-      "vol_30d_avg": 12084422,
+      "change_30d_pct": 7.58,
+      "vol_5d_avg": 14273624,
+      "vol_30d_avg": 12073821,
       "sparkline_90d": [
         829.2596,
         912.0858,
@@ -13695,14 +13722,15 @@
         1225.0,
         1200.0,
         1080.0,
-        1055.0
+        1055.0,
+        1050.0
       ]
     },
     {
       "ticker": "3189.TW",
       "name": "景碩 Kinsus",
       "type": "Stock",
-      "pe": "~142",
+      "pe": "~141",
       "fwd_pe": "~31",
       "price": "$813.00",
       "div": "19.0%",
@@ -13712,7 +13740,6 @@
       "shares": "445M",
       "mcap": "$2.2B (估)",
       "sparkline_30d": [
-        710.0,
         639.0,
         576.0,
         578.0,
@@ -13741,11 +13768,12 @@
         874.0,
         847.0,
         775.0,
-        819.0
+        819.0,
+        813.0
       ],
-      "change_30d_pct": 15.35,
-      "vol_5d_avg": 22189452,
-      "vol_30d_avg": 17294181,
+      "change_30d_pct": 27.23,
+      "vol_5d_avg": 22080931,
+      "vol_30d_avg": 17276094,
       "sparkline_90d": [
         696.8071,
         712.7798,
@@ -13810,7 +13838,8 @@
         874.0,
         847.0,
         775.0,
-        819.0
+        819.0,
+        813.0
       ]
     },
     {
@@ -13820,14 +13849,13 @@
       "pe": "~34",
       "fwd_pe": "~21",
       "price": "$156.00",
-      "div": "298.0%",
+      "div": "287.0%",
       "gross_margin": "29.1%",
       "fcf_ttm": "$-72.9B",
       "note": "8 吋成熟製程,PMIC / DDIC 為主;與 NXP 合資新加坡 12 吋廠 (VSMC)",
       "shares": "1.63B",
       "mcap": "$7.2B (估)",
       "sparkline_30d": [
-        157.0,
         147.5,
         133.0,
         138.0,
@@ -13856,11 +13884,12 @@
         153.5,
         149.5,
         147.0,
-        150.0
+        150.0,
+        156.0
       ],
-      "change_30d_pct": -4.46,
-      "vol_5d_avg": 9080296,
-      "vol_30d_avg": 18539053,
+      "change_30d_pct": 5.76,
+      "vol_5d_avg": 9032971,
+      "vol_30d_avg": 18531166,
       "sparkline_90d": [
         152.8817,
         157.2776,
@@ -13925,7 +13954,8 @@
         153.5,
         149.5,
         147.0,
-        150.0
+        150.0,
+        156.0
       ]
     },
     {
@@ -13935,14 +13965,13 @@
       "pe": "~58",
       "fwd_pe": "~22",
       "price": "$4,040",
-      "div": "77.0%",
+      "div": "81.0%",
       "gross_margin": "37.2%",
       "fcf_ttm": "$-2.6B",
       "note": "AI ASIC 設計服務,AWS Trainium 2/3 主要設計夥伴,純度極高",
       "shares": "75M",
       "mcap": "$8.5B (估)",
       "sparkline_30d": [
-        3433.1836,
         3090.8574,
         2783.2603,
         2763.415,
@@ -13971,11 +14000,12 @@
         4241.8672,
         4167.4482,
         4050.0,
-        4220.0
+        4220.0,
+        4040.0
       ],
-      "change_30d_pct": 22.92,
-      "vol_5d_avg": 2061839,
-      "vol_30d_avg": 2252796,
+      "change_30d_pct": 30.71,
+      "vol_5d_avg": 2017243,
+      "vol_30d_avg": 2245363,
       "sparkline_90d": [
         4137.6807,
         4217.061,
@@ -14040,7 +14070,8 @@
         4241.8672,
         4167.4482,
         4050.0,
-        4220.0
+        4220.0,
+        4040.0
       ]
     },
     {
@@ -15120,56 +15151,49 @@
     {
       "title": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$774K",
+      "vol": "$1.2M",
       "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-september-2026-meeting-586",
       "tag": "Fed"
     },
     {
+      "title": "Israel closes its airspace by September 30?",
+      "prob": "Yes 96%, No 4%",
+      "vol": "$819K",
+      "url": "https://polymarket.com/event/israel-closes-its-airspace-by-september-30",
+      "tag": "AI"
+    },
+    {
       "title": "Will there be no change in Fed interest rates after the September 2026 meeting?",
       "prob": "Yes 48%, No 52%",
-      "vol": "$643K",
+      "vol": "$700K",
       "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-september-2026-meeting-615",
       "tag": "Fed"
     },
     {
       "title": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
       "prob": "Yes 52%, No 48%",
-      "vol": "$473K",
+      "vol": "$445K",
       "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-september-2026-meeting-649",
-      "tag": "Fed"
-    },
-    {
-      "title": "Israel closes its airspace by September 30?",
-      "prob": "Yes 74%, No 26%",
-      "vol": "$228K",
-      "url": "https://polymarket.com/event/israel-closes-its-airspace-by-september-30",
-      "tag": "AI"
-    },
-    {
-      "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
-      "prob": "Yes 0%, No 100%",
-      "vol": "$228K",
-      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-september-2026-meeting-863",
       "tag": "Fed"
     },
     {
       "title": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
       "prob": "Yes 1%, No 99%",
-      "vol": "$220K",
+      "vol": "$276K",
       "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-september-2026-meeting-664",
       "tag": "Fed"
     },
     {
-      "title": "Will Tala'ea El Gaish SC win on 2026-09-07?",
+      "title": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$213K",
-      "url": "https://polymarket.com/event/egy1-elq-teg-2026-09-07-teg",
-      "tag": "AI"
+      "vol": "$266K",
+      "url": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-50-bps-after-the-september-2026-meeting-863",
+      "tag": "Fed"
     },
     {
       "title": "Strait of Hormuz traffic returns to normal by September 15?",
       "prob": "Yes 0%, No 100%",
-      "vol": "$135K",
+      "vol": "$138K",
       "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-september-15-20260810150912478",
       "tag": "AI"
     },
@@ -15179,6 +15203,34 @@
       "vol": "$122K",
       "url": "https://polymarket.com/event/bitcoin-above-72k-on-september-8-2026",
       "tag": "Crypto"
+    },
+    {
+      "title": "Will Augusto Cury win the 2026 Brazilian presidential election?",
+      "prob": "Yes 1%, No 99%",
+      "vol": "$84K",
+      "url": "https://polymarket.com/event/will-augusto-cury-win-the-2026-brazilian-presidential-election",
+      "tag": "Politics"
+    },
+    {
+      "title": "Will Donald Trump win the 2028 US Presidential Election?",
+      "prob": "Yes 2%, No 98%",
+      "vol": "$83K",
+      "url": "https://polymarket.com/event/will-donald-trump-win-the-2028-us-presidential-election",
+      "tag": "Politics"
+    },
+    {
+      "title": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
+      "prob": "Yes 58%, No 42%",
+      "vol": "$78K",
+      "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
+      "tag": "Politics"
+    },
+    {
+      "title": "Seville: Gilles Arnaud Bailly vs Calvin Hemery",
+      "prob": "Gilles Arnaud Bailly 0%, Calvin Hemery 100%",
+      "vol": "$77K",
+      "url": "https://polymarket.com/event/atp-bailly-hemery-2026-09-07",
+      "tag": "AI"
     }
   ],
   "wisdom_classics": [
